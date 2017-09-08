@@ -34,13 +34,17 @@ Couse Zoom meetings:	https://iu.zoom.us/j/235405252
 * Mon 7-8 pm (Gregor, Juliette)
 * Fri 4-5pm (Miao, Saber)
 
-### Practice
-* Configured computer to use pyenv python 2.7.13 and pyenv python 3.6.2
-* Installed LaTex, Emacs, and JabRef
-* Initialized Github repository for bigdata-i523/hid335/README.md with license and .gitignore
-
-Python
-* Reviewed programming examples, created ipynb for review
-
 ### Writing
-* Topic for Paper 1: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics 
+* (9.05.17) Topic for Paper 1: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics 
+
+### Practice
+* (9.07.17) Configured computer to use pyenv python 2.7.13 and pyenv python 3.6.2
+* (9.07.17) Installed LaTex, Emacs, and JabRef
+* (9.07.17) Initialized Github repository for bigdata-i523/hid335/README.md with license and .gitignore 
+* (9.05.17) Python: Review programming examples, creat ipynb for review (to do)
+
+### Theory
+Watch Video Lectures and Lesson by Geoffrey Fox
+* Computer 
+
+
