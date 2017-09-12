@@ -41,10 +41,15 @@ Couse Zoom meetings:	https://iu.zoom.us/j/235405252
 * (9.07.17) Configured computer to use pyenv python 2.7.13 and pyenv python 3.6.2 on OSX
 * (9.07.17) Installed LaTex, aquaMacs, and JabRef; still learning
 * (9.07.17) Initialized Github repository for bigdata-i523/hid335/README.md with license and .gitignore 
-* (9.05.17) Python: Review programming examples, creat ipynb for review (to do)
+* https://cloudmesh.github.io/classes/lesson/prg/python.html#e-python
+
+### Week 3 (Sept. 8-15): Paper2 Topic, Theory, Lectures
+### Writing
+* (9.12.17) Topic for Paper 2: Health Coverage, Wearables, Internet of Things 
+
+### Practice
+* (9.08-09.17) Python: Review programming examples, creat iPython notebooks for review
 
 ### Theory
 Watch Video Lectures and Lesson by Geoffrey Fox
-* (9.05.17) Computer Models
-
-
+* (9.14.17) Computer Models
