@@ -8,9 +8,6 @@
 
 ## 1.3. Course Information and Calendar
 
-### 1.3.1. Notebook
-Students are required to maintain a class notebook in github in which they summarize their weekly activities for this course. This includes a self maintained list of which lecture material they viewed. Students are responsible for maintaing the notebook.md and update it accordingly. We suggest that you prepare sections such as: Logistic, Theroy, Practice, Writing and put in bullet form what you have done into these sections during the week.
-
 ### 1.3.2. Calendar
 This class is a full term class of 16 weeks.
 * Aug 21, Mon, Class Begins (see web page)
