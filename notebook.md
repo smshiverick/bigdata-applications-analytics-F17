@@ -2,16 +2,15 @@
 
 ## Logistics
 ### 8.25-9.1 - Week 1: ORGANIZATION AND INTRODUCTION      
-*	Watched Introduction video: i523-organization https://youtu.be/yC3PNkb_9mI  
-* Completed Doodle suvery about weekly meeting times
-* Posted biography on Piazza, be present in class Piazza, ask questions, make comments
-* Piazza folders: https://cloudmesh.github.io/classes/lesson/communication/piazza.html#piazza-curration-for-i523 
+*	Read Course Organization and Introduction, and Piazza Folders curation
+* Watched Introduction video: i523-organization https://youtu.be/yC3PNkb_9mI  
 * Watched Getting started with i523-piazza video: https://youtu.be/9hnW-327CMQ 
+* Posted biography on Piazza, be present in class Piazza, ask questions, make comments
 * Created user accounts for: 
-  * Github account for the course: https://github.com/smshiver
+  * Github account for course: https://github.com/smshiver
   * Future Systems account: https://portal.futuresystems.org/projects/all
-  * Chameleon Cloud account: https://www.chameleoncloud.org/docs/getting-started/
-* Completed the Entry Survey after completing these accounts
+  * Chameleon Cloud account: https://www.chameleoncloud.org/docs/getting-started
+  * Completed the Entry Survey and Doodle suvery about weekly meeting times
 * 9.07.17 - Initialized Github repository with README.md, license, .gitignore, and created course notebook
 
 ##  Theory
