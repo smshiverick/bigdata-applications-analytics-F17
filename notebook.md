@@ -12,8 +12,7 @@
   * Future Systems account: https://portal.futuresystems.org/projects/all
   * Chameleon Cloud account: https://www.chameleoncloud.org/docs/getting-started/
 * Completed the Entry Survey after completing these accounts
-* 9.07.17 - Initialized Github repository for bigdata-i523/hid335/README.md with license and .gitignore 
-* 9.07.17 - Created course notebooks
+* 9.07.17 - Initialized Github repository with README.md, license, .gitignore, and created course notebook
 
 ##  Theory
 * Read Introduction and Watched Course Motivation Video Lectures by Geoffrey Fox:
