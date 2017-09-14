@@ -12,7 +12,7 @@
   * Chameleon Cloud account: https://www.chameleoncloud.org/docs/getting-started
   * Completed the Entry Survey and Doodle suvery about weekly meeting times
 * 9.07.17 - Initialized Github repository with README.md, license, .gitignore, and created course notebook
-* 9.08.18 - Submitted github push request to correct minor typos on course github 
+* 9.08.17 - Submitted github push request to correct minor typos on course github 
 
 ##  Theory
 * Read Introduction and Watched Course Motivation Video Lectures by Geoffrey Fox:
