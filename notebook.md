@@ -1,4 +1,4 @@
-## Big Data Applications and Analytics: Course Notebook
+## Course Notebook for Big Data Applications and Analytics (Fall 2017) 
 
 ## Logistics
 ### 8.25-9.1 - Week 1: ORGANIZATION AND INTRODUCTION      
