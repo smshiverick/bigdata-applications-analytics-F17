@@ -1,4 +1,4 @@
-## Course Notebook for Big Data Applications and Analytics (Fall 2017) 
+## Course Notebook: Big Data Applications and Analytics (Fall 2017) 
 
 ## Logistics
 ### 8.25-9.1 - Week 1: ORGANIZATION AND INTRODUCTION      
@@ -12,7 +12,7 @@
   * Chameleon Cloud account: https://www.chameleoncloud.org/docs/getting-started
   * Completed the Entry Survey and Doodle suvery about weekly meeting times
 * 9.07.17 - Initialized Github repository with README.md, license, .gitignore, and created course notebook
-* 9.08.17 - Submitted github push request to correct minor typos on course github 
+* 9.08.17 - Submitted github pull request to correct minor typos on Course webpage 
 
 ##  Theory
 * Read Introduction and Watched Course Motivation Video Lectures by Geoffrey Fox:
