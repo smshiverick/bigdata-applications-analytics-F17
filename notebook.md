@@ -5,13 +5,14 @@
 *	Read Course Organization and Introduction, and Piazza Folders curation
 * Watched Introduction video: i523-organization https://youtu.be/yC3PNkb_9mI  
 * Watched Getting started with i523-piazza video: https://youtu.be/9hnW-327CMQ 
-* Posted biography on Piazza, be present in class Piazza, ask questions, make comments
+* Posted biography on Piazza, engaged in discussion, asked questions, made comments
 * Created user accounts for: 
   * Github account for course: https://github.com/smshiver
   * Future Systems account: https://portal.futuresystems.org/projects/all
   * Chameleon Cloud account: https://www.chameleoncloud.org/docs/getting-started
   * Completed the Entry Survey and Doodle suvery about weekly meeting times
 * 9.07.17 - Initialized Github repository with README.md, license, .gitignore, and created course notebook
+* 9.08.18 - Submitted github push request to correct minor typos on course github 
 
 ##  Theory
 * Read Introduction and Watched Course Motivation Video Lectures by Geoffrey Fox:
