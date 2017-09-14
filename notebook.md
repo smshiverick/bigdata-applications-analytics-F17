@@ -1,4 +1,4 @@
-# Big Data Applications and Analytics: Course Notebook
+## Big Data Applications and Analytics: Course Notebook
 * Course website: https://cloudmesh.github.io/classes/i523/2017/index.html 
 * Piazza course site: https://piazza.com/iu/fall2017/i523/home 
 * Couse Zoom meetings:	https://iu.zoom.us/j/235405252
