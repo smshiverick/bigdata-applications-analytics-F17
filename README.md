@@ -1,15 +1,15 @@
 # hid335
 ### INFO-I535: Big Data Applications and Analytics
+* Course website: https://cloudmesh.github.io/classes/i523/2017/index.html 
+* Piazza course site: https://piazza.com/iu/fall2017/i523/home 
+* Couse Zoom meetings:	https://iu.zoom.us/j/235405252
+  * Mon 7-8 pm (Gregor, Juliette)
+  * Fri 4-5pm (Miao, Saber)
+
 ## 1.3. Course Information and Calendar
 
 ### 1.3.1. Notebook
-Students are required to maintain a class notebook in github in which they summarize their weekly activities for this course. This includes a self maintained list of which lecture material they viewed.
-
-The notbook is maintained in the class github.com in your hid project folder. It is a file called notebook.md that uses markdown as format. While using md, you can either edit it locally and upload to github, or directly edit it via the git hub Web editor.
-
-You will be responsible to set up and maintaing the notebook.md and update it accordingly. We suggest that you prepare sections such as: Logistic, Theroy, Practice, Writing and put in bullet form what you have done into these sections during the week. We can see from the github logs when you changed the notbook.md file to monitor progress. The management of the notebokk will be part of your discussion grade.
-
-A sample note book is available at: https://github.com/bigdata-i523/sample-hid000/blob/master/notebook.md
+Students are required to maintain a class notebook in github in which they summarize their weekly activities for this course. This includes a self maintained list of which lecture material they viewed. Students are responsible for maintaing the notebook.md and update it accordingly. We suggest that you prepare sections such as: Logistic, Theroy, Practice, Writing and put in bullet form what you have done into these sections during the week.
 
 ### 1.3.2. Calendar
 This class is a full term class of 16 weeks.
