@@ -50,9 +50,8 @@ Couse Zoom meetings:	https://iu.zoom.us/j/235405252
 ### Practice
 * (9.08-09.17) Python: Review programming examples, posted to github 
 * (9.14.17) Python: Create PANDAS iPython notebook for review
-* (9.15.17) Lesson 16: Course Motivation Conclusions
 
 ### Theory
 Watch Video Lectures and Lesson by Geoffrey Fox
 * (9.14.17) Lesson 6B: Computer Model, Lessons: 7, 8, 9
-
+* (9.15.17) Lesson 16: Course Motivation Conclusions
