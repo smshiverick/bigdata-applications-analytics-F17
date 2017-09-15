@@ -23,7 +23,7 @@
 ## Practice
 * 9.07.17 - Configured computer to use pyenv python 2.7.13 and pyenv python 3.6.2 on OSX
 * 9.08-09.17 - Python: Review programming examples, posted to github 
-* 9.14.17 - Python: Create PANDAS iPython notebook for review
+* 9.14.17 - Python: Create PANDAS iPython notebook for review: Data Structures, Indexing, Functions
 
 ## Writing
 * 9.05.17 - Topic for Paper 1: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics 
