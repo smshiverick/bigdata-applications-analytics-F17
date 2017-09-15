@@ -9,8 +9,6 @@ https://journalofbigdata.springeropen.com/articles/10.1186/2196-1115-1-2
 Twitter Improves Influenza Forecasting. Michael J. PaulMark Dredze David Broniatowski PLOS-Currents: Outbreaks. Oct. 28, 2014.
 http://currents.plos.org/outbreaks/article/twitter-improves-influenza-forecasting/#ref5
 
-Paper 2 Topic: Health coverage, wearables, and the internet of things
-•	https://pulse.embs.org/september-2016/wearables-internet-of-things-iot-health/
 ________________________________________________________________________________
 
 ## What the paper should be about: 
