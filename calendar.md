@@ -3,8 +3,8 @@
 * Course website: https://cloudmesh.github.io/classes/i523/2017/index.html 
 * Piazza course site: https://piazza.com/iu/fall2017/i523/home 
 * Couse Zoom meetings:	https://iu.zoom.us/j/235405252
-  * Mon 7-8 pm (Gregor, Juliette)
-  * Fri 4-5pm (Miao, Saber)
+  * Mon 5-7:00 pm CST (Gregor, Juliette)
+  * Fri 3-4:00 pm CST (Miao, Saber)
 
 ## 1.3. Course Information and Calendar
 
