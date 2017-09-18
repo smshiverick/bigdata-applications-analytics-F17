@@ -15,8 +15,8 @@ paper1:
    - Sean M. Shiverick
    hid:
    - 335
-   title: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics
-   abstract: This paper showcases this and that and the other
+   title: Big Data Analytics, Data Mining, Health Informatice
+   abstract: This paper explore how Social Media Behavior at Population has been used to predict the Epidemic outbreaks such as Influenza and H1N1 virus.  
    url: https://github.com/bigdata-i523/hid335/blob/master/paper1.tex
    type: LaTex
    status: In Progress
