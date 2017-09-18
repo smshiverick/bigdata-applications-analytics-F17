@@ -31,6 +31,6 @@
 
 ## Online Meetings
 * 9/14/17 Watched video of meeting on jabref, latex, sharelatex, github 
-* 9/18/17 Attended meeting on jabref, latex, sharelatex, github
+* 9/18/17 Attended meeting on jabref, latex, sharelatex, github HID format, experiments
 
 
