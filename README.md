@@ -15,7 +15,7 @@ paper1:
    - Sean M. Shiverick
    hid:
    - 335
-   title: "Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics"
+   title: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics
    abstract: This paper showcases this and that and the other
    url: https://github.com/bigdata-i523/hid335/blob/master/paper1.md
    type: latex
@@ -30,7 +30,7 @@ paper2:
    - Sean M. Shiverick
    hid:
    - 335
-   title: "Big Data on Health Care from Wearables and the Internet of Things"
+   title: Big Data on Health Care from Wearables and the Internet of Things
    abstract: This paper showcases this and that and the other in regards to abc
    url: https://github.com/bigdata-i523/hid335/blob/master/paper2.md
    type: Markdown
