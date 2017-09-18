@@ -37,23 +37,3 @@ paper2:
    status: in progress
 ```
 
-# Project 
-
-New pids will be assigned after approval for project and reports   
-Just use one type and delete the line with 
-
-```
-project:
-   type: project
-   type: report
-   author: 
-   - Sean M. Shiverick
-   pid:
-   - 335
-   title: Analysis of Personal Health Data from Wearables 
-   abstract: This paper will examine health data collected from personal electronic devices
-   url: https://github.com/bigdata-i523/sample-pid000/project/report.pdf
-   type: latex
-   status: in progress
-```
-   
