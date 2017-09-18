@@ -30,5 +30,8 @@
 * 9.07.17 - Installed LaTex, aquaMacs, and JabRef; still learning
 * 9.12.17 - Topic for Paper 2: Health Coverage, Wearables, Internet of Things 
 
+## Online Meetings
+* 09.14.17 Watched video of meeting on jabref, latex, sharelatex, github 
+* 09.18.17 Attended meeting on jabref, latex, sharelatex, github
 
 
