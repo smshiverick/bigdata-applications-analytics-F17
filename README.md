@@ -16,7 +16,7 @@ paper1:
    hid:
    - 335
    title: Big Data Analytics, Data Mining, Health Informatice
-   abstract: This paper explores how Social Media Behavior at Population has been used to predict the Epidemic outbreaks such as Influenza and H1N1 virus.  
+   abstract: This paper explores how Social Media Behavior at Population has been used to predict the Epidemic outbreaks such as Influenza and H1N1 virus.
    url: https://github.com/bigdata-i523/hid335/blob/master/paper1.tex
    type: LaTex
    status: In Progress
