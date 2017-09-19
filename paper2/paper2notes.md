@@ -1,4 +1,4 @@
-## Paper 2 Topic: Health coverage, wearables, and the internet of things
+## Paper 2 Topic: Big Health Data from Electronic Wearable Sensors and the Internet of Things
 The paper will address how the future of health care is influenced by new developments in wearable wireless technologies, such as LoRa (long range) backscatter flexible epidermal patches. The LoRa backscatter technology provides low power, low cost sensors that can be implemented in a variety of household appliance and personal devices, to collect big data on a range of health features. 
 * http://www.washington.edu/news/2017/09/13/uw-team-shatters-long-range-communication-barrier-for-devices-that-consume-almost-no-power/ 
 
