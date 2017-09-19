@@ -15,8 +15,8 @@ Source: (Submitted on 16 May 2017) 	arXiv:1705.05953 [cs.NI]
 
 
 ### Graphene Temporary Tattoo Tracks Vital Signs
-* Author:
-* Source: IEEE Spectrum, Nanoclast Blog, Semi-conductors, Nanotechnology
+* Author: Katherine Bourzac
+* Source: IEEE Spectrum, Nanoclast Blog, Semi-conductors, Nanotechnology, Posted 11 Jan 2017
 * https://spectrum.ieee.org/nanoclast/semiconductors/nanotechnology/graphene-temporary-tattoo
 
 ### Graphene Electronic Tattoo Sensors
