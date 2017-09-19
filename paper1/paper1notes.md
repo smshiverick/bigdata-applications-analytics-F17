@@ -2,12 +2,21 @@
 * Social Media, Populations: Data mining of search queries to track epidemics. 
 * Using population level data – Social media
 
-A review of data mining using big data in health informatics. Matthew Herland, Taghi M Khoshgoftaar and Randall Wald  
-Journal Of Big Data20141:2 https://doi.org/10.1186/2196-1115-1-2©  Herland et al.; licensee Springer. 2014
-https://journalofbigdata.springeropen.com/articles/10.1186/2196-1115-1-2 
+### A review of data mining using big data in health informatics. 
+* Authors: Matthew Herland, Taghi M Khoshgoftaar and Randall Wald  
+* Source: Journal Of Big Data 20141:2 https://doi.org/10.1186/2196-1115-1-2©  Herland et al.; licensee Springer. 2014
+* https://journalofbigdata.springeropen.com/articles/10.1186/2196-1115-1-2 
 
-Twitter Improves Influenza Forecasting. Michael J. PaulMark Dredze David Broniatowski PLOS-Currents: Outbreaks. Oct. 28, 2014.
-http://currents.plos.org/outbreaks/article/twitter-improves-influenza-forecasting/#ref5
+### Twitter Improves Influenza Forecasting. 
+* Authors: Michael J. PaulMark Dredze David Broniatowski 
+* Source: PLOS-Currents: Outbreaks. Oct. 28, 2014.
+* http://currents.plos.org/outbreaks/article/twitter-improves-influenza-forecasting/#ref5
+
+### The Parable of Google Flu: Traps in Big Data Analysis
+* Authors: Lazer, D., R. Kennedy, G. King, and A. Vespignani. 
+* Science 343 (6176): 1203–1205. March 14, 2014. 
+* https://dash.harvard.edu/handle/1/12016836  
+* full text: https://dash.harvard.edu/bitstream/handle/1/12016836/The%20Parable%20of%20Google%20Flu%20%28WP-Final%29.pdf?sequence=1
 
 ________________________________________________________________________________
 

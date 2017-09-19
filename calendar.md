@@ -6,21 +6,9 @@
   * Mon 5-7:00 pm CST (Gregor, Juliette)
   * Fri 3-4:00 pm CST (Miao, Saber)
 
-## 1.3. Course Information and Calendar
-
-### 1.3.2. Calendar
-This class is a full term class of 16 weeks.
-* Aug 21, Mon, Class Begins (see web page)
-* Aug 25, Fri, 9am Setup communication pathways for the class (no extensions)
-  * You must have created a github repository in our class repository. (Graded homework, no extensions)
-  * You must be in the class Piazza (Graded homework, no extensions).
-  * Why no extensions: if we can not communicate with you we can not conduct the class. Everyone must be in piazza and github timely. Instead of giving points we will deduct points from everyone that has not done it in time. Those that registered late have one week from the time they registered to complete this task.
-  
- * Sep 4, Mon, Labor Day
-  * Good day to work on projects, computer setup
-
+## 1.3. Course Calendar
+* Oct 2, Computer Setup completed
 * Oct 9, 9am. Paper 1 due (Graded)
-* Oct 2 Computer Setup completed
 * Fall Break Oct 6 - Oct 8
 
 This is a good time to work ahead or catch up with things. We strongly advise to use this time wisely.
