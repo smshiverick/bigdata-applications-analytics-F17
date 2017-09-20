@@ -30,8 +30,8 @@ paper2:
    - Sean M. Shiverick
    hid:
    - 335
-   title: Big Data on Health Care from Wearables and the Internet of Things
-   abstract: This paper showcases this and that and the other in regards to abc
+   title: Big Health Data from Wearable Electronic Sensors and the Internet of Things
+   abstract: This paper reviews literature and research on the use Wearable Electronic Sensors (WES) to collect vital health information, and how sensor devices in smart homes and appliances will be used for the collection and monitoring of health data from patients. 
    url: https://github.com/bigdata-i523/hid335/blob/master/paper2.tex
    type: LaTex
    status: in progress
