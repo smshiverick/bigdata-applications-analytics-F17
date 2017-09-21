@@ -12,7 +12,7 @@
 \pagestyle{plain} % removes running headers
 
 \begin{document}
-\title{Big Data Analytics, Data Mining, and Health Informatics: Social Media, Populations, and Epidemics}
+\title{Big Data Mining of Search Queries and Social Media to Predict Epidemics}
 \author{Sean M. Shiverick}
 % \orcid{1234-5678-9012}
 \affiliation{%
@@ -29,24 +29,16 @@
 This paper is a literature review of research on data mining of social media to predict ourbreaks of epdiemics at the population level. This work shows haw big data analytics has applications for health informatics.
 \end{abstract}
 
-\keywords{ACM proceedings, \LaTeX, text tagging}
+\keywords{Data Mining, Social Media, Population Health Informatics}
 
 
 \maketitle
 
 \section{Introduction}
 
-The \textit{proceedings} are the records of a
-conference. ACM seeks to give these
-conference by-products a uniform, high-quality appearance.  To do
-this, ACM has some rigid requirements for the format of the
-proceedings documents: there is a specified format (balanced double
-columns), a specified set of fonts (Arial or Helvetica and Times
-Roman) in certain specified sizes, a specified live area, centered on
-the page, specified size of margins, specified column width and gutter
-size \cite{herland2014}.
+In the tech era, \textit{Big Data} offers great promises: fuel innovation, generate new revenue streams, and transform society. Along with the potential benefits of big data comes a certain amount of hype; big data has been described as the \textit{new oil} of the tech age. The gargantuan task of sifting through inconceivably huge volumes of data is now largely automated with the use of ingenious algorithms, yet the task of data scientists essentially involves searching for gold among mountains of ore. Conventional adages such as, \textit{finding the needle in the haystack} are turned on its head, and enterprising data scientists are turning hay into needles. Apart from enriching a handful of corporations or entrepreneurs capable of capitalizing on this tsunami of data, it is important to ask how the potential of big data can be harnessed for the greater good. This paper explores approaches to using big data analytics in the health domain, specifically how data mining of social media behavior has been used to predict the outbreak of epidemics such as influenza and the H1N1 virus \cite{ginsburg09,signorini11, paul14}. Also considered is how this approach could be extended to predict or manage the spread of opioid epidemic in North America \cite{volkow14}.
 
-\section{The Body of The Paper}
+\section{Data Mining Population Health Informatics}
 
 Typically, the body of a paper is organized into a hierarchical
 structure, with numbered or unnumbered headings for sections,
@@ -63,9 +55,9 @@ balance of this sample document.
 Because the entire article is contained in the \textbf{document}
 environment, you can indicate the start of a new paragraph with a
 blank line in your input file; that is why this sentence forms a
-separate paragraph \cite{www-google}.
+separate paragraph.
 
-\subsection{Type Changes and {\itshape Special} Characters}
+\subsection{Social Media Data Mining}
 
 We have already seen several typeface changes in this sample.  You can
 indicate italicized words or phrases in your text with the command
@@ -86,13 +78,13 @@ characters you need anywhere in your document; you can find a complete
 list of what is available in the \textit{\LaTeX\ User's Guide}
 \cite{Lamport:LaTeX}.
 
-\subsection{Math Equations}
+\subsection{Using {\itshape Google} Search Query Data to Track Epidemics}
 
 You may want to display math equations in three distinct styles:
 inline, numbered or non-numbered display.  Each of
 the three are discussed in the next sections.
 
-\subsubsection{Inline (In-text) Equations}
+\subsubsection{}
 
 A formula that appears in the running text is called an
 inline or in-text formula.  It is produced by the
@@ -144,7 +136,7 @@ and follow it with another numbered equation:
 
 just to demonstrate \LaTeX's able handling of numbering.
 
-\subsection{Citations}
+\subsection{Using {\itshape Twitter} API Data to Track Epidemics}
 
 Citations to articles~\cite{bowman:reasoning, clark:pct, braams:babel,
   herlihy:methodology}, conference proceedings~\cite{clark:pct} or
@@ -320,60 +312,7 @@ that needs to span two columns of text.}
 been resized with the \texttt{includegraphics} command.}
 \end{figure}
 
-\subsection{Theorem-like Constructs}
 
-Other common constructs that may occur in your article are the forms
-for logical constructs like theorems, axioms, corollaries and proofs.
-ACM uses two types of these constructs:  theorem-like and
-definition-like.
-
-Here is a theorem:
-
-\begin{theorem}
-  Let $f$ be continuous on $[a,b]$.  If $G$ is
-  an antiderivative for $f$ on $[a,b]$, then
-  \begin{displaymath}
-    \int^b_af(t)\,dt = G(b) - G(a).
-  \end{displaymath}
-\end{theorem}
-
-Here is a definition:
-
-\begin{definition}
-  If $z$ is irrational, then by $e^z$ we mean the
-  unique number that has
-  logarithm $z$:
-  \begin{displaymath}
-    \log e^z = z.
-  \end{displaymath}
-\end{definition}
-
-The pre-defined theorem-like constructs are \textbf{theorem},
-\textbf{conjecture}, \textbf{proposition}, \textbf{lemma} and
-\textbf{corollary}.  The pre-defined de\-fi\-ni\-ti\-on-like
-constructs are \textbf{example} and \textbf{definition}.  You can add
-your own constructs using the \textsl{amsthm}
-interface~\cite{Amsthm15}.  The styles used in the
-\verb|\theoremstyle| command are \textbf{acmplain} and
-\textbf{acmdefinition}.
-
-Another construct is \textbf{proof}, for example,
-
-\begin{proof}
-  Suppose on the contrary there exists a real number $L$ such that
-  \begin{displaymath}
-    \lim_{x\rightarrow\infty} \frac{f(x)}{g(x)} = L.
-  \end{displaymath}
-  Then
-  \begin{displaymath}
-    l=\lim_{x\rightarrow c} f(x)
-    = \lim_{x\rightarrow c}
-    \left[ g{x} \cdot \frac{f(x)}{g(x)} \right ]
-    = \lim_{x\rightarrow c} g(x) \cdot \lim_{x\rightarrow c}
-    \frac{f(x)}{g(x)} = 0\cdot L = 0,
-  \end{displaymath}
-  which contradicts our assumption that $l\neq 0$.
-\end{proof}
 
 \section{Conclusions}
 
@@ -421,27 +360,10 @@ bibtex, then latex twice (to resolve references) to create the
 \texttt{.tex} source file and comment out the command
 \texttt{{\char'134}thebibliography}.
 
-% This next section command marks the start of
-% Appendix B, and does not continue the present hierarchy
-
-\section{More Help for the Hardy}
-
-Of course, reading the source code is always useful.  The file
-\path{acmart.pdf} contains both the user guide and the commented code.
 
 \begin{acks}
 
-  The authors would like to thank Dr. Yuhua Li for providing the
-  matlab code of the \textit{BEPS} method.
-
-  The authors would also like to thank the anonymous referees for
-  their valuable comments and helpful suggestions. The work is
-  supported by the \grantsponsor{GS501100001809}{National Natural
-    Science Foundation of
-    China}{http://dx.doi.org/10.13039/501100001809} under Grant
-  No.:~\grantnum{GS501100001809}{61273304}
-  and~\grantnum[http://www.nnsf.cn/youngscientsts]{GS501100001809}{Young
-    Scientsts' Support Program}.
+  The author would like to thank Dr. Gregor Von Laszewski for providing the \LaTex template for the paper and \JabRef bibliography for the references. Thanks also to the Assistant Instructors for their helpful comments and suggestions.
 
 \end{acks}
 
