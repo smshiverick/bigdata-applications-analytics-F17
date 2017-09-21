@@ -16,7 +16,7 @@ paper1:
    hid:
    - 335
    title: Big Data Analytics, Data Mining, Health Informatice
-   abstract: This paper explores how Social Media Behavior at Population has been used to predict the Epidemic outbreaks such as Influenza and H1N1 virus.
+   abstract: This paper reviews research on data mining of social media to predict Epidemic outbreaks (e.g. Influenza, H1N1).
    url: https://github.com/bigdata-i523/hid335/blob/master/paper1.tex
    type: LaTex
    status: In Progress
@@ -30,8 +30,8 @@ paper2:
    - Sean M. Shiverick
    hid:
    - 335
-   title: Big Health Data from Wearable Electronic Sensors and the Internet of Things
-   abstract: This paper reviews literature and research on the use Wearable Electronic Sensors (WES) to collect vital health information, and how sensor devices in smart homes and appliances will be used for the collection and monitoring of health data from patients. 
+   title: Big Health Data from Wearable Electronic Sensors and the Treatment of Opioid Addiction
+   abstract: This paper reviews the use of wearable electronic biosensors (WES) to collect vital health data in the treatment of opioid addiction. 
    url: https://github.com/bigdata-i523/hid335/blob/master/paper2.tex
    type: LaTex
    status: in progress
