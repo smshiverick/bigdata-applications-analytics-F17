@@ -30,8 +30,8 @@ paper2:
    - Sean M. Shiverick
    hid:
    - 335
-   title: Big Health Data from Wearable Electronic Sensors and the Treatment of Opioid Addiction
-   abstract: This paper reviews the use of wearable electronic biosensors (WES) to collect vital health data in the treatment of opioid addiction. 
+   title: Big Health Data from Wearable Electronic Sensors (WES) and the Treatment of Opioid Addiction
+   abstract: This paper reviews the use of wearable biosensors to collect vital health data in the treatment of opioid addiction. 
    url: https://github.com/bigdata-i523/hid335/blob/master/paper2.tex
    type: LaTex
    status: in progress
