@@ -12,7 +12,6 @@ Source: IEEE Pulse | October 3, 2016
 * Source: Dialogues in Clinical Neuroscience 18(2), 2016 
 * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4969708/ 
 
-
 ### LoRa Backscatter: Enabling The Vision of Ubiquitous Connectivity
 Authors: Vamsi Talla, Mehrdad Hessar, Bryce Kellogg, Ali Najafi, Joshua R. Smith, Shyamnath Gollakota
 Source: (Submitted on 16 May 2017) 	arXiv:1705.05953 [cs.NI]
