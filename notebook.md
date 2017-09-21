@@ -1,3 +1,5 @@
+# Course Notebook for Big Data Applications and Analytics (Fall 2017)
+
 # Logistics    
 *	8/25/17-9/01/17  Read Course Organization and Introduction, and Piazza Folders curation
 * 8/25/17-9/01/17  Watched Introduction video: i523-organization https://youtu.be/yC3PNkb_9mI  
@@ -30,8 +32,6 @@
 * 9/12/17  Topic for Paper 2: Health Coverage, Wearables, Internet of Things 
 * 9/20/17-9/23/17  Paper 1: Article search, literature review, writing
 
-## Online Meetings
+# Online Meetings
 * 9/14/17  Watched video of meeting on jabref, latex, sharelatex, github 
 * 9/18/17  Attended meeting on sharelatex, jabref, github HID format, experiments
-
-
