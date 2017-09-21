@@ -16,7 +16,7 @@ paper1:
    hid:
    - 335
    title: Big Data Analytics, Data Mining, Health Informatice
-   abstract: This paper reviews research on data mining of social media to predict Epidemic outbreaks (e.g. Influenza, H1N1).
+   abstract: This paper reviews research on data mining of social media to predict the outbreak of epidemics (e.g. Influenza, H1N1).
    url: https://github.com/bigdata-i523/hid335/blob/master/paper1.tex
    type: LaTex
    status: In Progress
