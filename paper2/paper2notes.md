@@ -28,9 +28,3 @@ Source: (Submitted on 16 May 2017) 	arXiv:1705.05953 [cs.NI]
 * Authors: Shideh Kabiri Ameri , Rebecca Ho, Hongwoo Jang, Li Tao, Youhua Wang, Liu Wang, David M. Schnyer, Deji Akinwande, and Nanshu Lu
 * Source: ACS Nano, 2017, 11 (8), pp 7634–7641; Publication Date (Web): July 18, 2017; DOI: 10.1021/acsnano.7b02182
 * https://www.researchgate.net/profile/Liu_Wang13/publication/318538396_Graphene_Electronic_Tattoo_Sensors/links/597f7884458515687b4ba7ed/Graphene-Electronic-Tattoo-Sensors.pdf
-
-### Multifunctional wearable devices for diagnosis and therapy of movement disorders
-* Authors: Donghee Son, Jongha Lee, Shutao Qiao, Ji Eun Lee, Roozbeh Ghaffari, Jaemin Kim, Dong Jun Lee, Hye Rim Cho, Inpyeong Hwang, Shixuan Yang, Samuel Woojoo Jun, Changyeong Song, Minjoon Park, Jiho Shin, Kyungsik Do, Sungmock Choi1, Jong Woo Lee, Kwanghun Kang, Seong Keun Kim, Cheol Seong Hwang, Seung Hong Choi, Nanshu Lu, Taeghwan Hyeon, Dae-Hyeong Kim,  
-* Source: Nature Nanotechnology 9, 397–404 (2014).
-* http://lu.ae.utexas.edu/images/documents/journal/27.pdf 
-
