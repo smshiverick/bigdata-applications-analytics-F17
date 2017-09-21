@@ -1,6 +1,7 @@
 ## Paper 1 Topic: Big Data Analytics, Data Mining, Health Informatics
 * Social Media, Populations: Data mining of search queries to track epidemics. 
 * Using population level data – Social media
+* https://docs.google.com/document/d/1saP2SWD5h57h3zAqrCRdzJTnAeCuvJm5nyCct3QgKfY/edit
 
 ### A review of data mining using big data in health informatics. 
 * Authors: Matthew Herland, Taghi M Khoshgoftaar and Randall Wald  
