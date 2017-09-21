@@ -1,4 +1,4 @@
-# Course Notebook for Big Data Applications and Analytics (Fall 2017)
+# Course Notebook: Big Data Applications and Analytics (F17)
 
 # Logistics    
 *	8/25/17-9/01/17  Read Course Organization and Introduction, and Piazza Folders curation
