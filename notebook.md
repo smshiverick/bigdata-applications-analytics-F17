@@ -30,6 +30,7 @@
 * 9/05/17  Topic for Paper 1: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics 
 * 9/07/17  Installed LaTex, aquaMacs, and JabRef; still learning
 * 9/12/17  Topic for Paper 2: Health Coverage, Wearables, Internet of Things 
+* 9/20/17  Updated Paper 2 title: Big Health Data, Wearable Electronic Sensors, Addiction Treatment
 * 9/20/17-9/23/17  Paper 1: Article search, literature review, writing
 
 # Online Meetings
