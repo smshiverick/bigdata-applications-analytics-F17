@@ -12,7 +12,7 @@
 \pagestyle{plain} % removes running headers
 
 \begin{document}
-\title{Data Mining of Social Media for Population Health Analytics}
+\title{Data Mining Social Media for Population Health Analytics}
 \author{Sean M. Shiverick}
 % \orcid{1234-5678-9012}
 \affiliation{%
@@ -26,7 +26,7 @@
 
 
 \begin{abstract}
-This paper is a literature review of research on data mining of social media to predict ourbreaks of epdiemics at the population level. This work shows how big data analytics has applications for health informatics.
+This paper is a literature review of research on data mining of social media to predict ourbreaks of epdiemics at the population level. This work shows how big data analytics has applications for public health informatics.
 \end{abstract}
 
 \keywords{Data Mining, Social Media, Population Health Informatics}
@@ -36,65 +36,31 @@ This paper is a literature review of research on data mining of social media to 
 
 \section{Introduction}
 
-In the tech era, \textit{Big Data} offers great promises, to fuel innovation, generate new streams of revenue, and ultimately transform society. Along with heightened expectations about the numerous benefits of big data comes a certain amount of hype \cite{gupta15}; big data has been described as the \textit{new oil} of the information age. The gargantuan task of sifting through inconceivably huge volumes of data is now largely automated with the use of algorithms, yet the task of data scientists essentially involves searching for gold among mountains of ore. Conventional adages such as, \textit{finding the needle in a haystack} are turned on its head, as enterprising data scientists are turning hay into needles. Apart from enriching a handful of corporations or tech entrepreneurs capable of capitalizing on this data tsunami, an important to consider is how the potential of big data may be harnessed for the greater good. This paper explores approaches to using big data analytics in the health domain, specifically how data mining of social media behavior has been used to predict the outbreak of epidemics such as influenza and the H1N1 virus \cite{ginsburg09, signorini11, paul14}. Also considered is how this approach could be extended to predict or manage the spread of opioid epidemic in North America \cite{volkow14}.
+In the tech era, \textit{Big Data} offers great promises, to fuel innovation, generate new streams of revenue, and ultimately transform society. Along with heightened expectations about the numerous benefits of big data comes a certain amount of hype \cite{gupta15}; big data has been described as the \textit{new oil} of the information age. The gargantuan task of sifting through inconceivably huge volumes of data is now largely automated with the use of algorithms, yet the task of data scientists essentially involves searching for gold among mountains of ore. Conventional adages such as, \textit{finding the needle in a haystack} are turned on its head, as enterprising data scientists are turning hay into needles. Apart from enriching a handful of corporations or tech entrepreneurs capable of capitalizing on this data tsunami, an important to consider is how the potential of big data may be harnessed for the greater good. This paper explores approaches to using big data analytics in the health domain, specifically how data mining of social media behavior has been used to predict the outbreak of epidemics such as influenza and the H1N1 virus \cite{signorini11,yuan13}. Also considered is how this approach could be extended to predict or manage the spread of opioid epidemic in North America \cite{volkow14}.
 
 \section{Big Data: Population Health Informatics}
 
-Big data is an ambiguous term that lacks a single, unified definition; a  useful approach has been to define big data in terms of: Volume, Velocity, Variety, Veracity, and Value \cite{demchenko12}. The field of Health Informatics is generating huge amounts of data at a very rapid pace, from genomic data, patient tissue samples, MRI imaging data, electronic medical records (EMRs), clinical research data, up to population-level data. This review focuses on public data collected at the population level from social media that may provide insights about health concerns such as epidemic spreading and pandemics  \cite{hay13, herland14}. Trying to track an epidemic in real-time from multitudes of incoming web posts (e.g., Twitter), involves a high volume of data coming in at high velocity \cite{lamb13, paul14}. The complex nature of this data reflects the wide variety of information collected, and in order to be of any use, the data has to be sifted through and effectively organized for further analysis.The issue of Veracity raises questions of utmost importance: How reliable are social media posts for predicting real life events? What is the relationship between data mined from social media to biological phenomenon such as the spreading and disease and contagion? The question of Value evaluates the quality of the data obtain in relation to intended outcomes to be attained. There may be some question as to the quality of data collected from social media; however, a review of the literature suggests that mining information from social media can produce data of high value. An important challenge for making sense of big data is developing data mining and analytic methods to handle large volumes of rapidly growing data. 
+Big data is an ambiguous term that lacks a single, unified definition; a useful approach has been to define big data in terms of: Volume, Velocity, Variety, Veracity, and Value \cite{demchenko12}. The field of Health Informatics is generating huge amounts of data at a very rapid pace, from genomic data, patient tissue samples, MRI imaging data, electronic medical records (EMRs), clinical research data, up to population-level data. This review focuses on public data collected at the population level from social media that may provide insights about health concerns such as epidemic spreading and pandemics  \cite{hay13, herland14}. Trying to track an epidemic in real-time from multitudes of incoming web posts (e.g., Twitter), involves a high volume of data coming in at high velocity \cite{lamb13, paul14}. The complex nature of this data reflects the wide variety of information collected, and in order to be of any use, the data has to be sifted through and effectively organized for further analysis.The issue of Veracity raises questions of utmost importance: How reliable are social media posts for predicting real life events? What is the relationship between data mined from social media to biological phenomenon such as the spreading and disease and contagion? The question of Value evaluates the quality of the data obtain in relation to intended outcomes to be attained. There may be some question as to the quality of data collected from social media; however, a review of the literature suggests that mining information from social media can produce data of high value. An important challenge for making sense of big data is developing data mining and analytic methods to handle large volumes of rapidly growing data. 
+
 
 \subsection{Social Media Data Mining}
 
-We have already seen several typeface changes in this sample.  You can
-indicate italicized words or phrases in your text with the command
-\texttt{{\char'134}textit}; emboldening with the command
-\texttt{{\char'134}textbf} and typewriter-style (for instance, for
-computer code) with \texttt{{\char'134}texttt}.  But remember, you do
-not have to indicate typestyle changes when such changes are part of
-the \textit{structural} elements of your article; for instance, the
-heading of this subsection will be in a sans serif\footnote{Another
-  footnote here.  Let's make this a rather long one to see how it
-  looks. Footnotes must be avoided.} typeface, but that is handled by
-the document class file.  Take care with the use of the curly braces
-in typeface changes; they mark the beginning and end of the text that
-is to be in the different typeface.
+Health Informatics research can be considered from two levels: where the data is collected, and the research questions being addressed. This paper focuses on population level data to address questions about epidemics.  Research on social media can yield data on a range of issues related to public health, including: spatiotemporal information of disease outbreaks, real-time tracking of infectious diseases, global distributions of various diseases, and search queries on medical questions that people might have. The questions of interest in the current review are: first, \textit{Can search query data be used to accurately track epidemics in a population (in real-time)?};  and second, \textit{Can Twitter post data be used to track an epidemic across a population?} A limitation of social media data is that, as mentioned above, although it has high Volume, Velocity, and Variety, it could be unreliable, resulting in both low Veracity and Value \cite{hay14, lazer14}. However, useful data can be extracted through data mining and analytic techniques. 
 
-You can use whatever symbols, accented characters, or non-English
-characters you need anywhere in your document; you can find a complete
-list of what is available in the \textit{\LaTeX\ User's Guide}
-\cite{Lamport:LaTeX}.
 
-\subsection{Using {\itshape Google} Search Query Data to Track Epidemics}
+\subsection{Using Search Query Data to Track Epidemics}
 
 You may want to display math equations in three distinct styles:
 inline, numbered or non-numbered display.  Each of
 the three are discussed in the next sections.
 
-\subsubsection{}
+\subsubsection{Tracking Epidemics Using {\itshape Google} Search Terms in U.S.}
 
 A formula that appears in the running text is called an
-inline or in-text formula.  It is produced by the
-\textbf{math} environment, which can be
-invoked with the usual \texttt{{\char'134}begin\,\ldots{\char'134}end}
-construction or with the short form \texttt{\$\,\ldots\$}. You
-can use any of the symbols and structures,
-from $\alpha$ to $\omega$, available in
-\LaTeX~\cite{Lamport:LaTeX}; this section will simply show a
-few examples of in-text equations in context. Notice how
-this equation:
+inline or in-text formula.  
 
-\begin{math}
-  \lim_{n\rightarrow \infty}x=0
-\end{math},
 
-set here in in-line math style, looks slightly different when
-set in display style.  (See next section).
-
-\subsubsection{Display Equations}
-
-A numbered display equation---one set off by vertical space from the
-text and centered horizontally---is produced by the \textbf{equation}
-environment. An unnumbered display equation is produced by the
-\textbf{displaymath} environment.
+\subsubsection{Tracking H1N1 Epidemic Using Search Queries on {\itshape Baidu} in China }
 
 Again, in either environment, you can use any of the symbols
 and structures available in \LaTeX\@; this section will just
@@ -103,19 +69,6 @@ First, consider the equation, shown as an inline equation above:
 
 
 \subsection{Using {\itshape Twitter} API Data to Track Epidemics}
-
-Citations to articles~\cite{bowman:reasoning, clark:pct, braams:babel,
-  herlihy:methodology}, conference proceedings~\cite{clark:pct} or
-maybe books \cite{Lamport:LaTeX, salas:calculus} listed in the
-Bibliography section of your article will occur throughout the text of
-your article.  You should use BibTeX to automatically produce this
-bibliography; you simply need to insert one of several citation
-commands with a key of the item cited in the proper location in the
-\texttt{.tex} file~\cite{Lamport:LaTeX}.  The key is a short reference
-you invent to uniquely identify each work; in this sample document,
-the key is the first author's surname and a word from the title.  This
-identifying key is included with each item in the \texttt{.bib} file
-for your article.
 
 The details of the construction of the \texttt{.bib} file are beyond
 the scope of this sample document, but more information can be found
