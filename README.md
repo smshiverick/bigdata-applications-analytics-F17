@@ -19,7 +19,7 @@ url: https://github.com/bigdata-i523/hid335
    abstract: >
    This paper reviews research on data mining of social media to
    predict the outbreak of epidemics (e.g. Influenza, H1N1).
-   url: https://github.com/bigdata-i523/hid335/blob/master/report.tex
+   url: https://github.com/bigdata-i523/hid335/blob/master/paper1/report.tex
    type: LaTex
    status: In Progress
 ```
@@ -36,7 +36,7 @@ paper2:
    abstract: >
       This paper reviews the use of wearable biosensors to collect
       vital health data in the treatment of opioid addiction. 
-   url: https://github.com/bigdata-i523/hid335/blob/master/report.tex
+   url: https://github.com/bigdata-i523/hid335/blob/master/paper2/report.tex
    type: LaTex
    status: in progress
 ```
