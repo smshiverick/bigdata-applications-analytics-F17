@@ -9,17 +9,9 @@
 * https://journalofbigdata.springeropen.com/articles/10.1186/2196-1115-1-2 
 
 ### Addressing Big Data Challenges for Scientific Data Infrastructure
-Demchenko, Yuri, et al. "Addressing big data challenges for scientific data infrastructure." Cloud Computing Technology and Science (CloudCom), 2012 IEEE 4th International Conference on. IEEE, 2012.
-@inproceedings{demchenko2012addressing,
-  title={Addressing big data challenges for scientific data infrastructure},
-  author={Demchenko, Yuri and Zhao, Zhiming and Grosso, Paola and Wibisono, Adianto and De Laat, Cees},
-  booktitle={Cloud Computing Technology and Science (CloudCom), 2012 IEEE 4th International Conference on},
-  pages={614--617},
-  year={2012},
-  organization={IEEE}
-}
-
-
+* Authors: Yuri Demchenko, Zhiming Zhao, Paola Grosso, Adianto Wibisono, Cees de Laat
+* Source: Cloud Computing Technology and Science (CloudCom), 2012 IEEE 4th International Conference on. IEEE, 2012.
+* https://pdfs.semanticscholar.org/aab3/3137d604ee7ba2f189b178ad87ae7fe8b951.pdf
 
 ### The Parable of Google Flu: Traps in Big Data Analysis
 * Authors: Lazer, D., R. Kennedy, G. King, and A. Vespignani. 
