@@ -27,7 +27,8 @@
 ### Monitoring influenza epidemics in China with search query from Baidu.  
 * Yuan Q, Nsoesie EO, Lv B, Peng G, Chunara R, Brownstein JS: 
 * Source: PLoS ONE 2013,8(5):e64323. [doi: 10.1371/journal.pone.0064323] 
-* [doi: 10.1371/journal.pone.0064323] 10.1371/journal.pone.0064323
+* http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0064323
+
 
 ### Twitter Improves Influenza Forecasting. 
 * Authors: Michael J. PaulMark Dredze David Broniatowski 
