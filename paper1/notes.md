@@ -8,6 +8,11 @@
 * Source: Journal Of Big Data 20141:2 https://doi.org/10.1186/2196-1115-1-2©  Herland et al.; licensee Springer. 2014
 * https://journalofbigdata.springeropen.com/articles/10.1186/2196-1115-1-2 
 
+### Detecting influenza epidemics using search engine query data.
+* Authors: J. Ginsberg, M.H. Mohebbi1, R.S. Patel1, L. Brammer, M.S. Smolinski1, & L. Brilliant 
+* Nature 457.7232 (2009): 1012-1014. APA	
+* http://li.mit.edu/Stuff/CNSE/Paper/Ginsberg09Mohebbi.pdf
+
 ### Addressing Big Data Challenges for Scientific Data Infrastructure
 * Authors: Yuri Demchenko, Zhiming Zhao, Paola Grosso, Adianto Wibisono, Cees de Laat
 * Source: Cloud Computing Technology and Science (CloudCom), 2012 IEEE 4th International Conference on. IEEE, 2012.
@@ -23,7 +28,6 @@
 * Yuan Q, Nsoesie EO, Lv B, Peng G, Chunara R, Brownstein JS: 
 * Source: PLoS ONE 2013,8(5):e64323. [doi: 10.1371/journal.pone.0064323] 
 * [doi: 10.1371/journal.pone.0064323] 10.1371/journal.pone.0064323
-
 
 ### Twitter Improves Influenza Forecasting. 
 * Authors: Michael J. PaulMark Dredze David Broniatowski 
