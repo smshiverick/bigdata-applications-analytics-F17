@@ -8,6 +8,12 @@
 * Source: Journal Of Big Data 20141:2 https://doi.org/10.1186/2196-1115-1-2©  Herland et al.; licensee Springer. 2014
 * https://journalofbigdata.springeropen.com/articles/10.1186/2196-1115-1-2 
 
+### Big data opportunities for global infectious disease surveillance. 
+* Authors: S.I. Hay, D.B. George DB, C.L. Moyes, J.S. Brownstein 
+* Source: PLoS Med 2013,10(4):e1001413. doi:10.1371/journal.pmed.1001413 
+* http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001413
+
+
 ### Detecting influenza epidemics using search engine query data.
 * Authors: J. Ginsberg, M.H. Mohebbi1, R.S. Patel1, L. Brammer, M.S. Smolinski1, & L. Brilliant 
 * Nature 457.7232 (2009): 1012-1014. APA	
