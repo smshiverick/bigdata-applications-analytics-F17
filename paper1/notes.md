@@ -8,16 +8,29 @@
 * Source: Journal Of Big Data 20141:2 https://doi.org/10.1186/2196-1115-1-2©  Herland et al.; licensee Springer. 2014
 * https://journalofbigdata.springeropen.com/articles/10.1186/2196-1115-1-2 
 
-### Twitter Improves Influenza Forecasting. 
-* Authors: Michael J. PaulMark Dredze David Broniatowski 
-* Source: PLOS-Currents: Outbreaks. Oct. 28, 2014.
-* http://currents.plos.org/outbreaks/article/twitter-improves-influenza-forecasting/#ref5
+### Addressing Big Data Challenges for Scientific Data Infrastructure
+Demchenko, Yuri, et al. "Addressing big data challenges for scientific data infrastructure." Cloud Computing Technology and Science (CloudCom), 2012 IEEE 4th International Conference on. IEEE, 2012.
+@inproceedings{demchenko2012addressing,
+  title={Addressing big data challenges for scientific data infrastructure},
+  author={Demchenko, Yuri and Zhao, Zhiming and Grosso, Paola and Wibisono, Adianto and De Laat, Cees},
+  booktitle={Cloud Computing Technology and Science (CloudCom), 2012 IEEE 4th International Conference on},
+  pages={614--617},
+  year={2012},
+  organization={IEEE}
+}
+
+
 
 ### The Parable of Google Flu: Traps in Big Data Analysis
 * Authors: Lazer, D., R. Kennedy, G. King, and A. Vespignani. 
 * Science 343 (6176): 1203–1205. March 14, 2014. 
 * https://dash.harvard.edu/handle/1/12016836  
 * full text: https://dash.harvard.edu/bitstream/handle/1/12016836/The%20Parable%20of%20Google%20Flu%20%28WP-Final%29.pdf?sequence=1
+
+### Twitter Improves Influenza Forecasting. 
+* Authors: Michael J. PaulMark Dredze David Broniatowski 
+* Source: PLOS-Currents: Outbreaks. Oct. 28, 2014.
+* http://currents.plos.org/outbreaks/article/twitter-improves-influenza-forecasting/#ref5
 
 ________________________________________________________________________________
 
