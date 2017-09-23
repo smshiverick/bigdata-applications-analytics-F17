@@ -2,15 +2,15 @@
 
 ```
 owner:
-hid: 335
-name: Sean Shiverick
-url: https://github.com/bigdata-i523/hid335
+   hid: 335
+   name: Sean Shiverick
+   url: https://github.com/bigdata-i523/hid335
 ```
 
 # Paper 1
 
 ```
-   paper1:
+paper1:
    author:  
    - Sean M. Shiverick
    hid:
