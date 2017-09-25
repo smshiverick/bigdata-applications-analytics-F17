@@ -33,6 +33,11 @@
 * 9/20/17  Updated Paper 2 title: Big Health Data, Wearable Electronic Sensors, Addiction Treatment
 * 9/20/17-9/23/17  Paper 1: Article search, literature review, writing
 
-# Online Meetings
+# Meetings
 * 9/14/17  Watched video of meeting on jabref, latex, sharelatex, github 
-* 9/18/17  Attended meeting on sharelatex, jabref, github HID format, experiments
+* 9/18/17  Attended zoom meeting on sharelatex, jabref, github HID format, experiments
+
+# Location
+* Address: Galway Drive, Dallas, Texas, 75218
+* Latitude: 32.840054
+* Longitude: -96.697841
