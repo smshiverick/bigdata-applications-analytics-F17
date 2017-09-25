@@ -27,12 +27,13 @@ Data Mining Social Media to Track Epidemics}
 
 
 \begin{abstract}
-This paper is a literature review of research on data mining of social media 
-to predict ourbreaks of epdiemics at the population level. This work shows how 
-big data analytics has applications for public health informatics.
+This paper is a literature review of research on data mining of social 
+media to predict ourbreaks of epdiemics at the population level. This work
+shows how big data analytics has applications for public health informatics.
 \end{abstract}
 
 \keywords{Data Mining, Social Media, Population Health Informatics}
+
 
 \maketitle
 
@@ -59,34 +60,31 @@ to predict epidemics are discussed. Also considered is how these approaches may
 be extended to monitor the opioid epidemic in North America \cite{volkow14}.
 
 
-\section{Big Data: Population Health Informatics}
+\subsection{Public Health Informatics}
 
-As an ambiguous term, big data lacks a single, unified definition; however, it 
-is often described in terms of: Volume, Velocity, Variety, Veracity, and Value 
-\cite{demchenko12}. The field of Health Informatics is generating huge amounts 
-of data at a rapid pace, from MRI imaging data, electronic medical records (EMRs), 
-clinical research data, to population-level data. This review focuses on data 
-collected at the population level from social media to provide insights about 
-epidemics and pandemics  \cite{hay13, herland14}. Trying to track an epidemic in 
-real-time from multitudes of incoming web posts (e.g., Twitter), involves a high 
-volume of data coming in at high velocity \cite{lamb13, paul14}. In order to be 
-of any use, diverse and often messy raw data has to be sifted through and effectively 
-organized for further analysis. The issue of Veracity raises the questions of how 
-reliable are social media posts for predicting real life events. What is the 
-relationship between data mined from social media to biological events such as 
-the spreading of disease and contagion? The question of Value evaluates the quality 
-of the data obtain in relation to intended outcomes to be attained. There may be 
-some question as to the quality of data collected from social media; however, a 
+The field of Health Informatics is generating huge amounts of data at a rapid pace,
+from MRI imaging data, electronic medical records (EMRs), clinical research data, to
+population-level data. This review focuses on population level from social media to 
+provide insights about epidemics and pandemics \cite{hay13, herland14}. Big data is 
+an ambiguous term, that lacks a single unified definition, but is often described in 
+terms of: Volume, Velocity, Variety, Veracity, and Value \cite{demchenko12}. Trying 
+to track an epidemic in real-time from multitudes of incoming web posts (e.g., 
+Twitter), involves a high volume of data coming in at high velocity \cite{lamb13, 
+paul14}. In order to be of any use, diverse and often messy raw data has to be sifted
+through and effectively organized for further analysis. The issue of Veracity raises 
+the questions of how reliable are social media posts for predicting real life events.
+What is the relationship between data mined from social media to biological events 
+such as the spreading of disease and contagion? The question of Value evaluates the 
+quality of the data obtain in relation to intended outcomes to be attained. There may
+be some question as to the quality of data collected from social media; however, a
 review of the literature suggests that mining information from social media can 
 produce data of high value. An important challenge for making sense of big data 
 is developing analytic tools adequate to handle large volumes of data in real time.
 
-
-\subsection{Social Media Data Mining}
+\subsection{Data Mining Social Media}
 
 Health Informatics research can be considered from two levels: where the data 
-is collected, and the research questions being addressed. This paper focuses on 
-population level data to address questions about epidemics. Research on social 
+is collected, and the research questions being addressed. Research on social 
 media can yield data on a range of issues related to public health, including: 
 spatiotemporal information of disease outbreaks, real-time tracking of infectious
 diseases, global distributions of various diseases, and search queries on medical 
@@ -98,8 +96,7 @@ that, as mentioned above, although it has high Volume, Velocity, and Variety, it
 could be unreliable, resulting in both low Veracity and Value \cite{hay14, lazer14}. 
 However, useful data can be extracted through data mining and analytic techniques. 
 
-
-\subsection{Using Search Query Data to Track Epidemics}
+\subsection{Using Search Queries to Track Epidemics}
 
 \subsubsection{Tracking Epidemics Using {\itshape Google} Search Terms in U.S.}
 
@@ -111,10 +108,10 @@ released weekly, but generally with a one to two week delay. In an effort to imp
 on early detection of season influenza, a team of researchers developed an automated 
 method to analyze Google search queries to track ILI terms from historical logs 
 between 2003 and 2008, using 50 million most popular searches, and CDC historical 
-data \cite{ginsburg09}. The Google Flu Trends (GFT; https://www.google.org/flutrends) 
+data \cite{ginsburg09}. The Google Flu Trends (GFT; https://www.google.org/flutrends)
 model sought to find the probability that a given search query is related to an ILI 
 of a patient visiting a physician in the same region. Ginsberg and colleagues used 
-a feature selection method to narrow  the 50 million most popular search queries down 
+a feature selection method to narrow  the 50 million most popular search queries down
 to 45. These top queries showed connections to influenza symptoms, complications, 
 remedies, that were consistent with searches by individuals with influenza. The 
 researchers based their estimates of the current level of weekly influenza based on 
@@ -122,7 +119,8 @@ the correlation of the relative frequency of search queries and the percentage o
 physician visits with patients presenting influenza-like symptoms. Thus, analyzing 
 high volume Google search queries was used to predict ILI epidemics in real time for 
 areas with a large population of web users, and provide information to the public in 
-a matter of days to help physicians and hospitals prepare and respond to the outbreak. 
+a matter of days to help physicians and hospitals prepare and respond to the 
+outbreak. 
 
 \subsubsection{Tracking H1N1 Epidemic Using {\itshape Baidu} Searches in China}
 
@@ -135,31 +133,32 @@ epidemics, (iii) defining weights and composite search index, and (iv) fitting
 regression model with keyword index to influenza case data. In the process of 
 filtering only 40 of 94 keywords were correlated with the case data, and only 8 
 of these 40 keywords were used as the optimal set in the composite search index. 
-As expected, the search index captured seasonal variation of influenza epidemics in 
-the Winter and Spring, indicating a good predictor for tracking influenza activity
+As expected, the search index captured seasonal variation of influenza epidemics 
+in the Winter and Spring, indicating a good predictor for tracking influenza activity
 in China.  Their regression model accounted for 95 percent of the variability in 
 influenza case data (ICD), and the model was validated for a test period in 2012. 
 The mean absolute percent error rate was less than 11 percent for the validation 
 test data. A limitation acknowledged by the authors is the relatively small initial 
-number of keyword search terms compared to those reported by Ginsberg et al. with 
-the Google Flu Trends model. This study contributes to the evidence showing that novel 
+number of keyword search terms compared to those reported by Ginsberg et al. with the
+Google Flu Trends model. This study contributes to the evidence showing that novel
 approaches using big data can help provide early indicators for disease outbreak, 
-and can provide information on epidemic activity as a supplement to official sources, 
+and can provide information on epidemic activity as a supplement to official sources,
 rather than a replacement. Another limitation of using search query data is that, 
 although the keywords selected for use in this model performed well at capturing 
 the temporal trend in the epidemic, the same keywords may not reflect the trend of 
 an influenza epidemic at a future time. The authors also noted the lack of internet 
-access in rural areas, which underscores the fact that effective tracking of epidemics 
-based on search queries relies on internet access. Furthermore, “correlation does 
-not imply causation”, and caution should be taken in evaluating predictions based 
-on correlational data.    
+access in rural areas, which underscores the fact that effective tracking of 
+epidemics based on search queries relies on internet access. Furthermore, 
+“correlation does not imply causation”, and caution should be taken in evaluating 
+predictions based on correlational data.    
+
 
 \subsection{Using {\itshape Twitter} API Data to Track Epidemics}
 
 The details of the construction of the \texttt{.bib} file are beyond
 the scope of this sample document, but more information can be found
-in the \textit{Author's Guide}, and exhaustive details in the
-\textit{\LaTeX\ User's Guide} by Lamport~\shortcite{Lamport:LaTeX}.
+in the \textit{Author's Guide}, and exhaustive details in the \textit{\LaTeX\ 
+User's Guide} by Lamport~\shortcite{Lamport:LaTeX}.
 
 This article shows only the plainest form of the citation command,
 using \texttt{{\char'134}cite}.
@@ -170,8 +169,8 @@ added to rfernces with the {\it url} filed. They are not to be
 included in the {\it howpublished} or {\it note} field. 
 
 
+\subsection{Conclusions}
 
-\section{Conclusions}
 
 \subsubsection{How Reliable is Social Media Data for Monitoring Epidemics?}
 
@@ -185,7 +184,7 @@ of these follow.  There is still the Bibliography to deal with; and we
 will make a disclaimer about that here: with the exception of the
 reference to the \LaTeX\ book, the citations in this paper are to
 articles which have nothing to do with the present subject and are
-used as examples only \cite{Paul2014}.
+used as examples only.
 
 
 \begin{acks}
