@@ -37,7 +37,8 @@
 
 # Meetings
 * 9/14/17  Watched video of meeting on jabref, latex, sharelatex, github 
-* 9/18/17  Attended zoom meeting on sharelatex, jabref, github HID format, experiments
+* 9/18/17  Attended online zoom meeting on sharelatex, jabref, github HID format, experiments
+* 9/25/17  Attended online zoom meeting on paper1, shareLatex, github
 
 # Location
 * Address: Galway Drive, Dallas, Texas, 75218
