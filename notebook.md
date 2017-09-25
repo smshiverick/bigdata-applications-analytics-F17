@@ -20,19 +20,20 @@
 * 8/25/17-9/01/17  Lessons 1-6a: Emerging Technologies, Data Deluge, Jobs, Trends(A-C), Digital Disruption, Computing Models(A)
 * 9/14/17  Lesson 6B: Computer Model, Lessons: 7, 8, 9
 * 9/15/17  Lesson 16: Course Motivation Conclusions
-* (to do)  Watch remaining video lessons
+* (TO DO)  Watch remaining video lessons
 
 # Practice
 * 9/07/17  Configured computer to use pyenv python 2.7.13 and pyenv python 3.6.2 on OSX
 * 9/08/17-9/09/17  Python: Review programming examples, posted to github 
 * 9/14/17  Python: Create PANDAS iPython notebook for review: Data Structures, Indexing, Functions
+* (TO DO)  Create course experiment for graphing with Seaborn in Python
 
 # Writing
 * 9/05/17  Topic for Paper 1: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics 
 * 9/07/17  Installed LaTex, aquaMacs, and JabRef; still learning
 * 9/12/17  Topic for Paper 2: Health Coverage, Wearables, Internet of Things 
 * 9/20/17  Updated Paper 2 title: Big Health Data, Wearable Electronic Sensors, Addiction Treatment
-* 9/20/17-9/23/17  Paper 1: Article search, literature review, writing
+* 9/20/17-9/24/17  Paper 1: Article search, literature review, writing, updating report.bib, report.tex
 
 # Meetings
 * 9/14/17  Watched video of meeting on jabref, latex, sharelatex, github 
