@@ -13,6 +13,7 @@
 * 9/07/17  Initialized Github repository with README.md, license, .gitignore, and created course notebook
 * 9/08/17  Submitted github pull request to correct minor typos on Course webpage 
 * 9/20/17  Update github HID README, paper1 LaTex templates, report.bib, report.tex 
+* 9/25/17  Updated course notebook to include sections on Meetings and Location latitude, longitude
 
 #  Theory
 * 8/25/17-9/01/17  Read Introduction and Watched Course Motivation Video Lectures by Geoffrey Fox:
