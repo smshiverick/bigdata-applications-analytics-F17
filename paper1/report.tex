@@ -12,7 +12,7 @@
 \pagestyle{plain} % removes running headers
 
 \begin{document}
-\title{Big Data Analytics, Data Mining, Health Informatics: 
+\title{Big Data Analytics, Data Mining, and Health Informatics: 
 Data Mining Social Media to Track Epidemics}
 \author{Sean M. Shiverick}
 % \orcid{1234-5678-9012}
@@ -101,7 +101,7 @@ However, useful data can be extracted through data mining and analytic technique
 \subsubsection{Tracking Epidemics Using {\itshape Google} Search Terms in U.S.}
 
 Seasonal influenza is an acute viral infection that spreads easily from person to 
-person , circulates across the world, affecting people of every age. Traditional 
+person, circulates across the world, affecting people of every age. Traditional 
 flu monitoring estimates from the U.S. Center of Disease Control and Prevention 
 (CDC) based on physician reports of patients with influenza-like illness (ILI) are 
 released weekly, but generally with a one to two week delay. In an effort to improve 
@@ -124,40 +124,37 @@ outbreak.
 
 \subsubsection{Tracking H1N1 Epidemic Using {\itshape Baidu} Searches in China}
 
-Researchers in China used a similar method to monitor influenza activity based 
-on internet search query data from Baidu (baidu.com) compared to influenza case 
-counts from the Chinese Ministry of Health (MOH) between 2009 to 2012 (during the 
-H1N1 epidemic) \cite{yuan13}. This approach was based on four parts (i) selecting 
-keyword terms related to influenza, (ii) filtering keywords unrelated to flu 
-epidemics, (iii) defining weights and composite search index, and (iv) fitting 
-regression model with keyword index to influenza case data. In the process of 
-filtering only 40 of 94 keywords were correlated with the case data, and only 8 
-of these 40 keywords were used as the optimal set in the composite search index. 
-As expected, the search index captured seasonal variation of influenza epidemics 
-in the Winter and Spring, indicating a good predictor for tracking influenza activity
-in China.  Their regression model accounted for 95 percent of the variability in 
-influenza case data (ICD), and the model was validated for a test period in 2012. 
-The mean absolute percent error rate was less than 11 percent for the validation 
-test data. A limitation acknowledged by the authors is the relatively small initial 
-number of keyword search terms compared to those reported by Ginsberg et al. with the
-Google Flu Trends model. This study contributes to the evidence showing that novel
-approaches using big data can help provide early indicators for disease outbreak, 
-and can provide information on epidemic activity as a supplement to official sources,
-rather than a replacement. Another limitation of using search query data is that, 
-although the keywords selected for use in this model performed well at capturing 
-the temporal trend in the epidemic, the same keywords may not reflect the trend of 
-an influenza epidemic at a future time. The authors also noted the lack of internet 
-access in rural areas, which underscores the fact that effective tracking of 
-epidemics based on search queries relies on internet access. Furthermore, 
-“correlation does not imply causation”, and caution should be taken in evaluating 
-predictions based on correlational data.    
-
+Researchers in China used a similar method to monitor influenza activity based on
+internet search query data from Baidu (baidu.com) compared to influenza case counts 
+from the China’s Ministry of Health (MOH) between 2009 to 2012 (during H1N1 epidemic) 
+\cite{yuan13}. This approach was based on four parts (1) selecting keyword terms related 
+to influenza, (2) filtering keywords unrelated to flu epidemics, (3) defining weights 
+and composite search index, and (4) fitting regression model with keyword index to 
+influenza case data. In the process of filtering only 40 of 94 keywords were correlated 
+with the case data, and only 8 of these 40 keywords were used as the optimal set in the 
+composite search index. As expected, the search index captured seasonal variation of 
+influenza epidemics in the Winter and Spring, indicating a good predictor for tracking 
+influenza activity in China. The regression model accounted for 95 percent of the
+variability in influenza case data (ICD), and the model was validated for a test period 
+in 2012. The mean absolute percent error rate was less than 11 percent for the validation
+test data. This research yields additional evidence that novel approaches using big data 
+can provide early indicators of epidemic activity that supplement official public health 
+information sources, rather than replacing them. A limitation acknowledged by the authors
+is the relatively small initial number of keyword search terms used compared to the 
+Google Flu Trends (GFT) project cite{ginsberg09}. Another limitation of using search 
+query data is that, although the keywords selected in this model performed well at 
+capturing temporal trends in the H1N1 epidemic, the same keywords may not reflect the 
+trend of an influenza epidemic at a future time. The authors also noted the lack of 
+internet access in rural areas, which underscores the fact that effective tracking of 
+epidemics based on search queries relies on internet access. Furthermore, caution should 
+be used when evaluating predictions based on correlational data, as causation cannot be 
+inferred from correlation.
 
 \subsection{Using {\itshape Twitter} API Data to Track Epidemics}
 
 The details of the construction of the \texttt{.bib} file are beyond
 the scope of this sample document, but more information can be found
-in the \textit{Author's Guide}, and exhaustive details in the \textit{\LaTeX\ 
+in the \textit{Author's Guide}, and exhaustive details in the \textit{\LaTeX\
 User's Guide} by Lamport~\shortcite{Lamport:LaTeX}.
 
 This article shows only the plainest form of the citation command,
@@ -181,8 +178,8 @@ included in the {\it howpublished} or {\it note} field.
 This paragraph will end the body of this sample document.  Remember
 that you might still have Acknowledgments or Appendices; brief samples
 of these follow.  There is still the Bibliography to deal with; and we
-will make a disclaimer about that here: with the exception of the
-reference to the \LaTeX\ book, the citations in this paper are to
+will make a disclaimer about that here: ''with the exception of the
+reference to the \LaTeX\ book``, the citations in this paper are to
 articles which have nothing to do with the present subject and are
 used as examples only.
 
