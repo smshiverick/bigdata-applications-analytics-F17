@@ -47,8 +47,7 @@ In the information age, \textit{Big Data} offers great promise: to fuel innovati
 generate new revenue streams, and transform society \cite{gupta15}. Can the 
 potential of big data be harnessed for the greater good, to prevent disease, 
 and improve health? Seasonal influenza epidemics are a major concern for public 
-health, resulting each year in an estimated 250,000 to 500,000 deaths worldwide 
-\cite{who17}. This paper explores big data in public health informatics, 
+health, resulting each year in an estimated 250,000 to 500,000 deaths worldwide \cite{who17}. This paper explores big data in public health informatics, 
 specifically the use of data mining to track epidemics and the spread of 
 contagious disease \cite{hay13}. Epidemic spreading is a complex phenomenon, 
 however, based on contact networks between individuals and distributed by 
@@ -120,7 +119,7 @@ outbreak.
 
 \subsubsection{Tracking H1N1 Epidemic Using {\itshape Baidu} Searches in China}
 
-in China, researchers  used a similar method to monitor influenza activity based on
+In China, researchers used a similar method to monitor influenza activity based on
 internet search query data from Baidu ({\it baidu.com}) compared to influenza case counts 
 from the Chinese Ministry of Health (MOH) between 2009 to 2012 (during H1N1 epidemic) 
 \cite{yuan13}. This approach was based on four parts (1) selecting keyword terms related 
@@ -148,29 +147,50 @@ inferred from correlation.
 
 \subsection{Using {\itshape Twitter} API Data to Track Epidemics}
 
+Twitter is a free online social networking and microblogging service, where users can send 
+and read messages of 140 characters (i.e., ``tweets''). As of 2017, Twitter has more than 
+320 million monthly active users (67 million in U.S.), with an estimated 500 million tweets 
+posted per day ({\it https://about.twitter.com}). Twitter users share their perspectives and 
+reactions on a wide range of topics, approximately 80 percent from handheld mobile devices, 
+acting as ``sensors'' of events in real time cite{achrekar12}. The Twitter stream provides 
+a rich data source for tracking or forecasting general sentiment, political attitudes, 
+linguistic variation, detecting earthquakes, and disease surveillance. The large volume of 
+users provides a high likelihood that ILI epidemic information is posted; however, Twitter 
+post data is noisy and perhaps unreliable insofar as it can be difficult to differentiate 
+posts about the flu based on instances of concerned awareness ({\it ``I am worried about 
+the swine flu epidemic!''}) versus actual infection, ({\it ``Robbie might have swine flu. 
+I am worried.''})\cite{lamb13}. Despite the noise in Twitter data from much useless chatter, 
+useful information be found. 
+
 \subsubsection{Using Twitter to Track Disease Activity and Public Concern in the 
 U.S. during the Influenza A H1N1 Pandemic {signorini11}}
 
-Efforts to monitor public health have also extracted information from Twitter, a 
-free online social networking and microblogging service, where users can send and 
-read messages of 140 characters (i.e., “tweets”). As of 2017, Twitter has more than 320 
-million monthly active users (67 million in U.S.), with an estimated 500 million tweets 
-posted per day {\it https://about.twitter.com}. Twitter users share their perspectives 
-and reactions on a wide range of topics, approximately 80 percent from handheld mobile 
-devices, acting as “sensors” of events in real time cite{achrekar12}. The Twitter stream 
-provides a rich data source for tracking or forecasting general sentiment, political 
-attitudes, linguistic variation, detecting earthquakes, and disease surveillance. The 
-large volume of users provides a high likelihood that ILI epidemic information is posted; 
-however, Twitter post data is noisy and perhaps unreliable insofar as it can be difficult 
-to differentiate posts about the flu based on instances of concerned awareness ({\it 
-``I am worried about the swine flu epidemic!''}) versus actual infection, ({\it ``Robbie 
-might have swine flu. I am worried.''})\cite{lamb13}. Despite the noise in Twitter data 
-from much useless chatter, useful information be found. In a 2011 study, researchers 
-searched through post data from Twitter`s streaming application programmers interface 
-(API) during the H1N1 epidemic (10/1/2009 -5/20/2010) across spatiotemporal areas of 
-the U.S. to predict weekly ILI levels {signorini11}. Tweets were sifted according to 
-keywords related to H1N1 (flu, swine, influenza) and additional terms about vaccines, 
-side effects, and/or vaccine shortages.
+In a 2011 study, researchers searched through post data from Twitter`s streaming 
+application programmer`s interface (API) during the H1N1 epidemic (October 2009 to May 2010) 
+across spatiotemporal areas of the U.S. to predict weekly ILI levels {signorini11}. Tweets 
+were sifted according to keywords related to H1N1 (flu, swine, influenza) and additional 
+terms about vaccines, side effects, and/or vaccine shortages. The first data set consisted 
+of 951,697 tweets containing influenza-related keywords from 334,840,972 tweets extracted 
+between April 29 and June 1, 2009 (results reported as a percentage of observed tweets). 
+These tweets represent just over 1% of the sample tweet volume, and this percentage declined 
+rapidly over time as the number of reported H1N1 cases increased. In the U.S. surveillance 
+programs track reported influenza-like illness (ILI) seasonally (October to May), monitoring 
+the total number of patients seen along with the number with ILIs reported. Quantitative 
+estimates of ILI values based on the Twitter stream were constructed support-vector 
+regression and leave-one-out cross-validation. Weekly ILI values were estimated using a 
+model trained on roughly 1 million influenza-related tweets obtained between October, 2009 
+to May 2010. Point estimates of national ILI values produced by the system were good with 
+an average error of 0.28 percent. A regional model, based on significantly fewer tweets, 
+approximated the epidemic curve for CDC region 2 (New York, New Jersey) as reported by the 
+ILI data, but the estimate was less precise with an average error of 0.37 percent. In terms 
+of public interest, Twitter users' interest in antiviral drugs such dropped as official 
+disease reports indicated most influenza cases were relatively mild, even as the number of 
+cases was increasing. In addition, interest in hand hygiene and face masks was associated 
+with public health messages from CDC.
+
+\subsubsection{Twitter Improves Seasonal Influenza Prediction. \cite{achrekar12}}
+
+
 
 
 \subsection{Conclusions}
@@ -182,13 +202,6 @@ side effects, and/or vaccine shortages.
 \subsubsection{Can Data Mining Be Used to Track Opioid Epidemic?}
 
 
-This paragraph will end the body of this sample document.  Remember
-that you might still have Acknowledgments or Appendices; brief samples
-of these follow.  There is still the Bibliography to deal with; and we
-will make a disclaimer about that here: ''with the exception of the
-reference to the \LaTeX\ book``, the citations in this paper are to
-articles which have nothing to do with the present subject and are
-used as examples only.
 
 
 \begin{acks}
