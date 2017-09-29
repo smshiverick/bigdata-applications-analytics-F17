@@ -21,15 +21,15 @@
 * 2017/09/25  Updated course notebook to include sections on Meetings and Location latitude, longitude
 
 #  Theory
-* 2017/08/25-9/01  Read Introduction and Watched Course Motivation Video Lectures by Geoffrey Fox:
-* 2017/08/25-9/01  Lessons 1-6a: Emerging Technologies, Data Deluge, Jobs, Trends(A-C), Digital Disruption, Computing Models(A)
+* 2017/08/25-09/01  Read Introduction and Watched Course Motivation Video Lectures by Geoffrey Fox:
+* 2017/08/25-09/01  Lessons 1-6a: Emerging Technologies, Data Deluge, Jobs, Trends(A-C), Digital Disruption, Computing Models(A)
 * 2017/09/14  Lesson 6B: Computer Model, Lessons: 7, 8, 9
 * 2017/09/15  Lesson 16: Course Motivation Conclusions
 * (TO DO)  Watch remaining video lessons
 
 # Practice
 * 2017/09/07  Configured computer to use pyenv python 2.7.13 and pyenv python 3.6.2 on OSX
-* 2017/09/08-9/09  Python: Review programming examples, posted to github 
+* 2017/09/08-09/09  Python: Review programming examples, posted to github 
 * 2017/09/14  Python: Create PANDAS iPython notebook for review: Data Structures, Indexing, Functions
 * (TO DO)  Create course experiment for graphing with Seaborn in Python
 
@@ -39,6 +39,7 @@
 * 2017/09/12  Topic for Paper 2: Health Coverage, Wearables, Internet of Things 
 * 2017/09/20  Updated Paper 2 title: Big Health Data, Wearable Electronic Sensors, Addiction Treatment
 * 2017/09/20-9/24  Paper 1: Article search, literature review, writing, updating report.bib, report.tex
+* 2017/09/28-9/30  Paper 1: Writing body of the text, reviewing, updating report.bib, report.tex
 
 # Location
 * Address: Galway Drive, Dallas, Texas, 75218
