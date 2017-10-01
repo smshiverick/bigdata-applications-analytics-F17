@@ -19,9 +19,9 @@ paper1:
    abstract: >
        This paper reviews research on data mining of social media to
        predict the outbreak of epidemics (e.g. Influenza, H1N1).
-   url: https://github.com/bigdata-i523/hid335/blob/master/paper1/report.tex
+   url: https://github.com/bigdata-i523/hid335/blob/master/paper1/report.pdf
    type: LaTex
-   status: In Progress
+   status: 95%
    chapter: Health
 ```
    
