@@ -15,7 +15,9 @@ paper1:
    - Sean M. Shiverick
    hid:
    - 335
-   title: Big Data Analytics, Data Mining, Health Informatics
+   title: >
+       Big Data Analytics, Data Mining, and Public Health Informatics: 
+       Using Data Mining of Social Media to Track Epidemics
    abstract: >
        This paper reviews research on data mining of social media to
        predict the outbreak of epidemics (e.g. Influenza, H1N1).
