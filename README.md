@@ -11,7 +11,7 @@ owner:
 
 ```
 paper1:
-   author:  
+   author:
    - Sean M. Shiverick
    hid:
    - 335
@@ -22,6 +22,7 @@ paper1:
    url: https://github.com/bigdata-i523/hid335/blob/master/paper1/report.tex
    type: LaTex
    status: In Progress
+   chapter: Health
 ```
    
 # Paper 2
