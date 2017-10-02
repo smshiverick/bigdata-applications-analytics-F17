@@ -4,6 +4,7 @@
 * 09/14/17  Watched video of meeting on jabref, latex, sharelatex, github 
 * 09/18/17  Attended online zoom meeting on sharelatex, jabref, github HID format, experiments
 * 09/25/17  Attended online zoom meeting on paper1, shareLatex, github
+* 10/02/17  Attended online zoom meeting on paper1, question about table, figure
 
 # Logistics    
 *	08/25-09/01/17  Read Course Organization and Introduction, and Piazza Folders curation
@@ -31,7 +32,7 @@
 * 09/07/17  Configured computer to use pyenv python 2.7.13 and pyenv python 3.6.2 on OSX
 * 09/08-09/09/17  Python: Review programming examples, posted to github 
 * 09/14/17  Python: Create PANDAS iPython notebook for review: Data Structures, Indexing, Functions
-* (TO DO)  Create course experiment for graphing with Seaborn in Python
+* 10/02/17  Added experiment for creating plots in Python with Seaborn
 
 # Writing
 * 09/05/17  Topic for Paper 1: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics 
