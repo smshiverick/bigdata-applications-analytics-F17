@@ -33,6 +33,7 @@
 * 09/08-09/09/17  Python: Review programming examples, posted to github 
 * 09/14/17  Python: Create PANDAS iPython notebook for review: Data Structures, Indexing, Functions
 * 10/02/17  Added experiment for creating plots in Python with Seaborn
+* 10/03/17  Added experiment on Using Pandas to Merge CSV, JSON, and SQL files
 
 # Writing
 * 09/05/17  Topic for Paper 1: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics 
