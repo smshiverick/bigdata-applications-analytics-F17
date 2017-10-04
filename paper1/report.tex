@@ -51,7 +51,9 @@ other epidemics such as the opioid crisis in North America? \cite{volkow14}
 Epidemic spreading is a complex phenomenon based on contact networks between 
 individuals and distributed by transportation networks \cite{Colizza06}. Some 
 question remains as to whether prediction models based on social networking 
-platforms can be generalized to other epidemics. 
+platforms can be generalized to other epidemics. Limitations of using social 
+media data to predict epidemics are discussed.
+
 
 
 \subsection{Public Health Informatics}
@@ -104,7 +106,7 @@ released weekly \cite{cdc17}, but generally with a one to two week delay. In an 
 to improve on early detection of season influenza, a team of researchers developed an 
 automated method to analyze Google search queries to track ILI terms from historical 
 logs between 2003 and 2008, using 50 million most popular searches, and CDC historical 
-data \cite{ginsburg09}. The {\it Google Flu Trends} (GFT; https://www.google.org/flutrends)
+data \cite{ginsburg09}. The {\it Google Flu Trends} (GFT, https://www.google.org/flutrends)
 model sought to find the probability that a given search query is related to an ILI of a 
 patient visiting a physician in the same region. GFT used a feature selection method to 
 narrow  the 50 million most popular search queries down to 45. These top queries showed 
@@ -142,6 +144,22 @@ the trend of an influenza epidemic at a future time. The authors also noted the 
 internet access in rural areas, which underscores the fact that effective tracking of 
 epidemics based on search queries relies on internet access. Furthermore, caution should 
 be used when evaluating correlational data, as causation cannot be inferred from correlation.
+
+\begin{table}
+  \caption{Frequency of Special Characters}
+  \label{tab:freq}
+  \begin{tabular}{ccl}
+    \toprule
+    Non-English or Math&Frequency&Comments\\
+    \midrule
+    \O & 1 in 1,000& For Swedish names\\
+    $\pi$ & 1 in 5& Common in math\\
+    \$ & 4 in 5 & Used in business\\
+    $\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
+  \bottomrule
+\end{tabular}
+\end{table}
+
 
 \subsection{Using {\itshape Twitter} API Data to Track Epidemics}
 
@@ -189,6 +207,13 @@ messages from CDC. A limitation of the study is that only a limited number of se
 terms and one prediction method was used. An important question is whether the results 
 could be improved using broader search terms and other prediction models. 
 
+\begin{figure}
+\includegraphics[height=1in, width=1in]{images/fly}
+\caption{A sample black and white graphic
+that has been resized with the \texttt{includegraphics} command.}
+\end{figure}
+
+
 \subsubsection{Twitter Improves Seasonal Influenza Prediction}
 
 In a 2012 study, researchers implemented a system using an online social network (OSN)
@@ -217,11 +242,8 @@ populations in other countries \cite{yuan13}.
 
 \subsection{{\it Limitations} of Using Search Queries and Social Media Data to Track Epidemics}
 
-The research reviewed above shows how data mining search queries and twitter posts for 
-ILI related information provides an early detection signal to supplement existing epidemic 
-monitoring systems and may help improve public health responses and prevention. There is 
-some evidence that influenza forecasting models based on Twitter data performed better 
-than general search query data \cite{paul14}; the Google Flu Trends (GFT) algorithms 
+There is some evidence that influenza forecasting models based on Twitter data performed 
+better than general search query data \cite{paul14}. Google Flu Trends (GFT) algorithms 
 underestimated ILI in the U.S. at the start of the H1N1 (i.e. {\it swine flu}) pandemic 
 in 2009 \cite{butler13}, and over-predicted seasonal influenza in January 2013 compared 
 to the CDC ILI by almost double \cite{lazer14}. As described above, there are important 
@@ -229,33 +251,15 @@ limitations in using social media data for predicting epidemics: First, internet
 and Twitter usage is not uniform by geographical region. Urban areas have higher density 
 of internet connections than rural areas \cite{yuan13}, and coastal regions of the U.S. 
 (CA, NY) produced more tweets per person than Midwestern U.S. states (or Europe) 
-\cite{achrekar12}. Thus, performance of seasonal influenza predictions models may be 
-limited to regions with high internet access and where tweets are more frequent. Second, 
+\cite{achrekar12}. Thus, performance of seasonal influenza predictions models may be best 
+applied to regions with high internet access and where tweets are more frequent. Second, 
 exact demographic information about the Twitter population is not easy to estimate (or 
 unknown) and the demographic of internet users does not represent characteristics of the 
-general population. If we consider that outbreaks such as swine flu or avian flu originated 
-at points of contact between humans and domesticated animals in agricultural areas, then 
-internet searches or Twitter posts would provide limited information to predict epidemic 
-spreading in the larger population. Third, though promising, the results of this research 
-are based on correlations between often noisy internet search queries or Twitter posts and 
-physician reports of ILI compiled by official governmental sources. We should be cautious 
-in evaluating predictions about serious health concerns such as epidemics or pandemics 
-based on correlational evidence as the data do not support causal inferences . 
-
-\begin{table}
-  \caption{Frequency of Special Characters}
-  \label{tab:freq}
-  \begin{tabular}{ccl}
-    \toprule
-    Non-English or Math&Frequency&Comments\\
-    \midrule
-    \O & 1 in 1,000& For Swedish names\\
-    $\pi$ & 1 in 5& Common in math\\
-    \$ & 4 in 5 & Used in business\\
-    $\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
-  \bottomrule
-\end{tabular}
-\end{table}
+general population.  Third, though promising, the results of this research are based on 
+correlations between often noisy internet search queries or Twitter posts and 
+physician reports of ILI compiled by official governmental sources. Caution should be  
+used in evaluating predictions about serious health concerns such as epidemics or 
+pandemics based on correlational evidence as the data do not support causal inferences . 
 
 \begin{figure}
 \includegraphics[height=1in, width=1in]{images/fly}
@@ -264,29 +268,38 @@ that has been resized with the \texttt{includegraphics} command.}
 \end{figure}
 
 
+\subsubsection{Can these methods be extended to survey other types of epidemics?} 
+
+The dynamics of epidemic spreading is a 
+complex phenomenon, based on contact networks of person-to-person interaction, indirect 
+exposure, and transmission highways such as the {\it airline transportation network} (ATN) 
+\cite{Colizza06}. Epidemics are described in terms of the proportion of the population 
+infected, those yet to be infected, and the rate of transmission \cite{hethcote00}. 
+In addition, the structure of the contact network can influence epidemic spreading 
+\cite{pastor01}. For example, in the case of simple contagion, weak ties among 
+acquaintances or infrequent associations provide shortcuts between distant nodes that 
+reduce distance within the network \cite{granovetter73} and can facilitate the spread of 
+disease. Furthermore, networks with ``small world'' properties have many nodes with few 
+connections, but a small number of highly connected nodes that can rapidly transmit 
+contagion throughout the network \cite{watts98}. Analyzing the correlation between 
+Twitter posts and rate of ILI reports does not capture the complexity underlying disease 
+epidemics and pandemics. By analyzing the structure of social media networks, future 
+research may help to identify how points of connection online is associated with epidemic 
+spreading in the external world \cite{zhu17}. There have been some efforts to address the 
+opioid crisis in North America?\cite{smith16}. The emergence of new technologies, such as 
+wearable biosensors \cite{carreiro15} may help improve geospatial mapping other epidemics.
+
 \section{Conclusion}
 
 Big data mining of social media has tremendous potential to detect trends and confirm 
 observations based on real time events, providing opportunities to monitor infectious 
-disease on a global level \cite{hay13}. Can these methods be extended to survey other 
-types of epidemics such as the opioid crisis in North America?\cite{smith16} Epidemics are 
-described in terms of the proportion of the population infected, those yet to be infected, 
-and the rate of transmission \cite{hethcote00}. The dynamics of epidemic spreading is a 
-complex phenomenon, based on contact networks of person-to-person interaction, indirect 
-exposure, and transmission highways such as the {\it airline transportation network} (ATN) 
-\cite{Colizza06}. In addition, the structure of the contact network can influence epidemic 
-spreading \cite{pastor01}. For example, in the case of simple contagion, weak ties among 
-acquaintances or infrequent associations provide shortcuts between distant nodes that reduce 
-distance within the network \cite{granovetter73} and can facilitate the spread of disease. 
-Furthermore, networks with ``small world'' properties have many nodes with few connections, 
-but a small number of highly connected nodes that can rapidly transmit contagion throughout 
-the network \cite{watts98}. Analyzing the correlation between Twitter posts and rate of ILI 
-reports does not capture the complexity underlying disease epidemics and pandemics. By 
-analyzing the structure of social media networks, future research may help to identify how 
-points of connection online is associated with epidemic spreading in the external world 
-\cite{zhu17}. The emergence of new technologies, such as wearable biosensors 
-\cite{carreiro15} may help improve geospatial mapping seasonal influenza and other epidemics.
-A combination of approaches may prove to be more effective than any individual approach. 
+disease on a global level. The research reviewed above shows how search queries and 
+Twitter data about ILI related information provides an early detection signal that 
+supplements existing epidemic monitoring systems and may help improve public health 
+responses and prevention. As described above, these approaches to predicting edidemic
+may work best in areas of high population density with a high internet connectivity
+and social media usage, and thus are better suited to larger urban areas than 
+predicting outbreaks in rural areas. 
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{report} 
