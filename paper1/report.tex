@@ -119,6 +119,33 @@ to predict ILI epidemics in real time for areas with a large population of web u
 and provide information to the public in a matter of days to help physicians and 
 hospitals prepare and respond to the outbreak. 
 
+%\begin{table}
+%  \caption{Google Flue Trends: Top 45 search queries most correlated with CDC ILI data \cite{ginsburg09}}
+%  \label{tab:columns}
+%  \begin{tabular}{ccl}
+%    \toprule
+%     Search query topic& N& Weighted\\
+%    \midrule
+%     Influenza Complication& 11& 18.15\\
+%     Cold or flue remedy& 8& 5.05\\
+%     General Influenza symptoms& 5& 2.6\\
+%     Term for influenza& 4& 3.74\\
+%     Specific influenza symptom& 4& 2.54\\
+%     Symptoms of influenza complication& 4& 2.21\\
+%     Antibiotic medication& 3& 6.23\\
+%     General influenza remedies& 2& 0.18\\
+%     Symptoms of a related disease& 2& 1.66\\
+%     Antiviral medication& 1& 0.39\\
+%     Related disease& 1& 6.66\\
+%     Unrelated to influenza& 45& 49.40\\
+%    \midrule
+%     The number of queries in each topic is indicated, as well as query-volume-weighted counts, 
+%reflecting the relative frequency of queries in each topic.\\ 
+%  \bottomrule
+%  \end{tabular}
+%\end{table}
+
+
 \subsubsection{Tracking H1N1 Epidemic Using {\itshape Baidu} Queries in China}
 
 A research study in China monitored influenza activity by comparing internet search query 
@@ -145,20 +172,11 @@ internet access in rural areas, which underscores the fact that effective tracki
 epidemics based on search queries relies on internet access. Furthermore, caution should 
 be used when evaluating correlational data, as causation cannot be inferred from correlation.
 
-%\begin{table}
-%  \caption{Frequency of Special Characters}
-%  \label{tab:freq}
-%  \begin{tabular}{ccl}
-%    \toprule
-%   Non-English or Math&Frequency&Comments\\
-%    \midrule
-%    \O & 1 in 1,000& For Swedish names\\
-%    $\pi$ & 1 in 5& Common in math\\
-%    \$ & 4 in 5 & Used in business\\
-%    $\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
-%  \bottomrule
-%\end{tabular}
-%\end{table}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/Figure1.pdf}
+  \caption{Plot of influenza cases, fitted values and prediction based on model \cite{yuan13}} \label{fig:Figure1} 
+\end{figure}
 
 
 \subsection{Using {\itshape Twitter} API Data to Track Epidemics}
@@ -177,6 +195,7 @@ posts about the flu based on instances of concerned awareness ({\it ``I am worri
 the swine flu epidemic!''}) versus actual infection, ({\it ``Robbie might have swine flu. 
 I am worried.''})\cite{lamb13}. Despite the noise in Twitter data from much useless chatter, 
 useful information be obtained from mining data in the Twitter stream. 
+
 
 \subsubsection{Using Twitter to Track Disease Activity and Public Concern in the 
 U.S. during the H1N1 Pandemic.}
@@ -207,12 +226,13 @@ messages from CDC. A limitation of the study is that only a limited number of se
 terms and one prediction method was used. An important question is whether the results 
 could be improved using broader search terms and other prediction models. 
 
-%\begin{figure}
-%\includegraphics[height=1in, width=1in]{images/fly}
-%\caption{A sample black and white graphic
-%that has been resized with the \texttt{includegraphics} command.}
-%\end{figure}
-
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/Figure2.pdf}
+  \caption{Weekly plot of percentage weighted ILI visits, positively classified Twitter
+  dataset and predicted ILI rate using CDC and Twitter \cite{achrekar12}} 
+  \label{fig:Figure2} 
+\end{figure}
 
 \subsubsection{Twitter Improves Seasonal Influenza Prediction}
 
@@ -246,11 +266,11 @@ There is some evidence that influenza forecasting models based on Twitter data p
 better than general search query data \cite{paul14}. Google Flu Trends (GFT) algorithms 
 underestimated ILI in the U.S. at the start of the H1N1 (i.e. {\it swine flu}) pandemic 
 in 2009 \cite{butler13}, and over-predicted seasonal influenza in January 2013 compared 
-to the CDC ILI by almost double \cite{lazer14}. As described above, there are important 
-limitations in using social media data for predicting epidemics: First, internet access 
-and Twitter usage is not uniform by geographical region. Urban areas have higher density 
-of internet connections than rural areas \cite{yuan13}, and coastal regions of the U.S. 
-(CA, NY) produced more tweets per person than Midwestern U.S. states (or Europe) 
+to the CDC ILI by almost double \cite{lazer14} (See Figure 3). As described above, there 
+are important limitations in using social media data for predicting epidemics: First, 
+internet access and Twitter usage is not uniform by geographical region. Urban areas have 
+higher density of internet connections than rural areas \cite{yuan13}, and coastal regions 
+of the U.S. (CA, NY) produced more tweets per person than Midwestern U.S. states (or Europe) 
 \cite{achrekar12}. Thus, performance of seasonal influenza predictions models may be best 
 applied to regions with high internet access and where tweets are more frequent. Second, 
 exact demographic information about the Twitter population is not easy to estimate (or 
@@ -259,14 +279,15 @@ general population.  Third, though promising, the results of this research are b
 correlations between often noisy internet search queries or Twitter posts and 
 physician reports of ILI compiled by official governmental sources. Caution should be  
 used in evaluating predictions about serious health concerns such as epidemics or 
-pandemics based on correlational evidence as the data do not support causal inferences . 
+pandemics based on correlational evidence as the data do not support causal inferences. 
 
-%\begin{figure}
-%\includegraphics[height=1in, width=1in]{images/fly}
-%\caption{A sample black and white graphic
-%that has been resized with the \texttt{includegraphics} command.}
-%\end{figure}
-
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/Figure3.pdf}
+  \caption{GFT overestimation: GFT overestimated the prevalence of flu in 2012-2013 season
+  and overshot the actual level in 2011-2012 by more than 50 percent \cite{lazer14}} 
+  \label{fig:Figure3} 
+\end{figure}
 
 \subsubsection{Can these methods be extended to survey other types of epidemics?} 
 
