@@ -43,6 +43,7 @@
 * 09/20-09/24/17  Paper 1: Article search, literature review, writing, updating report.bib, report.tex
 * 09/28-09/30/17  Paper 1: Writing body of the text, reviewing, updating report.bib, report.tex
 * 10/04/17  Paper 1: Update abstract, introduction, limitations subsection, conclusion, and report.bib
+* 10/06/17  Paper 1: Reformatted images for Figures, and added Table and Figures to report.tex
 
 # Location
 * Address: Galway Drive, Dallas, Texas, 75218
