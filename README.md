@@ -19,8 +19,13 @@ paper1:
        Big Data Analytics, Data Mining, and Public Health Informatics: 
        Using Data Mining of Social Media to Track Epidemics
    abstract: >
-       This paper reviews research on data mining of social media to
-       predict the outbreak of epidemics (e.g. Influenza, H1N1).
+       Data mining of internet search queries and social media for influenza related keywords 
+       has been used to track seasonal influenza and correlates highly with official reports 
+       of `infuenza-like-illness' (ILI). Efforts to monitor epidemics using big data analytics 
+       can provide early detection that supplements existing systems of disease surveillance. 
+       A review of the literature shows that data extracted from social media has applications 
+       for public health informatics. Prediction models based on social media work best in 
+       areas with a high degree of internet access.  
    url: https://github.com/bigdata-i523/hid335/blob/master/paper1/report.pdf
    type: latex
    status: 95%
