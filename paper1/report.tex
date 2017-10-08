@@ -96,6 +96,15 @@ extracted by data mining and analytic techniques.
 
 \subsection{Using Search Queries to Track Epidemics}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/Figure1.pdf}
+  \caption{Comparison of GFT model estimates (black) for mid-Atlantic region of U.S. 
+  (NY, NJ, PA) against CDC-reported ILI percentages (red) between 2004 to 2008 
+  \cite{ginsburg09}} 
+  \label{fig:Figure1} 
+\end{figure}
+
 \subsubsection{Tracking Epidemics Using {\itshape Google} Search Terms in the U.S.}
 
 Seasonal influenza is an acute viral infection that spreads easily from person to 
@@ -109,41 +118,28 @@ logs between 2003 and 2008, using 50 million most popular searches, and CDC hist
 data \cite{ginsburg09}. The {\it Google Flu Trends} (GFT, https://www.google.org/flutrends)
 model sought to find the probability that a given search query is related to an ILI of a 
 patient visiting a physician in the same region. GFT used a feature selection method to 
-narrow  the 50 million most popular search queries down to 45. These top queries showed 
-connections to influenza symptoms, complications, remedies, that were consistent with 
-searches by individuals with influenza. The researchers based their estimates of the 
-current level of weekly influenza based on the correlation of the relative frequency 
-of search queries and the percentage of physician visits with patients presenting 
-influenza-like symptoms. Thus, analyzing high volume Google search queries was used 
-to predict ILI epidemics in real time for areas with a large population of web users, 
-and provide information to the public in a matter of days to help physicians and 
-hospitals prepare and respond to the outbreak. 
+narrow the 50 million most popular search queries, aggregrated from historical logs 
+between 2003 to 2008, down to 45. These top 45 search queries yielded the highest
+estimates during cross validation and were connected with influenza symptoms, 
+complications, remedies, consistent with searches by individuals with influenza. 
+Estimates of the current level of weekly influenza were based on the correlation of 
+the relative frequency of search queries and the percentage of physician visits with 
+patients presenting influenza-like symptoms. The GFT model was trained on 128 points 
+of the MidAtlantic region of the U.S. (e.g., New York, New Jersey, Pennsylvania) 
+between 2004 to 2007 with a correlation of 0.85, and validated on 42 points between 
+2007 to 2008, with a correlation of 0.96 (Figure 1). The final model, for all regions 
+in the U.S., generated correlation estimates ranging from 0.92 to 0.99 over 42 points. 
+Thus, analyzing high volume Google search queries estimated ILI percentages across 
+several regions in the U.S. about 1 to 2 weeks earlier than official CDC ILI reports. 
+Such efforst at early detection can help physicians and health care professional
+anticipate and prepare for the outbreak of influenza epidemics and pandemics. 
 
-\begin{table}
-  \caption{Google Flue Trends: Top 45 search queries most correlated with CDC ILI data \cite{ginsburg09}}
-  \label{tab:columns}
-  \begin{tabular}{ccl}
-    \toprule
-     Search query topic& N& Weighted\\
-    \midrule
-     Influenza Complication& 11& 18.15\\
-     Cold or flue remedy& 8& 5.05\\
-     General Influenza symptoms& 5& 2.6\\
-     Term for influenza& 4& 3.74\\
-     Specific influenza symptom& 4& 2.54\\
-     Symptoms of influenza complication& 4& 2.21\\
-     Antibiotic medication& 3& 6.23\\
-     General influenza remedies& 2& 0.18\\
-     Symptoms of a related disease& 2& 1.66\\
-     Antiviral medication& 1& 0.39\\
-     Related disease& 1& 6.66\\
-     Unrelated to influenza& 45& 49.40\\
-    \midrule
-     The number of queries in each topic is indicated, as well as query-volume-weighted counts, 
- reflecting the relative frequency of queries in each topic.\\ 
-  \bottomrule
-  \end{tabular}
-\end{table}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/Figure2.pdf}
+  \caption{Plot of influenza cases, fitted values and prediction based on model \cite{yuan13}} 
+  \label{fig:Figure2} 
+\end{figure}
 
 
 \subsubsection{Tracking H1N1 Epidemic Using {\itshape Baidu} Queries in China}
@@ -172,11 +168,8 @@ internet access in rural areas, which underscores the fact that effective tracki
 epidemics based on search queries relies on internet access. Furthermore, caution should 
 be used when evaluating correlational data, as causation cannot be inferred from correlation.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.5\textwidth]{images/Figure1.pdf}
-  \caption{Plot of influenza cases, fitted values and prediction based on model \cite{yuan13}} \label{fig:Figure1} 
-\end{figure}
+
+
 
 
 \subsection{Using {\itshape Twitter} API Data to Track Epidemics}
@@ -228,10 +221,10 @@ could be improved using broader search terms and other prediction models.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.5\textwidth]{images/Figure2.pdf}
+  \includegraphics[width=0.5\textwidth]{images/Figure3.pdf}
   \caption{Weekly plot of percentage weighted ILI visits, positively classified Twitter
   dataset and predicted ILI rate using CDC and Twitter \cite{achrekar12}} 
-  \label{fig:Figure2} 
+  \label{fig:Figure3} 
 \end{figure}
 
 \subsubsection{Twitter Improves Seasonal Influenza Prediction}
@@ -283,10 +276,10 @@ pandemics based on correlational evidence as the data do not support causal infe
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.5\textwidth]{images/Figure3.pdf}
+  \includegraphics[width=0.5\textwidth]{images/Figure4.pdf}
   \caption{GFT overestimation: GFT overestimated the prevalence of flu in 2012-2013 season
   and overshot the actual level in 2011-2012 by more than 50 percent \cite{lazer14}} 
-  \label{fig:Figure3} 
+  \label{fig:Figure4} 
 \end{figure}
 
 \subsection{The Dynamics of Epidemic Spreading} 
