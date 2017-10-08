@@ -28,7 +28,7 @@ paper1:
        areas with a high degree of internet access.  
    url: https://github.com/bigdata-i523/hid335/blob/master/paper1/report.pdf
    type: latex
-   status: 95%
+   status: 100%
    chapter: Health
 ```
    
