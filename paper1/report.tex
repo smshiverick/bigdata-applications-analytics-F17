@@ -96,15 +96,6 @@ extracted by data mining and analytic techniques.
 
 \subsection{Using Search Queries to Track Epidemics}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.5\textwidth]{images/Figure1.pdf}
-  \caption{Comparison of GFT model estimates (black) for mid-Atlantic region of U.S. 
-  (NY, NJ, PA) against CDC-reported ILI percentages (red) between 2004 to 2008 
-  \cite{ginsburg09}} 
-  \label{fig:Figure1} 
-\end{figure}
-
 \subsubsection{Tracking Epidemics Using {\itshape Google} Search Terms in the U.S.}
 
 Seasonal influenza is an acute viral infection that spreads easily from person to 
@@ -136,38 +127,46 @@ anticipate and prepare for the outbreak of influenza epidemics and pandemics.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.5\textwidth]{images/Figure2.pdf}
-  \caption{Plot of influenza cases, fitted values and prediction based on model \cite{yuan13}} 
-  \label{fig:Figure2} 
+  \includegraphics[width=0.5\textwidth]{images/Figure1.pdf}
+  \caption{Comparison of GFT model estimates (black) for mid-Atlantic region of U.S. 
+  (NY, NJ, PA) against CDC-reported ILI percentages (red) between 2004 to 2008 
+  \cite{ginsburg09}} 
+  \label{fig:Figure1} 
 \end{figure}
-
 
 \subsubsection{Tracking H1N1 Epidemic Using {\itshape Baidu} Queries in China}
 
-A research study in China monitored influenza activity by comparing internet search query 
+Researchers in China monitored influenza activity by comparing internet search query 
 data from {\it Baidu} (https://www.baidu.com) to influenza case counts from the Chinese 
 Ministry of Health (MOH) between 2009 to 2012 during the H1N1 epidemic \cite{yuan13}. 
-This study consisted of four parts: (i) Selecting keyword terms related to influenza, (ii) 
+The study consisted of four parts: (i) Selecting keyword terms related to influenza, (ii) 
 Filtering keywords unrelated to flu epidemics, (iii) Defining weights and composite search 
 index, and (iv) Fitting a regression model with keyword index to influenza case data. In the 
 process of filtering, only 40 of 94 keywords were correlated with the case data, and only 8 
 of these 40 keywords were used as the optimal set in the composite search index. As expected,
 the search index captured seasonal variation of influenza epidemics in the Winter and Spring,
-indicating a good predictor for tracking influenza activity in China.  The regression model 
-accounted for 95 percent of the variability in influenza case data (ICD), and the model was 
-validated for a test period in 2012. The mean absolute percent error rate was less than 11 
-percent for the validation test data. This research yields additional evidence that novel 
-approaches using big data can provide early indicators of epidemic activity that supplement 
-official public health information sources, rather than replacing them. A limitation 
-acknowledged by the authors is the relatively small initial number of keyword search terms 
-used compared to the Google Flu Trends (GFT) project \cite{ginsburg09}. Another limitation 
-of using search query data is that, although the keywords selected in this model performed 
-well at capturing temporal trends in the H1N1 epidemic, the same keywords may not reflect 
-the trend of an influenza epidemic at a future time. The authors also noted the lack of 
-internet access in rural areas, which underscores the fact that effective tracking of 
-epidemics based on search queries relies on internet access. Furthermore, caution should 
-be used when evaluating correlational data, as causation cannot be inferred from correlation.
+indicating a good predictor for tracking influenza activity in China (see Figure 2). The 
+regression model accounted for 95 percent of the variability in influenza case data (ICD), 
+and the model was validated for a test period in 2012. The mean absolute percent error rate 
+of prediction over an eight month period in 2012 was 10.6 (see Table 1). This research yields 
+additional evidence that novel approaches using big data can provide early indicators of 
+epidemic activity that supplement official public health information sources, rather than 
+replacing them. A limitation acknowledged by the authors is the relatively small initial 
+number of keyword search terms used compared to the Google Flu Trends (GFT) project 
+\cite{ginsburg09}. Another limitation of using search query data is that, although the 
+keywords selected in this model performed well at capturing temporal trends in the H1N1 
+epidemic, the same keywords may not reflect the trend of an influenza epidemic at a future 
+time. The authors also noted the lack of internet access in rural areas, which underscores 
+the fact that effective tracking of epidemics based on search queries relies on internet 
+access. Furthermore, caution should be used when evaluating correlational data, as causation 
+cannot be inferred from correlation.
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/Figure2.pdf}
+  \caption{Plot of influenza cases, fitted values and prediction based on model \cite{yuan13}} 
+  \label{fig:Figure2} 
+\end{figure}
 
 \begin{table}
   \caption{Predicted values, errors, and mean absolute percent error of prediction based 
@@ -225,26 +224,29 @@ surveillance programs track reported influenza-like illness (ILI) seasonally, fr
 to May, monitoring the total number of patients seen along with the number with ILIs 
 reported. Quantitative estimates of ILI values based on the Twitter stream were analyzed 
 using support vector regression (SVR) and leave-one-out cross-validation to test model 
-accuracy. Weekly ILI values were estimated using a model trained on roughly 1 million
-influenza-related tweets obtained between October, 2009 to May 2010. Point estimates of 
-national ILI values produced by the system were good with an average error of 0.28 percent. 
-A regional model, based on significantly fewer tweets, approximated the epidemic curve for 
-CDC region 2 (New York, New Jersey) as reported by the ILI data, but the estimate was less 
-precise with an average error of 0.37 percent. In terms of public interest, Twitter users` 
-interest in antiviral drugs dropped, as official disease reports indicated most 
-influenza cases were relatively mild, even as the number of cases was increasing. In 
-addition, interest in hand hygiene and face masks was associated with public health 
-messages from CDC. A limitation of the study is that only a limited number of search 
-terms and one prediction method was used. An important question is whether the results 
-could be improved using broader search terms and other prediction models. 
+accuracy. Figure 3 shows the weekly ILI values, nationwide, reported by the CDC (green line)
+and estimated using a model trained on roughly 1 million influenza-related Tweets (red line)
+obtained between October, 2009 to May 2010. Point estimates of national ILI values produced 
+by the system were good with an average error of 0.28 percent. The red line shows output 
+from a leave one out cross validation based on SVM estimator. A regional model, based on 
+significantly fewer tweets, approximated the epidemic curve for CDC region 2 (New York, 
+New Jersey) as reported by the ILI data, but the estimate was less precise with an average
+error of 0.37 percent. In terms of public interest, Twitter users` interest in antiviral 
+drugs dropped, as official disease reports indicated most influenza cases were relatively 
+mild, even as the number of cases was increasing. In addition, interest in hand hygiene 
+and face masks was associated with public health messages from CDC. A limitation of the 
+study is that only a limited number of search terms and one prediction method was used. 
+An important question is whether the results could be improved using broader search terms 
+and other prediction models. 
 
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth]{images/Figure3.pdf}
-  \caption{Weekly plot of percentage weighted ILI visits, positively classified Twitter
-  dataset and predicted ILI rate using CDC and Twitter \cite{achrekar12}} 
+  \caption{Weekly CDC reported (green) and Twitter estimated (red) ILI percent 
+  Nationwide (U.S., 2009 to 2010) \cite{signorini11}} 
   \label{fig:Figure3} 
 \end{figure}
+
 
 \subsubsection{Twitter Improves Seasonal Influenza Prediction}
 
@@ -257,19 +259,30 @@ and profile details of the Twitter users who commented on flu keywords (starting
 tweets and ILI was very high between 2009 to 2010 (r=0.98) during the H1N1 outbreak, but 
 the correlation dropped substantially for 2010-2011 (r=0.47) after the epidemic, suggesting 
 that noisy tweets became more prominent as H1N1 was less of an issue. To reduce noise, text 
-classification using support vector machines ({\it SVMs}) was trained on a dataset of 
-25,000 tweets to determine whether a tweet was related to a flu event or not; data cleansing 
-was conducted to remove multiple tweets posted by the same user during a single bout with 
-the same illness. These methods improved the correlation between the Twitter data and ILI 
-rates from the CDC from October 2010 to May 2011 in the U.S. (r=0.89), and Twitter data was 
-correlated with ILI rates across subregions. The authors reported that Twitter data alone 
-had higher prediction rates toward the beginning and end of the flu season, and during an 
-epidemic. In addition, age analysis suggested Twitter data best fit the age groups of 5-24 
-years and 25-49 years,  for most regions in the U.S. The results showed Twitter data can be 
-used to detect and possibly predict ongoing ILI epidemics in real time with relatively 
-low error, up to 1-2 weeks earlier than the CDC reportings. It would also be interesting to 
-determine whether these results are generalizable outside the U.S. with different 
-populations in other countries \cite{yuan13}.
+classification using support vector machines (SVM) was trained on a dataset of 25,000 tweets 
+to determine whether a tweet was related to a flu event or not; data cleansing was conducted 
+to remove multiple tweets posted by the same user during a single bout with the same illness. 
+These methods improved the correlation between the Twitter data and ILI rates from the CDC 
+from October 2010 to May 2011 in the U.S. (r=0.89), and Twitter data was correlated with 
+ILI rates across subregions. Figure 4 shows the weekly plot of percentage weighted ILI visits, 
+positively classified Twitter users and predicted ILI rate using CDC and Twitter for 2010 
+to 2011. The authors reported that Twitter data alone had higher prediction rates toward 
+the beginning and end of the flu season, and during an epidemic; however, the also noted 
+that using previous CDC ILI data offered a better assessment for making flu predictions. 
+In addition, age analysis suggested Twitter data best fit the age groups of 5-24 years 
+and 25-49 years,  for most regions in the U.S. The results showed Twitter data can be used 
+to detect and possibly predict ongoing ILI epidemics in real time with relatively low error, 
+up to 1-2 weeks earlier than the CDC reportings. It would be interesting to determine 
+whether these results could be generalized beyond the U.S. and replicated with populations 
+in other countries \cite{yuan13}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/Figure4.pdf}
+  \caption{Weekly plot of percentage weighted ILI visits, positively classified Twitter
+  dataset and predicted ILI rate using CDC and Twitter \cite{achrekar12}} 
+  \label{fig:Figure4} 
+\end{figure}
 
 
 \subsection{Limitations of Using Search Queries and Social Media Data to Track Epidemics}
@@ -278,27 +291,27 @@ There is some evidence that influenza forecasting models based on Twitter data p
 better than general search query data \cite{paul14}. Google Flu Trends (GFT) algorithms 
 underestimated ILI in the U.S. at the start of the H1N1 (i.e. {\it swine flu}) pandemic 
 in 2009 \cite{butler13}, and over-predicted seasonal influenza in January 2013 compared 
-to the CDC ILI by almost double \cite{lazer14} (See Figure 3). As described above, there 
-are important limitations in using social media data for predicting epidemics: First, 
-internet access and Twitter usage is not uniform by geographical region. Urban areas have 
-higher density of internet connections than rural areas \cite{yuan13}, and coastal regions 
-of the U.S. (CA, NY) produced more tweets per person than Midwestern U.S. states (or Europe) 
-\cite{achrekar12}. Thus, performance of seasonal influenza predictions models may be best 
-applied to regions with high internet access and where tweets are more frequent. Second, 
-exact demographic information about the Twitter population is not easy to estimate (or 
-unknown) and the demographic of internet users does not represent characteristics of the 
-general population.  Third, though promising, the results of this research are based on 
-correlations between often noisy internet search queries or Twitter posts and 
-physician reports of ILI compiled by official governmental sources. Caution should be  
-used in evaluating predictions about serious health concerns such as epidemics or 
-pandemics based on correlational evidence as the data do not support causal inferences. 
+to the CDC ILI by almost double \cite{lazer14} (shown in Figure 5). As described above, 
+there are important limitations in using social media data for predicting epidemics: 
+First, internet access and Twitter usage is not uniform by geographical region. Urban areas 
+have higher density of internet connections than rural areas \cite{yuan13}, and coastal 
+regions of the U.S. (CA, NY) produced more tweets per person than Midwestern U.S. states 
+(or Europe) \cite{achrekar12}. Thus, performance of seasonal influenza predictions models 
+may be best applied to regions with high internet access and where tweets are more frequent. 
+Second, exact demographic information about the Twitter population is not easy to estimate 
+(or unknown) and the demographic of internet users does not represent characteristics of 
+the general population.  Third, though promising, the results of this research are based 
+on correlations between often noisy internet search queries or Twitter posts and physician 
+reports of ILI compiled by official governmental sources. Caution should be  used in 
+evaluating predictions about serious health concerns such as epidemics or pandemics 
+based on correlational evidence as the data do not support causal inferences. 
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.5\textwidth]{images/Figure4.pdf}
+  \includegraphics[width=0.5\textwidth]{images/Figure5.pdf}
   \caption{GFT overestimation: GFT overestimated the prevalence of flu in 2012-2013 season
   and overshot the actual level in 2011-2012 by more than 50 percent \cite{lazer14}} 
-  \label{fig:Figure4} 
+  \label{fig:Figure5} 
 \end{figure}
 
 \subsection{The Dynamics of Epidemic Spreading} 
