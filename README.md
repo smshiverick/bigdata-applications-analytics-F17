@@ -16,8 +16,8 @@ paper1:
    hid:
    - 335
    title: >
-       ``Big Data Analytics, Data Mining, and Public Health Informatics: 
-       Using Data Mining of Social Media to Track Epidemics''
+       "Big Data Analytics, Data Mining, and Public Health Informatics: 
+       Using Data Mining of Social Media to Track Epidemics"
    abstract: >
        Data mining of internet search queries and social media for influenza related keywords 
        has been used to track seasonal influenza and correlates highly with official reports 
