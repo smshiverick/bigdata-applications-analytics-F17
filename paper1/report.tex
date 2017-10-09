@@ -1,4 +1,4 @@
-\documentclass[sigconf]{acmart}
+ \documentclass[sigconf]{acmart}
 
 \usepackage{hyperref}
 
@@ -43,17 +43,16 @@ In the information age, \textit{Big Data} offers great promise to fuel innovatio
 generate new revenue streams, and transform society \cite{gupta15}. Can the 
 potential of big data be harnessed for the greater good, to prevent disease 
 and improve health? Seasonal influenza epidemics are a major public health concern, 
-that each year result in an estimated 250,000 to 500,000 deaths worldwide 
+resulting each year in an estimated 250,000 to 500,000 deaths worldwide 
 \cite{who16}. This paper explores big data in public health informatics, 
 specifically reviewing research on data mining to track epidemics and the spread 
 of contagious disease \cite{hay13}. Can these approaches be extended to monitor 
-other epidemics such as the opioid crisis in North America? \cite{volkow14}
+other epidemics such as the opioid crisis in North America? \cite{smith16}
 Epidemic spreading is a complex phenomenon based on contact networks between 
 individuals and distributed by transportation networks \cite{Colizza06}. Some 
-question remains as to whether prediction models based on social networking 
-platforms can be generalized to other epidemics. Limitations of using social 
-media data to predict epidemics are discussed.
-
+questions remain as to whether prediction models based on social networking 
+platforms can be generalized to other epidemics at future points in time. 
+Limitations of using social media data to predict epidemics are discussed.
 
 
 \subsection{Public Health Informatics}
@@ -71,11 +70,12 @@ raw data has to be sifted through and effectively organized for further analysis
 The issue of Veracity raises the questions of how reliable social media data are for 
 predicting real life events. What is the relationship between social media data to 
 biological events such as the spreading of contagion and disease? The question of 
-Value evaluates the quality of the data as it pertains to intended outcomes. There 
-are legitimate concerns about the quality of data obtained from the internet; 
-however, the literature suggests that mining information from social media can 
-produce valuable data. An important challenge for making sense of big data is 
-developing analytic tools adequate to handle large volumes of data in real time.
+Value evaluates the quality of the data as it pertains to intended outcomes, such 
+as limiting the spread of contagion and disease prevention. There are legitimate 
+concerns about the quality of data obtained from the internet; however, the 
+literature suggests that mining information from social media can produce valuable 
+data. An important challenge for making sense of big data is developing analytic 
+tools adequate to handle large volumes of data in real time.
 
 \subsection{Data Mining Social Media}
 
@@ -87,7 +87,7 @@ diseases, global distributions of various diseases, and search queries on medica
 questions that people might have \cite{herland14}. The questions of interest in the 
 current review are: \textit{Can search query data be used to accurately track epidemics 
 in real-time?} and, \textit{can Twitter data be used to monitor epidemics across 
-different regions??}. The general idea is that increasing search query or social 
+different regions?} The general idea is that increasing search query or social 
 media activity is associated with an increasing interest in a given health topic. 
 A limitation of social media data is that, although it has high Volume, Velocity, 
 and Variety, it can be unreliable, resulting in both low Veracity and Value 
@@ -109,21 +109,21 @@ logs between 2003 and 2008, using 50 million most popular searches, and CDC hist
 data \cite{ginsburg09}. The {\it Google Flu Trends} (GFT, https://www.google.org/flutrends)
 model sought to find the probability that a given search query is related to an ILI of a 
 patient visiting a physician in the same region. GFT used a feature selection method to 
-narrow the 50 million most popular search queries, aggregrated from historical logs 
-between 2003 to 2008, down to 45. These top 45 search queries yielded the highest
-estimates during cross validation and were connected with influenza symptoms, 
-complications, remedies, consistent with searches by individuals with influenza. 
-Estimates of the current level of weekly influenza were based on the correlation of 
-the relative frequency of search queries and the percentage of physician visits with 
-patients presenting influenza-like symptoms. The GFT model was trained on 128 points 
-of the MidAtlantic region of the U.S. (e.g., New York, New Jersey, Pennsylvania) 
-between 2004 to 2007 with a correlation of 0.85, and validated on 42 points between 
-2007 to 2008, with a correlation of 0.96 (Figure 1). The final model, for all regions 
-in the U.S., generated correlation estimates ranging from 0.92 to 0.99 over 42 points. 
-Thus, analyzing high volume Google search queries estimated ILI percentages across 
-several regions in the U.S. about 1 to 2 weeks earlier than official CDC ILI reports. 
-Such efforst at early detection can help physicians and health care professional
-anticipate and prepare for the outbreak of influenza epidemics and pandemics. 
+narrow the 50 million most popular search queries, aggregrated from historical, down to 
+45. These top 45 search queries yielded the highest estimates during cross validation 
+and were connected with influenza symptoms, complications, remedies, consistent with 
+searches by individuals with influenza. Estimates of the current level of weekly 
+influenza were based on the correlation of the relative frequency of search queries 
+and the percentage of physician visits with patients presenting influenza-like symptoms. 
+The GFT model was trained on 128 points of the mid-Atlantic region of the U.S. (e.g., 
+New York, New Jersey, Pennsylvania) between 2004 to 2007 with a correlation of 0.85, 
+and validated on 42 points between 2007 to 2008, with a correlation of 0.96 (see Figure 1). 
+The final model, for all regions in the U.S., generated correlation estimates ranging 
+from 0.92 to 0.99 over 42 points. Thus, analyzing high volume Google search queries 
+estimated ILI percentages across several regions in the U.S. about 1 to 2 weeks 
+earlier than official CDC ILI reports. Such efforts at early detection can help 
+physicians and health care professional anticipate and prepare for the outbreak 
+of influenza epidemics and pandemics. 
 
 \begin{figure}
   \centering
@@ -158,7 +158,7 @@ keywords selected in this model performed well at capturing temporal trends in t
 epidemic, the same keywords may not reflect the trend of an influenza epidemic at a future 
 time. The authors also noted the lack of internet access in rural areas, which underscores 
 the fact that effective tracking of epidemics based on search queries relies on internet 
-access. Furthermore, caution should be used when evaluating correlational data, as causation 
+access. Furthermore, caution should be used in evaluating correlational data, as causation 
 cannot be inferred from correlation.
 
 \begin{figure}
@@ -203,7 +203,7 @@ linguistic variation, detecting earthquakes, and disease surveillance. The large
 users provides a high likelihood that ILI epidemic information is posted; however, Twitter 
 post data is noisy and perhaps unreliable insofar as it can be difficult to differentiate 
 posts about the flu based on instances of concerned awareness ({\it ``I am worried about 
-the swine flu epidemic!''}) versus actual infection, ({\it ``Robbie might have swine flu. 
+the swine flu epidemic!''}), versus actual infection ({\it ``Robbie might have swine flu. 
 I am worried.''})\cite{lamb13}. Despite the noise in Twitter data from much useless chatter, 
 useful information be obtained from mining data in the Twitter stream. 
 
@@ -224,11 +224,11 @@ surveillance programs track reported influenza-like illness (ILI) seasonally, fr
 to May, monitoring the total number of patients seen along with the number with ILIs 
 reported. Quantitative estimates of ILI values based on the Twitter stream were analyzed 
 using support vector regression (SVR) and leave-one-out cross-validation to test model 
-accuracy. Figure 3 shows the weekly ILI values, nationwide, reported by the CDC (green line)
+accuracy. Figure 3 shows the weekly ILI values nationwide reported by the CDC (green line)
 and estimated using a model trained on roughly 1 million influenza-related Tweets (red line)
-obtained between October, 2009 to May 2010. Point estimates of national ILI values produced 
-by the system were good with an average error of 0.28 percent. The red line shows output 
-from a leave one out cross validation based on SVM estimator. A regional model, based on 
+obtained between October, 2009 to May, 2010. The red line shows output from a leave one out 
+cross validation based on SVM estimator. Point estimates of national ILI values produced 
+by the system were good with an average error of 0.28 percent. A regional model, based on 
 significantly fewer tweets, approximated the epidemic curve for CDC region 2 (New York, 
 New Jersey) as reported by the ILI data, but the estimate was less precise with an average
 error of 0.37 percent. In terms of public interest, Twitter users` interest in antiviral 
@@ -252,7 +252,7 @@ and other prediction models.
 
 In a 2012 study, researchers implemented a system using an online social network (OSN)
 Crawler bot to retrieve tweets by keywords (e.g., {\it ``flu'', ``H1N1'', ``swine flu''}), 
-geospatial location, relative keyword frequency , and CDC ILI reports \cite{achrekar12}. 
+geospatial location, relative keyword frequency, and CDC ILI reports \cite{achrekar12}. 
 The {\it Social Network Enabled Flu Trends} (SNEFT) network continuously monitored tweets 
 and profile details of the Twitter users who commented on flu keywords (starting October 
 2009), to detect and track the spread of ILI epidemics. The correlation between flu related 
@@ -318,8 +318,8 @@ based on correlational evidence as the data do not support causal inferences.
 
 Can these methods be extended to survey other types of epidemics? The dynamics of epidemic 
 spreading is a complex phenomenon, based on contact networks of person-to-person interaction, 
-indirect exposure, and transmission highways such as the {\it airline transportation network} 
-(ATN) \cite{Colizza06}. Epidemics are described in terms of the proportion of the population 
+indirect exposure, and transmission byways such as the {\it airline transportation network} 
+(ATN) \cite{Colizza06}. Epidemics are quantified in terms of the proportion of the population 
 infected, those yet to be infected, and the rate of transmission \cite{hethcote00}. In 
 addition, the structure of the contact network can influence epidemic spreading 
 \cite{pastor01}. For example, in the case of simple contagion, weak ties among acquaintances 
@@ -328,24 +328,25 @@ the network \cite{granovetter73} and can facilitate the spread of disease. Furth
 networks with ``small world'' properties have many nodes with few connections, but a small 
 number of highly connected nodes that can rapidly transmit contagion throughout the network 
 \cite{watts98}. Analyzing the correlation between Twitter posts and rate of ILI reports does 
-not capture the complexity underlying disease epidemics and pandemics. By analyzing the 
-structure of social media networks, future research may help to identify how points of 
-connection online is associated with epidemic spreading in the external world \cite{zhu17}. 
-There have been some efforts to address the opioid crisis in North America?\cite{smith16}. 
-The emergence of new technologies, such as wearable biosensors \cite{carreiro15} may help 
-improve geospatial mapping other epidemics.
+not capture the complex network structure that underlies disease epidemics and pandemics. 
+It is possible that by analyzing the structure of social media networks, future research 
+may help to identify how points of connection within online networks are associated with 
+the spread of contagion and resulting epidemics \cite{zhu17}. Some epidemics such as the
+opioid crisis in North America \cite{volkow14} may be amenable to social network modeling
+as drug usage, dependancy, and addiction is subserved by social networks. The emergence of 
+new technologies, such as wearable biosensors \cite{carreiro15} may help improve geospatial 
+mapping of the opioid epidemics and treatment interventions.
 
 \section{Conclusion}
 
 Big data mining of social media has tremendous potential to detect trends and confirm 
 observations based on real time events, providing opportunities to monitor infectious 
 disease on a global level. The research reviewed above shows how search queries and 
-Twitter data about ILI related information provides an early detection signal that 
-supplements existing epidemic monitoring systems and may help improve public health 
-responses and prevention. As described above, these approaches to predicting edidemic
-may work best in areas of high population density with a high internet connectivity
-and social media usage, and thus are better suited to larger urban areas than 
-predicting outbreaks in rural areas. 
+Twitter data about ILI related information provides an early detection signal that can
+supplement existing epidemic monitoring systems and may help improve public health 
+responses and prevention. As described above, these approaches to predicting epidemic 
+work best in areas with high internet connectivity, and are better suited to populations
+with a high proportions of social media users.
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{report} 
