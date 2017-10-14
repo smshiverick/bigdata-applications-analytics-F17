@@ -46,6 +46,7 @@
 * 10/06/17  Paper 1: Reformatted images for Figures, and added Table and Figures to report.tex
 * 10/08/17  Paper 1: Final revisions, integration of Table and Figures the text of the report.tex
 * 10/10/17  Review of HID312: An Overview of Big Data Applications in Mental Health Treatment
+* 10/14-10/15/17  Paper 2: Update report.tex, update references in bib.tex, review articles 
 
 # Location
 * Address: Galway Drive, Dallas, Texas, 75218
