@@ -4,37 +4,37 @@ owner:
     name: Sean Shiverick
     url: https://github.com/bigdata-i523/hid335
 paper1:
-    abstract: "Data mining of internet search queries and social media for influenza\
-        \ related keywords  has been used to track seasonal influenza and correlates\
-        \ highly with official reports  of `infuenza-like-illness' (ILI). Efforts\
-        \ to monitor epidemics using big data analytics  can provide early detection\
-        \ that supplements existing systems of disease surveillance.  A review of\
-        \ the literature shows that data extracted from social media has applications\
-        \  for public health informatics. Prediction models based on social media\
-        \ work best in  areas with a high degree of internet access.  \n"
+    abstract: >
+         Data mining of internet search queries and social media for influenza
+         related keywords  has been used to track seasonal influenza and correlates
+         highly with official reports  of `infuenza-like-illness' (ILI). Efforts
+         to monitor epidemics using big data analytics  can provide early detection
+         that supplements existing systems of disease surveillance.  A review of
+         the literature shows that data extracted from social media has applications
+          for public health informatics. Prediction models based on social media
+         work best in  areas with a high degree of internet access.  n"
     author:
         - Sean M. Shiverick
     chapter: Health
     hid:
         - 335
     status: 100%
-    title: '"Big Data Analytics, Data Mining, and Public Health Informatics:  Using
-        Data Mining of Social Media to Track Epidemics"
-
-        '
+    title: >
+        Big Data Analytics, Data Mining, and Public Health Informatics:  Using
+        Data Mining of Social Media to Track Epidemics
     type: latex
     url: https://github.com/bigdata-i523/hid335/blob/master/paper1/report.pdf
 paper2:
-    abstract: "This paper reviews the use of wearable biosensors to collect vital\
-        \ health data in the treatment of opioid addiction. \n"
+    abstract: >
+         This paper reviews the use of wearable biosensors to collect vital
+         health data in the treatment of opioid addiction.
     author:
         - Sean M. Shiverick
     hid:
         - 335
     status: in progress
-    title: 'Big Health Data from Wearable Electronic Sensors (WES) and the  Treatment
+    title: >
+        Big Health Data from Wearable Electronic Sensors (WES) and the  Treatment
         of Opioid Addiction
-
-        '
     type: latex
     url: https://github.com/bigdata-i523/hid335/blob/master/paper2/report.tex
