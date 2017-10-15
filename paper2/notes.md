@@ -4,7 +4,7 @@
 * why is this topic important
 * how it's relevant to big data
 
-## Wearables and the Internet of Things for Health, Metcalf et al. 2016
+### Wearables and the Internet of Things for Health, Metcalf et al. 2016
 * David Metcalf, Sharlin T.J. Milliard, Melinda Gomez and Michael Schwartz | October 3, 2016
 * https://pulse.embs.org/september-2016/wearables-internet-of-things-iot-health/ 
 
