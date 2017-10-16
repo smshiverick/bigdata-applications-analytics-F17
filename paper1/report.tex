@@ -97,24 +97,23 @@ released weekly \cite{cdc17}, but generally with a one to two week delay. In an 
 to improve on early detection of season influenza, a team of researchers developed an 
 automated method to analyze Google search queries to track ILI terms from historical 
 logs between 2003 and 2008, using 50 million most popular searches, and CDC historical 
-data \cite{ginsburg09}. The {\it Google Flu Trends} (GFT, https://www.google.org/flutrends)
-model sought to find the probability that a given search query is related to an ILI of a 
-patient visiting a physician in the same region. GFT used a feature selection method to 
-narrow the 50 million most popular search queries, aggregrated from historical, down to 
-45. These top 45 search queries yielded the highest estimates during cross validation 
-and were connected with influenza symptoms, complications, remedies, consistent with 
-searches by individuals with influenza. Estimates of the current level of weekly 
-influenza were based on the correlation of the relative frequency of search queries 
-and the percentage of physician visits with patients presenting influenza-like symptoms. 
-The GFT model was trained on 128 points of the mid-Atlantic region of the U.S. (e.g., 
-New York, New Jersey, Pennsylvania) between 2004 to 2007 with a correlation of 0.85, 
-and validated on 42 points between 2007 to 2008, with a correlation of 0.96 (see Figure 1). 
-The final model, for all regions in the U.S., generated correlation estimates ranging 
-from 0.92 to 0.99 over 42 points. Thus, analyzing high volume Google search queries 
-estimated ILI percentages across several regions in the U.S. about 1 to 2 weeks 
-earlier than official CDC ILI reports. Such efforts at early detection can help 
-physicians and health care professional anticipate and prepare for the outbreak 
-of influenza epidemics and pandemics. 
+data \cite{ginsburg09}. The {\it Google Flu Trends} (GFT) model\cite{gft09} sought to 
+find the probability that a given search query is related to an ILI of a patient visiting 
+a physician in the same region. GFT used a feature selection method to narrow the 50 
+million most popular search queries, aggregrated from historical, down to 45. These 
+top 45 search queries yielded the highest estimates during cross validation and were 
+connected with influenza symptoms, complications, remedies, consistent with searches 
+by individuals with influenza. Estimates of the current level of weekly influenza were 
+based on the correlation of the relative frequency of search queries and the percentage 
+of physician visits with patients presenting influenza-like symptoms. The GFT model was 
+trained on 128 points of the mid-Atlantic region of the U.S. (e.g., New York, New Jersey, 
+Pennsylvania) between 2004 to 2007 with a correlation of 0.85, and validated on 42 points 
+between 2007 to 2008, with a correlation of 0.96 (see Figure 1). The final model, for 
+all regions in the U.S., generated correlation estimates ranging from 0.92 to 0.99 over 
+42 points. Thus, analyzing high volume Google search queries estimated ILI percentages 
+across several regions in the U.S. about 1 to 2 weeks earlier than official CDC ILI 
+reports. Such efforts at early detection can help physicians and health care professional 
+anticipate and prepare for the outbreak of influenza epidemics and pandemics. 
 
 \begin{figure}
   \centering
