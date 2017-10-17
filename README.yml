@@ -1,75 +1,21 @@
 owner:
-    hid: 335
-    name: 
-    url: 
-
-
-
-owner:
     hid: 000
     name: Sean Shiverick
     firtsname: Sean
     lastname: Shiverick
-    longitude: 39.1653 N
-    latitude: 86.5264 W
+    latitude: 32.840054 W
+    longitude: -96.697841 N
     city: Dallas, TX, U.S.A.
     url: https://github.com/bigdata-i523/hid335
 
-owner:
-    hid: 000
-    name: Gregor von Laszewski
-    url: https://github.com/bigdata-i523/sample-hid000
 paper1:
-   author: 
-   - Gregor von Laszewski
-   - Fugang Wang
-   hid:
-   - 000
-   - 001
-   title: Big Data and Edge Computing
-   abstract: >
-       We showcase this and that and the other.
-   url: https://github.com/bigdata-i523/sample-hid000/paper1/report.pdf
-   type: latex
-   status: 10%
-   chapter: TBD   
-paper2:
-   author: 
-   - Gregor von Laszewski
-   hid:
-   - 000
-   title: Big Data and Cloud Edge Computing
-   abstract: >
-      We showcase this and that and the other.
-      in regards to abc
-   url: https://github.com/bigdata-i523/sample-hid000/paper2/report.pdf
-   type: word
-   status: 10%
-   chapter: TBD
-project:
-   type: project
-   author: 
-   - Gregor von Laszewski
-   pid:
-   - 000
-   title: Benchmarking a BigData Docker deployment
-   abstract: >
-       We showcase tis and that and the other
-       and another line.
-   url: https://github.com/bigdata-i523/sample-pid000/project/report.pdf
-   type: latex
-   status: in progress
-   
-
-
-
-
-
-
-
-
-
-paper1:
+    author:
+    - Sean M. Shiverick
+    hid:
+    - 335
+    title: >
+        Big Data Analytics, Data Mining, and Public Health Informatics:  
+        Using Data Mining of Social Media to Track Epidemics
     abstract: >
          Data mining of internet search queries and social media for influenza
          related keywords  has been used to track seasonal influenza and correlates
@@ -79,28 +25,22 @@ paper1:
          the literature shows that data extracted from social media has applications
           for public health informatics. Prediction models based on social media
          work best in  areas with a high degree of internet access.  n"
-    author:
-        - Sean M. Shiverick
-    chapter: Health
-    hid:
-        - 335
-    status: 100%
-    title: >
-        Big Data Analytics, Data Mining, and Public Health Informatics:  Using
-        Data Mining of Social Media to Track Epidemics
+    url: https://github.com/bigdata-i523/hid335/blob/master/paper1/report.pdf    
     type: latex
-    url: https://github.com/bigdata-i523/hid335/blob/master/paper1/report.pdf
+    status: 100%
+    chapter: Health
 paper2:
+    author:
+    - Sean M. Shiverick
+    hid:
+    - 335
+    title: >
+         Big Health Data from Wearable Electronic Sensors (WES) and the Treatment
+         of Opioid Addiction
     abstract: >
          This paper reviews the use of wearable biosensors to collect vital
          health data in the treatment of opioid addiction.
-    author:
-        - Sean M. Shiverick
-    hid:
-        - 335
-    status: in progress
-    title: >
-        Big Health Data from Wearable Electronic Sensors (WES) and the  Treatment
-        of Opioid Addiction
-    type: latex
     url: https://github.com/bigdata-i523/hid335/blob/master/paper2/report.tex
+    type: latex
+    status: 10%
+    chapter: TBD
