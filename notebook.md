@@ -5,7 +5,7 @@
 * 09/18/17  Attended online zoom meeting on sharelatex, jabref, github HID format, experiments
 * 09/25/17  Attended online zoom meeting on paper1, shareLatex, github
 * 10/02/17  Attended online zoom meeting on paper1, question about table, figure, JabRef references
-* 10/16/17  Attended online zoom meeting on paper2
+* 10/16/17  Attended online zoom meeting on paper2, and revisions for paper1 report.bib and report.tex
 
 # Logistics    
 *	08/25-09/01/17  Read Course Organization and Introduction, and Piazza Folders curation
