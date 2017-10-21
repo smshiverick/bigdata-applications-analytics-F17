@@ -45,3 +45,23 @@ paper2:
     type: latex
     status: 10%
     chapter: TBD
+ 
+ project:
+   type: project
+   author: 
+   - Sean Shiverick
+   pid:
+   - 335
+   title: >
+       "Big Data and Health Analytics: Using Machine Learning to Predict Opiate Addiction and Overdose"
+   abstract: >
+       Abuse of prescription medication in North America over the past two decades has lead to 
+       increased rates of opioid addiction, drug overdose, and death. Big data health analytics 
+       may help to identify individuals susceptible to addiction and overdose, possibly leading 
+       to improved treatment and prevention outcomes. This project will explore how machine 
+       learning classification methods (logistic regression, decision trees, SVM) applied to 
+       public health data can be used to predict opioid addiction and drug overdose. Differences 
+       between the ML classification methods will be discussed.
+   url: https://github.com/bigdata-i523/sample-pid000/project/report.pdf
+   type: latex
+   status: in progress
