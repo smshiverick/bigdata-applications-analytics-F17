@@ -5,7 +5,7 @@
 * 09/18/17  Attended online zoom meeting on sharelatex, jabref, github HID format, experiments
 * 09/25/17  Attended online zoom meeting on paper1, shareLatex, github
 * 10/02/17  Attended online zoom meeting on paper1, question about table, figure, JabRef references
-* TO DO: 10/16  Attend online zoom meeting on paper2
+* 10/16/17  Attended online zoom meeting on paper2
 
 # Logistics    
 *	08/25-09/01/17  Read Course Organization and Introduction, and Piazza Folders curation
@@ -21,6 +21,8 @@
 * 09/08/17  Submitted github pull request to correct minor typos on Course webpage 
 * 09/20/17  Update github HID README, paper1 LaTex templates, report.bib, report.tex 
 * 09/25/17  Updated course notebook to include sections on Meetings and Location latitude, longitude
+* 10/19/17  Submitted Project proposal abstract, approved by instructor von Laszewski
+* 10/21/17  Submitted Paper 1 to TurnItIn for online review
 
 #  Theory
 * 08/25-09/01/17  Read Introduction and Watched Course Motivation Video Lectures by Geoffrey Fox:
@@ -49,6 +51,7 @@
 * 10/10/17  Review of HID312: An Overview of Big Data Applications in Mental Health Treatment
 * 10/14-10/15/17  Paper 2: Update report.tex, update references in bib.tex, review articles 
 * 10/16/17  Paper 1: Updated report.tex and report.bib according to issues in review.pdf
+* 10/21-10/22/17 Paper 2: Review literature, revise report.tex and report.bib
 
 # Location
 * Address: Galway Drive, Dallas, Texas, 75218
