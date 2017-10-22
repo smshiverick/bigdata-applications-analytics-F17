@@ -1,67 +1,71 @@
+---
 owner:
     hid: 335
     name: Sean Shiverick
     firtsname: Sean
     lastname: Shiverick
-    latitude: 32.840054 W
-    longitude: -96.697841 N
+    latitude: "32.840054 W"
+    longitude: "-96.697841 N"
     city: Dallas, TX, U.S.A.
     url: https://github.com/bigdata-i523/hid335
-
 paper1:
     author:
     - Sean M. Shiverick
     hid:
     - 335
     title: >
-        Big Data Analytics, Data Mining, and Public Health Informatics:  
-        Using Data Mining of Social Media to Track Epidemics
+        Big Data Analytics, Data Mining, and Public Health
+        Informatics: Using Data Mining of Social Media to Track
+        Epidemics
     abstract: >
-         Data mining of internet search queries and social media for influenza
-         related keywords  has been used to track seasonal influenza and correlates
-         highly with official reports  of `infuenza-like-illness' (ILI). Efforts
-         to monitor epidemics using big data analytics  can provide early detection
-         that supplements existing systems of disease surveillance.  A review of
-         the literature shows that data extracted from social media has applications
-          for public health informatics. Prediction models based on social media
-         work best in  areas with a high degree of internet access.  n"
-    url: https://github.com/bigdata-i523/hid335/blob/master/paper1/report.pdf    
+        Data mining of internet search queries and social media for
+        influenza related keywords has been used to track seasonal
+        influenza and correlates highly with official reports of
+        `infuenza-like-illness' (ILI). Efforts to monitor epidemics
+        using big data analytics can provide early detection that
+        supplements existing systems of disease surveillance.  A
+        review of the literature shows that data extracted from social
+        media has applications for public health
+        informatics. Prediction models based on social media work best
+        in areas with a high degree of internet access.
+    url: https://github.com/bigdata-i523/hid335/blob/master/paper1/report.pdf
     type: latex
     status: 100%
     chapter: Health
-
 paper2:
     author:
     - Sean M. Shiverick
     hid:
     - 335
     title: >
-         Big Health Data from Wearable Electronic Sensors (WES) and the Treatment
-         of Opioid Addiction
+        Big Health Data from Wearable Electronic Sensors (WES) and the Treatment
+        of Opioid Addiction
     abstract: >
-         This paper reviews the use of wearable biosensors to collect vital
-         health data in the treatment of opioid addiction.
+        This paper reviews the use of wearable biosensors to collect vital
+        health data in the treatment of opioid addiction.
     url: https://github.com/bigdata-i523/hid335/blob/master/paper2/report.tex
     type: latex
     status: 10%
     chapter: TBD
- 
- project:
+project:
    type: project
-   author: 
+   author:
    - Sean Shiverick
    pid:
    - 335
    title: >
-       "Big Data and Health Analytics: Using Machine Learning to Predict Opiate Addiction and Overdose"
+       Big Data and Health Analytics: Using Machine Learning to
+       Predict Opiate Addiction and Overdose
    abstract: >
-       Abuse of prescription medication in North America over the past two decades has lead to 
-       increased rates of opioid addiction, drug overdose, and death. Big data health analytics 
-       may help to identify individuals susceptible to addiction and overdose, possibly leading 
-       to improved treatment and prevention outcomes. This project will explore how machine 
-       learning classification methods (logistic regression, decision trees, SVM) applied to 
-       public health data can be used to predict opioid addiction and drug overdose. Differences 
-       between the ML classification methods will be discussed.
+       Abuse of prescription medication in North America over the past
+       two decades has lead to increased rates of opioid addiction,
+       drug overdose, and death. Big data health analytics may help to
+       identify individuals susceptible to addiction and overdose,
+       possibly leading to improved treatment and prevention
+       outcomes. This project will explore how machine learning
+       classification methods (logistic regression, decision trees,
+       SVM) applied to public health data can be used to predict
+       opioid addiction and drug overdose. Differences between the ML
+       classification methods will be discussed.
    url: https://github.com/bigdata-i523/sample-pid000/project/report.pdf
-   type: latex
    status: in progress
