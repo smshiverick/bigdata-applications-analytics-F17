@@ -35,8 +35,9 @@
 * 09/07/17  Configured computer to use pyenv python 2.7.13 and pyenv python 3.6.2 on OSX
 * 09/08-09/09/17  Python: Review programming examples, posted to github 
 * 09/14/17  Python: Create PANDAS iPython notebook for review: Data Structures, Indexing, Functions
-* 10/02/17  Added experiment for creating plots in Python with Seaborn
-* 10/03/17  Added experiment on Using Pandas to Merge CSV, JSON, and SQL files
+* 10/02/17  Python experiment: Creating plots in Python with Seaborn
+* 10/03/17  Python experiment: Using Pandas to Merge CSV, JSON, and SQL files
+* 10/25/17  Python Experiment: Using SciKit-Learn for KNNeighbors Classification of Iris Dataset
 
 # Writing
 * 09/05/17  Topic for Paper 1: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics 
