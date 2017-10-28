@@ -37,7 +37,8 @@
 * 09/14/17  Python: Create PANDAS iPython notebook for review: Data Structures, Indexing, Functions
 * 10/02/17  Python experiment: Creating plots in Python with Seaborn
 * 10/03/17  Python experiment: Using Pandas to Merge CSV, JSON, and SQL files
-* 10/25/17  Python Experiment: Using SciKit-Learn for KNNeighbors Classification of Iris Dataset
+* 10/25/17  Python experiment: Using SciKit-Learn for KNNeighbors Classification of Iris Dataset
+* 10/28/17  Python experiment: SKLearn Logistic Regression Linear Model for Classifier with Cancer data
 
 # Writing
 * 09/05/17  Topic for Paper 1: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics 
