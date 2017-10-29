@@ -40,6 +40,7 @@
 * 10/25/17  Python experiment: Using SciKit-Learn for KNNeighbors Classification of Iris Dataset
 * 10/28/17  Python experiment: SKLearn Logistic Regression Linear Model for Classifier with Cancer dataset
 * 10/28/17  Python experiment: SKLearn Decision Trees and Random Forest Classification of Cancer dataset
+* 10/28/17  Python experiment: SKLearn Support Vector Machines and SVC Classification with Cancer dataset
 
 # Writing
 * 09/05/17  Topic for Paper 1: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics 
