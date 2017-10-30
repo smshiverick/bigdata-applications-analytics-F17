@@ -28,47 +28,61 @@ vital health data in the treatment of opioid addiction.
 \section{Introduction}
 
 In the increasingly connected digital age, personal electronic devices are 
-generating tremendous volumes of data with important applications for 
-health analytics. Wearable electronic sensors (i.e., \emph{wearables}) and
-fitness monitors (e.g, FitBit, iWatch) can record our movements and vital 
-physiological measures such as heart rate, temperature, and blood pressure 
-\cite{metcalf16}. Consumers are using wearables to self-monitor stress 
-and hypertension. In addition, wearable sensors can be used to help track
-recovery following medical procedures such as surgery \cite{atallah11}. 
-Emerging forms of personalized health care are arising in which individuals 
-self-monitor and manage their own health in partnership with care providers.
+generating large volumes of data with important applications for health analytics. 
+Wearable electronic sensors (i.e., \emph{wearables}) and fitness monitors 
+(e.g, FitBit, iWatch) can record our movements and vital physiological measures 
+such as heart rate, temperature, and blood pressure \cite{metcalf16}. Consumers 
+are using wearables to self-monitor stress and hypertension, and wearable sensors 
+can be used to help track recovery following medical procedures such as surgery 
+\cite{atallah11}. The development of personalized health care models are also 
+enabling individuals to self-monitor and manage their own health in partnership 
+with care providers. This paper explores approaches to using personal electronic 
+devices and wearable sensors for the treatment of opioid addiction and prevention 
+of drug overdose. Past research has shown that \emph{Mobile Health} platforms
+have been used to address prescription medication abuse in several ways: (a) 
+monitor patient health conditions at any time and remotely, (b) monitor medication 
+consumption, and (c) connect patients with health care providers and treatment 
+interventions \cite{Varshney14}. A review of the literature shows that emerging 
+digital technologies, such as tatoo biosensors and long range (lora) backscatter, 
+can provide health data in real time to assist patients in addiction recovery to 
+resist physical cravings and prevent relapse. Mobile applications can play an 
+important role in supplementing traditional treatment approaches to drug 
+addiction and recovery. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Medication Abuse and Opioid Addiction} 
 
-There is currently an ongoing health crisis in the U.S. related to the abuse 
-of prescription opioid medication (e.g., oxycodone, hydrocodone) that has 
-grown to epidemic proportions. Approximately 2 million Americans abused or 
-were dependent on prescription opioids in 2014, and roughly 1 in 4 people who 
-received prescription opioids in primary care for non-cancer pain is struggling 
-with addiction \cite{cdc17}. Overdose deaths from prescription opioids has 
-quadrupled since 1999, and more than 180,000 Americans died from prescription 
-opioid overdoses between 1999 to 2015 cite. Figure 1 shows that dramatic 
-increase in overdose deaths in the U.S. between 2000 and 2016 are from synthetic 
-opioids (other than methadone), natural and semi-synthetic opioids, and heroin 
-\cite{nida17}. Of the estimated 64,000 drug overdose deaths in 2015, over 
-20,000 overdose deaths were from fentanyl and other synthetic opioid analogs. 
-
+The abuse of prescription opioid medication in the U.S. has become a major health 
+crisis that the Department of Health and Human Services (HHS) has described as an 
+epidemic \cite{volkow14}. Approximately 2 million Americans were dependent on 
+or abused prescription opioids (e.g., oxycodone, hydrocodone) in 2014 \cite{cdc17}. 
+Overdose deaths from prescription opioids has quadrupled since 1999, resulting in 
+more than 180,000 deaths between 1999 to 2015. Public health agencies are 
+implementing comprehensive efforts to address four major risk areas of
+prescription opioid abuse, overdoses, and deaths: (i) Increasing knowledge of 
+opioid abuse and improving decisions among medication prescribers, (ii) Reducing 
+inappropriate access to opioids, (iii) Increasing effective overdose treatment, 
+(iv) Providing substance-abuse treatment to persons addicted to opioids.
+In addition, researchers have developed Mobile Health applications to monitor
+prescribed medication consumption for potential abuse \cite{Varshney14}.
+Figure 1 shows steps involved in the process and decision support structure for
+a medication abuse monitoring system. There are several problems faced in 
+implementing a monitoring systems for medication abuse; foremost is the 
+difficulty in getting reliable data on medication consumption from potentially 
+addicted individuals, based on self-reports. Concstructing an accurate 
+prediction model for complex behavior such as addiction is also a challenge. 
+Other issues arise related to patient privacy, confidentiality, and regulation 
+of controlled opioid medications. 
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure1.pdf}
-  \caption{Drugs Involved in U.S. Overdose Deaths, 2000 to 2016 \cite{nida17}
+  \caption{Process and Decision Support for Abuse Monitoring System 
+  \cite{Varshney14}
   }\label{f:Figure1}
 \end{figure}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Medication Abuse and Opioid Addiction} \cite{Varshney14}
-
-The nature of the opioid epidemic \cite{volkow14}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Drug Addiction as an Illness}
+\subsubsection{Drug Addiction and Treatment}
 
 For millions of people struggling with substance abuse and dependency in 
 the U.S., addiction and relapse are chronic health conditions \cite{boyer10}. 
@@ -95,7 +109,7 @@ to developing strategies for prevention and treatment.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Review of Technology-Based Interventions for Addiction Treatment}
+\subsection{Technology-Based Interventions for Addiction Treatment}
 
 Technology-based interventions have been used for drug addiction assessment, 
 treatment, prevention and recovery \cite{marsch12}. In terms of assessment, data 
@@ -123,14 +137,14 @@ treatment applications in the long terms, beyond a limited course of treatment.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Mobile-Based Applications for Addiction Treatment}
+\subsubsection{Mobile-Based Applications}
 
 Mobile based applications have been used for monitoring and treatment of 
 substance abuse and addiction disorders for several decades \cite{boyer10}. 
 Early applications included the use of electronic pagers (i.e., beepers) 
 for experience sampling with paper-based assessments that generated data about 
 daily life behavior and experiences \cite{swedenson16}. In the 1990s, programmable 
-personal digital assistants (i.e., palm-pilot) enabled collection of data 
+personal digital assistants (e.g., palm-pilot) enabled collection of data 
 electronically, and subsequent mobile research tools facilitated the collection 
 of information about psychological factors (e.g., daily stressors, emotional 
 states, thoughts) and other variables related to addiction (e.g., craving, 
@@ -154,7 +168,7 @@ can trigger relapse for individuals in recovery.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Smartphone Application for Addiction and recovery}
+\subsubsection*{Smartphone Applications}
 
 Continued care is an important ingredient for recovery from addiction that
 involves monitoring, outreach, planning, case management, and social support 
@@ -212,6 +226,21 @@ report-long.tex.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Effectiveness of Technology-Based Interventions Addiction Treatment and Recovery}
 
+Figure 1 shows that dramatic 
+increase in overdose deaths in the U.S. between 2000 and 2016 are from synthetic 
+opioids (other than methadone), natural and semi-synthetic opioids, and heroin 
+\cite{nida17}. Of the estimated 64,000 drug overdose deaths in 2015, over 
+20,000 overdose deaths were from fentanyl and other synthetic opioid analogs. 
+
+
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/Figure5.pdf}
+  \caption{Drugs Involved in U.S. Overdose Deaths from 2000 to 2016, 
+  National Institute on Drug Addiction (NIDS) \cite{nida17}
+  }\label{f:Figure5}
+\end{figure}
+
+
 
 \section{figures}
 
@@ -232,6 +261,14 @@ paper. Instead use images that you like to include. If you do not have
 any images, do not dreate the images folder.
 
 \section{Tables}
+
+
+
+
+
+
+
+
 
 In case you need to create tables, you can do this with online tools
 (if you do not mind sharing your data) such as
