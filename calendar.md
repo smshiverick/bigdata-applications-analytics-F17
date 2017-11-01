@@ -5,7 +5,7 @@
 * Couse Zoom meetings:	https://iu.zoom.us/j/235405252
   * Mon 5-7:00 pm CST (Gregor, Juliette)
   * Fri 3-4:00 pm CST (Miao, Saber)
-
+  
 ## 1.3. Course Calendar
 * Oct 2, Computer Setup completed
 * Oct 9, 9am. Paper 1 due (Graded)
@@ -40,3 +40,40 @@ Work in group meetings with TAs on improving your papers and projects
 * Paper 1 - Oct 9th 9am
 * Paper 2 - Nov 6th 9am
 * Final Project - Dec 4th, 9am
+
+
+## FAQ: Notes and video links for online office hours
+
+### September 4, 2017, 6-8 p.m.
+* Piazza post with notes: https://piazza.com/class/j5wll7vzylg25j?cid=220
+
+### September 11, 2017, 6-8 p.m.
+* Piazza post with notes and video link: https://piazza.com/class/j5wll7vzylg25j?cid=229 
+* Video link: https://drive.google.com/open?id=0B8936_ytjfjmcDJLLUk1c0pxa00
+ 
+### September 18, 2017, 6-8 p.m.
+* Piazza post with notes and video link: https://piazza.com/class/j5wll7vzylg25j?cid=270 
+* Video link: https://drive.google.com/open?id=0B8936_ytjfjmcXNCdTkyNllTeVU
+ 
+### September 25, 2017, 6-8 p.m.
+* Piazza post with notes and video link: https://piazza.com/class/j5wll7vzylg25j?cid=326 
+* Video link: https://drive.google.com/open?id=0B8936_ytjfjmR0FjQlRRRDhWNjA
+ 
+### October 2, 2017, 6-8 p.m.
+* Piazza post with notes and video link: https://piazza.com/class/j5wll7vzylg25j?cid=373 
+* Video link: https://drive.google.com/open?id=0B8936_ytjfjmaU56ZzdQMHYzQTQ
+ 
+#### October 9, 2017, 6-8 p.m.
+* Piazza post with notes: https://piazza.com/class/j5wll7vzylg25j?cid=481
+
+##3 October 16, 2017, 6-8 p.m.
+* Piazza post with notes: https://piazza.com/class/j5wll7vzylg25j?cid=560
+
+### October 23, 2017, 6-8 p.m.
+* Piazza post with notes and video link: https://piazza.com/class/j5wll7vzylg25j?cid=679 
+* Full video link: https://drive.google.com/open?id=0B8936_ytjfjmbWdaVEhaQjByM00 
+* GitHub tutorial video link, Google Drive (unstreamed): https://drive.google.com/open?id=0B8936_ytjfjmRmNwckRsMm1sSkE 
+* GitHub tutorial video link, YouTube (streamed with optional CC): https://youtu.be/WN0wGDfq57M
+ 
+### October 30, 2017, 6-8 p.m.
+* Piazza post with notes: https://piazza.com/class/j5wll7vzylg25j?cid=684
