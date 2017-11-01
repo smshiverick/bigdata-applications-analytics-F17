@@ -58,6 +58,7 @@
 * 10/16/17  Paper 1: Updated report.tex and report.bib according to issues in review.pdf
 * 10/21-10/22/17 Paper 2: Review literature, revise report.tex and report.bib
 * 10/29/17 Paper 2: Read and review literature, revise report.tex, add Figures
+* 10/31/17 Paper 2: Writing literature review, revise report.tex, report.bib, add Figures 1-8, add Table 1
 
 # Location
 * Address: Galway Drive, Dallas, Texas, 75218
