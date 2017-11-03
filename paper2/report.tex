@@ -67,7 +67,8 @@ prescription opioid abuse, overdoses, and deaths: (i) Increasing knowledge of
 opioid abuse and improving decisions among medication prescribers, (ii) Reducing 
 inappropriate access to opioids, (iii) Increasing effective overdose treatment, 
 (iv) Providing substance-abuse treatment to persons addicted to opioids. The 
-nature of the opioid epidemic is complex, and to understand how technological interventions can play a role in mitigating the crisis, it is necessary to 
+nature of the opioid epidemic is complex, and to understand how technological 
+interventions can play a role in mitigating the crisis, it is necessary to 
 consider the nature of addiction and approaches to treatment. 
 
 \begin{figure}[!ht]
@@ -88,10 +89,10 @@ illnesses. For example, drug addicted patients undergo intense detoxification
 in rehabilitation treatment programs, but then are released back into the same 
 environment associated with their drug use. The lack of continuity in the 
 treatment of addiction disorders, leaves addicts in recovery at high risk for
-relapse into substance use and abuse. Second, individuals with addiction 
-disorders present for care to emergency rooms after acute intoxication, often 
-following law enforcement interventions. Emergency personal and very capable 
-at crisis intervention for drug overdose, but lack resources to evaluate severe 
+relapse into substance use and abuse. Second, individuals with severe addiction 
+disorders end up at emergency rooms for care following acute intoxication, 
+often after law enforcement interventions. Emergency personal are capable with
+crisis interventions for drug overdose, but lack resources to evaluate severe 
 addiction disorders or provide follow-up. Furthermore, addicted individuals 
 seeking treatment often relapse at night or on weekends when treatment centers 
 are not open. Various theories of addiction and relapse have been proposed. 
@@ -196,30 +197,32 @@ treatment specialists to initiate interventions for opioid addiction
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Medication Adherence and Abuse Monitoring System}
 
-Mobile health applications can be used as an advanced warning system for 
-medication adherence and potential abuse of prescription medication 
-\cite{varshney13}. Medication abuse can consist of higher dosages 
-or rapid escalation of a prescribed medication dosage, and the general goal of 
-such a prediction model is to analyze patient data for sudden changes in 
-medication consumption. Figure 2 illustrates several steps in a process and 
-decision support structure for a medication monitoring system, with adjustable 
-parameters, such as the threshold for abuse (e.g., greater than N doses in X hours)
-\cite{Varshney14}. A major challenge for measuring medication abuse is obtaining 
-reliable information from potentially addicted individuals based on self report 
-data. Ideally, information on medication consumption and adherence can be 
-obtained from multiple sources. Addiction is a complex behavior that involves  
-a variety of factors, including: demographics (e.g., age, gender), past history, 
+Mobile health applications can be used to monitor medication adherence and 
+as an advanced warning system for potential abuse of prescription medication 
+\cite{varshney13}. Medication abuse can consist of higher medication dosages 
+or rapid escalation of a prescribed dosage, and the general goal of a prediction 
+model is to analyze patient data for sudden changes in medication consumption. 
+Figure 2 illustrates several steps in a process and decision support structure 
+for a medication monitoring system, with adjustable parameters, such as the 
+threshold for abuse (e.g., greater than N doses in X hours) \cite{Varshney14}. 
+A major challenge for measuring medication abuse is obtaining reliable 
+information from potentially addicted individuals based on self report data. 
+Ideally, information on medication consumption and adherence can be obtained 
+from multiple sources. Addiction is a complex behavior that involves a variety 
+of factors, including: demographics (e.g., age, gender), past history, 
 comorbidity with other disorders, family support, social influence, employment 
 status, and patient motivation. Figure 3 shows a model architecture of a system 
-for monitoring potential abuse where dose information is provided via a smartphone 
-application, relayed via wireless cellular network to analytic models that
-measure changes in medication consumption, relays reports to support treatment 
-services for possible interventions, and to a smart medication dispenser box. 
-In order to function successfully a medication abuse monitoring system depends 
-on the collection of reliable information, including data from wearable sensors 
-that can directly measure physiological changes (e.g., heartrate, blood pressure, respiration, temperature) related to changes in medication usage. n the context 
-of prescription opioid abuse, such as medication monitoring system could be 
-very beneficial in anticipating opioid addiction and preventing overdose death. 
+for monitoring potential abuse where dose information is provided via a 
+smartphone application, relayed via wireless cellular network to analytic models 
+that measure changes in medication consumption, relays reports to support 
+treatment services for possible interventions, and to a smart medication box that 
+dispenses medication. In order to function successfully a medication abuse 
+monitoring system depends on the collection of reliable information, including 
+data from wearable sensors that can directly measure physiological changes 
+(e.g., heartrate, blood pressure, respiration, temperature) related to changes 
+in medication usage. In the context of prescription opioid abuse, such as 
+medication monitoring system could be very beneficial in anticipating opioid 
+addiction and preventing overdose death. 
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure3.pdf}
@@ -232,16 +235,16 @@ very beneficial in anticipating opioid addiction and preventing overdose death.
 
 Portable biosensors can provide a continuous stream of data on the timing, 
 location, context, and duration of drug use by individuals in treatment. 
-In a small pilot study, an Affectiva Q sensor was used to  continuously measure 
+In a small pilot study, researchers used an Affectiva Q sensor to measure 
 electrodermal activity (EDA), skin temperature, and acceleration (8 recordings 
 per second), in a sample of N = 4 patients during the administration of opioid 
 medication in an emergency room setting \cite{carreiro15}. Table 1 provides a 
-summary of the participant characteristics. The Q biosensor was worn on the 
-wrist and was similar in size and dimensions to a wristwatch or fitbit health
+summary of the participant characteristics. The biosensor was worn on the 
+wrist and is similar in size and dimensions to a wristwatch or fitbit health
 monitor. The results showed an increase in EDA associated with intravenous 
 opioid injection that was detected by the biosensors. In addition, there was 
-some indication that the physiological response to opioids varies according to 
-an individual’s drug tolerance. The findings provide evidence to support the 
+some indication that the physiological response to opioids varied according 
+to individual drug tolerance. The findings provide evidence to support the 
 use of wearable biodensors to detect drug use in real time, though in a 
 relatively controlled environment. An important limitation of the study is 
 the small sample size, which reduces the generalizability of the findings to 
@@ -297,26 +300,66 @@ settings.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{LoRa Backscatter: Enabling Ubiquitous Connectivity} 
 
+Emerging technologies, such as longe range (LoRa) backscatter, have the potential 
+to extend the boundaries of wireless connectivity. Existing radio technologies 
+(e.g., WIFI, ZigBee, SigFox, LTE-M) provide reliable long range coverage, but 
+consume energy and would be costly to expand to large scale implementation; 
+however, LoRa backscatter is a smaller, low-cost, low-power alternative with 
+extended range between an RF source and receiver of approximately 475 meters 
+(i.e., yards) cite{talla17}. Table 1 shows the sensitivity and supported data 
+rates for different communication technologies and  feasibility of different 
+power sources. LoRa backscatter (LoRaB) performs best in terms of sensitivity 
+(-149 dBm), supports bit rates of 18 pbs to 37.5 kbps, provides whole home 
+coverage, and is the only option capable of being powered by button cell, tiny 
+solar cell, or printed battery. LoRa backscatter uses chirp spread activation 
+(CSS) that can synthesize continuous frequency modulated chirps; a limitation is 
+that backscatter is drowned out by noise and the RF source. The LoRa backscatter 
+system was tested in various in various deployments: across three floors of a 
+4800 square-foot house, a single floor of 13,000 square foot office building, 
+and one-acre farm. Figure 5 shows the layout of the house with the RF source (TX) 
+on the second floor and receiver in the basement (RX); the plot shows the system 
+achieved RSSI values greater -144 dBm, which reliable wireless coverage throughout 
+the house, with rates sufficient for temperature sensors that transmit small 
+packages. The system was also implemented in the form flexible epidermal patch 
+sensor shown in Figure 6, that provided reliable connectivity across a 3,300 
+square foot atrium with RSSI greater than -132 dBm. Overall, LoRa backscatter 
+provides a compact, energy-efficient, and affordable wireless transmission 
+system that can extended to scale at a reasonable cost. This system could be used 
+for the transmission of biometric data from wearable sensors to capture health 
+information from addicted individuals in treatment and recovery. 
 
+\begin{table}
+  \caption{Comparison of Wireless Communication Technologies \cite{talla17}}
+  \label{tab:freq}
+  \begin{tabular}{ccccccc}
+    \toprule
+     Technology& Sensitivity& Data Rate& Home Coverage& Button Cell& Tiny Solar Cell& Printed Battery \\
+    \midrule
+    Wi-Fi (802.11 b/g)& -95 dBm& 1-54 Mbps& yes& no& no& no \\
+    LoRa& -149 dBm& 18 bps-37.5 kbps& yes& no& no& no \\
+    Bluetooth& -97 dBm& 1-2 Mbps& no& no& no& no \\
+    SigFox& -126 dBm& 100 bps& yes& no& no& no \\
+    Zigbee& -100 dBm& 250 kpbs& yes& no& no& no \\
+    Passive Wi-Fi& -95 dBm& 1-11 Mbps& no& yes& yes& yes \\
+    RFID& -85 dBm& 40-640 kbps& no& yes& yes& yes \\
+    LoRA Backscatter& -149 dBm& 18 bps-37.5 kpbs& yes& yes& yes& yes \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure5.pdf}
-  \caption{LoRa Backscatter Epidermal Patch \cite{talla17}
+  \caption{Home Deployment of LoRa backscatter pakcets across 4,800 sq. ft.
+  House Apread Across Three Floors \cite{talla17}
   }\label{f:Figure5}
 \end{figure}
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure6.pdf}
-  \caption{Comparison of Wireless Communication Technologies \cite{talla17}
+  \caption{LoRa Backscatter Epidermal Patch \cite{talla17}
   }\label{f:Figure6}
 \end{figure}
 
-\begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/Figure7.pdf}
-  \caption{Home Deployment of LoRa backscatter pakcets across 4,800 sq. ft.
-  House Apread Across Three Floors \cite{talla17}
-  }\label{f:Figure7}
-\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Graphene Electronic Tattoo sensors}
@@ -324,22 +367,21 @@ settings.
 \cite{ameri17}
 
 \begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/Figure8.pdf}
+  \centering\includegraphics[width=\columnwidth]{images/Figure7.pdf}
   \caption{Graphene Electronic Tatoo Biosensor \cite{ameri17}
-  }\label{f:Figure8}
+  }\label{f:Figure7}
 \end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Can Emerging Technologies Reduce Opioid Addiction in U.S.}
+\subsection{Can Technological Applications Reduce Opioid Addiction? }
 
-
-
-
-
-
-
+%\begin{figure}[!ht]
+%  \centering\includegraphics[width=\columnwidth]{images/Figure8.pdf}
+%  \caption{Graphene Electronic Tatoo Biosensor \cite{ameri17}
+%  }\label{f:Figure8}
+%\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
