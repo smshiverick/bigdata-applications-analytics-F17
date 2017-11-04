@@ -32,6 +32,7 @@ paper1:
     type: latex
     status: 10/25/17 100%
     chapter: Health
+
 paper2:
     author:
     - Sean M. Shiverick
