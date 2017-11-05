@@ -15,12 +15,12 @@ the Treatment of Opioid Addiction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
-Wearable electronic sensors (WES) generate to collect
-vital health data in the treatment of opioid addiction. 
+Wearable electronic sensors (WES) and mobile health applications can be used to
+collect vital health data to supplement traditional forms of treatment for opioid
+addiction and may be used to predict risk factors related to overdose death. 
 \end{abstract}
 
-\keywords{Big Data Applications, Health Analytics, Wearable Sensors, i535, 
-HID335}
+\keywords{Health Informatics, Wearable Sensors, Addiction Treatment, i535, HID335}
 
 \maketitle
 
@@ -29,26 +29,27 @@ HID335}
 \section{Introduction}
 
 In the increasingly connected digital age, personal electronic devices are 
-generating huge volumes of data with important applications for health analytics. 
-Wearable electronic sensors (i.e., \emph{wearables}) and fitness monitors 
-(e.g, FitBit, iWatch) can record our movements and vital physiological measures 
-such as heart rate, temperature, and blood pressure \cite{metcalf16}. Consumers 
-are using wearables to self-monitor stress and hypertension, and wearable sensors 
-can be used to help track recovery following medical procedures such as surgery 
-\cite{atallah11}. The development of personalized health care models are also 
-enabling individuals to self-monitor and manage their own health in partnership 
-with care providers. This paper explores approaches to using personal electronic 
-devices and wearable sensors for the treatment of addiction disorders and the 
-prevention of drug overdose. Past research has shown that \emph{Mobile Health} 
-platforms have been used to address prescription medication abuse in several ways: 
-(a) monitor patient health conditions at any time and remotely, (b) monitor 
-medication consumption, and (c) connect patients with health care providers and 
-treatment services \cite{Varshney14}. The following review of the literature shows 
-that wireless digital technologies and smartphone applications are effective 
-at providing health data in real time and can assist patients in recovery to 
-resist physical cravings, prevent relapse, and access treatment support. 
-Mobile applications can play an important role in addressing the opioid epideic 
-by supplementing traditional approaches to addiction treatment and recovery. 
+generating huge volumes of data with important applications for health 
+informatics. Wearable electronic sensors (i.e., \emph{wearables}) and fitness 
+monitors (e.g, FitBit, iWatch) can record our movements and vital physiological 
+measures such as heart rate, temperature, and blood pressure \cite{metcalf16}. 
+Consumers are using wearables to self-monitor stress and hypertension, and 
+wearable sensors can be used to help track recovery following medical procedures 
+such as surgery \cite{atallah11}. The development of personalized health care 
+models are also enabling individuals to self-monitor and manage their own health 
+in partnership with care providers. This paper explores approaches to using 
+personal electronic devices and wearable sensors for the treatment of addiction 
+disorders and the prevention of drug overdose. Past research has shown that 
+\emph{Mobile Health} platforms have been used to address prescription medication 
+abuse in several ways: (a) monitor patient health conditions at any time and 
+remotely, (b) monitor medication consumption, and (c) connect patients with 
+health care providers and treatment services \cite{Varshney14}. The following 
+review of the literature shows that wireless digital technologies and smartphone
+applications are effective at providing health data in real time and can assist 
+patients in recovery to resist physical cravings, prevent relapse, and access 
+treatment support. Mobile applications can play an important role in addressing 
+the opioid epidemic by supplementing traditional approaches to addiction treatment 
+and recovery. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The Opioid Epidemic: Medication Abuse and Addiction} 
@@ -68,9 +69,10 @@ prescription opioid abuse, overdoses, and deaths: (i) Increasing knowledge of
 opioid abuse and improving decisions among medication prescribers, (ii) Reducing 
 inappropriate access to opioids, (iii) Increasing effective overdose treatment, 
 (iv) Providing substance-abuse treatment to persons addicted to opioids. The 
-nature of the opioid epidemic is complex, and to understand how technological 
-interventions can play a role in mitigating the crisis, it is necessary to 
-consider the nature of addiction and approaches to treatment. 
+opioid epidemic is complex, with multiple and interacting causal factors. To 
+understand how technological interventions can play a role in mitigating the 
+crisis, it is necessary to consider the nature of addiction itself and 
+various approaches to treatment. 
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure1.pdf}
@@ -87,59 +89,61 @@ the U.S., addiction and relapse are chronic health conditions \cite{boyer10}.
 Drug addiction has many similar characteristics to other chronic medical 
 illnesses; however, there are unique challenges to the treatment of addiction
 illnesses. For example, drug addicted patients undergo intense detoxification 
-in rehabilitation treatment programs, but then are released back into the same 
-environment associated with their drug use. The lack of continuity in the 
-treatment of addiction disorders, leaves addicts in recovery at high risk for
-relapse into substance use and abuse. Second, individuals with severe addiction 
-disorders end up at emergency rooms for care following acute intoxication, 
-often after law enforcement interventions. Emergency personal are capable with
-crisis interventions for drug overdose, but lack resources to evaluate severe 
-addiction disorders or provide follow-up. Furthermore, addicted individuals 
-seeking treatment often relapse at night or on weekends when treatment centers 
-are not open. Various theories of addiction and relapse have been proposed. 
-According to the classical conditioning model, situational cues or events can 
-elicit a motivational state underlying relapse to drug use. A slightly more 
-complex model suggests that addictive behavior can be reinstated after 
-extinction of dependency by exposure to drugs, drug-related cues, or 
+in rehabilitation treatment programs, which reduces their drug tolerance, and 
+then are released back into the same environment associated with their drug use, 
+putting them at greater risk for relapse and potential drug overdose. The lack 
+of continuity in the treatment of addiction disorders leaves persons in recovery 
+at high risk of relapse for substance use and abuse. Second, individuals with 
+severe addiction disorders end up at emergency rooms for care following acute 
+intoxication, often following law enforcement interventions. Emergency personal 
+are very competent at crisis interventions for drug overdose, but lack resources 
+to evaluate severe addiction disorders or provide follow-up. Furthermore, 
+addicted individuals seeking treatment often relapse at night or on weekends 
+when treatment centers are not open. Various theories of addiction and relapse 
+have been proposed. According to the classical conditioning model, situational 
+cues or events can elicit a motivational state underlying relapse to drug use. 
+A slightly more complex model suggests that addictive behavior can be reinstated 
+after extinction of dependency by exposure to drugs, drug-related cues, or 
 environmental stressors \cite{shaham03}. Understanding that a user`s affective
-response to cues in the environmental can lead to relapse and drug use are key 
-to developing strategies for prevention and treatment. 
+(i.e., motivational) response to cues in the environment can lead to relapse 
+and drug use are key to developing strategies for prevention and treatment. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Technology-Based Interventions for Addiction Treatment}
 
 Technology-based interventions have been used for drug addiction assessment, 
-treatment, prevention and recovery \cite{marsch12}. In terms of assessment, data 
-about individuals substance use can be obtained from mobile cell phone reporting 
+treatment, prevention, and recovery \cite{marsch12}. In terms of assessment, 
+data about substance use can be obtained from mobile cell phone reporting 
 outside of treatment settings. Web-based approaches to treatment have been 
-implemented online to improve behavioral and psychosocial functioning for addicted 
-individuals in recovery \cite{marschdallery2012}. For example, the Therapeutic 
-Education System (TES) is a self-directed, web-based interactive treatment program 
-consisted of 65 training modules that  focuses cognitive-behavioral skills, 
-psychosocial functioning (family/social relations). This online approach helped 
-to increase access to treatment for individuals in rural areas, and included an 
-optional contingency management module. A computer based Training in Cognitive 
-Behavioral Therapy (CBT) program was found to enhance treatment outcomes when 
-provided in conjunction with traditional substance abuse treatment, and helped 
-improve coping skills and decision-making skills \cite{carroll08}. In evaluating 
-the effectiveness of mobile applications for addiction treatment, several  
-questions remain to be answered: First, if mobile applications are regarded 
-primarily as supplements to traditional therapeutic treatment, can their 
-effectiveness be measured independently from the approach used in treatment? 
-Second, over what time period period can the benefits of mobile applications be 
-observed? Research evidence suggests that the benefits of mobile interventions 
-may be limited to 12 or 15 weeks \cite{swedenson16}. It is unclear whether 
-individuals struggling from addiction would continue to use mobile treatment 
-applications in the long term, beyond a limited course of treatment.
+implemented online to improve behavioral and psychosocial functioning for 
+addicted individuals in recovery \cite{marschdallery2012}. For example, the 
+{\em Therapeutic Education System} (TES) is a self-directed, web-based 
+interactive treatment program consisted of 65 training modules that focused 
+on cognitive-behavioral skills and psychosocial functioning (family/social 
+relations). This online approach helped to increase access to treatment for 
+individuals in rural areas, and included an optional contingency management 
+module. A computer based {\em Training in Cognitive Behavioral Therapy} (CBT) 
+program was found to enhance treatment outcomes when provided in conjunction 
+with traditional substance abuse treatment, and helped improve coping skills 
+and decision-making skills \cite{carroll08}. In evaluating the effectiveness 
+of mobile applications for addiction treatment, several questions remain to be 
+answered: First, if mobile applications are regarded primarily as supplements 
+to traditional therapeutic treatment, can their effectiveness be evaluated 
+independently from the approach used in treatment? Second, over what time 
+period period can the benefits of mobile applications be observed? Research 
+evidence suggests that the benefits of mobile interventions may be limited 
+to 12 or 15 weeks \cite{swedenson16}. It is unclear whether individuals 
+struggling from addiction would continue to use mobile treatment applications 
+in the long term, beyond a limited course of treatment.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Mobile-Based Applications}
 
-Mobile based applications have been used for monitoring and treatment of
-substance abuse and addiction disorders for several decades \cite{boyer10}. 
-Early applications included the use of electronic pagers (i.e., beepers) 
-for experience sampling with paper-based assessments that generated data about 
+Mobile applications have been used for monitoring and treatment of substance 
+abuse and addiction disorders for several decades \cite{boyer10}. Early 
+applications included the use of electronic pagers (i.e., beepers) for 
+experience sampling with paper-based assessments that generated data about 
 daily life behavior and experiences \cite{swedenson16}. In the 1990s, 
 programmable personal digital assistants (e.g., palm-pilot) enabled collection 
 of data electronically, and subsequent mobile research tools facilitated the 
@@ -156,12 +160,12 @@ including behaviors and symptoms (severe physiological cravings, withdrawal,
 and substance use) that can span a relatively short time. An additional factor 
 is the co-morbidity, or co-occurence, of substance use disorders (SUDs) with 
 other psychological disorders, such as anxiety and mood disorders. For example, 
-the ``self-medication’’ model has commonly been used to explain the association 
-between alcohol abuse is used as an effort by an individual to reduce or cope 
-with a high degree of anxiety (or depression). It has also been challenging 
-for researchers to capture the role of environmental or contextual cues (e.g., 
-people, places, things) associated with substance abuse and addiction, which 
-can trigger relapse for individuals in recovery.
+the {\em self-medication} model has commonly been used to explain the association 
+between alcohol abuse as an effort by an individual to reduce or cope with a 
+high degree of anxiety (or depression). It has also been challenging for 
+researchers to capture the role of environmental or contextual cues (e.g., 
+people, places, things) associated with substance abuse, which can act as 
+triggers of relapse for individuals in recovery.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -173,20 +177,20 @@ involves monitoring, outreach, planning, case management, and social support
 monitor cravings at critical points in daily life, track contextual cues 
 associated with substance use, and provide outreach to support services. A team 
 of researchers at the University of Wisconsin evaluated the effectiveness of a
-smartphone application called Addiction Comprehensive Health Enhancement Support 
-System (A-CHESS), designed to provide recovery support patients leaving 
-residential alcohol treatment center \cite{gustafson14}. A-CHESS provided anytime, 
-anywhere access to support services in audio-visual format, GPS monitoring and 
-warnings for risky locations, and communication with counselors. Over an 8-month
-period and 4 month follow-up, patients who used the A-CHESS intervention reported
-fewer risky drinking days, on average, per month than patients in a comparable
-control group. The findings provide evidence that the smartphone intervention was 
-effective at treating a critical behavioral measure for treatment of alcohol use 
-disorder (AUD). The methods described in this study could be extended by 
-re-purposing built-in smartphone sensors to record physiological measures 
-related to opioid usage, and communicate data to health care providers or 
-treatment specialists to initiate interventions for opioid addiction
-\cite{johnson11}. 
+smartphone application called {\em Addiction Comprehensive Health Enhancement 
+Support System} (A-CHESS), designed to provide recovery support for patients 
+leaving a residential alcohol treatment center \cite{gustafson14}. A-CHESS 
+provided anytime, anywhere access to support services in audio-visual format, 
+GPS monitoring and warnings for risky locations related to past substance use, 
+and communication with counselors. Over an 8-month period (and 4 month follow-up), 
+patients who used the A-CHESS intervention reported fewer risky drinking days, 
+on average, per month than patients in a comparable control group. The findings 
+provide evidence that the smartphone intervention was effective at treating a 
+critical behavioral measure for treatment of alcohol use disorder (AUD). The 
+methods described in this study could be extended by re-purposing built-in 
+smartphone sensors to record physiological measures related to opioid usage, 
+and communicate data to health care providers or treatment specialists to 
+initiate interventions for opioid addiction \cite{johnson11}. 
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure2.pdf}
@@ -221,9 +225,9 @@ dispenses medication. In order to function successfully a medication abuse
 monitoring system depends on the collection of reliable information, including 
 data from wearable sensors that can directly measure physiological changes 
 (e.g., heartrate, blood pressure, respiration, temperature) related to changes 
-in medication usage. In the context of prescription opioid abuse, such as 
-medication monitoring system could be very beneficial in anticipating opioid 
-addiction and preventing overdose death. 
+in medication usage. In the context of prescription opioid abuse, a medication 
+monitoring system could be very beneficial in anticipating opioid dependency
+and preventing accidental death from medication overdose. 
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure3.pdf}
@@ -241,21 +245,21 @@ electrodermal activity (EDA), skin temperature, and acceleration (8 recordings
 per second), in a sample of N = 4 patients during the administration of opioid 
 medication in an emergency room setting \cite{carreiro15}. Table 1 provides a 
 summary of the participant characteristics. The biosensor was worn on the 
-wrist and is similar in size and dimensions to a wristwatch or fitbit health
+wrist and was similar in size and dimensions to a wristwatch or fitbit health
 monitor. The results showed an increase in EDA associated with intravenous 
 opioid injection that was detected by the biosensors. In addition, there was 
 some indication that the physiological response to opioids varied according 
-to individual drug tolerance. The findings provide evidence to support the 
-use of wearable sensors to detect drug use in real time, though in a 
-relatively controlled environment. An important limitation of the study is 
+to individual drug tolerance; patients with higher opioid tolerance showed
+less EDA response than patients with low tolerance. The findings provide 
+evidence to support the use of wearable sensors to detect drug use in real 
+time, in a controlled environment. An important limitation of the study is 
 the small sample size, which reduces the generalizability of the findings to 
 a broader population. The authors also acknowledged that psychological or 
 physiological stress can produce alterations in EDA, skin temperature, and 
 acceleration, and therefore this could not be ruled out as an alternative 
-explanation for the findings. The results are promising, however, and encourage 
-future efforts to explore the effectiveness of wearable biosensors in the 
-context of environments that individuals in recovery associate with drug use 
-where relapse can occur.
+explanation for the findings. The results are promising, however, and 
+encourage efforts to explore the effectiveness of wearable biosensors 
+in the context of environments associated with substance use.
 
 \begin{table}
   \caption{Summary of Participant Characteristics in Pilot study \cite{carreiro15}}
@@ -309,25 +313,25 @@ however, LoRa backscatter is a smaller, low-cost, low-power alternative with
 extended range between an RF source and receiver of approximately 475 meters 
 (i.e., yards) \cite{talla17}. Table 1 shows the sensitivity and supported data 
 rates for different communication technologies and  feasibility of different 
-power sources. LoRa backscatter (LoRaB) performs best in terms of sensitivity 
-(-149 dBm), supports bit rates of 18 pbs to 37.5 kbps, provides whole home 
-coverage, and is the only option capable of being powered by button cell, tiny 
-solar cell, or printed battery. LoRa backscatter uses chirp spread activation 
-(CSS) that can synthesize continuous frequency modulated chirps; a limitation is 
-that backscatter is drowned out by noise and the RF source. The LoRa backscatter 
+power sources. LoRa backscatter performed best overall, in terms of sensitivity 
+(-149 dBm), supporting bit rates of 18 pbs to 37.5 kbps, providing whole home 
+coverage, and capable of being powered by button cell, tiny solar cell, or 
+printed battery. LoRa backscatter uses chirp spread activation (CSS) that can 
+synthesize continuous frequency modulated chirps; a limitation is that 
+backscatter is drowned out by noise and the RF source. The LoRa backscatter 
 system was tested in various deployments: across three floors of a 4800 square-
 foot house, a single floor of 13,000 square foot office building, and on a 
 one-acre farm. Figure 5 shows the layout of the house with the RF source (TX) 
 on the second floor and receiver in the basement (RX); the plot shows the system 
-achieved RSSI values greater -144 dBm, with reliable wireless coverage throughout 
-the house, and rates sufficient for temperature sensors that transmit small 
-packages. The system was also implemented in the form flexible epidermal patch 
-sensor shown in Figure 6, that provided reliable connectivity across a 3,300 
-square foot atrium with RSSI greater than -132 dBm. Overall, LoRa backscatter 
-provides a compact, energy-efficient, and affordable wireless transmission 
-system that can be extended to scale at reasonable cost. This system could
-possibly transmission of biometric data from wearable sensors to capture 
-health information from addicted individuals in treatment and recovery. 
+achieved RSSI values greater than -144 dBm, with reliable wireless coverage 
+throughout the house, and rates sufficient for temperature sensors that 
+transmit small packages. The system was also implemented in the form flexible 
+epidermal patch sensor shown in Figure 6, that provided reliable connectivity 
+across a 3,300 square foot atrium with RSSI greater than -132 dBm. LoRa 
+backscatter provides a compact, energy-efficient, and affordable wireless 
+transmission system that can be extended to scale at reasonable cost. This 
+system could possibly transmission of biometric data from wearable sensors 
+to capture health information from addicted individuals in treatment. 
 
 \begin{table}
   \caption{Comparison of Wireless Communication Technologies \cite{talla17}}
@@ -379,7 +383,7 @@ As depicted in Figure 7, the GET sensor is is flexible, stretchable, and
 transparent, and less than a sub-micrometer in thickness (463 +/- 30 nm). 
 GET has been used successfully to measure electrocardiograph (ECK), 
 electromyogram (EMG), electrocephalograph (EEG) signals, as well as skin 
-temperature and skin hydration. After use, the get can be easily removed by 
+temperature and skin hydration. After use, the GET can be easily removed by 
 peeling it from the skin. A future step in the development of GET is to include
 an antenna to the design so that signals can be beamed off the device to a
 smartphone application or computer. The thin, flexible, resilient tattoo 
@@ -397,7 +401,7 @@ in addicted individuals.
 
 \section{Conclusion}
 
-\subsubsection{Can Technological Applications Reduce Opioid Addiction?}
+{\em Can Technological Applications Reduce Opioid Addiction?}
 The abuse of prescription medication in the U.S. has led to opioid addiction  
 at levels of epidemic proportion. Technological interventions can play a role 
 in addressing this crisis as a supplement to conventional forms of addiction 
@@ -409,24 +413,27 @@ addicted individuals. The literature reviewed indicates that wearable sensors
 are an effective way to measure vital health data in real time and remotely. 
 Providing individuals in recovery with vital health data may help them to 
 resist physical cravings and prevent relapse. Another limitation of treatment 
-approaches is that individuals in recovery are released back into the 
-environmental settings associated with their drug use. Recent advances in 
+approaches is that, after detoxification, individuals in recovery are released 
+back into the environmental settings associated with their drug use, putting 
+them at risk for potential relapse and possible overdose. Recent advances in 
 signal technologies such as LoRa Backscatter and Graphene tattoo sensors can 
-lead to the more efficient collection of biometric signals and cost effective 
-transmission of health data for subsequent analysis. The opioid addiction 
-epidemic is a complex phenomenon, with underlying sociological factors. 
-Technological interventions will increase the amount of data about addicted
-individuals and relevant risk factors that may be used to predict opioid 
-overdose death. Despite increased awareness of the potential for prescription 
-medication abuse, Table 1 shows the rate of overdose deaths is growing more 
-rapidly for heroin and synthetic opioids such as fentanyl compared to 
-conventional prescription opioid medication. The implication of this is that 
-individuals who may become addicted to prescribed medication may go on to 
-abuse illicit or synthetic opioids, which occurs in non-clinical and 
-unregulated settings. Big data offers potential for transforming health care
-and addition treatment; however, increasing levels of data about opioid 
-addiction may not lead to a decrease in rates of overdose death if the 
-overall availability of illicit and alternative opioids remains high. 
+lead to the more efficient collection of biometric information and cost 
+effective transmission of health data for subsequent analysis. The opioid 
+addiction epidemic is a complex phenomenon, with both physical and sociological 
+contributing factors. Technological interventions will increase the amount of 
+data about addicted individuals and relevant risk factors that may be used to 
+predict opioid overdose death; however, it will not address the environmental
+factors that lead to addiction. Despite increased awareness of the potential 
+for prescription medication abuse, Table 1 shows the rate of overdose deaths 
+is growing more rapidly for heroin and synthetic opioids such as fentanyl 
+compared to conventional prescription opioid medication. The implication of 
+this is that individuals who may become addicted to prescribed medication may 
+go on to abuse illicit or synthetic opioids, in non-clinical, unsupervised,
+and unregulated settings. Big data offers potential for transforming health 
+care and addition treatment. Increasing levels of data about opioid 
+addiction ultimately may not be sufficient to prevent or decrease rates of 
+overdose death if the availability of illicit and synthetic opioids remains 
+high. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -441,17 +448,6 @@ overall availability of illicit and alternative opioids remains high.
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{report} 
-
-\appendix
-
-When you submit the paper you need to address each of the items in the
-issues.tex file and verify that you have done them. Please do this
-only at the end once you have finished writing the paper. To d this
-cange TODO with DONE. However if you check something on with DONE, but
-we find you actually have not executed it correctly, you will receive
-point deductions. Thus it is important to do this correctly and not
-just 5 minutes before the deadline. It is better to do a late
-submission than doing the check in haste. 
 
 \input{issues}
 
