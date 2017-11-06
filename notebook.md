@@ -1,4 +1,4 @@
-# Course Notebook: Big Data Applications and Analytics (F17)
+## Course Notebook: Big Data Applications and Analytics (F17)
 
 # Meetings
 * 09/14/17  Watched video of meeting on jabref, latex, sharelatex, github 
