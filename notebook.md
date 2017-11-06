@@ -23,7 +23,8 @@
 * 09/20/17  Update github HID README, paper1 LaTex templates, report.bib, report.tex 
 * 09/25/17  Updated course notebook to include sections on Meetings and Location latitude, longitude
 * 10/19/17  Submitted Project proposal abstract, approved by instructor von Laszewski
-* 10/21/17  Submitted Paper 1 to TurnItIn for online review
+* 10/21/17  Submitted Paper 1 to TurnItIn for online review, 31 percent similarity
+* 11/06/17  Submitted Paper 2 to TurnItIn for online review, 20 percent similarity
 
 #  Theory
 * 08/25-09/01/17  Read Introduction and Watched Course Motivation Video Lectures by Geoffrey Fox:
