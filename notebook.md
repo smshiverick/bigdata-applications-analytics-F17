@@ -44,6 +44,7 @@
 * 10/28/17  Python experiment: SKLearn Decision Trees and Random Forest Classification of Cancer dataset
 * 10/28/17  Python experiment: SKLearn Support Vector Machines and SVC Classification with Cancer dataset
 * 11/03/17  Python experiment: SKLearn Neural Networks, Multilayer Perceptron (MLP) Classifier on Cancer data
+* 11/07-11/08/17  Project: Obtained dataset on National Drug Survey, created ipynb for project, varible selection
 
 # Writing
 * 09/05/17  Topic for Paper 1: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics 
