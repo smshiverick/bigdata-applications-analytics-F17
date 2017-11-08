@@ -1,10 +1,8 @@
-HID335: Project Proposal 
-
-Title: > 
+## HID335: Project Proposal 
+## Title: > 
     Big Data and Health Analytics: Using Machine Learning 
     to Predict Opiate Addiction and Overdose.  
-
-Abstract: >
+## Abstract: >
    Abuse of prescription medication in North America over the past two decades 
    has lead to increased rates of opioid addiction, drug overdose, and death. Big data 
    health analytics may help to identify individuals susceptible to addiction and overdose, 
@@ -13,12 +11,12 @@ Abstract: >
    applied to public health data can be used to predict opioid addiction and drug overdose. 
    Differences between the ML classification methods will be discussed. 
 
-Data: 2015 NATIONAL SURVEY ON DRUG USE AND HEALTH
+## Data: 2015 NATIONAL SURVEY ON DRUG USE AND HEALTH
 * Substance Abuse and Mental Health Services Administration Center for Behavioral Health Statistics and Quality
 * Rockville, Maryland 20857, October 27, 2016
-* https://www.samhsa.gov/samhsa-data-outcomes-quality/major-data-collections/reports-detailed-tables-2015-NSDUH
+* http://datafiles.samhsa.gov/study/national-survey-drug-use-and-health-nsduh-2015-nid16893
    
-1.11. PRESCRIPTION PAIN RELIEVERS 
+# 1.11. PRESCRIPTION PAIN RELIEVERS 
 To be defined with prescription pain reliever dependence, DEPNDPYPNR, a respondent must have met three or more of these pain reliever dependence criteria: 
 (1) Spent a great deal of time over a period of a month or more getting, using, or getting over the effects of pain relievers (PNRLLOTTM=1 or PNRLGTOVR=1) 
 (2) Used pain relievers more often than intended or was unable to keep set limits on pain reliever use (PNRLKPLMT=2) 
@@ -30,7 +28,7 @@ effects or noticed that same amount of pain reliever use had less effect than be
 (7) Reported experiencing three or more pain reliever withdrawal symptoms at the same time that lasted longer than a day after pain reliever use was cut back or stopped. Symptoms include (i) feeling kind of blue or down; (ii) vomiting or feeling nauseous; (iii) having cramps or muscle aches; (iv) having teary eyes or a runny nose; (v) feeling sweaty, having enlarged pupils, or having body hair standing up on skin; (vi) having diarrhea; (vii) yawning; (viii) having a fever; and (ix) having trouble sleeping. (PNRLWDSMT=1). 
 This recode was created using the edited dependence variable (DEPENDPNR) and imputing it so that all past year users were either defined with dependence or defined without dependence. Then the imputed dependence variable (IRDEPENDPNR) was converted to the 
 
-1.7. HEROIN
+# 1.7. HEROIN
 To be defined with heroin dependence, DEPNDHER, a respondent must have met three or more of these heroin dependence criteria:
 (1) Spent a great deal of time over a period of a month or more getting, using, or getting over the effects of heroin (HERLOTTM=1 or HERGTOVR=1)
 (2) Used heroin more often than intended or was unable to keep set limits on heroin use (HERKPLMT=2)
