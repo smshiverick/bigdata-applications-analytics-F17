@@ -1,7 +1,5 @@
 ## HID335: Project Proposal 
-## Title: > 
-    Big Data and Health Analytics: Using Machine Learning 
-    to Predict Opiate Addiction and Overdose.  
+## Title: Big Data Health Analytics: Using Machine Learning to Predict Opiate Addiction and Overdose.  
 ## Abstract: >
    Abuse of prescription medication in North America over the past two decades 
    has lead to increased rates of opioid addiction, drug overdose, and death. Big data 
