@@ -6,7 +6,7 @@
 * 09/25/17  Attended online zoom meeting on paper1, shareLatex, github
 * 10/02/17  Attended online zoom meeting on paper1, question about table, figure, JabRef references
 * 10/16/17  Attended online zoom meeting on paper2, and revisions for paper1 report.bib and report.tex
-* (TO DO)  Attend online zoom meeting on paper2 and course project
+* 11/06/17  Attended online zoom meeting on paper2 and course project
 
 # Logistics    
 *	08/25-09/01/17  Read Course Organization and Introduction, and Piazza Folders curation
@@ -45,6 +45,7 @@
 * 10/28/17  Python experiment: SKLearn Support Vector Machines and SVC Classification with Cancer dataset
 * 11/03/17  Python experiment: SKLearn Neural Networks, Multilayer Perceptron (MLP) Classifier on Cancer data
 * 11/07-11/08/17  Project: Obtained dataset on National Drug Survey, created ipynb for project, varible selection
+* 11/09/17  Project: National Drug and Health Survey, data preprocessing, feature selection
 
 # Writing
 * 09/05/17  Topic for Paper 1: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics 
