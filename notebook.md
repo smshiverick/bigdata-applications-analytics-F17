@@ -30,7 +30,7 @@
 * 11/09/17  Project: National Drug and Health Survey, data preprocessing, feature selection
 * 11/11/17  Project: NSDUH survey questions, variable selection, construction of data subset
 * 11/12/17  Project: Updated project notebook with NSDUH variable, dataset construction
-* TODO: Project: Recorde variables in NSDUH data subset, prepare data for analysis
+* 11/16/17  Project: Loaded NSDUH dataset as data frame, recoded features, prepare data for analysis
 
 #  Theory
 * 08/25-09/01/17  Read Introduction and Watched Course Motivation Video Lectures by Geoffrey Fox:
