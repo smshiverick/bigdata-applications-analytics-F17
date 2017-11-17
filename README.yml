@@ -37,6 +37,7 @@ paper2:
     review: Nov 6 2017
     author:
     - Sean M. Shiverick
+    chapter: Health
     hid:
     - 335
     title: >
@@ -79,6 +80,6 @@ project:
        size TBD
    analytics: Machine Learning
    application: Health Analytics 
-   chapter: Machine Learning or Health
+   chapter: Health
    keywords: Health Analytics, Machine Learning, Opioid Overdose, Addiction Treatment, i523
    status: in progress
