@@ -52,6 +52,7 @@
 * 11/03/17  Python experiment: SKLearn Neural Networks, Multilayer Perceptron (MLP) Classifier on Cancer data
 * 11/15-11/16/17 Project: Python notebook for cleaning and preparing data from the NSDUH dataset
 * 11/16/17  Python experiment: Pandas Data Cleaning and Preparation, subsetting data frames, export to CSV
+* 11/19/17  Project: Subset NSDUH dataset in Pandas and created aggregated data subset for course project
 
 # Writing
 * 09/05/17  Topic for Paper 1: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics 
