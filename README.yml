@@ -60,8 +60,7 @@ project:
    hid:
    - 335
    title: >
-       Big Data and Health Analytics: Using Machine Learning to
-       Predict Opiate Addiction and Overdose
+       Big Data Health Analytics: Machine Learning Classification of Opioid Addiction
    abstract: >
        Abuse of prescription medication in North America over the past
        two decades has lead to increased rates of opioid addiction,
