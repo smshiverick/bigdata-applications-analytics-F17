@@ -31,6 +31,7 @@
 * 11/11/17  Project: NSDUH survey questions, variable selection, construction of data subset
 * 11/12/17  Project: Updated project notebook with NSDUH variable, dataset construction
 * 11/16/17  Project: Loaded NSDUH dataset as data frame, recoded features, prepare data for analysis
+* 11/20/17  Project: Formatted project folder in HID335 to include necessary files, folders, and formats
 
 #  Theory
 * 08/25-09/01/17  Read Introduction and Watched Course Motivation Video Lectures by Geoffrey Fox:
@@ -72,6 +73,7 @@
 * 10/31/17 Paper 2: Writing literature review, revise report.tex, report.bib, add Figures 1-8, add Table 1
 * 11/03-11/05/17 Paper 2: Writing, review, revision of report.tex and report.bib for submission
 * 11/15-11/16/17 Project: NSDUH data codebook includes survey variables and frequency summary 
+* 11/20/17  Project: Created report.tex and report.bib files in SharelaTex with accompanying files and folders
 
 # Location
 * Address: Galway Drive, Dallas, Texas, 75218
