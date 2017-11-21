@@ -3,45 +3,153 @@
 \input{format/i523}
 
 \begin{document}
-\title{Big Data Health Analytics: Machine Learning Classification of 
-Opioid Addiction}
 
-\author{Sean M. Shiverick}
-\affiliation{%
+\title{Machine Learning Classification of Opioid Use and Addiction
+for Big Data Health Analytics}
+
+  \author{Sean M. Shiverick}
+  \affiliation{%
   \institution{Indiana University Bloomington}
 }
 \email{smshiver@indiana.edu}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{abstract}
-Abuse of prescription medication in North America over the past two decades 
-has lead to increased rates of opioid addiction, drug overdose, and death. Big 
-data health analytics may help to identify individuals susceptible to opioid 
-addiction and overdose, possibly leading to improved treatment and prevention
-       outcomes. This project will explore how machine learning
-       classification methods (logistic regression, decision trees,
-       SVM) applied to public health data can be used to predict
-       opioid addiction and drug overdose. Differences between the ML
-       classification methods will be discussed.
+Classification of opioid abuse and dependency can help to identify features
+relevant to drug addiction and overdose. This project uses machine learning
+procedures to classify individuals according to illicit opioid use, and
+identify characteristics of individuals susceptible to opioid addiction.
+Developing a classification model for identifying factors related to opioid 
+addiction could be extended over previous years, to the population of
+patients who are prescribed opioid medication, to help reduce rates of 
+opioid addiction, and curtain the epidemic of opioid medication abuse.  
+Differences between the classification methods is discussed.
+
 \end{abstract}
 
-\keywords{Big Data, Health Analytics, Opioid Addiction, i523, HID335}
+\keywords{Health Analytics, Machine Learning, Classification, Opioid Addiction, 
+Big Data, i523, HID335}
 
 \maketitle
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-Put here an introduction about your topic. 
-We just need one sample refernce so the paper compiles in LaTeX so we
-put it here \cite{editor00}.
+The abuse of prescription opioid medication has become a major health crisis 
+in the U.S. that has reached epidemic proportion \cite{volkow14}. Over 2 
+million Americans were dependent or abused prescription opioids such as 
+oxycodone (i.e. ``Oxycontin'') or hydrocodone (e.g., ``Vicodan'') in 2014 
+\cite{cdc17}. Overdose deaths from prescription opioids has quadrupled since 
+1999, resulting in more than 180,000 deaths between 1999 to 2015 \cite{nida17}. 
+Mobile health applications can help monitor medication adherence and provide 
+an early warning system for potential abuse of prescription medication 
+\cite{varshney13}. Medication abuse can consist of higher medication dosages 
+or rapid escalation of a prescribed dosage. The general goal of this prediction 
+model is to analyze patient data for sudden changes in medication consumption;
+however, reliable information about medication consumption can be difficult 
+to obtain from potentially addicted individuals based on self-reports. 
+Individuals dependent or addicted to opioids may seek to obtain medications 
+without a prescription, seek synthetic opioids such as fentanyl, or obtain 
+illicit drugs such as heroin. The goal of this project was to use machine
+learning classification procedures to help identify demographic information 
+and features of individuals who are potentially susceptible to opioid 
+dependency, abuse, and addiction.Classification of illicit opioid use
+could help identify at risk for developing opioid dependency and addiction. 
+
+\subsection{Drug Addiction and Treatment}
+
+
+
+
+
+
+
+
+
+Addiction is a complex phenomenon, with multiple and interacting factors. 
+
+
+Drug addiction chronic health conditions 
+Drug addiction has many similar characteristics to other chronic medical 
+illnesses; however, there are unique challenges to the treatment of addiction
+illnesses \cite{boyer10}. 
+
+For example, drug addicted patients undergo intense detoxification 
+in rehabilitation treatment programs, which reduces their drug tolerance, and 
+then are released back into the same environment associated with their drug use, 
+putting them at greater risk for relapse and potential drug overdose. 
+
+
+Efforts to address prescription opioid abuse, overdoses, and deaths have 
+focused on four major risk areas: (i) Increasing knowledge of opioid abuse 
+and improving decisions of medication prescribers, (ii) Reducing inappropriate 
+access to opioids, (iii) Increasing effective overdose treatment, (iv) 
+Providing substance-abuse treatment to persons addicted to opioids. 
+
+
+The lack 
+of continuity in the treatment of addiction disorders leaves persons in recovery 
+at high risk of relapse for substance use and abuse. 
+
+have been proposed. According to the classical conditioning model, situational 
+cues or events can elicit a motivational state underlying relapse to drug use. 
+
+A slightly more complex model suggests that addictive behavior can be reinstated 
+after extinction of dependency by exposure to drugs, drug-related cues, or 
+environmental stressors \cite{shaham03}. 
+
+
+
+\cite{cdc17}.
+
+
+\cite{johnson11}
+\cite{marsch12}
+\cite{nida17}
+
+
+\subsection{Medication Abuse and Addiction} 
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Project Data: NSDUH-2015} 
+
+The data for this project were obtained from the National Survey on Drug Use 
+and Health 
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data Cleaning and Preparation}\cite{rahm00}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{figures}
 
-In Figure \ref{f:fly} we show a fly. Please note that because we use
+In Figure \ref{f:fly} 
+
+
+we show a fly. Please note that because we use
 just columwidth that the size of the figure will change to the
 columnwidth of the paper once we change the layout to final. CHnaging
 the layout to final should not be done by you. All figures will be
@@ -93,29 +201,46 @@ citations in the section.
 
 \begin{acks}
 
-  The authors would like to thank Dr. Gregor von Laszewski for his
-  support and suggestions to write this paper.
+  The author would like to thank Dr. Gregor von Laszewski, 
+    the Assistant Instructors, Juliette Zurick, Jiang Miao,
+    and others who helped to improve this report. 
 
 \end{acks}
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{report} 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \appendix
 
-We include an appendix with common issues that we see when students
-submit papers. One particular important issue is not to use the
-underscore in bibtex labels. Sharelatex allows this, but the
-proceedings script we have does not allow this.
+\section{Code References}
 
-When you submit the paper you need to address each of the items in the
-issues.tex file and verify that you have done them. Please do this
-only at the end once you have finished writing the paper. To d this
-cange TODO with DONE. However if you check something on with DONE, but
-we find you actually have not executed it correcty, you will receive
-point deductions. Thus it is important to do this correctly and not
-just 5 minutes before the deadline. It is better to do a late
-submission than doing the check in haste. 
+Appendix of common issues: 
+
+\begin{enumerate}
+
+\item Cloud - chameleon, jetstream, or kilo (futuresystems)
+\item MongoDB Version - 34 for version 3.4, 32 for version 3.2
+\item Config Server Replication Size - a number
+\item Mongos Router Instances - a number
+\item Shard Count - a number
+\item Shard Replication Size - a number
+
+\end{enumerate}
+
+
+Do not to use the underscore in bibtex labels.  
+Address each of the items in the issues.tex file 
+and verify that you have done them. 
+Please do this only at the end once you have 
+finished writing the paper. 
+Change `TODO` with `DONE`. 
+
+
+
+
 
 %\input{issues}
 
