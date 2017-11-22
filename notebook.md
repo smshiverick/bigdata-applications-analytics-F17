@@ -7,7 +7,7 @@
 * 10/02/17  Attended online zoom meeting on paper1, question about table, figure, JabRef references
 * 10/16/17  Attended online zoom meeting on paper2, and revisions for paper1 report.bib and report.tex
 * 11/06/17  Attended online zoom meeting on paper2 and course project
-* TO DO 11/13/17  Attend online zoom meeting on course project
+* 11/20/17  Attended online zoom meeting on course project, formatting issues, questions about data
 
 # Logistics    
 *	08/25-09/01/17  Read Course Organization and Introduction, and Piazza Folders curation
