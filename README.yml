@@ -4,8 +4,8 @@ owner:
     name: Sean Shiverick
     firtsname: Sean
     lastname: Shiverick
-    latitude: "32.840054 W"
-    longitude: "-96.697841 N"
+    latitude: "32.840054 N"
+    longitude: "-96.697841 W"
     city: Dallas, TX, U.S.A.
     url: https://github.com/bigdata-i523/hid335
 paper1:
