@@ -3,7 +3,6 @@
 \input{format/i523}
 
 \begin{document}
-
 \title{Machine Learning Classification of Opioid Use and Addiction
 for Big Data Health Analytics}
 
@@ -12,6 +11,8 @@ for Big Data Health Analytics}
   \institution{Indiana University Bloomington}
 }
 \email{smshiver@indiana.edu}
+
+\renewcommand{\shortauthors}{S.M. Shiverick}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -33,14 +34,16 @@ Big Data, i523, HID335}
 
 \maketitle
 
+\url{url: https://github.com/bigdata-i523/hid335/tree/master/project}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
 The abuse of prescription opioid medication has become a major health crisis 
-in the U.S. that has reached epidemic proportion \cite{volkow14}. Over 2 
-million Americans were dependent or abused prescription opioids such as 
-oxycodone (i.e. ``Oxycontin'') or hydrocodone (e.g., ``Vicodan'') in 2014 
-\cite{cdc17}. Overdose deaths from prescription opioids has quadrupled since 
+in the U.S. that has reached epidemic proportions \cite{volkow14}.In 2014, 
+over 2 million Americans were dependent or abused prescription opioids such 
+as oxycodone (i.e. ``Oxycontin'') or hydrocodone (e.g., ``Vicodan'') 
+\cite{cdc17}. Overdose deaths from prescription opioids have quadrupled since 
 1999, resulting in more than 180,000 deaths between 1999 to 2015 \cite{nida17}. 
 Mobile health applications can help monitor medication adherence and provide 
 an early warning system for potential abuse of prescription medication 
@@ -57,59 +60,90 @@ and features of individuals who are potentially susceptible to opioid
 dependency, abuse, and addiction.Classification of illicit opioid use
 could help identify at risk for developing opioid dependency and addiction. 
 
-\subsection{Drug Addiction and Treatment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Opioid Abuse, Dependency, and Addiction}
 
-
-
-
-
-
-
-
-
-Addiction is a complex phenomenon, with multiple and interacting factors. 
-
-
-Drug addiction chronic health conditions 
 Drug addiction has many similar characteristics to other chronic medical 
-illnesses; however, there are unique challenges to the treatment of addiction
-illnesses \cite{boyer10}. 
+illnesses, but there are unique challenges to the treatment of addiction
+\cite{marsch12, swendson16}. In drug rehabilitation treatment programs, 
+patients undergo intense detoxification that reduces their drug tolerance, but 
+are then released back into the environments associated with their drug use, 
+putting them at high risk for relapse and potential drug overdose 
+\cite{johnson11}. According to a classical conditioning model of addiction, 
+situational cues or events can elicit a motivational state underlying relapse 
+to drug use. Addictive behavior can be also be reinstated after extinction of 
+dependency by exposure to drug-related cues or stressors in the environment 
+\cite{shaham03}. Categorizing or classifying cases of opioid abuse can 
+contribute to efforts at addressing the opioid crisis in the following ways: 
+(i) Identify factors related to opioid dependency, (ii) Inform consumers of 
+opioid medication about relevant risk factors, and (iii) Increase knowledge 
+of opioid abuse for more informed decisions by prescribers. 
 
-For example, drug addicted patients undergo intense detoxification 
-in rehabilitation treatment programs, which reduces their drug tolerance, and 
-then are released back into the same environment associated with their drug use, 
-putting them at greater risk for relapse and potential drug overdose. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Machine Learning Classsification} 
+
+Machine learning describes a set of procedures and automated processes for 
+extracting knowledge from data. The two main branches of machine learning are'
+supervised learning and unsupervised learning. When a problem has a specific 
+target variable or outcome, we are dealing with a supervised learning problem. 
+If the data that we are working with has no specific outcome, then we are
+dealing with an unsupervised learning task that involves clustering or 
+dimension reduction. The goals of this project are primarily direct at the 
+outcome of opioid addiction, and will focus on supervised learning problems. 
+Supervised learning is used to predict a certain outcome from a given input,
+when examples of input/output pairs are available \cite{muller17}. A machine
+learning model is constructed from the training set of input-output pairs, 
+with the goal of predicting new test data that the model has not seen before. 
+The two major approaches to supervised learning problems are regression and
+classification. When the target variable to be predicted is continuous, or
+there is continuity between the outcome (e.g., home values, or income), a 
+regression model is used to test the set of features that predict the target 
+variable of interest. If the target to be predicted is a class label, set of 
+categorical or binary outcome (e.g., `spam` or `ham`, `benign` or `malignant`), 
+then classification is used to predict which class or category label that 
+new instances will be assigned to. \cite{raschka17}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Project Goals} 
+This project will use a set of demographic characteristics, health, and 
+psychological characteristics (e.g., adult depression) to classify individuals 
+according to opioid addiction. 
 
 
-Efforts to address prescription opioid abuse, overdoses, and deaths have 
-focused on four major risk areas: (i) Increasing knowledge of opioid abuse 
-and improving decisions of medication prescribers, (ii) Reducing inappropriate 
-access to opioids, (iii) Increasing effective overdose treatment, (iv) 
-Providing substance-abuse treatment to persons addicted to opioids. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Method}
+
+\subsection{National Survey on Drug Use and Health} 
+
+The data used for this project is the 2015 National Survey on Drug Use and 
+Health (NSHUH-2015) obtained from the Substance Abuse and Mental Health Data 
+Archive \cite{samhsa16}. The data consisted of a sample of 57,146 observations 
+with 2,666 features representing individual-level responses to a comprehensive 
+survey on substance use (prescription medication and illicit drugs), health, 
+depression, employment, and demographic characteristics in the U.S. population. 
+Sampling was weighted across states by population size for a representative 
+distribution selected from 6,000 area segments varying in size according to 
+state. The sample design used five state sample size groups drawing more 
+heavily from the eight states with the largest population (e.g., CA, FL, IL, MI, 
+NY, OH, PA, TX) which together account for 48 percent of total U.S. population 
+aged 12 or older. Given that NSDUH collects highly-sensitive information from 
+individuals, all identifying information was collapsed (e.g., age categories)
+and state identifiers were removed from the public use file to ensure 
+confidentiality. The NSDUH public-use files do not include geographic location, 
+or demographic variables related to ethnicity or immigration status. The 
+weighted survey screening response rate was 81.94 percent and the weighted
+interview response rate was 71.2 percent. The NSDUH-2015 dataset was 
+downloaded from the SAMH Data Archive as tab-separated Excel files.
 
 
-The lack 
-of continuity in the treatment of addiction disorders leaves persons in recovery 
-at high risk of relapse for substance use and abuse. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-have been proposed. According to the classical conditioning model, situational 
-cues or events can elicit a motivational state underlying relapse to drug use. 
 
-A slightly more complex model suggests that addictive behavior can be reinstated 
-after extinction of dependency by exposure to drugs, drug-related cues, or 
-environmental stressors \cite{shaham03}. 
+\subsection{Data Cleaning and Preparation}
 
 
 
-\cite{cdc17}.
-
-
-\cite{johnson11}
-\cite{marsch12}
-\cite{nida17}
-
-
-\subsection{Medication Abuse and Addiction} 
+\cite{mckinney17}
 
 
 
@@ -117,10 +151,43 @@ environmental stressors \cite{shaham03}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Project Data: NSDUH-2015} 
+\section{Results}
 
-The data for this project were obtained from the National Survey on Drug Use 
-and Health 
+\subsection{Exploratory Analysis and Descriptives}
+
+\cite{rahm00}
+
+
+\cite{mckinney17}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Machine Learning Classification Models}
+
+\cite{muller17}
+
+
+\cite{raschka17}
+
+Machine learning classification 
+of opioid abuse can contribute to efforts to address prescription opioid 
+addiction, overdoses, in the following ways: 
+\begin{enumerate}
+\item Identify factors related to opioid dependency
+\item Inform consumers of opioid medication as to risk factors 
+\item Increase knowledge of opioid abuse for more informed prescriptions. 
+\end{enumerate}
+
+
+\cite{vanderplas17}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+
+\subsection{Classification of Opioid Addiction}
+
 
 
 
@@ -129,27 +196,11 @@ and Health
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Data Cleaning and Preparation}\cite{rahm00}
 
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{figures}
 
-In Figure \ref{f:fly} 
-
-
-we show a fly. Please note that because we use
+In Figure \ref{f:fly} we show a fly. Please note that because we use
 just columwidth that the size of the figure will change to the
 columnwidth of the paper once we change the layout to final. CHnaging
 the layout to final should not be done by you. All figures will be
@@ -165,16 +216,17 @@ examples into your images directory as you will not need them for your
 paper. Instead use images that you like to include. If you do not have
 any images, do not dreate the images folder.
 
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Tables}
 
-In case you need to create tables, you can do this with online tools
-(if you do not mind sharing your data) such as
-\url{https://www.tablesgenerator.com/} or other such tools (please
-google for them). They even allow you to manage tables as CSV.
 
-or generate them by hand while using the provided template in Table\ref{t:mytable}. Not ethat
-the caption is before the tabular environment.
+
+%Table\ref{t:mytable}. 
+
 
 \begin{table}[htb]
 \centering
@@ -193,17 +245,17 @@ the caption is before the tabular environment.
 If you like to see a more elaborate example, please look at
 report-long.tex. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
 
-Put here an conclusion. Conlcusions and abstracts must not have any
-citations in the section.
+Conclusions and abstracts must not have any citations.
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{acks}
 
   The author would like to thank Dr. Gregor von Laszewski, 
-    the Assistant Instructors, Juliette Zurick, Jiang Miao,
-    and others who helped to improve this report. 
+  the Assistant Instructors, Juliette Zurick, Miao Zheng,
+  and others who helped to improve this project and report.
 
 \end{acks}
 
@@ -211,36 +263,25 @@ citations in the section.
 \bibliography{report} 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 
 \section{Code References}
+References used in data cleaning and preparation, exploratory analysis, 
+visualization, classification model construction and evaluation are documented
+here as well as included in comments in the jupyter notebooks 
+\cite{muller17,mckinney17,vanderplas17}
 
 Appendix of common issues: 
 
-\begin{enumerate}
+%\begin{enumerate}
 
-\item Cloud - chameleon, jetstream, or kilo (futuresystems)
-\item MongoDB Version - 34 for version 3.4, 32 for version 3.2
-\item Config Server Replication Size - a number
-\item Mongos Router Instances - a number
-\item Shard Count - a number
-\item Shard Replication Size - a number
+%\item Do not to use the underscore in bibtex labels
+%\item Address each of the items in the issues.tex file  and verify you have done them. 
+%item Please do this only at the end once you have finished writing the paper. 
+%\item Change `TODO` with `DONE`. 
 
-\end{enumerate}
-
-
-Do not to use the underscore in bibtex labels.  
-Address each of the items in the issues.tex file 
-and verify that you have done them. 
-Please do this only at the end once you have 
-finished writing the paper. 
-Change `TODO` with `DONE`. 
-
-
-
-
+%\end{enumerate}
 
 %\input{issues}
 
