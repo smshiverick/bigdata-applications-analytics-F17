@@ -60,16 +60,16 @@ project:
    hid:
    - 335
    title: >
-       Big Data Health Analytics: Machine Learning Classification of Opioid Addiction
+       Machine Learning Classification of Opioid Use and Addiction for Big Data Health Analytics
    abstract: >
-       Abuse of prescription medication in North America over the past two decades 
-       has lead to increased rates of opioid addiction, drug overdose, and death. 
-       Big data health analytics may help to identify individuals susceptible to 
-       opioid addiction and overdose, possibly leading to improved treatment and 
-       prevention outcomes. This project will explore how machine learning
-       classification methods (logistic regression, decision trees, SVM) applied 
-       to public health data can be used to predict opioid addiction and drug overdose. 
-       Differences between the classification methods will be discussed.
+       Classification of opioid abuse and dependency can help to identify features relevant 
+       to drug addiction and overdose. This project uses machine learning procedures to 
+       classify individuals according to illicit opioid use, and identify characteristics 
+       of individuals susceptible to opioid addiction. Developing a classification model for
+       identifying factors related to opioid addiction could be extended over previous years, 
+       to the population of patients who are prescribed opioid medication, to help reduce rates 
+       of opioid addiction, and curtain the epidemic of opioid medication abuse. Differences 
+       between classification methods will be discussed.
    url: https://github.com/bigdata-i523/sample-pid000/project/report.pdf
    dataset: >
        Centers for Disease Control (CDC) Wide-ranging Online Data for 
