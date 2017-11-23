@@ -42,29 +42,62 @@ Big Data, i523, HID335}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-The abuse of prescription opioid medication has become a major health crisis 
-in the U.S. that has reached epidemic proportions \cite{volkow14}.In 2014, 
-over 2 million Americans were dependent or abused prescription opioids such 
-as oxycodone (i.e. ``Oxycontin'') or hydrocodone (e.g., ``Vicodan'') 
-\cite{cdc17}. Overdose deaths from prescription opioids have quadrupled since 
-1999, resulting in more than 180,000 deaths between 1999 to 2015 \cite{nida17}. 
-Mobile health applications can help monitor medication adherence and provide 
-an early warning system for potential abuse of prescription medication 
-\cite{varshney13}. Medication abuse can consist of higher medication dosages 
-or rapid escalation of a prescribed dosage. The general goal of this prediction 
-model is to analyze patient data for sudden changes in medication consumption;
-however, reliable information about medication consumption can be difficult 
-to obtain from potentially addicted individuals based on self-reports. 
-Individuals dependent or addicted to opioids may seek to obtain medications 
-without a prescription, seek synthetic opioids such as fentanyl, or obtain 
-illicit drugs such as heroin. The goal of this project was to use machine
-learning classification procedures to help identify demographic information 
-and features of individuals who are potentially susceptible to opioid 
-dependency, abuse, and addiction.Classification of illicit opioid use
-could help identify at risk for developing opioid dependency and addiction. 
+Big Data offers tremendous potential to fuel innovation and transform society, 
+but can this momentum be harnessed for the greater good, to prevent disease 
+and improve health? Health informatics is generating huge amounts of data at a 
+rapid pace, from electronic medical records (EMRs), clinical research data, to 
+population-level public health data \cite{herland14}. This project explores 
+whether big data health analytics can help address the opioid overdose epidemic 
+\cite{cdc16}. Health Informatics is considered from two levels: where the data 
+is collected, and the research questions being addressed. Public health surveys
+can provide data on a wide range of issues related to substance use, including 
+information that individuals may be reluctant to disclose in person, including: 
+personal health status, mental health conditions, and illicit drug consumption.  
+Questions of interest in this project: \textit{What prescription medications 
+have you used in the past month, year, life time?}, \textit{What illicit
+substances have you used in the past month, year, life time?} The general idea 
+features associated with a susceptibility for the abuse and dependence on 
+prescription medications may be influential for classifying illicit opioid use. 
+A limitation of survey data is that although there is a high volume and variety 
+of information collected, it may be unreliable due to response biases of 
+respondents, leading to low veracity. The literature review shows that survey
+data can be useful for obtaining personal health data, but public use data 
+often restricted identifying information to protect confidentiality that could
+be useful for accurate classification and prediction. The goal of this project 
+was to examine how machine learning procedures can be used to classify 
+individuals susceptible to opioid dependence and addiction.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Opioid Abuse, Dependency, and Addiction}
+\subsection{Opioid Overdose Epidemic}
+
+The abuse of prescription opioid medication in the U.S. has become a major 
+health crisis of epidemic proportions \cite{volkow14}. Over 2 million Americans 
+were dependent on or abused prescription opioids such as oxycodone or 
+hydrocodone in 2014 \cite{cdc17}. Overdose deaths from prescription opioids 
+have quadrupled since 1999, resulting in more than 180,000 deaths between 1999 
+to 2015 \cite{nida17}. Drug overdose death increased significantly for both 
+males and females, ages 25-44, 55 years and older, for Non-Hispanic Whites 
+and Blacks, in the Norheastern, Midwestern, and Southern areas of the U.S.
+\cite{cdc16}. Medication abuse can consist of higher medication dosages or rapid 
+escalation of a prescribed dosage. Mobile health applications can help provide 
+an early warning system for potential abuse of prescription medication 
+\cite{varshney13}. Analytic models can monitor patient data for sudden changes 
+in medication consumption; however, it can be difficult to obtain reliable 
+information about medication consumption based on self-reports from potentially
+addicted individuals. Patients who become dependent and addicted to  
+prescription opioid medications may seek to obtain synthetic opioids such as 
+fentanyl without a prescription or illicit drugs such as heroin, whose exact 
+dosages and potency are uknown, putting them at great risk of drug overdose 
+death. Indeed, the sharp increase in overdose deaths due to synthetic opioids 
+(other than methadone) has coincided with the increased availability of 
+illicitly manufactured fentanyl, which is indistinguishable from prescription 
+fentanyl. These findings indicate that the opioid overdose epidemic is getting
+worse, and requires urgent action to detect and prevent opioid dependence, 
+abuse and death. The general goal of this project is to develop a classification 
+model for predicting opioid addiction based on demographic characteristics.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Drug Abuse, Dependency, and Addiction}
 
 Drug addiction has many similar characteristics to other chronic medical 
 illnesses, but there are unique challenges to the treatment of addiction
@@ -267,43 +300,57 @@ Additional data from the NSDUH was downloaded from 2012 to 2014
 
 hen trying to integrate data from multiple sources, (4) inconsistencies in coding of attributes or features can be a major source of problems. For example, time stamped data with different date formats (e.g., DD/MM/YY; YY/MM/DD, or MM/DD/YY) would have to be reformatted before being combined. Similarly, different coding for sex (e.g., ‘M’/’F’, ‘0’/’1’, ‘1’,’2’) have to be reconciled when combining multiple data sources. Cleaning big data is a more involved process, with Extraction, Integration, and Aggregation of data from operationalized sources into a data warehouse. In general, there are several phases involved in big data cleaning approaches, including the following:
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Limitations}
 
+Tradeoff between quality and quantity
+
+
+To be of any use, diverse and often messy raw data has to be sifted through and 
+effectively organized for further analysis, and 
+
+
+there are legitimate questions about the reliability of self report data from survey
+research for predicting actual behavior. 
+
+The question of 
+Value evaluates the quality of the data as it pertains to intended outcomes, such 
+as limiting the spread of contagion and disease prevention. 
+
+An important challenge for making sense of big data is developing analytic 
+tools adequate to handle large volumes of data in real time.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dynamics of Epidemic Spreading}
 
-\section{figures}
+Epidemic spreading is a complex phenomenon based on contact networks between 
+individuals and distributed by transportation networks \cite{Colizza06}.
 
-In Figure \ref{f:fly} we show a fly. Please note that because we use
-just columwidth that the size of the figure will change to the
-columnwidth of the paper once we change the layout to final. 
+The dynamics of epidemic spreading is a complex phenomenon, based on contact 
+networks of person-to-person interaction, indirect exposure, and transmission 
+byways such as the {\it airline transportation network} (ATN) \cite{Colizza06}. 
+Epidemics are quantified in terms of the proportion of the population infected, 
+those yet to be infected, and the rate of transmission \cite{hethcote00}. In 
+addition, the structure of the contact network can influence epidemic spreading 
+\cite{pastor01}. For example, in the case of simple contagion, weak ties among 
+acquaintances or infrequent associations provide shortcuts between distant nodes 
+that reduce distance within the network \cite{granovetter73} and can facilitate 
+the spread of disease. 
 
-\begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/fly.pdf}
-  \caption{Example caption}\label{f:fly}
-\end{figure}
+Furthermore, networks with ``small world'' properties have many nodes with 
+few connections, but a small number of highly connected nodes that can rapidly 
+transmit contagion throughout the network \cite{watts98}. Analyzing the 
+correlation between Twitter posts and rate of ILI reports does not capture the 
+complex network structure that underlies disease epidemics and pandemics. 
+It is possible that by analyzing the structure of social media networks, 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Tables}
-
-%Table\ref{t:mytable}. 
-
-\begin{table}[htb]
-\centering
-\caption{My caption}
-\label{t:mytabble}
-\begin{tabular}{lll}
-1 & 2 & 3 \\
-\hline
-4 & 5 & 6 \\
-7 & 8 & 9
-\end{tabular}
-\end{table}
-
-\section{Long example}
-
-If you like to see a more elaborate example, please look at
-report-long.tex. 
+future research may help to identify how points of connection within online
+networks are associated with the spread of contagion and resulting epidemics 
+\cite{zhu17}. Some epidemics such as the opioid crisis in North America 
+\cite{volkow14} may be amenable to social network modeling as drug usage, 
+dependancy, and addiction is subserved by social networks. The emergence of 
+new technologies, such as wearable biosensors \cite{carreiro15} may help 
+improve geospatial mapping of the opioid epidemics and treatment interventions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
@@ -314,6 +361,45 @@ Machine learning classification of opioid abuse can contribute to efforts to add
 \item Inform consumers of opioid medication as to risk factors 
 \item Increase knowledge of opioid abuse for more informed prescriptions. 
 \end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{figures}
+
+In Figure \ref{f:fly} we show a fly. Please note that because we use
+just columwidth that the size of the figure will change to the
+columnwidth of the paper once we change the layout to final. 
+
+Figure \ref{f:Figure1} 
+
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/Figure1.pdf}
+  \caption{Drug overdose deaths involving opioids by type of opioid in U.S. 2000-2014
+  \cite{cdc16}}
+  \label{f:Figure1}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tables}
+
+%Table\ref{t:mytable}. 
+
+\begin{table}
+  \caption{Summary of Participant Characteristics in Pilot study \cite{carreiro15}}
+  \label{tab:freq}
+  \begin{tabular}{ccccccc}
+    \toprule
+     Patient& Age& Gender& History of Use& Intervention& Pre-EDA& Post-EDA \\
+    \midrule
+    1& 82& Male& Opioid naive& 4 mg morphine& 4.5& 60.0 \\
+    2& 47& Male& Recent short-term& 1 mg hydromorphone& 3.4& 12.2 \\
+    3& 43& Female& Chronic opioid use& 1 mg hydromorphone& 0.2& 0.2 \\
+    4& 72& Male& Chronic opioid use& 4 mg morphine& 0.9& 1.6 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{acks}
