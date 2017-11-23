@@ -113,8 +113,13 @@ set of data points and classifies a new data point based on the distance
 is the number of neighbors, and typically k equal to 3 or 5 works well. KNN is
 easy to understand and performs well with little adjustment, but it doe not 
 perform well with datasets that have a large number of features (100 or more) 
-or data that is sparse. Two common linear classification models are logistic 
-regression and support vector machines (SVMs). 
+or data that is sparse. For linear classification models, the decision boundary 
+is a linear function of the input; a binary classifier separates two classes 
+using along a line, plane, or hyperplane. Algorithms for linear classification 
+differ in terms of (1) how they measure how well a particular combination of 
+coefficients and intercept fit the training data, and (2) the type of 
+regularization used \cite{muller17}. Two common linear classification models 
+are logistic regression and support vector machines (SVMs). 
 
 
 Decision Trees
