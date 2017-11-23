@@ -3,7 +3,7 @@
 \input{format/i523}
 
 \begin{document}
-\title{Machine Learning Classification of Opioid Use and Addiction
+\title{Using Machine Learning Classification of Opioid Addiction
 for Big Data Health Analytics}
 
   \author{Sean M. Shiverick}
@@ -17,15 +17,18 @@ for Big Data Health Analytics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
-Classification of opioid abuse and dependency can help to identify features
-relevant to drug addiction and overdose. This project uses machine learning
-procedures to classify individuals according to illicit opioid use, and
-identify characteristics of individuals susceptible to opioid addiction.
-Developing a classification model for identifying factors related to opioid 
-addiction could be extended over previous years, to the population of
-patients who are prescribed opioid medication, to help reduce rates of 
-opioid addiction, and curtain the epidemic of opioid medication abuse.  
-Differences between the classification methods is discussed.
+Classification of opioid addiction can help identify features related to 
+drug abuse and overdose death. Machine learning procedures were used on data 
+from a large National Survey of Drug Use and Health (NSDUH-2015) to classify 
+individuals for illicit opioid use according to demographic characteristics 
+and mental health attributes (i.e., depression). The classification model of 
+opioid addiction could be extended for big data health analytics to include 
+data over previous years of the survey, or extending the sample to the larger 
+population of patients taking prescription opioid medication. Results from  
+this project are intended to raise awareness of risk factors related to 
+opioid addiction among patients and medication prescribers, and provide 
+information that may help to decrease the risk of opioid overdose and death. 
+Different classification methods are discussed.
 
 \end{abstract}
 
@@ -80,53 +83,80 @@ opioid medication about relevant risk factors, and (iii) Increase knowledge
 of opioid abuse for more informed decisions by prescribers. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Machine Learning Classsification} 
+\subsection{Machine Learning Approaches} 
 
-Machine learning describes a set of procedures and automated processes for 
-extracting knowledge from data. The two main branches of machine learning are'
-supervised learning and unsupervised learning. When a problem has a specific 
-target variable or outcome, we are dealing with a supervised learning problem. 
-If the data that we are working with has no specific outcome, then we are
-dealing with an unsupervised learning task that involves clustering or 
-dimension reduction. The goals of this project are primarily direct at the 
-outcome of opioid addiction, and will focus on supervised learning problems. 
-Supervised learning is used to predict a certain outcome from a given input,
-when examples of input/output pairs are available \cite{muller17}. A machine
-learning model is constructed from the training set of input-output pairs, 
-with the goal of predicting new test data that the model has not seen before. 
-The two major approaches to supervised learning problems are regression and
-classification. When the target variable to be predicted is continuous, or
-there is continuity between the outcome (e.g., home values, or income), a 
-regression model is used to test the set of features that predict the target 
-variable of interest. If the target to be predicted is a class label, set of 
-categorical or binary outcome (e.g., `spam` or `ham`, `benign` or `malignant`), 
-then classification is used to predict which class or category label that 
-new instances will be assigned to. \cite{raschka17}
+Machine learning is a set of procedures and automated processes for extracting 
+knowledge from data. The two main branches of machine learning are' supervised 
+learning and unsupervised learning. Supervised learning is used with problems 
+that involve prediction about a specific target variable or outcome of interest. 
+If a given dataset has no target outcome, unsupervised learning can be used to 
+discover underlying structure in unlabeled data. The goal of this project is 
+to classify opioid addiction and focuses on supervised learning. Supervised 
+learning is used to predict a certain outcome from a given input, when examples 
+of input/output pairs are available \cite{muller17}. A machine learning model 
+is constructed from the training set of input-output pairs, to predict new test 
+data not previously seen by the model. The two major approaches to supervised 
+learning problems are regression and classification. When the target variable 
+to be predicted is continuous, or there is continuity between the outcome (e.g., 
+home values, or income), a regression model is used to test the set of features 
+that predict the target variable. If the target is a class label, set of 
+categorical or binary outcomes (e.g., `spam` or `ham`, `benign` or `malignant`), 
+then classification is used to predict which class or category label that new 
+instances will be assigned to.
+
+\subsection{Classification Algorithms} 
+Comparing the performance of different learning algorithms can be helpful for 
+selecting the best model for a given problem \cite{raschka17}. One of the 
+simplest classification algorithms is K-Nearest-Neighbors (KNN) which takes a 
+set of data points and classifies a new data point based on the distance 
+(Euclidean by default) to its nearest neighbor(s). The main parameter for KNN
+is the number of neighbors, and typically k equal to 3 or 5 works well. KNN is
+easy to understand and performs well with little adjustment, but it doe not 
+perform well with datasets that have a large number of features (100 or more) 
+or data that is sparse. Two common linear classification models are logistic 
+regression and support vector machines (SVMs). 
+
+
+Decision Trees
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Project Goals} 
-This project will use a set of demographic characteristics, health, and 
-psychological characteristics (e.g., adult depression) to classify individuals 
-according to opioid addiction. 
 
+The data for this project is the 2015 National Survey on Drug Use and Health 
+(NSHUH-2015) completed by the U. S. Department of Health and Human Services 
+(DHHS), Substance Abuse and Mental Health Services Administration (SAMHSA), 
+Center for Behavioral Health Statistics and Quality \cite{samhsa16}. The 
+NSDUH-2015 is a comprehensive survey that cover all aspects of substance use, 
+misuse, abuse, including questions related to both prescription medications 
+(opioids, tranquilizers, sedatives) and illicit drugs (e.g., heroin, cocaine, 
+methamphetamine), drug dependency, addiction, and treatment, demographic 
+measures of education and employment, physical health, depression, and mental 
+health treatment. The goal is to identify the set of features that best 
+classifies opioid addiction, defined by lifetime heroin. A machine learning 
+classification model will be constructed to classify individuals by heroin 
+use according to demographics attributes and mental health characteristics 
+(e.g., adult depression). Understanding the features that contribute to 
+opioid addiction may help to identify risk factors and increase awareness
+of the potential of opioid abuse by patients and health care providers. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Method}
 
-\subsection{National Survey on Drug Use and Health} 
+\subsection{Data} 
 
-The data used for this project is the 2015 National Survey on Drug Use and 
-Health (NSHUH-2015) obtained from the Substance Abuse and Mental Health Data 
-Archive \cite{samhsa16}. The data consisted of a sample of 57,146 observations 
-with 2,666 features representing individual-level responses to a comprehensive 
-survey on substance use (prescription medication and illicit drugs), health, 
-depression, employment, and demographic characteristics in the U.S. population. 
-Sampling was weighted across states by population size for a representative 
-distribution selected from 6,000 area segments varying in size according to 
-state. The sample design used five state sample size groups drawing more 
-heavily from the eight states with the largest population (e.g., CA, FL, IL, MI, 
-NY, OH, PA, TX) which together account for 48 percent of total U.S. population 
-aged 12 or older. Given that NSDUH collects highly-sensitive information from 
+Data from the 2015 NSHUH was downloaded from the Substance Abuse and Mental 
+Health Data Archive (SAMHDA) as a tab separated Excel file \cite{samhsa16}. 
+The dataset consists of 57,146 observations with 2,666 features representing 
+individual-level responses from a survey of the U.S. population. Sampling was 
+weighted across states by population size for a representative distribution 
+selected from 6,000 area segments varying in size according to state. The 
+sample design used five state sample size groups drawing more heavily from 
+the eight states with the largest population (e.g., CA, FL, IL, MI, NY, OH, 
+PA, TX) which together account for 48 percent of total U.S. population aged 
+12 or older. Given that NSDUH collects highly-sensitive information from 
 individuals, all identifying information was collapsed (e.g., age categories)
 and state identifiers were removed from the public use file to ensure 
 confidentiality. The NSDUH public-use files do not include geographic location, 
@@ -137,17 +167,58 @@ downloaded from the SAMH Data Archive as tab-separated Excel files.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Data Cleaning and Preparation }
 
+\subsubsection{Data Cleaning}
+This analysis was completed in a python interactive notebook \cite{data17} 
+based on instructions and examples from \emph{Python for Data Analysis}
+\cite{mckinney17}. The NSDUH-2015 was loaded into python using Pandas and 
+saved as a dataframe object. The dataset was subset by columns to include: 
+demographic characteristics (e.g., age category, sex, marital status, education, 
+employment status, and category of metropolitan area), measures of physical 
+health (e.g., overall health, STDs, Hepatitis, HIV, Cancer, hospitalization), 
+mental health (e.g., Adult Depression, Emotional Distress, Suicidal Thoughts, 
+Plans), Suicide Attempts, Pain Reliever Medication Use, Misuse, and Abuse
+(over the past year, past month), Prescription Opioid Medications Taken in
+the Past year (e.g., Hydrocodone, Oxycodone, Tramadol, Morphine, Fentanyl,
+Oxymorphone, Demerol, Hydromorphone), Heroin Use, Abuse, and Dependency
+(over the past year, past month), Tranquilizer Use, Sedative Use, Cocaine 
+Use, Amphetamine and Methamphetamine Use, Hallucinogen Use, Drug Treatment
+(e.g., Inpatient, Outpatient, Hospital, Mental Health Clinic, ER, Drug
+Treatment Status), and Mental Health Treatment History. A codebook was 
+created to provide a complete list of variables included with summaries 
+of response categories \cite{codebook17}. Several steps to taken to detect 
+and remove inconsistencies in the data \cite{rahm00}: 
+\begin{enumerate}
+  \item Missing values (i.e., `NaN`) were removed 
+  \item Blanks, non-responses, or legitimate skips were recoded to zero 
+  (e.g.,`99`, `991`, `993`) 
+  \item Dichotomous responses (e.g., ``Yes=1``/``No=2``) were responses to 
+  ``No=0``
+  \item Categorical variables so the response was consistent with degree 
+  (e.g., ``1=low``, ``2=med``, ``3=high``)
+   \item Selected variables were renamed for better description (e.g., 
+   Adult Major Depressive Episode Lifetime changed from `AMDELT` to `DEPMELT`)
+\end{enumerate}
 
-\subsection{Data Cleaning and Preparation}
-
-
-
-\cite{mckinney17}
-
-
-
-
+Because the majority of features were represented as dichotomous ``Yes/No`` 
+variables, related features were summed to create aggregated variables. For 
+example, overall health, STD, Hepatitis, HIV, Cancer, and hospitalization were 
+aggregated to create a single health measure. The health measure was recoded
+so that higher scores indicated better health. Questions related to depression, 
+emotional distress, and suicidal thoughts were summed to create a single 
+variable for mental health (`MENTHLTH`) with scores ranging from 0 to 9. 
+Responses to pain reliever medication use, misuse, abuse, or dependency, 
+were aggregated to create a single variable of pain reliever misuse or abuse
+(`PRLMISAB`). All prescription painkiller medications used in the past year
+were summed. Similarly, all related responses were summed to create single 
+variables for Tranquilizers, Sedatives, Cocaine, Amphetamines, Hallucinogens, 
+Drug Treatment, and Mental Health Treatment. The target outcome of interest for 
+classification, lifetime heroin use (i.e., ``Have you ever used heroin before, 
+at any point in time?``) is a dichotomous variables. The demographic 
+characteristics and aggregated variables were subset and saved to a new data 
+frame consisting of 22 features and 57,146 observations, which was exported 
+to CSV file, titled as `project-data.csv`. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -155,7 +226,7 @@ downloaded from the SAMH Data Archive as tab-separated Excel files.
 
 \subsection{Exploratory Analysis and Descriptives}
 
-\cite{rahm00}
+
 
 
 \cite{mckinney17}
@@ -163,21 +234,14 @@ downloaded from the SAMH Data Archive as tab-separated Excel files.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Machine Learning Classification Models}
+\section{Classification Algorithms}
 
 \cite{muller17}
 
 
 \cite{raschka17}
 
-Machine learning classification 
-of opioid abuse can contribute to efforts to address prescription opioid 
-addiction, overdoses, in the following ways: 
-\begin{enumerate}
-\item Identify factors related to opioid dependency
-\item Inform consumers of opioid medication as to risk factors 
-\item Increase knowledge of opioid abuse for more informed prescriptions. 
-\end{enumerate}
+
 
 
 \cite{vanderplas17}
@@ -186,47 +250,38 @@ addiction, overdoses, in the following ways:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 
-\subsection{Classification of Opioid Addiction}
+\subsection{Extension to Big Data}
+
+This classification method could be adopted for big data health analytics by
+expanding the suvery to the popluation of patients with prescriptions for 
+opioid pain medication and may help to identify individuals at risk for
+potentially developing opioid dependency of addiction. 
 
 
+Additional data from the NSDUH was downloaded from 2012 to 2014
 
-
-
+hen trying to integrate data from multiple sources, (4) inconsistencies in coding of attributes or features can be a major source of problems. For example, time stamped data with different date formats (e.g., DD/MM/YY; YY/MM/DD, or MM/DD/YY) would have to be reformatted before being combined. Similarly, different coding for sex (e.g., ‘M’/’F’, ‘0’/’1’, ‘1’,’2’) have to be reconciled when combining multiple data sources. Cleaning big data is a more involved process, with Extraction, Integration, and Aggregation of data from operationalized sources into a data warehouse. In general, there are several phases involved in big data cleaning approaches, including the following:
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \section{figures}
 
 In Figure \ref{f:fly} we show a fly. Please note that because we use
 just columwidth that the size of the figure will change to the
-columnwidth of the paper once we change the layout to final. CHnaging
-the layout to final should not be done by you. All figures will be
-listed at the end.
+columnwidth of the paper once we change the layout to final. 
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/fly.pdf}
   \caption{Example caption}\label{f:fly}
 \end{figure}
 
-When copying the example, please do not check in the images from the
-examples into your images directory as you will not need them for your
-paper. Instead use images that you like to include. If you do not have
-any images, do not dreate the images folder.
-
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Tables}
 
-
-
 %Table\ref{t:mytable}. 
-
 
 \begin{table}[htb]
 \centering
@@ -248,7 +303,12 @@ report-long.tex.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
 
-Conclusions and abstracts must not have any citations.
+Machine learning classification of opioid abuse can contribute to efforts to address prescription opioid addiction, overdoses, in the following ways: 
+\begin{enumerate}
+\item Identify factors related to opioid dependency
+\item Inform consumers of opioid medication as to risk factors 
+\item Increase knowledge of opioid abuse for more informed prescriptions. 
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{acks}
