@@ -17,103 +17,57 @@ for Big Data Health Analytics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
-Classification of opioid addiction can help identify features related to 
-drug abuse and overdose death. Machine learning procedures were used on data 
-from a large National Survey of Drug Use and Health (NSDUH-2015) to classify 
-individuals for illicit opioid use according to demographic characteristics 
-and mental health attributes (i.e., depression). The classification model of 
-opioid addiction could be extended for big data health analytics to include 
-data over previous years of the survey, or extending the sample to the larger 
-population of patients taking prescription opioid medication. Results from  
-this project are intended to raise awareness of risk factors related to 
-opioid addiction among patients and medication prescribers, and provide 
-information that may help to decrease the risk of opioid overdose and death. 
-Different classification methods are discussed.
-
+Classification of opioid addiction can identify features related to drug abuse 
+and overdose death. Machine learning procedures were used on data from a large National Survey of Drug Use and Health (NSDUH-2015) to classify individuals for illicit opioid use according to demographic characteristics and mental health attributes (i.e., depression). The classification model of opioid addiction 
+could be extended for big data health analytics to include data over previous years, or to include the larger population of patients taking prescription 
+opioid medication. The results seek to raise awareness of risk factors 
+related to opioid addiction among patients and medication prescribers, and  
+help decrease the risk of opioid overdose and death. 
 \end{abstract}
-
 \keywords{Health Analytics, Machine Learning, Classification, Opioid Addiction, 
 Big Data, i523, HID335}
-
 \maketitle
-
-\url{url: https://github.com/bigdata-i523/hid335/tree/master/project}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-Big Data offers tremendous potential to fuel innovation and transform society, 
-but can this momentum be harnessed to prevent disease and improve health? 
-Health informatics is generating huge amounts of data at a rapid pace, from 
-electronic medical records (EMRs), clinical research data, to population-level 
-public health data \cite{herland14}. This project explores whether big data 
-health analytics can help address the opioid overdose epidemic \cite{cdc16}. 
-Health Informatics is considered from two levels: where the data is collected, 
-and the research questions being addressed. Public health surveys can provide 
-data on a wide range of issues related to substance use, including information 
-that individuals may be reluctant to disclose in person, including: personal 
-health status, mental health conditions, and illicit drug consumption. Questions 
-of interest in this project: \textit{What prescription medications have you used
-in the past month, year, life time?}, \textit{What illicit substances have you 
-used in the past month, year, life time?} The general idea features associated 
-with a susceptibility for the abuse and dependence on prescription medications 
-may be influential for classifying illicit opioid use. A limitation of survey 
-data is that although there is a high volume and variety of information 
-collected, it may be unreliable due to response biases of respondents, leading 
-to low veracity. The literature review shows that survey data can be useful for 
-obtaining personal health data, but public use data often restricts identifying 
-information to protect confidentiality that could be useful for accurate 
-classification and prediction. The goal of this project was to examine how 
-machine learning procedures can be used to classify individuals susceptible 
-to opioid dependence and addiction.
+Big Data offers tremendous potential to fuel innovation and transform society. 
+Can this momentum be harnessed to address a serious health crisis such as the 
+opioid overdose epidemic \cite{cdc16}? Health informatics is generating huge 
+amounts of data at a rapid pace, from electronic medical records (EMRs), 
+clinical research data, to population-level public health data \cite{herland14}. 
+This project considers health analytics from two levels, the research questions 
+being addressed and the data used to answer them. The question of interest in 
+this project is whether opioid dependency and addiction can be predicted from 
+demographic attributes and psychological characteristics. Survey research 
+provides data on a wide range of issues that people may be reluctant to 
+disclose, including mental health disorders, personal medical health concerns, prescription medications, and illicit drug use. Responses to surveys may be 
+biased to some degree, but measures of confidentiality and anonymity help to assure more accurate disclosures. The goal of this project is to use machine 
+learning procedures to classify individuals susceptible to opioid abuse and dependence. Understanding the features that contribute to opioid addiction 
+can identify underlying risk factors and increase awareness of potential 
+opioid abuse for patients and health care providers. The results could be 
+extended to big data from previous years of the opioid crisis and to the 
+larger population of patients taking prescription opioid mediation. Different machine learning classification methods are discussed.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Opioid Overdose Epidemic}
 
 The abuse of prescription opioid medication in the U.S. has become a major 
 health crisis of epidemic proportions \cite{volkow14}. Over 2 million Americans 
-were dependent on or abused prescription opioids such as oxycodone or 
-hydrocodone in 2014 \cite{cdc17}. Overdose deaths from prescription opioids 
-have quadrupled since 1999, resulting in more than 180,000 deaths between 1999 
-to 2015 \cite{nida17}. Drug overdose death increased significantly for both 
-males and females, ages 25-44, 55 years and older, for Non-Hispanic Whites 
-and Blacks, in the Norheastern, Midwestern, and Southern areas of the U.S.
-\cite{cdc16}. Medication abuse can consist of higher medication dosages or rapid 
-escalation of a prescribed dosage. Mobile health applications can help provide 
-an early warning system for potential abuse of prescription medication 
-\cite{varshney13}. Analytic models can monitor patient data for sudden changes 
-in medication consumption; however, it can be difficult to obtain reliable 
-information about medication consumption based on self-reports from potentially
-addicted individuals. Patients who become dependent and addicted to  
-prescription opioid medications may seek to obtain synthetic opioids such as 
-fentanyl without a prescription or illicit drugs such as heroin, whose exact 
-dosages and potency are uknown, putting them at great risk of drug overdose 
-death. Indeed, the sharp increase in overdose deaths due to synthetic opioids 
-(other than methadone) has coincided with the increased availability of 
-illicitly manufactured fentanyl, which is indistinguishable from prescription 
-fentanyl. These findings indicate that the opioid overdose epidemic is getting
-worse, and requires urgent action to detect and prevent opioid dependence, 
-abuse and death. The general goal of this project is to develop a classification 
-model for predicting opioid addiction based on demographic characteristics.  
+were dependent or abused prescription opioids such as oxycodone or hydrocodone 
+in 2014 \cite{cdc17}. Overdose deaths from prescription opioids have quadrupled since 1999, resulting in more than 180,000 deaths between 1999 to 2015 \cite{nida17}. Drug overdose deaths increased significantly for males and 
+females, between 25-44 years, ages 55 and older, for Non-Hispanic Whites and Blacks, in the Northeast, Midwest, and Southern regions of the U.S. 
+\cite{cdc16}. Mobile health applications can monitor patient medication consumption and provide an early warning system for potential abuse, detecting sudden changes in medications, higher dosages, or rapid escalation of a 
+prescribed dosage \cite{varshney13}. Reliable information about medication 
+dosages can be difficult to obtain based on self-reports. Individuals dependent 
+or addicted to prescription opioids may obtain synthetic opioids such as 
+fentanyl or illicit drugs such as heroin. Because the dosage levels and potency 
+of illicit opioids are largely unknown, there is greater risk of drug overdose death. The sharp increase in overdose deaths due to synthetic (opioids other 
+than methadone) has coincided with the increased availability of illicitly manufactured fentanyl, which is indistinguishable from prescription fentanyl. 
+The findings indicate the opioid overdose epidemic is getting worse, and 
+requires urgent action to prevent opioid dependence, abuse and overdose death. This project seeks to identify features related to opioid addiction. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Drug Abuse, Dependency, and Addiction}
-
-Drug addiction has many similar characteristics to other chronic medical 
-illnesses, but there are unique challenges to the treatment of addiction
-\cite{marsch12, swendson16}. In drug rehabilitation treatment programs, 
-patients undergo intense detoxification that reduces their drug tolerance, but 
-are then released back into the environments associated with their drug use, 
-putting them at high risk for relapse and potential drug overdose 
-\cite{johnson11}. According to a classical conditioning model of addiction, 
-situational cues or events can elicit a motivational state underlying relapse 
-to drug use. Addictive behavior can be also be reinstated after extinction of 
-dependency by exposure to drug-related cues or stressors in the environment 
-\cite{shaham03}. Categorizing or classifying cases of opioid abuse can 
-contribute to efforts at addressing the opioid crisis in the following ways: 
-(i) Identify factors related to opioid dependency, (ii) Inform consumers of 
-opioid medication about relevant risk factors, and (iii) Increase knowledge 
-of opioid abuse for more informed decisions by prescribers. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Machine Learning Approaches} 
@@ -130,12 +84,12 @@ of input/output pairs are available \cite{muller17}. A machine learning model
 is constructed from the training set of input-output pairs, to predict new test 
 data not previously seen by the model. The two major approaches to supervised 
 learning problems are regression and classification. When the target variable 
-to be predicted is continuous, or there is continuity between the outcome (e.g., 
-home values, or income), a regression model is used to test the set of features 
-that predict the target variable. If the target is a class label, set of 
-categorical or binary outcomes (e.g., `spam` or `ham`, `benign` or `malignant`), 
-then classification is used to predict which class or category label that new 
-instances will be assigned to.
+to be predicted is continuous, or there is continuity between the outcome 
+(e.g., home values, or income), a regression model is used to test the set of 
+features that predict the target variable. If the target is a class label, set 
+of categorical or binary outcomes (e.g., `spam` or `ham`, `benign` or 
+`malignant`), then classification is used to predict which class or category 
+label that new instances will be assigned to.
 
 \subsection{Classification Algorithms} 
 Comparing the performance of different learning algorithms can be helpful for 
@@ -164,21 +118,20 @@ Decision Trees
 \subsection{Project Goals} 
 
 The data for this project is the 2015 National Survey on Drug Use and Health 
-(NSHUH-2015) completed by the U. S. Department of Health and Human Services 
-(DHHS), Substance Abuse and Mental Health Services Administration (SAMHSA), 
-Center for Behavioral Health Statistics and Quality \cite{samhsa16}. The 
-NSDUH-2015 is a comprehensive survey that cover all aspects of substance use, 
-misuse, abuse, including questions related to both prescription medications 
-(opioids, tranquilizers, sedatives) and illicit drugs (e.g., heroin, cocaine, 
-methamphetamine), drug dependency, addiction, and treatment, demographic 
-measures of education and employment, physical health, depression, and mental 
-health treatment. The goal is to identify the set of features that best 
-classifies opioid addiction, defined by lifetime heroin. A machine learning 
-classification model will be constructed to classify individuals by heroin 
-use according to demographics attributes and mental health characteristics 
-(e.g., adult depression). Understanding the features that contribute to 
-opioid addiction may help to identify risk factors and increase awareness
-of the potential of opioid abuse by patients and health care providers. 
+(NSHUH-2015) \cite{samhsa16}. The NSDUH-2015 is a comprehensive survey that 
+covers all aspects of substance use, misuse, dependency, and abuse, including 
+questions related to both prescription medications (opioids, tranquilizers, 
+sedatives) and illicit drugs (e.g., heroin, cocaine, methamphetamine), drug 
+dependency, addiction, and treatment, demographic measures of education and 
+employment, physical health, depression, and mental health treatment. The 
+general idea of the project is that individuals dependent of addicted to prescription opioid medications are more likely to use illicit opioids such 
+as heroin and fentanyl. Classifying individuals according to heroin use will identify the set of features the best predicts opioid addiction. Machine 
+learning classification models were constructed to classify heroin use 
+in the sample by demographics attributes and mental health characteristics 
+(e.g., adult depression). This method helps address the opioid crisis in 
+the following ways: (i) Identify factors related to opioid dependency and addiction, (ii) Inform consumers of prescription opioids about risk factors, 
+and (iii) Increase knowledge about opioid abuse for better decisions by 
+medication prescribers. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Method}
@@ -239,6 +192,7 @@ and remove inconsistencies in the data \cite{rahm00}:
    Adult Major Depressive Episode Lifetime changed from `AMDELT` to `DEPMELT`)
 \end{enumerate}
 
+\subsubsection{Aggregate Variables}
 Because the majority of features were represented as dichotomous ``Yes/No`` 
 variables, related features were summed to create aggregated variables. For 
 example, overall health, STD, Hepatitis, HIV, Cancer, and hospitalization were 
@@ -321,6 +275,22 @@ An important challenge for making sense of big data is developing analytic
 tools adequate to handle large volumes of data in real time.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Drug Abuse, Dependency, and Addiction}
+
+Drug addiction has many similar characteristics to other chronic medical 
+illnesses, but there are unique challenges to the treatment of addiction
+\cite{marsch12, swendson16}. In drug rehabilitation treatment programs, 
+patients undergo intense detoxification that reduces their drug tolerance, but 
+are then released back into the environments associated with their drug use, 
+putting them at high risk for relapse and potential drug overdose 
+\cite{johnson11}. According to a classical conditioning model of addiction, 
+situational cues or events can elicit a motivational state underlying relapse 
+to drug use. Addictive behavior can be also be reinstated after extinction of 
+dependency by exposure to drug-related cues or stressors in the environment 
+\cite{shaham03}. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Dynamics of Epidemic Spreading}
 
 Epidemic spreading is a complex phenomenon based on contact networks between 
@@ -367,11 +337,8 @@ Machine learning classification of opioid abuse can contribute to efforts to add
 
 \section{figures}
 
-In Figure \ref{f:fly} we show a fly. Please note that because we use
-just columwidth that the size of the figure will change to the
-columnwidth of the paper once we change the layout to final. 
 
-Figure \ref{f:Figure1} 
+In Figure \ref{f:Figure1}, we show... 
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure1.pdf}
@@ -416,6 +383,8 @@ Figure \ref{f:Figure1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
+
+\url{url: https://github.com/bigdata-i523/hid335/tree/master/project}
 
 \section{Code References}
 References used in data cleaning and preparation, exploratory analysis, 
