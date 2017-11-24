@@ -1,199 +1,408 @@
-% Encoding: UTF-8
+\documentclass[sigconf]{acmart}
 
-@Misc{cdc17,
-  author       = {Centers for Disease Control and Prevention},
-  title        = {Prescription Opioid Overdose Data},
-  howpublished = {online},
-  month        = Oct,
-  year         = {2017},
-  owner        = {Centers for Disease Control and Prevention},
-  url          = {https://www.cdc.gov/drugoverdose/data/overdose.html},
+\input{format/i523}
+
+\begin{document}
+\title{Using Machine Learning Classification of Opioid Addiction
+for Big Data Health Analytics}
+
+  \author{Sean M. Shiverick}
+  \affiliation{%
+  \institution{Indiana University Bloomington}
 }
+\email{smshiver@indiana.edu}
+
+\renewcommand{\shortauthors}{S.M. Shiverick}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+Classification of opioid addiction can identify features related to drug abuse 
+and overdose death. Machine learning procedures were used on data from a large National Survey of Drug Use and Health (NSDUH-2015) to classify individuals for illicit opioid use according to demographic characteristics and mental health attributes (i.e., depression). The classification model of opioid addiction 
+could be extended for big data health analytics to include data over previous years, or to include the larger population of patients taking prescription 
+opioid medication. The results seek to raise awareness of risk factors 
+related to opioid addiction among patients and medication prescribers, and  
+help decrease the risk of opioid overdose and death. 
+\end{abstract}
+\keywords{Health Analytics, Machine Learning, Classification, Opioid Addiction, 
+Big Data, i523, HID335}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+Big Data offers tremendous potential to fuel innovation and transform society. 
+Can this momentum be harnessed to address a serious health crisis such as the 
+opioid overdose epidemic \cite{cdc16}? Health informatics is generating huge 
+amounts of data at a rapid pace, from electronic medical records (EMRs), 
+clinical research data, to population-level public health data \cite{herland14}. 
+This project considers health analytics from two levels, the research questions 
+being addressed and the data used to answer them. The question of interest in 
+this project is whether opioid dependency and addiction can be predicted from 
+demographic attributes and psychological characteristics. Survey research 
+provides data on a wide range of issues that people may be reluctant to 
+disclose, including mental health disorders, personal medical health concerns, prescription medications, and illicit drug use. Responses to surveys may be 
+biased to some degree, but measures of confidentiality and anonymity help to assure more accurate disclosures. The goal of this project is to use machine 
+learning procedures to classify individuals susceptible to opioid abuse and dependence. Understanding the features that contribute to opioid addiction 
+can identify underlying risk factors and increase awareness of potential 
+opioid abuse for patients and health care providers. The results could be 
+extended to big data from previous years of the opioid crisis and to the 
+larger population of patients taking prescription opioid mediation. Different machine learning classification methods are discussed.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Opioid Overdose Epidemic}
+
+The abuse of prescription opioid medication in the U.S. has become a major 
+health crisis of epidemic proportions \cite{volkow14}. Over 2 million Americans 
+were dependent or abused prescription opioids such as oxycodone or hydrocodone 
+in 2014 \cite{cdc17}. Overdose deaths from prescription opioids have quadrupled since 1999, resulting in more than 180,000 deaths between 1999 to 2015 \cite{nida17}. Drug overdose deaths increased significantly for males and 
+females, between 25-44 years, ages 55 and older, for Non-Hispanic Whites and Blacks, in the Northeast, Midwest, and Southern regions of the U.S. 
+\cite{cdc16}. Mobile health applications can monitor patient medication consumption and provide an early warning system for potential abuse, detecting sudden changes in medications, higher dosages, or rapid escalation of a 
+prescribed dosage \cite{varshney13}. Reliable information about medication 
+dosages can be difficult to obtain based on self-reports. Individuals dependent 
+or addicted to prescription opioids may obtain synthetic opioids such as 
+fentanyl or illicit drugs such as heroin. Because the dosage levels and potency 
+of illicit opioids are largely unknown, there is greater risk of drug overdose death. The sharp increase in overdose deaths due to synthetic (opioids other 
+than methadone) has coincided with the increased availability of illicitly manufactured fentanyl, which is indistinguishable from prescription fentanyl. 
+The findings indicate the opioid overdose epidemic is getting worse, and 
+requires urgent action to prevent opioid dependence, abuse and overdose death. This project seeks to identify features related to opioid addiction. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Machine Learning Approaches} 
+
+Machine learning is a set of procedures and automated processes for extracting 
+knowledge from data. The two main branches of machine learning are' supervised 
+learning and unsupervised learning. Supervised learning is used with problems 
+that involve prediction about a specific target variable or outcome of interest. 
+If a given dataset has no target outcome, unsupervised learning can be used to 
+discover underlying structure in unlabeled data. The goal of this project is 
+to classify opioid addiction and focuses on supervised learning. Supervised 
+learning is used to predict a certain outcome from a given input, when examples 
+of input/output pairs are available \cite{muller17}. A machine learning model 
+is constructed from the training set of input-output pairs, to predict new test 
+data not previously seen by the model. The two major approaches to supervised 
+learning problems are regression and classification. When the target variable 
+to be predicted is continuous, or there is continuity between the outcome 
+(e.g., home values, or income), a regression model is used to test the set of 
+features that predict the target variable. If the target is a class label, set 
+of categorical or binary outcomes (e.g., `spam` or `ham`, `benign` or 
+`malignant`), then classification is used to predict which class or category 
+label that new instances will be assigned to.
+
+\subsection{Classification Algorithms} 
+Comparing the performance of different learning algorithms can be helpful for 
+selecting the best model for a given problem \cite{raschka17}. One of the 
+simplest classification algorithms is K-Nearest-Neighbors (KNN) which takes a 
+set of data points and classifies a new data point based on the distance 
+(Euclidean by default) to its nearest neighbor(s). The main parameter for KNN
+is the number of neighbors, and typically k equal to 3 or 5 works well. KNN is
+easy to understand and performs well with little adjustment, but it doe not 
+perform well with datasets that have a large number of features (100 or more) 
+or data that is sparse. For linear classification models, the decision boundary 
+is a linear function of the input; a binary classifier separates two classes 
+using along a line, plane, or hyperplane. Algorithms for linear classification 
+differ in terms of (1) how they measure how well a particular combination of 
+coefficients and intercept fit the training data, and (2) the type of 
+regularization used \cite{muller17}. Two common linear classification models 
+are logistic regression and support vector machines (SVMs). 
+
+
+Decision Trees
 
 
 
 
-@Article{johnson11,
-  author  = {Johnson, K. and Isham, A. and Shah, D.V. and Gustafson, D.H.},
-  title   = {Potential Roles for New Communication Technologies in Treatment of Addiction.},
-  journal = {Current psychiatry reports.},
-  year    = {2011},
-  doi     = {10.1007/s11920-011-0218-y},
-  url     = {https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3179375/},
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Project Goals} 
+
+The data for this project is the 2015 National Survey on Drug Use and Health 
+(NSHUH-2015) \cite{samhsa16}. The NSDUH-2015 is a comprehensive survey that 
+covers all aspects of substance use, misuse, dependency, and abuse, including 
+questions related to both prescription medications (opioids, tranquilizers, 
+sedatives) and illicit drugs (e.g., heroin, cocaine, methamphetamine), drug 
+dependency, addiction, and treatment, demographic measures of education and 
+employment, physical health, depression, and mental health treatment. The 
+general idea of the project is that individuals dependent of addicted to prescription opioid medications are more likely to use illicit opioids such 
+as heroin and fentanyl. Classifying individuals according to heroin use will identify the set of features the best predicts opioid addiction. Machine 
+learning classification models were constructed to classify heroin use 
+in the sample by demographics attributes and mental health characteristics 
+(e.g., adult depression). This method helps address the opioid crisis in 
+the following ways: (i) Identify factors related to opioid dependency and addiction, (ii) Inform consumers of prescription opioids about risk factors, 
+and (iii) Increase knowledge about opioid abuse for better decisions by 
+medication prescribers. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Method}
+
+\subsection{Data} 
+
+Data from the 2015 NSHUH was downloaded from the Substance Abuse and Mental 
+Health Data Archive (SAMHDA) as a tab separated Excel file \cite{samhsa16}. 
+The dataset consists of 57,146 observations with 2,666 features representing 
+individual-level responses from a survey of the U.S. population. Sampling was 
+weighted across states by population size for a representative distribution 
+selected from 6,000 area segments varying in size according to state. The 
+sample design used five state sample size groups drawing more heavily from 
+the eight states with the largest population (e.g., CA, FL, IL, MI, NY, OH, 
+PA, TX) which together account for 48 percent of total U.S. population aged 
+12 or older. Given that NSDUH collects highly-sensitive information from 
+individuals, all identifying information was collapsed (e.g., age categories)
+and state identifiers were removed from the public use file to ensure 
+confidentiality. The NSDUH public-use files do not include geographic location, 
+or demographic variables related to ethnicity or immigration status. The 
+weighted survey screening response rate was 81.94 percent and the weighted
+interview response rate was 71.2 percent. The NSDUH-2015 dataset was 
+downloaded from the SAMH Data Archive as tab-separated Excel files.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Data Cleaning and Preparation }
+
+\subsubsection{Data Cleaning}
+This analysis was completed in a python interactive notebook \cite{data17} 
+based on instructions and examples from \emph{Python for Data Analysis}
+\cite{mckinney17}. The NSDUH-2015 was loaded into python using Pandas and 
+saved as a dataframe object. The dataset was subset by columns to include: 
+demographic characteristics (e.g., age category, sex, marital status, education, 
+employment status, and category of metropolitan area), measures of physical 
+health (e.g., overall health, STDs, Hepatitis, HIV, Cancer, hospitalization), 
+mental health (e.g., Adult Depression, Emotional Distress, Suicidal Thoughts, 
+Plans), Suicide Attempts, Pain Reliever Medication Use, Misuse, and Abuse
+(over the past year, past month), Prescription Opioid Medications Taken in
+the Past year (e.g., Hydrocodone, Oxycodone, Tramadol, Morphine, Fentanyl,
+Oxymorphone, Demerol, Hydromorphone), Heroin Use, Abuse, and Dependency
+(over the past year, past month), Tranquilizer Use, Sedative Use, Cocaine 
+Use, Amphetamine and Methamphetamine Use, Hallucinogen Use, Drug Treatment
+(e.g., Inpatient, Outpatient, Hospital, Mental Health Clinic, ER, Drug
+Treatment Status), and Mental Health Treatment History. A codebook was 
+created to provide a complete list of variables included with summaries 
+of response categories \cite{codebook17}. Several steps to taken to detect 
+and remove inconsistencies in the data \cite{rahm00}: 
+\begin{enumerate}
+  \item Missing values (i.e., `NaN`) were removed 
+  \item Blanks, non-responses, or legitimate skips were recoded to zero 
+  (e.g.,`99`, `991`, `993`) 
+  \item Dichotomous responses (e.g., ``Yes=1``/``No=2``) were responses to 
+  ``No=0``
+  \item Categorical variables so the response was consistent with degree 
+  (e.g., ``1=low``, ``2=med``, ``3=high``)
+   \item Selected variables were renamed for better description (e.g., 
+   Adult Major Depressive Episode Lifetime changed from `AMDELT` to `DEPMELT`)
+\end{enumerate}
+
+\subsubsection{Aggregate Variables}
+Because the majority of features were represented as dichotomous ``Yes/No`` 
+variables, related features were summed to create aggregated variables. For 
+example, overall health, STD, Hepatitis, HIV, Cancer, and hospitalization were 
+aggregated to create a single health measure. The health measure was recoded
+so that higher scores indicated better health. Questions related to depression, 
+emotional distress, and suicidal thoughts were summed to create a single 
+variable for mental health (`MENTHLTH`) with scores ranging from 0 to 9. 
+Responses to pain reliever medication use, misuse, abuse, or dependency, 
+were aggregated to create a single variable of pain reliever misuse or abuse
+(`PRLMISAB`). All prescription painkiller medications used in the past year
+were summed. Similarly, all related responses were summed to create single 
+variables for Tranquilizers, Sedatives, Cocaine, Amphetamines, Hallucinogens, 
+Drug Treatment, and Mental Health Treatment. The target outcome of interest for 
+classification, lifetime heroin use (i.e., ``Have you ever used heroin before, 
+at any point in time?``) is a dichotomous variables. The demographic 
+characteristics and aggregated variables were subset and saved to a new data 
+frame consisting of 22 features and 57,146 observations, which was exported 
+to CSV file, titled as `project-data.csv`. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+
+\subsection{Exploratory Analysis and Descriptives}
 
 
 
-@Article{marsch12,
-  author  = {Marsch, Lisa A.},
-  title   = {Leveraging teachnology to enhance addiction treatment and recovery.},
-  journal = {Journal of Addictive Diseases},
-  year    = {2012},
-  volume  = {31},
-  number  = {3},
-  pages   = {313-318},
-  doi     = {10.1080/10550887.2012.694606},
-  url     = {https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3650640/},
-}
 
-@Book{mckinney17,
-  title     = {Python for Data Analysis},
-  publisher = {O'Reilly Media Inc.},
-  year      = {2017},
-  author    = {Wes McKinney},
-  address   = {Sebastopol, CA},
-  url       = {https://github.com/wesm/pydata-book},
-}
+\cite{mckinney17}
 
 
-@Book{muller17,
-  title     = {Introduction to Machine Learning},
-  publisher = {O'Reilly},
-  year      = {2017},
-  author    = {Andreas C. Muller and Sarah Guido},
-  address   = {Sebastopol, CA},
-  url       = {https://github.com/amueller/introduction_to_ml_with_python/},
-}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Classification Algorithms}
+
+\cite{muller17}
+
+
+\cite{raschka17}
 
 
 
 
-@TechReport{nida17,
-  author      = {National Institute on Drug Abuse (NIDA)},
-  title       = {Overdose Death Rates},
-  institution = {National Institutes of Health (NIH)},
-  year        = {2017},
-  type        = {Summary},
-  address     = {Washington D.C.},
-  url         = {https://www.drugabuse.gov/related-topics/trends-statistics/overdose-death-rates},
-}
+\cite{vanderplas17}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+
+\subsection{Extension to Big Data}
+
+This classification method could be adopted for big data health analytics by
+expanding the suvery to the popluation of patients with prescriptions for 
+opioid pain medication and may help to identify individuals at risk for
+potentially developing opioid dependency of addiction. 
 
 
-@TechReport{rahm00,
-  author      = {E. Rahm and H. Hai Do},
-  title       = {Data cleaning: Problems and current approaches},
-  institution = {Bulletin of the Technical Committee on Data Engineering},
-  year        = {2000},
-  type        = {techreport},
-  number      = {23(4)},
-  address     = {1730 Massachusetts Avenue, Washington D.C.},
-  month       = Dec,
-  owner       = {IEEE Computer Society},
-  url         = {https://s3.amazonaws.com/academia.edu.documents/41858217/A00DEC-CD.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1511155930&Signature=VWRM7u4KWtP6ZxX5jB%2Bh6wMCbpg%3D&response-content-disposition=inline%3B%20filename%3DAutomatically_extracting_structure_from.pdf#page=5},
-}
+Additional data from the NSDUH was downloaded from 2012 to 2014
 
-@Book{raschka17,
-  title     = {Ptyhon Machine Learning, Second Edition},
-  publisher = {Packt},
-  year      = {2017},
-  author    = {Sebastian Raschka and Vahid Mirjalili},
-  address   = {Birmingham, UK},
-  url       = {https://github.com/rasbt/python-machine-learning-book-2nd-edition},
-}
+hen trying to integrate data from multiple sources, (4) inconsistencies in coding of attributes or features can be a major source of problems. For example, time stamped data with different date formats (e.g., DD/MM/YY; YY/MM/DD, or MM/DD/YY) would have to be reformatted before being combined. Similarly, different coding for sex (e.g., ‘M’/’F’, ‘0’/’1’, ‘1’,’2’) have to be reconciled when combining multiple data sources. Cleaning big data is a more involved process, with Extraction, Integration, and Aggregation of data from operationalized sources into a data warehouse. In general, there are several phases involved in big data cleaning approaches, including the following:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Limitations}
+
+Tradeoff between quality and quantity
 
 
-@TechReport{samhsa16,
-  author      = {Substance Abuse and Mental Health Services Administration, Center for Behavioral Health Statistics and Quality},
-  title       = {National Survey on Drug Use and Health (NSDUH) 2015},
-  institution = {United States Department of Health and Human Services.},
-  year        = {2016},
-  type        = {Online data archive},
-  address     = {Ann Arbor, MI},
-  doi         = {http://doi.org/10.3886/ICPSR50011.v1},
-  url         = {http://datafiles.samhsa.gov/info/browse-studies-nid3454},
-}
+To be of any use, diverse and often messy raw data has to be sifted through and 
+effectively organized for further analysis, and 
 
 
+there are legitimate questions about the reliability of self report data from survey
+research for predicting actual behavior. 
+
+The question of 
+Value evaluates the quality of the data as it pertains to intended outcomes, such 
+as limiting the spread of contagion and disease prevention. 
+
+An important challenge for making sense of big data is developing analytic 
+tools adequate to handle large volumes of data in real time.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Drug Abuse, Dependency, and Addiction}
+
+Drug addiction has many similar characteristics to other chronic medical 
+illnesses, but there are unique challenges to the treatment of addiction
+\cite{marsch12, swendson16}. In drug rehabilitation treatment programs, 
+patients undergo intense detoxification that reduces their drug tolerance, but 
+are then released back into the environments associated with their drug use, 
+putting them at high risk for relapse and potential drug overdose 
+\cite{johnson11}. According to a classical conditioning model of addiction, 
+situational cues or events can elicit a motivational state underlying relapse 
+to drug use. Addictive behavior can be also be reinstated after extinction of 
+dependency by exposure to drug-related cues or stressors in the environment 
+\cite{shaham03}. 
 
 
-@Article{shaham03,
-  author  = {Shaham, Yavin and Shalev, Uri and Lu, Lin and de Wit, Harriet and Stewart, Jane},
-  title   = {The reinstatement model of drug relapse: history, methodology and major findings},
-  journal = {Psychopharmacology},
-  year    = {2003},
-  volume  = {168},
-  number  = {1},
-  pages   = {3--20},
-  month   = {Jul},
-  issn    = {1432-2072},
-  day     = {01},
-  doi     = {10.1007/s00213-002-1224-x},
-  url     = {url="https://doi.org/10.1007/s00213-002-1224-x"},
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dynamics of Epidemic Spreading}
+
+Epidemic spreading is a complex phenomenon based on contact networks between 
+individuals and distributed by transportation networks \cite{Colizza06}.
+
+The dynamics of epidemic spreading is a complex phenomenon, based on contact 
+networks of person-to-person interaction, indirect exposure, and transmission 
+byways such as the {\it airline transportation network} (ATN) \cite{Colizza06}. 
+Epidemics are quantified in terms of the proportion of the population infected, 
+those yet to be infected, and the rate of transmission \cite{hethcote00}. In 
+addition, the structure of the contact network can influence epidemic spreading 
+\cite{pastor01}. For example, in the case of simple contagion, weak ties among 
+acquaintances or infrequent associations provide shortcuts between distant nodes 
+that reduce distance within the network \cite{granovetter73} and can facilitate 
+the spread of disease. 
+
+Furthermore, networks with ``small world'' properties have many nodes with 
+few connections, but a small number of highly connected nodes that can rapidly 
+transmit contagion throughout the network \cite{watts98}. Analyzing the 
+correlation between Twitter posts and rate of ILI reports does not capture the 
+complex network structure that underlies disease epidemics and pandemics. 
+It is possible that by analyzing the structure of social media networks, 
+
+future research may help to identify how points of connection within online
+networks are associated with the spread of contagion and resulting epidemics 
+\cite{zhu17}. Some epidemics such as the opioid crisis in North America 
+\cite{volkow14} may be amenable to social network modeling as drug usage, 
+dependancy, and addiction is subserved by social networks. The emergence of 
+new technologies, such as wearable biosensors \cite{carreiro15} may help 
+improve geospatial mapping of the opioid epidemics and treatment interventions.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+
+Machine learning classification of opioid abuse can contribute to efforts to address prescription opioid addiction, overdoses, in the following ways: 
+\begin{enumerate}
+\item Identify factors related to opioid dependency
+\item Inform consumers of opioid medication as to risk factors 
+\item Increase knowledge of opioid abuse for more informed prescriptions. 
+\end{enumerate}
 
 
-@Misc{codebook17,
-  author       = {S.M. Shiverick},
-  title        = {Project Codebook for Data Variables from NSDUH-2015},
-  howpublished = {github},
-  month        = Nov,
-  year         = {2017},
-  comment      = {Subset of variables from NSDUH-2015 with code names and response frequency summary},
-  url          = {https://github.com/bigdata-i523/hid335/blob/master/project/project-data-codebook.txt},
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-@Misc{data17,
-  author       = {S.M. Shiverick},
-  title        = {BDA Project Data},
-  howpublished = {github},
-  month        = Nov,
-  year         = {2017},
-  comment      = {Interactive Python Jupyter Notebook on Data Cleaning and Preparation},
-  url          = {https://github.com/bigdata-i523/hid335/blob/master/project/BDA_Project_Data.ipynb},
-}
+\section{figures}
 
 
+In Figure \ref{f:Figure1}, we show... 
 
-@Article{swendson16,
-  author  = {J. Swendsen},
-  title   = {Contributions of mobile technologies to addiction research},
-  journal = {Dialogues Clinical Neuroscience},
-  year    = {2016},
-  volume  = {18},
-  number  = {2},
-  pages   = {213-221},
-  month   = Jun,
-  url     = {https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4969708/},
-}
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/Figure1.pdf}
+  \caption{Drug overdose deaths involving opioids by type of opioid in U.S. 2000-2014
+  \cite{cdc16}}
+  \label{f:Figure1}
+\end{figure}
 
-@Book{vanderplas17,
-  title     = {Python Data Science Handbook},
-  publisher = {O'Reilly Media Inc.},
-  year      = {2017},
-  author    = {Jake VanderPlas},
-  address   = {Sebastopol, CA},
-  url       = {https://jakevdp.github.io/PythonDataScienceHandbook/},
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tables}
 
+%Table\ref{t:mytable}. 
 
-@Article{varshney13,
-  author  = {Varshney, Upkar},
-  title   = {Smart medication management system and multiple interventions for medication adherence},
-  journal = {Decision Support Systems},
-  year    = {2013},
-  volume  = {55},
-  number  = {5},
-  pages   = {538-551},
-  month   = May,
-  doi     = {https://doi.org/10.1016/j.dss.2012.10.011},
-  url     = {http://www.sciencedirect.com/science/article/pii/S0167923612002667},
-}
-
-@Article{volkow14,
-  author  = {Volkow , Nora D. and Frieden , Thomas R. and Hyde , Pamela S. and Cha , Stephen S.},
-  title   = {Medication-Assisted Therapies: Tackling the Opioid-Overdose Epidemic},
-  journal = {New England Journal of Medicine},
-  year    = {2014},
-  volume  = {370},
-  number  = {22},
-  pages   = {2063-2066},
-  note    = {PMID: 24758595},
-  doi     = {10.1056/NEJMp1402780},
-  eprint  = {http://dx.doi.org/10.1056/NEJMp1402780},
-  url     = {http://dx.doi.org/10.1056/NEJMp1402780},
-}
+\begin{table}
+  \caption{Summary of Participant Characteristics in Pilot study \cite{carreiro15}}
+  \label{tab:freq}
+  \begin{tabular}{ccccccc}
+    \toprule
+     Patient& Age& Gender& History of Use& Intervention& Pre-EDA& Post-EDA \\
+    \midrule
+    1& 82& Male& Opioid naive& 4 mg morphine& 4.5& 60.0 \\
+    2& 47& Male& Recent short-term& 1 mg hydromorphone& 3.4& 12.2 \\
+    3& 43& Female& Chronic opioid use& 1 mg hydromorphone& 0.2& 0.2 \\
+    4& 72& Male& Chronic opioid use& 4 mg morphine& 0.9& 1.6 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 
-@Comment{jabref-meta: databaseType:bibtex;}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{acks}
+
+  The author would like to thank Dr. Gregor von Laszewski, 
+  the Assistant Instructors, Juliette Zurick, Miao Zheng,
+  and others who helped to improve this project and report.
+
+\end{acks}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{report} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+
+\url{url: https://github.com/bigdata-i523/hid335/tree/master/project}
+
+\section{Code References}
+References used in data cleaning and preparation, exploratory analysis, 
+visualization, classification model construction and evaluation are documented
+here as well as included in comments in the jupyter notebooks 
+\cite{muller17,mckinney17,vanderplas17}
+
+Appendix of common issues: 
+
+%\begin{enumerate}
+
+%\item Do not to use the underscore in bibtex labels
+%\item Address each of the items in the issues.tex file  and verify you have done them. 
+%item Please do this only at the end once you have finished writing the paper. 
+%\item Change `TODO` with `DONE`. 
+
+%\end{enumerate}
+
+%\input{issues}
+
+\end{document}
