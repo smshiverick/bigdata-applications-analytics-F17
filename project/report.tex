@@ -56,18 +56,33 @@ larger population of patients taking prescription opioid mediation. Different ma
 The abuse of prescription opioid medication in the U.S. has become a major 
 health crisis of epidemic proportions \cite{volkow14}. Over 2 million Americans 
 were dependent or abused prescription opioids such as oxycodone or hydrocodone 
-in 2014 \cite{cdc17}. Overdose deaths from prescription opioids have quadrupled since 1999, resulting in more than 180,000 deaths between 1999 to 2015 \cite{nida17}. Drug overdose deaths increased significantly for males and 
-females, between 25-44 years, ages 55 and older, for Non-Hispanic Whites and Blacks, in the Northeast, Midwest, and Southern regions of the U.S. 
-\cite{cdc16}. Mobile health applications can monitor patient medication consumption and provide an early warning system for potential abuse, detecting sudden changes in medications, higher dosages, or rapid escalation of a 
+in 2014 \cite{cdc17}. Overdose deaths from prescription opioids have quadrupled 
+since 1999, resulting in more than 180,000 deaths between 1999 to 2015 
+\cite{nida17}. Drug overdose deaths increased significantly for males and 
+females, between 25-44 years, ages 55 and older, for Non-Hispanic Whites and 
+Blacks, in the Northeast, Midwest, and Southern regions of the U.S. 
+\cite{cdc16}. Mobile health applications can monitor patient medication 
+consumption and provide an early warning system for potential abuse, detecting 
+sudden changes in medications, higher dosages, or rapid escalation of a 
 prescribed dosage \cite{varshney13}. Reliable information about medication 
 dosages can be difficult to obtain based on self-reports. Individuals dependent 
 or addicted to prescription opioids may obtain synthetic opioids such as 
 fentanyl or illicit drugs such as heroin. Because the dosage levels and potency 
-of illicit opioids are largely unknown, there is greater risk of drug overdose death. The sharp increase in overdose deaths due to synthetic (opioids other 
-than methadone) has coincided with the increased availability of illicitly manufactured fentanyl, which is indistinguishable from prescription fentanyl. 
+of illicit opioids are largely unknown, there is greater risk of drug overdose 
+death. The sharp increase in overdose deaths due to synthetic (opioids other 
+than methadone) has coincided with the increased availability of illicitly
+manufactured fentanyl, which is indistinguishable from prescription fentanyl. 
 The findings indicate the opioid overdose epidemic is getting worse, and 
-requires urgent action to prevent opioid dependence, abuse and overdose death. This project seeks to identify features related to opioid addiction. 
+requires urgent action to prevent opioid dependence, abuse and overdose death. 
+The target group for this project is individuals who reported misusing or 
+abusing prescribed opioid medication who also used heroin, shown in Figure 1. 
 
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/Figure1.pdf}
+  \caption{Proportion of Individuals Who Reported Ever Misusing Prescription
+  Opioid Pain Relievers and Proportion Who Reported Using Heroin}
+  \label{f:Figure1}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Machine Learning Approaches} 
@@ -124,14 +139,19 @@ questions related to both prescription medications (opioids, tranquilizers,
 sedatives) and illicit drugs (e.g., heroin, cocaine, methamphetamine), drug 
 dependency, addiction, and treatment, demographic measures of education and 
 employment, physical health, depression, and mental health treatment. The 
-general idea of the project is that individuals dependent of addicted to prescription opioid medications are more likely to use illicit opioids such 
-as heroin and fentanyl. Classifying individuals according to heroin use will identify the set of features the best predicts opioid addiction. Machine 
+general idea of the project is that individuals dependent of addicted to 
+prescription opioid medications are more likely to use illicit opioids such 
+as heroin and fentanyl. Classifying individuals according to heroin use will 
+identify the set of features the best predicts opioid addiction. Machine 
 learning classification models were constructed to classify heroin use 
 in the sample by demographics attributes and mental health characteristics 
 (e.g., adult depression). This method helps address the opioid crisis in 
 the following ways: (i) Identify factors related to opioid dependency and addiction, (ii) Inform consumers of prescription opioids about risk factors, 
 and (iii) Increase knowledge about opioid abuse for better decisions by 
 medication prescribers. 
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Method}
@@ -216,12 +236,36 @@ to CSV file, titled as `project-data.csv`.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
 
-\subsection{Exploratory Analysis and Descriptives}
+\subsection{Exploratory Analysis and Descriptives}\cite{mckinney17}
+
+Figure \ref{f:Figure1}, shows the proportion of individuals who reported
+misusing painreliever opioid medications and also the proportion of individuals 
+who reported using herion. The plot clearly shows that the majority of 
+respondents never reported misuing prescription pain killers or heroin; 
+however, of those individuals who did misuse prescription pain medication, 
+a small proportin also reported using heroin, which is the group of interest 
+
+%Table\ref{t:mytable}. 
+
+\begin{table}
+  \caption{Summary of Respondent Substance Use by Age Group NSDUH 2015}
+  \label{tab:freq}
+  \begin{tabular}{ccccc}
+    \toprule
+     Age Group & Pain Medication& Heroin& Transqulizers& Sedatives \\
+    \midrule
+    12-17 years& 2127& 261&  &  &   \\
+    18-25 years& 2273& 281&  &  &   \\
+    26-34 years& 1343& 250&  &  &   \\
+    35-49 years&  465& 144&  &  &   \\
+    50 or older&  135&  20&  &  &   \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 
 
 
-\cite{mckinney17}
 
 
 
@@ -338,14 +382,7 @@ Machine learning classification of opioid abuse can contribute to efforts to add
 \section{figures}
 
 
-In Figure \ref{f:Figure1}, we show... 
 
-\begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/Figure1.pdf}
-  \caption{Drug overdose deaths involving opioids by type of opioid in U.S. 2000-2014
-  \cite{cdc16}}
-  \label{f:Figure1}
-\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Tables}
