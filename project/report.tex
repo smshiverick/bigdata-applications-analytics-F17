@@ -160,6 +160,10 @@ medication prescribers.
 
 Data from the 2015 NSHUH was downloaded from the Substance Abuse and Mental 
 Health Data Archive (SAMHDA) as a tab separated Excel file \cite{samhsa16}. 
+The python function `get-data.py` was written to download the zip data file
+from SAMHDA, unzip the file, extract the data as data frame, and write the
+file to CSV file \cite{getdata17}.
+
 The dataset consists of 57,146 observations with 2,666 features representing 
 individual-level responses from a survey of the U.S. population. Sampling was 
 weighted across states by population size for a representative distribution 
@@ -421,15 +425,37 @@ Machine learning classification of opioid abuse can contribute to efforts to add
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 
-\url{url: https://github.com/bigdata-i523/hid335/tree/master/project}
+
 
 \section{Code References}
-References used in data cleaning and preparation, exploratory analysis, 
-visualization, classification model construction and evaluation are documented
-here as well as included in comments in the jupyter notebooks 
-\cite{muller17,mckinney17,vanderplas17}
 
-Appendix of common issues: 
+All code, notebooks, files, and folders for this project can be found in the
+project githup repository: \url{url:  https://github.com/bigdata-i523/hid335/tree/master/project}.
+
+\subsection{Download and Extract Data file \cite{getdata17}}
+The `get-data.py` function was written to download the data, unzip the data
+files, extract the data, and write the NSDUH-2015 dataset to CSV file 
+\cite{getdata17}.
+
+\subsection{Data Cleaning and Preparation \cite{mckinney17}}
+Data cleaning and preparation steps was conducted based on examples in 
+Chapter 7 of Python for Data Analysis \cite{mckinney17} and Chapter 3 in 
+the Python Data Science Handbook \cite{vanderplas17}, using an interactive 
+python Jupyter Notebook: \url{url: https://github.com/bigdata-i523/hid335/blob/master/project/BDA_Project_Data.ipynb}.
+
+\subsection{Exploratory Data Analysis and Visualization\cite{vanderplas17}}
+Exploratory Data Analysis and Visualization was based on examples included
+in Python for Data Analysis \cite{mckinney17}, and the Python Data Science 
+Handbook \cite{vanderplas17}, and were executed in the following interative
+python notebook: 
+
+
+\subsection{Machine Learning Classification Algorithms\cite{muller17, raschka17}}
+Machine Learning Classification algorithms were based on examples provided
+in Chapters 2 and 5 of an Introduction to Machine Learning \cite{muller17},
+and Chapters 3 and 4 in Python Machine Learning \cite{raschka17}. All 
+classification models were constructed in an interative python notebook: 
+
 
 %\begin{enumerate}
 
