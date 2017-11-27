@@ -76,7 +76,8 @@
 * 11/03-11/05/17 Paper 2: Writing, review, revision of report.tex and report.bib for submission
 * 11/15-11/16/17 Project: NSDUH data codebook includes survey variables and frequency summary 
 * 11/20/17  Project: Created report.tex and report.bib files in SharelaTex with accompanying files and folders
-* 11/21-11/24/17  Project: Writing Introduction sections, Method in report.tex, adding reference to report.bib
+* 11/21-11/25/17  Project: Writing Introduction sections, Method in report.tex, adding reference to report.bib
+* 11/26/17  Project Report: Added Figure 1 and created Tables 1 and 2 Summaries of Substance Use and Treatment 
 
 # Location
 * Address: Galway Drive, Dallas, Texas, 75218
