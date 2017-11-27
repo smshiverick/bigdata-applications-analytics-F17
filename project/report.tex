@@ -18,14 +18,20 @@ for Big Data Health Analytics}
 
 \begin{abstract}
 Classification of opioid addiction can identify features related to drug abuse 
-and overdose death. Machine learning procedures were used on data from a large National Survey of Drug Use and Health (NSDUH-2015) to classify individuals for illicit opioid use according to demographic characteristics and mental health attributes (i.e., depression). The classification model of opioid addiction 
-could be extended for big data health analytics to include data over previous years, or to include the larger population of patients taking prescription 
+and overdose death. Machine learning procedures were used on data from a large 
+National Survey of Drug Use and Health (NSDUH-2015) to classify individuals for 
+illicit opioid use according to demographic characteristics and mental health 
+attributes (i.e., depression). The classification model of opioid addiction 
+could be extended for big data health analytics to include data over previous 
+years, or to include the larger population of patients taking prescription 
 opioid medication. The results seek to raise awareness of risk factors 
 related to opioid addiction among patients and medication prescribers, and  
 help decrease the risk of opioid overdose and death. 
 \end{abstract}
+
 \keywords{Health Analytics, Machine Learning, Classification, Opioid Addiction, 
 Big Data, i523, HID335}
+
 \maketitle
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -159,51 +165,46 @@ medication prescribers.
 \subsection{Data} 
 
 Data from the 2015 NSHUH was downloaded from the Substance Abuse and Mental 
-Health Data Archive (SAMHDA) as a tab separated Excel file \cite{samhsa16}. 
-The python function `get-data.py` was written to download the zip data file
-from SAMHDA, unzip the file, extract the data as data frame, and write the
-file to CSV file \cite{getdata17}.
-
-The dataset consists of 57,146 observations with 2,666 features representing 
-individual-level responses from a survey of the U.S. population. Sampling was 
-weighted across states by population size for a representative distribution 
-selected from 6,000 area segments varying in size according to state. The 
-sample design used five state sample size groups drawing more heavily from 
-the eight states with the largest population (e.g., CA, FL, IL, MI, NY, OH, 
-PA, TX) which together account for 48 percent of total U.S. population aged 
-12 or older. Given that NSDUH collects highly-sensitive information from 
-individuals, all identifying information was collapsed (e.g., age categories)
-and state identifiers were removed from the public use file to ensure 
-confidentiality. The NSDUH public-use files do not include geographic location, 
-or demographic variables related to ethnicity or immigration status. The 
-weighted survey screening response rate was 81.94 percent and the weighted
-interview response rate was 71.2 percent. The NSDUH-2015 dataset was 
-downloaded from the SAMH Data Archive as tab-separated Excel files.
-
+Health Data Archive (SAMHDA) \cite{samhsa16} URL using the `get-data.py` 
+function written to unzip the data files, extract the data as a Pandas data 
+frame, and write the file to CSV file \cite{getdata17}. The dataset consists 
+of 57,146 observations with 2,666 features representing individual-level 
+responses from a survey of the U.S. population. According to the NSDUH 
+codebook, sampling was weighted across states by population size for a 
+representative distribution selected from 6,000 area segments. The sample 
+design used five state sample size groups drawing more heavily from the eight 
+states with the largest population (e.g., CA, FL, IL, MI, NY, OH, PA, TX) which 
+together account for 48 percent of total U.S. population aged 12 or older. 
+All identifying information was collapsed (e.g., age categories) and state 
+identifiers were removed from the public use file to ensure confidentiality. 
+The NSDUH public-use files do not include geographic location, or demographic 
+variables related to ethnicity or immigration status. The weighted survey 
+screening response rate was 81.94 percent and the weighted interview response 
+rate was 71.2 percent. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Data Cleaning and Preparation }
 
 \subsubsection{Data Cleaning}
-This analysis was completed in a python interactive notebook \cite{data17} 
-based on instructions and examples from \emph{Python for Data Analysis}
-\cite{mckinney17}. The NSDUH-2015 was loaded into python using Pandas and 
-saved as a dataframe object. The dataset was subset by columns to include: 
-demographic characteristics (e.g., age category, sex, marital status, education, 
-employment status, and category of metropolitan area), measures of physical 
-health (e.g., overall health, STDs, Hepatitis, HIV, Cancer, hospitalization), 
-mental health (e.g., Adult Depression, Emotional Distress, Suicidal Thoughts, 
-Plans), Suicide Attempts, Pain Reliever Medication Use, Misuse, and Abuse
-(over the past year, past month), Prescription Opioid Medications Taken in
-the Past year (e.g., Hydrocodone, Oxycodone, Tramadol, Morphine, Fentanyl,
-Oxymorphone, Demerol, Hydromorphone), Heroin Use, Abuse, and Dependency
-(over the past year, past month), Tranquilizer Use, Sedative Use, Cocaine 
-Use, Amphetamine and Methamphetamine Use, Hallucinogen Use, Drug Treatment
-(e.g., Inpatient, Outpatient, Hospital, Mental Health Clinic, ER, Drug
-Treatment Status), and Mental Health Treatment History. A codebook was 
+All steps of this analysis was completed in a python interactive notebook 
+\cite{data17} based following examples from \emph{Python for Data Analysis}
+\cite{mckinney17}. After saving the NSDUH-2015 as a data frame object, the 
+dataset was subset by columns to include demographic characteristics (e.g., 
+age category, sex, marital status, education, employment status, and category 
+of metropolitan area), measures of physical health (e.g., overall health, 
+STDs, Hepatitis, HIV, Cancer, hospitalization), mental health (e.g., Adult 
+Depression, Emotional Distress, Suicidal Thoughts, Plans), Suicide Attempts, 
+Pain Reliever Medication Use, Misuse, and Abuse (over past year, past month), 
+Prescription Opioid Medications Taken in Past year (e.g., Hydrocodone, 
+Oxycodone, Tramadol, Morphine, Fentanyl,Oxymorphone, Demerol, Hydromorphone), 
+Heroin Use, Abuse (over past year, past month), Tranquilizer Use, Sedative Use, 
+Cocaine Use, Amphetamine and Methamphetamine Use, Hallucinogen Use, Drug 
+Treatment (e.g., Inpatient, Outpatient, Hospital, Mental Health Clinic, ER, 
+Drug Treatment Status), and Mental Health Treatment History. A codebook was 
 created to provide a complete list of variables included with summaries 
 of response categories \cite{codebook17}. Several steps to taken to detect 
 and remove inconsistencies in the data \cite{rahm00}: 
+
 \begin{enumerate}
   \item Missing values (i.e., `NaN`) were removed 
   \item Blanks, non-responses, or legitimate skips were recoded to zero 
@@ -231,16 +232,25 @@ were summed. Similarly, all related responses were summed to create single
 variables for Tranquilizers, Sedatives, Cocaine, Amphetamines, Hallucinogens, 
 Drug Treatment, and Mental Health Treatment. The target outcome of interest for 
 classification, lifetime heroin use (i.e., ``Have you ever used heroin before, 
-at any point in time?``) is a dichotomous variables. The demographic 
-characteristics and aggregated variables were subset and saved to a new data 
-frame consisting of 22 features and 57,146 observations, which was exported 
-to CSV file, titled as `project-data.csv`. 
+at any time?``) is a dichotomous variables. The demographic characteristics 
+and aggregated variables were subset and saved to a new data frame consisting 
+of 2` features and 57,146 observations, which was exported to CSV file. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
 
 \subsection{Exploratory Analysis and Descriptives}\cite{mckinney17}
+
+Of the total sample of N=57,146 respondents, 26,736 were male and 30,410 female;
+6,343 individuals reported misusing pain medication at some point; however, 
+only 956 repondents had used heroin at some point (570 males, 386 females). 
+
+
+
+
+
+
 
 Figure \ref{f:Figure1}, shows the proportion of individuals who reported
 misusing painreliever opioid medications and also the proportion of individuals 
@@ -252,17 +262,39 @@ a small proportin also reported using heroin, which is the group of interest
 %Table\ref{t:mytable}. 
 
 \begin{table}
-  \caption{Summary of Respondent Substance Use by Age Group NSDUH 2015}
+  \caption{Substance Use by Age Group Counts - NSDUH 2015
+  \cite{samhsa16}}
   \label{tab:freq}
-  \begin{tabular}{ccccc}
+  \begin{tabular}{cccccc}
     \toprule
-     Age Group & Pain Medication& Heroin& Transqulizers& Sedatives \\
+    Age Group & 12-17& 18-25& 26-34& 35-49& 50+\\
     \midrule
-    12-17 years& 2127& 261&  &  &   \\
-    18-25 years& 2273& 281&  &  &   \\
-    26-34 years& 1343& 250&  &  &   \\
-    35-49 years&  465& 144&  &  &   \\
-    50 or older&  135&  20&  &  &   \\
+    Sample Size & 13585& 14553& 9084& 11169& 8755 \\
+    \midrule
+    Oxycodone& 545& 1632& 1132& 1345& 1044 \\
+    Hydrocodone& 831& 2936& 2233& 2781& 2103 \\
+    Tramadol& 241& 753& 654& 829& 734 \\
+    Morphine& 251& 431& 236& 313& 286 \\
+    Fentanyl& 28& 97& 81& 96& 86 \\
+    Demerol& 26& 74& 49& 64& 71 \\
+    Buprenorphine& 43& 197& 167& 124& 51 \\
+    Oxymorphone& 46& 88& 57& 47& 41 \\
+    Hydromorphone& 24& 94& 107& 118& 81 \\
+    \midrule
+    PRL Misuse Ever*& 798& 2127& 1475& 1343& 600 \\
+    \midrule
+    Tranquilizers& 405& 1469& 1064& 1405& 1153 \\
+    Sedatives& 204& 242& 157& 256& 226 \\
+    Methadone Ever& 32& 83& 96& 71& 46&
+    \midrule
+    Heroin Use Ever*& 22& 261& 259& 250& 164 \\
+    \midrule
+    Cocaine Use Ever& 109& 1645& 1626& 1954& 1406 \\
+    Amphetamines Ever& 932& 1836& 627& 383& 164&
+    Methamphetamine& 42& 481& 700&  898& 492 \\
+    Hallucinogens& 450& 2660& 2020& 2127& 1197 \\
+    LSD Use Ever& 190& 1114& 874& 1442& 907 \\
+    Exstasy (MDMA)& 199& 1867& 1403& 947& 149 \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -394,19 +426,25 @@ Machine learning classification of opioid abuse can contribute to efforts to add
 %Table\ref{t:mytable}. 
 
 \begin{table}
-  \caption{Summary of Participant Characteristics in Pilot study \cite{carreiro15}}
+  \caption{Frequency Table of Mental Health Issues and Treatment NSDUH 2015
+  \cite{samhsa16}}
   \label{tab:freq}
-  \begin{tabular}{ccccccc}
+  \begin{tabular}{cccccc}
     \toprule
-     Patient& Age& Gender& History of Use& Intervention& Pre-EDA& Post-EDA \\
+    Age Group & 12-17& 18-25& 26-34& 35-49& 50+\\
     \midrule
-    1& 82& Male& Opioid naive& 4 mg morphine& 4.5& 60.0 \\
-    2& 47& Male& Recent short-term& 1 mg hydromorphone& 3.4& 12.2 \\
-    3& 43& Female& Chronic opioid use& 1 mg hydromorphone& 0.2& 0.2 \\
-    4& 72& Male& Chronic opioid use& 4 mg morphine& 0.9& 1.6 \\
+    In Hospital Overnight& 730& 1149& 821& 890& 1173 \\
+    Adult Depression& 0& 2413& 1395& 1766& 967 \\
+    Suicidal Thoughts& 13585& 14553& 9084& 11189& 8755 \\
+    \midrule
+    Mental Health Treatment& & & & & \\
+    \midrule
+    Private Therapist& 0& 592& 434& 554& 311 \\
+    Treatment Gap*& 469& 931& 321& 239& 90 \\
     \bottomrule
   \end{tabular}
 \end{table}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
