@@ -7,7 +7,7 @@
 * 10/02/17  Attended online zoom meeting on paper1, question about table, figure, JabRef references
 * 10/16/17  Attended online zoom meeting on paper2, and revisions for paper1 report.bib and report.tex
 * 11/06/17  Attended online zoom meeting on paper2 and course project
-* TO DO 11/13/17  Attend online zoom meeting on course project
+* 11/20/17  Attended online zoom meeting on course project, formatting issues, questions about data
 
 # Logistics    
 *	08/25-09/01/17  Read Course Organization and Introduction, and Piazza Folders curation
@@ -31,6 +31,8 @@
 * 11/11/17  Project: NSDUH survey questions, variable selection, construction of data subset
 * 11/12/17  Project: Updated project notebook with NSDUH variable, dataset construction
 * 11/16/17  Project: Loaded NSDUH dataset as data frame, recoded features, prepare data for analysis
+* 11/20/17  Project: Formatted project folder in HID335 to include necessary files, folders, and formats
+* 11/27/17  Paper2: Resubmitted paper as report2.tex, and addressed issues in issues.tex
 
 #  Theory
 * 08/25-09/01/17  Read Introduction and Watched Course Motivation Video Lectures by Geoffrey Fox:
@@ -53,6 +55,8 @@
 * 11/15-11/16/17 Project: Python notebook for cleaning and preparing data from the NSDUH dataset
 * 11/16/17  Python experiment: Pandas Data Cleaning and Preparation, subsetting data frames, export to CSV
 * 11/19/17  Project: Subset NSDUH dataset in Pandas and created aggregated data subset for course project
+* 11/24/17  Project: Wrote get-data.py function to download, unzip, extract NSDUH data, write to csv file
+* 11/24/17  Project: Updated Pandas Data Cleaning and Preparation, to include get-data() function
 
 # Writing
 * 09/05/17  Topic for Paper 1: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics 
@@ -72,6 +76,9 @@
 * 10/31/17 Paper 2: Writing literature review, revise report.tex, report.bib, add Figures 1-8, add Table 1
 * 11/03-11/05/17 Paper 2: Writing, review, revision of report.tex and report.bib for submission
 * 11/15-11/16/17 Project: NSDUH data codebook includes survey variables and frequency summary 
+* 11/20/17  Project: Created report.tex and report.bib files in SharelaTex with accompanying files and folders
+* 11/21-11/25/17  Project: Writing Introduction sections, Method in report.tex, adding reference to report.bib
+* 11/26/17  Project Report: Added Figure 1 and created Tables 1 and 2 Summaries of Substance Use and Treatment 
 
 # Location
 * Address: Galway Drive, Dallas, Texas, 75218
