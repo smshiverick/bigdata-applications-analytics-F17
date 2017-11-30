@@ -109,23 +109,35 @@ of categorical or binary outcomes (e.g., `spam` or `ham`, `benign` or
 `malignant`), then classification is used to predict which class or category 
 label that new instances will be assigned to.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Classification Algorithms} 
 Comparing the performance of different learning algorithms can be helpful for 
-selecting the best model for a given problem \cite{raschka17}. One of the 
-simplest classification algorithms is K-Nearest-Neighbors (KNN) which takes a 
-set of data points and classifies a new data point based on the distance 
-(Euclidean by default) to its nearest neighbor(s). The main parameter for KNN
-is the number of neighbors, and typically k equal to 3 or 5 works well. KNN is
-easy to understand and performs well with little adjustment, but it doe not 
-perform well with datasets that have a large number of features (100 or more) 
-or data that is sparse. For linear classification models, the decision boundary 
-is a linear function of the input; a binary classifier separates two classes 
-using along a line, plane, or hyperplane. Algorithms for linear classification 
-differ in terms of (1) how they measure how well a particular combination of 
-coefficients and intercept fit the training data, and (2) the type of 
-regularization used \cite{muller17}. Two common linear classification models 
-are logistic regression and support vector machines (SVMs). 
+selecting the best model for a given problem \cite{raschka17}. The K-Nearest-
+Neighbors (KNN) algorithms takes a set of data points and classifies a new data 
+point based on the distance (e.g., Euclidean) to its nearest neighbor(s). 
+The main parameter, k equal to 3 or 5 neighbors works well and provides a 
+solution that is easy to understand; however, KNN doe not perform well with 
+a large number of features (100 or more) or data that is sparse. 
 
+\subsubsection{Linear Classification Algorithms}
+Two common linear classification algorithms are logistic regression and support 
+vector machines (SVMs). The decision boundary for a linear classifier is a 
+linear function of the input; a binary classifier separates two classes using 
+along a line, plane, or hyperplane. Linear classification models differ in 
+terms of (1) how they measure how well a particular combination of coefficients 
+and intercept fit the training data, and (2) the type of regularization used 
+\cite{muller17}. The main difference between linear models for classification 
+is the penalty parameter `C`. High values of C correspond to less regularization
+and the model will fit the training set as best as possible, stressing the 
+importance of each individual data point to be classified correctly. By 
+contrast, with low values of C, the model puts more emphasis on finding 
+coefficient vectors (w) that are close to zero, trying to adjust to the 
+`majority` of data points \cite{muller17}. The L2 (Ridge) penalty uses all 
+available features, but pushes the coefficient values toward zero. The L2 
+(Lasso) penalty sets the coefficient values for most features to zero, and 
+uses only a subset for improved interpretability.
+
+\subsubsection{Tree Based Models}
 
 Decision Trees
 
@@ -192,7 +204,7 @@ STDs, Hepatitis, HIV, Cancer, hospitalization), mental health (e.g., Adult
 Depression, Emotional Distress, Suicidal Thoughts, Plans), Suicide Attempts, 
 Pain Reliever Medication Use, Misuse, and Abuse (over past year, past month), 
 Prescription Opioid Medications Taken in Past year (e.g., Hydrocodone, 
-Oxycodone, Tramadol, Morphine, Fentanyl,Oxymorphone, Demerol, Hydromorphone), 
+Oxycodone, Tramadol, Morphine, Fentanyl, Oxymorphone, Demerol, Hydromorphone), 
 Heroin Use, Abuse (over past year, past month), Tranquilizer Use, Sedative Use, 
 Cocaine Use, Amphetamine and Methamphetamine Use, Hallucinogen Use, Drug 
 Treatment (e.g., Inpatient, Outpatient, Hospital, Mental Health Clinic, ER, 
@@ -238,11 +250,27 @@ of 2` features and 57,146 observations, which was exported to CSV file.
 
 \subsection{Exploratory Analysis and Descriptives}\cite{mckinney17}
 
-Of the total sample of N=57,146 respondents, 26,736 were male and 30,410 female;
-6,343 individuals reported misusing pain medication at some point; however, 
-only 956 repondents had used heroin at some point (570 males, 386 females). 
-
-%Table\ref{t:mytable}. 
+Of the total sample of N=57,146 respondents, 26,736 were male and 30,410 
+female; 6,343 individuals reported misusing pain medication at some point; 
+however, only 956 repondents had used heroin (570 males, 386 females). Table 1 
+shows the raw counts of individual substance use by age group (with the sample 
+size for each age group), listing the ten most commonly used opioid pain 
+medications, self-reported misuse of prescription opioid pain relievers (i.e., 
+PRL Misuse Ever), use of prescription Tranquilizers, Sedatives, and Methadone. 
+In addition, self-reported use of illicit drugs such as heroin, cocaine, 
+amphetamines, methamphetamine, Hallucinogens, including LSD and Exstasy 
+(MDMA). This summary table shows that substance use seems to be highest for 
+individuals between the ages of 18 to 25 and from 35 to 49 years. Of the
+prescription relievers, Hydrocodone use was almost double the rate of 
+Oxycodone use for each age group, and was significantly higher than any other 
+prescription opioid medication. Use of prescription Fentanyl and Demerol,
+two powerful opioids, and synthetic morphines such as Oxymorphone and
+Hydromorphone, was very low. The rate of prescription Tranquilizer use
+was several orders of magnitude higher than Sedative use or Methadone use.
+Compared to other illicit drugs such as Cocain, Amphetamines, Hallucinogens,
+heroin use was not very common in this sample. The highest rates of heroin
+use were seen between the ages of 18 to 49, and was lowest for respondents
+in the youngest age group 12 to 17, and individuals over 50. 
 
 \begin{table}
   \caption{Substance Use by Age Group Counts - NSDUH 2015
@@ -284,16 +312,16 @@ only 956 repondents had used heroin at some point (570 males, 386 females).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Figure \ref{f:Figure1} shows the proportion of individuals who reported 
-misusing prescription opioid pain relievers and those who reported using 
-heroin. The left column of the Figure 1 shows that majority of respondents 
-(89 percent) stated they had never misused prescription opioid pain medication 
-or used heroin, although 10 percent reported misusing opioid pain medication 
-at some point. The right panel of Figure 1 shows that of those individuals who 
-reported using heroin, the proportion who also reported misusing opioid pain 
-medication was almost twice as large as the proportion of those who only used 
-heroin. This is consistent with the hypothesis that misuse of prescription 
-opioids is linked with heroin use for some individuals.
+Figure 1 shows the proportion of individuals who reported misusing prescription 
+opioid pain relievers and who reported using heroin. The left column of the 
+Figure 1 shows the majority of respondents (89 percent) stated they had never 
+misused prescription opioid pain medication or used heroin, although 10 percent 
+reported misusing opioid pain medication at some point. The right panel of 
+Figure 1 shows that, of those individuals who reported using heroin, the 
+proportion who also reported misusing opioid pain medication was almost twice 
+as large as the proportion of those who only used heroin. This is consistent 
+with the hypothesis that misuse of prescription opioids is linked with heroin 
+use for some individuals.
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure1.pdf}
@@ -322,13 +350,48 @@ by far fewer points.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Target Variable: Heroin Use }
+\subsection{Classification of Heroin as Target \cite{muller17}}
 
-\subsubsection{Logistic Regression Classifier\cite{muller17}}
+This analysis classified individuals according to whether they had ever used 
+heroin  (i.e. ``Heroin Use Ever``). All Classifier models were constructed in 
+interactive python jupyter notebooks using SciKit Learn \cite{logclassH}. 
+In addition to identifying the accuracy of the model, classification can 
+identify features in terms of importance for classifying the outcome. The 
+features of interest were identified: demographic characteristics, health, 
+mental health (adultdepression), prescription opioid misuse and abuse 
+('PRLMISEVR', 'PRLMISAB', 'PRLANY'), prescription tranquilizers and sedatives 
+('TRQLZRS', 'SEDATVS'), illicit drugs ('COCAINE', 'AMPHETMN'), drug treatment 
+('TRTMENT'), and mental health treatment ('MHTRTMT'). The target variable was 
+heroin use ('HEROINEVR'). Next, the dataset was split into the training set 
+and test sets using the `train-test-split` function in `sklearn`.
+
+
+\subsubsection{Logistic Regression Classifier}
+Logistic Regression Classification is a based on a linear equation that 
+calculates the relative weight of each feature for a categorical target or 
+binary outcome (``yes/no``). The logistic regression classifier was fit to 
+the training data, and the model was validated on the test data. By default, 
+the model applies L2 (Ridge) regularization, and the test set accuracy 
+was 0.983 and test set accuracy was 0.984. Parameter `C` determines the 
+strength of regularization; higher values of C provides greater regularization. 
+The L1 (Lasso) regularization limits the values of most coefficients to zero, 
+creating a more interpretable model using only a few features. Figure 3 plots 
+the Coefficients of Logistic Regression Classifier (LGC) for Heroin Use with 
+L1 (Lasso) regularization under different values of parameter C. The default 
+setting, C=1.0, provides good performance for train and test sets, but the 
+model is very likely underfitting the test data. Using a higher value of C 
+fits a more 'flexible' model and generally gives improved accuracy for both 
+training and tests sets. A value of C=100 yielded training set accuracy of
+0.98 and test set accuracy of 0.98. Figure 3 shows that Pain Reliever Misuse
+('PRLMISEVR'), Cocaine use, and Amphetamine use, were the three features
+with the highest coefficient values for classifying Heroin use. 
+
+\url{https://github.com/bigdata-i523/hid335/blob/master/project/BDA-Logistic-Classifier-Heroin.ipynb}
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure3.pdf}
-  \caption{Logistic Regression Classification of Heroin Use with L2 Lasso Regularization}
+  \caption{Coefficients of Logistic Regression Classifier (LGC) for Heroin Use 
+  with L1 (Lasso) Regularization under Different Values of Parameter C}
   \label{f:Figure3}
 \end{figure}
 
@@ -338,7 +401,7 @@ by far fewer points.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Target Variable: Opioid Pain Medication Misuse}
+\subsection{Classification of Prescription Pain Reliever Medication Misuse}
 
 \subsubsection{Logistic Regression Classifier\cite{muller17}}
 
@@ -358,25 +421,28 @@ by far fewer points.
 
 \subsection{Extension to Big Data}
 
-This classification method could be adopted for big data health analytics by
-expanding the suvery to the popluation of patients with prescriptions for 
-opioid pain medication and may help to identify individuals at risk for
-potentially developing opioid dependency of addiction. 
-
-
-Additional data from the NSDUH was downloaded from 2012 to 2014
-
-hen trying to integrate data from multiple sources, (4) inconsistencies in coding of attributes or features can be a major source of problems. For example, time stamped data with different date formats (e.g., DD/MM/YY; YY/MM/DD, or MM/DD/YY) would have to be reformatted before being combined. Similarly, different coding for sex (e.g., ‘M’/’F’, ‘0’/’1’, ‘1’,’2’) have to be reconciled when combining multiple data sources. Cleaning big data is a more involved process, with Extraction, Integration, and Aggregation of data from operationalized sources into a data warehouse. In general, there are several phases involved in big data cleaning approaches, including the following:
+These classification models could be adopted for big health data in two ways: 
+First, by expanding the survey to previous years, and second, by expanding the 
+sample to the population of patients with prescriptions for opioid pain 
+medication. Additional data from the NSDUH was downloaded from previous years 
+(2012 to 2014); preliminary examination of the data revealed inconsistencies 
+in questions and prescription opioid medications that would need to be 
+reconciled for combining data from multiple years. Additional time would have 
+been necessary to resolve inconsistencies in the coding of features, and
+unfortunately, constraints of time did not allow for the incorporation of data 
+from previous years into this analysis, or integration of data from multiple 
+sources. Data cleaning can be a time consuming process, especially for datasets 
+with a large number of features. In general, there are several phases involved 
+in big data cleaning, including: Extraction, Integration, and Aggregation of 
+data from operationalized sources into a data warehouse.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Limitations}
 
 Tradeoff between quality and quantity
 
-
 To be of any use, diverse and often messy raw data has to be sifted through and 
 effectively organized for further analysis, and 
-
 
 there are legitimate questions about the reliability of self report data from survey
 research for predicting actual behavior. 
