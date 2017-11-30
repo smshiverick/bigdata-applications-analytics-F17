@@ -83,6 +83,7 @@
 * 11/21-11/25/17  Project: Writing Introduction sections, Method in report.tex, adding reference to report.bib
 * 11/26/17  Project Report: Added Figure 1 and created Tables 1 and 2 Summaries of Substance Use and Treatment 
 * 11/29/17  Project Report: Added Figures 2 through 4, regression scatterplot, logistic classifier variable plots
+* 11/20/17  Project Report: Added Figures 4 through 9, decision trees, random forests, gradient boosting classifiers
 
 # Location
 * Address: Galway Drive, Dallas, Texas, 75218
