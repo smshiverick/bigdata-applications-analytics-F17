@@ -265,15 +265,15 @@ were summed. Similarly, all related responses were summed to create single
 variables for Tranquilizers, Sedatives, Cocaine, Amphetamines, Hallucinogens, 
 Drug Treatment, and Mental Health Treatment. The target outcome of interest for 
 classification, lifetime heroin use (i.e., ``Have you ever used heroin before, 
-at any time?``) is a dichotomous variables. The demographic characteristics 
+at any time?'') is a dichotomous variables. The demographic characteristics 
 and aggregated variables were subset and saved to a new data frame consisting 
-of 2` features and 57,146 observations, which was exported to CSV file. 
+of 2 features and 57,146 observations, which was exported to CSV file. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
 
-\subsection{Exploratory Data Analysis \cite{mckinney17}}
+\subsection{Exploratory Data Analysis}
 
 Of the total sample of N=57,146 respondents, 26,736 were male and 30,410 
 female; 6,343 individuals reported misusing pain medication at some point; 
@@ -283,7 +283,7 @@ size for each age group), listing the ten most commonly used opioid pain
 medications, self-reported misuse of prescription opioid pain relievers (i.e., 
 PRL Misuse Ever), use of prescription Tranquilizers, Sedatives, and Methadone. 
 In addition, self-reported use of illicit drugs such as heroin, cocaine, 
-amphetamines, methamphetamine, Hallucinogens, including LSD and Exstasy 
+amphetamines, methamphetamine, Hallucinogens, including LSD and Ecstasy 
 (MDMA). This summary table shows that substance use seems to be highest for 
 individuals between the ages of 18 to 25 and from 35 to 49 years. Of the
 prescription relievers, Hydrocodone use was almost double the rate of 
@@ -321,16 +321,16 @@ in the youngest age group 12 to 17, and individuals over 50.
     \midrule
     Tranquilizers& 405& 1469& 1064& 1405& 1153 \\
     Sedatives& 204& 242& 157& 256& 226 \\
-    Methadone Ever& 32& 83& 96& 71& 46&
+    Methadone Ever& 32& 83& 96& 71& 46 \\
     \midrule
     Heroin Use Ever*& 22& 261& 259& 250& 164 \\
     \midrule
     Cocaine Use Ever& 109& 1645& 1626& 1954& 1406 \\
-    Amphetamines Ever& 932& 1836& 627& 383& 164&
+    Amphetamines Ever& 932& 1836& 627& 383& 164 \\
     Methamphetamine& 42& 481& 700&  898& 492 \\
     Hallucinogens& 450& 2660& 2020& 2127& 1197 \\
     LSD Use Ever& 190& 1114& 874& 1442& 907 \\
-    Exstasy (MDMA)& 199& 1867& 1403& 947& 149 \\
+    Ecstasy (MDMA)& 199& 1867& 1403& 947& 149 \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -375,15 +375,15 @@ by far fewer points.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Classifier Models of Heroin Use \cite{muller17}}
+\subsection{Classifier Models of Heroin Use}
 
 This analysis classified individuals according to whether they had ever used 
-heroin (i.e. ``Heroin Use Ever``). All classifier models were constructed in 
-interactive python jupyter notebooks using SciKit Learn \cite{classifyH}. 
-In addition to identifying the accuracy of the model, classification can 
-identify features in terms of importance for classifying the outcome. The 
-features of interest were identified: demographic characteristics, health, 
-mental health (adultdepression), prescription opioid misuse and abuse 
+heroin (i.e., ``Heroin Use Ever``. All classifier models were constructed using 
+SciKit Learn \cite{muller17} using an interactive python jupyter notebooks  
+\cite{classifyH}. In addition to identifying the accuracy of the model, 
+classification can identify features in terms of importance for classifying the 
+outcome. The features of interest were identified: demographic characteristics, 
+health, mental health (adultdepression), prescription opioid misuse and abuse 
 ('PRLMISEVR', 'PRLMISAB', 'PRLANY'), prescription tranquilizers and sedatives 
 ('TRQLZRS', 'SEDATVS'), illicit drugs ('COCAINE', 'AMPHETMN'), drug treatment 
 ('TRTMENT'), and mental health treatment ('MHTRTMT'). The target variable was 
@@ -392,6 +392,7 @@ and test sets using the `train-test-split` function in `sklearn`.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Logistic Regression Classifier}
+
 Logistic Regression Classification is a based on a linear equation that 
 calculates the relative weight of each feature for a categorical target or 
 binary outcome (``yes/no``). The logistic regression classifier was fit to 
@@ -413,21 +414,15 @@ with the highest coefficient values for classifying Heroin use.
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure4.pdf}
-  \caption{Coefficients of Logistic Regression Classifier (LGC) for Heroin Use 
-  with L1 (Lasso) Regularization under Different Values of Parameter C}
+  \caption{Coefficients of Logistic Regression Classifier of Heroin Use 
+  (With L1 Penalty and Values of Regularization Parameter C)}
   \label{f:Figure4}
 \end{figure}
 
 \cite{raschka17}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Decision Tree Classifier\cite{muller17}}
-
-Random Forests Classifier: Strengths, weaknesses, parameters
-Most widely used ML method, very powerful, work well without heavy parameter tuning, without scaling of data
-Very difficult to interpret tens of hundreds of trees, random forests are deeper than single decision trees
-Random forests do NOT perform well with very high-dimensional, sparse data, such as text data
-max-features parameter determines how random each tree is; smaller max-features reduces overfitting
+\subsubsection{Decision Tree Classifier}
 
 The plot of the decision tree classifier of heroin use figure was too wide
 to include here, and therefore a partial view of the decision tree is included
@@ -439,9 +434,6 @@ in Figure 5.
   \label{f:Figure5}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Logistic Regression Classifier\cite{muller17}}
-
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure6.pdf}
   \caption{Feature Importance for Decision Tree Classifier for Heroin Use}
@@ -449,9 +441,20 @@ in Figure 5.
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Random Forests Classifier\cite{muller17}}
+\subsubsection{Random Forests Classifier}
 
-\subsubsection{Logistic Regression Classifier\cite{muller17}}
+Random Forests Classifier: Strengths, weaknesses, parameters
+Most widely used ML method, very powerful, work well without heavy parameter 
+tuning, without scaling of data
+
+Very difficult to interpret tens of hundreds of trees, random forests are deeper 
+than single decision trees
+
+Random forests do NOT perform well with very high-dimensional, sparse data, such 
+as text data 
+
+max-features parameter determines how random each tree is; smaller max-features 
+reduces overfitting
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure7.pdf}
@@ -460,20 +463,21 @@ in Figure 5.
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Gradient Boosting Classifier\cite{muller17}}
+\subsubsection{Gradient Boosting Classifier}
 
-\subsubsection{Logistic Regression Classifier\cite{muller17}}
 
 \begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/Figure9.pdf}
+  \centering\includegraphics[width=\columnwidth]{images/Figure8.pdf}
   \caption{Feature Importance for Gradient Boosting Classifier for Heroin Use}
   \label{f:Figure8}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Classifier Models of Prescription Opioid Pain Relievers Misuse}
 
-\subsubsection{Logistic Regression Classifier\cite{muller17}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Classifier Model of Prescription Opioid Pain Relievers Misuse}
+
+\subsubsection{Logistic Regression Classifier}
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure9.pdf}
@@ -633,27 +637,29 @@ Moghadam, and others who helped to improve this project and report.
 \section{Code References}
 
 All code, notebooks, files, and folders for this project can be found in the
-project githup repository: \url{url:  https://github.com/bigdata-i523/hid335/tree/master/project}.
+i523/hid335/project githup repository: 
+\url{url:  https://github.com/bigdata-i523/hid335/tree/master/project}.
 
-\subsection{Download and Extract Data file \cite{getdata17}}
+\subsection{Download and Extract Data file}
 
 The `get-data.py` function was written to download the data, unzip the data
 files, extract the data, and write the NSDUH-2015 dataset to CSV file 
 \cite{getdata17}.
 
-\subsection{Data Cleaning and Preparation \cite{mckinney17}}
+\subsection{Data Cleaning and Preparation}
 
 Data cleaning and preparation steps was conducted based on examples in 
 Chapter 7 of Python for Data Analysis \cite{mckinney17} and Chapter 3 in 
 the Python Data Science Handbook \cite{vanderplas17}, using an interactive 
-python Jupyter Notebook: \url{url: https://github.com/bigdata-i523/hid335/blob/master/project/BDA_Project_Data.ipynb}.
+python Jupyter Notebook \cite{data17}.
 
-\subsection{Exploratory Data Analysis and Visualization\cite{vanderplas17}}
+\subsection{Exploratory Data Analysis}
 
-Exploratory Data Analysis and Visualization was based on examples included
-in Python for Data Analysis \cite{mckinney17}, and the Python Data Science 
-Handbook \cite{vanderplas17}, and were executed in the following interative
-python notebook: 
+Exploratory Data Analysis and Visualization was conducted using an interactive
+python notebook: CITE URL
+
+based on examples from Python for Data Analysis \cite{mckinney17}, and the 
+Python Data Science Handbook \cite{vanderplas17}.  
 
 
 \subsection{Machine Learning Classifier Algorithms}
@@ -666,7 +672,7 @@ using an interactive python jupyter notebook \cite{classifyH}.
 %\begin{enumerate}
 
 %\item Do not to use the underscore in bibtex labels
-%\item Address each of the items in the issues.tex file  and verify you have done them. 
+%\item Address each of the items in the issues.tex file  
 %item Please do this only at the end once you have finished writing the paper. 
 %\item Change `TODO` with `DONE`. 
 
