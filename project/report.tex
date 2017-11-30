@@ -399,28 +399,29 @@ the model applies L2 (Ridge) regularization, and the test set accuracy
 was 0.983 and test set accuracy was 0.984. Parameter `C` determines the 
 strength of regularization; higher values of C provides greater regularization. 
 The L1 (Lasso) regularization limits the values of most coefficients to zero, 
-creating a more interpretable model using only a few features. Figure 3 plots 
+creating a more interpretable model using only a few features. Figure 4 plots 
 the Coefficients of Logistic Regression Classifier (LGC) for Heroin Use with 
 L1 (Lasso) regularization under different values of parameter C. The default 
 setting, C=1.0, provides good performance for train and test sets, but the 
 model is very likely underfitting the test data. Using a higher value of C 
 fits a more 'flexible' model and generally gives improved accuracy for both 
 training and tests sets. A value of C=100 yielded training set accuracy of
-0.98 and test set accuracy of 0.98. Figure 3 shows that Pain Reliever Misuse
+0.98 and test set accuracy of 0.98. Figure 4 shows that Pain Reliever Misuse
 ('PRLMISEVR'), Cocaine use, and Amphetamine use, were the three features
 with the highest coefficient values for classifying Heroin use. 
 
 \url{https://github.com/bigdata-i523/hid335/blob/master/project/BDA-Logistic-Classifier-Heroin.ipynb}
 
 \begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/Figure3.pdf}
+  \centering\includegraphics[width=\columnwidth]{images/Figure4.pdf}
   \caption{Coefficients of Logistic Regression Classifier (LGC) for Heroin Use 
   with L1 (Lasso) Regularization under Different Values of Parameter C}
-  \label{f:Figure3}
+  \label{f:Figure4}
 \end{figure}
 
 \cite{raschka17}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Decision Tree Classifier\cite{muller17}}
 
 Random Forests Classifier: Strengths, weaknesses, parameters
@@ -429,12 +430,46 @@ Very difficult to interpret tens of hundreds of trees, random forests are deeper
 Random forests do NOT perform well with very high-dimensional, sparse data, such as text data
 max-features parameter determines how random each tree is; smaller max-features reduces overfitting
 
+The plot of the decision tree classifier of heroin use figure was too wide
+to include here, and therefore a partial view of the decision tree is included
+in Figure 5.
 
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/Figure5.pdf}
+  \caption{Decision Tree Classification of Heroin Use (Partial View)}
+  \label{f:Figure5}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Logistic Regression Classifier\cite{muller17}}
+
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/Figure6.pdf}
+  \caption{Feature Importance for Decision Tree Classifier for Heroin Use}
+  \label{f:Figure9}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Random Forests Classifier\cite{muller17}}
 
+\subsubsection{Logistic Regression Classifier\cite{muller17}}
+
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/Figure7.pdf}
+  \caption{Feature Importance for Random Forests Classifier for Heroin Use}
+  \label{f:Figure7}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Gradient Boosting Classifier\cite{muller17}}
 
+\subsubsection{Logistic Regression Classifier\cite{muller17}}
 
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/Figure9.pdf}
+  \caption{Feature Importance for Gradient Boosting Classifier for Heroin Use}
+  \label{f:Figure8}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Classification of Prescription Pain Reliever Medication Misuse}
@@ -442,10 +477,10 @@ max-features parameter determines how random each tree is; smaller max-features 
 \subsubsection{Logistic Regression Classifier\cite{muller17}}
 
 \begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/Figure4.pdf}
+  \centering\includegraphics[width=\columnwidth]{images/Figure9.pdf}
   \caption{Logistic Regression Classification of Opioid Pain Medication
   with L2 Lasso Regularization}
-  \label{f:Figure4}
+  \label{f:Figure9}
 \end{figure}
 
 \cite{vanderplas17}
@@ -541,7 +576,8 @@ improve geospatial mapping of the opioid epidemics and treatment interventions.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
 
-Machine learning classification of opioid abuse can contribute to efforts to address prescription opioid addiction, overdoses, in the following ways: 
+Machine learning classification of opioid abuse can contribute to efforts to 
+address prescription opioid addiction, overdoses, in the following ways: 
 \begin{enumerate}
 \item Identify factors related to opioid dependency
 \item Inform consumers of opioid medication as to risk factors 
