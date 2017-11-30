@@ -17,16 +17,17 @@ for Big Data Health Analytics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
-Classification of opioid addiction can identify features related to drug abuse 
-and overdose death. Machine learning procedures were used on data from a large 
-National Survey of Drug Use and Health (NSDUH-2015) to classify individuals for 
-illicit opioid use according to demographic characteristics and mental health 
-attributes (e.g., depression). Classification models of opioid addiction 
-can be extended for big data health analytics to include high-dimensional 
-datasets, data over previous years, or expanded to the larger population of 
-patients taking prescription opioid medication. The results seek to raise 
-awareness of risk factors related to opioid addiction among patients and 
-medication prescribers, and help decrease the risk of opioid overdose death. 
+Classification of opioid addiction can identify important features relevant 
+for predicting drug abuse and overdose death. Machine learning procedures were 
+used on data from a large National Survey of Drug Use and Health (NSDUH-2015) 
+to classify individuals for illicit opioid use according to demographic 
+characteristics and mental health attributes (e.g., depression). Classification 
+models of opioid addiction can be extended for big data health analytics to 
+include high-dimensional datasets, data collected over previous years, or 
+expanded to the larger population of patients taking prescription opioid 
+medication. The results seek to raise awareness of risk factors related to 
+opioid addiction among patients and medication prescribers, and help 
+decrease the risk of opioid overdose death. 
 \end{abstract}
 
 \keywords{Health Analytics, Machine Learning, Classification, Opioid Addiction, 
@@ -39,7 +40,7 @@ Big Data, i523, HID335}
 
 Big Data offers tremendous potential to fuel innovation and transform society. 
 Can this momentum be harnessed to address a serious health crisis such as the 
-opioid overdose epidemic \cite{cdc16}? Health informatics is generating huge 
+opioid overdose epidemic?\cite{cdc16} Health informatics is generating huge 
 amounts of data at a rapid pace, from electronic medical records (EMRs), 
 clinical research data, to population-level public health data \cite{herland14}. 
 This project considers health analytics from two levels, the research questions 
@@ -66,11 +67,11 @@ machine learning classification methods are discussed.
 The abuse of prescription opioid medication in the U.S. has become a major 
 health crisis of epidemic proportions \cite{volkow14}. Over 2 million Americans 
 were dependent or abused prescription opioids such as oxycodone or hydrocodone 
-in 2014 \cite{cdc17}. Overdose deaths from prescription opioids have quadrupled 
+in 2014\cite{cdc17}. Overdose deaths from prescription opioids have quadrupled 
 since 1999, resulting in more than 180,000 deaths between 1999 to 2015 
 \cite{nida17}. Drug overdose deaths increased significantly for males and 
 females, between 25-44 years, ages 55 and older, for Non-Hispanic Whites and 
-Blacks, in the Northeast, Midwest, and Southern regions of the U.S. 
+Blacks, in the Northeast, Midwest, and Southern regions of the U.S.
 \cite{cdc16}. Mobile health applications can monitor patient medication 
 consumption and provide an early warning system for potential abuse, detecting 
 sudden changes in medications, higher dosages, or rapid escalation of a 
@@ -79,7 +80,7 @@ dosages can be difficult to obtain based on self-reports. Individuals dependent
 or addicted to prescription opioids may obtain synthetic opioids such as 
 fentanyl or illicit drugs such as heroin. Because the dosage levels and potency 
 of illicit opioids are largely unknown, there is greater risk of drug overdose 
-death. The sharp increase in overdose deaths due to synthetic (opioids other 
+death. The sharp increase in overdose deaths due to synthetic opioids (other 
 than methadone) has coincided with the increased availability of illicitly
 manufactured fentanyl, which is indistinguishable from prescription fentanyl. 
 The findings indicate the opioid overdose epidemic is getting worse, and 
@@ -272,7 +273,7 @@ of 2` features and 57,146 observations, which was exported to CSV file.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
 
-\subsection{Exploratory Analysis and Descriptives}\cite{mckinney17}
+\subsection{Exploratory Data Analysis \cite{mckinney17}}
 
 Of the total sample of N=57,146 respondents, 26,736 were male and 30,410 
 female; 6,343 individuals reported misusing pain medication at some point; 
@@ -374,11 +375,11 @@ by far fewer points.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Classification of Heroin as Target \cite{muller17}}
+\subsection{Classifier Models of Heroin Use \cite{muller17}}
 
 This analysis classified individuals according to whether they had ever used 
-heroin  (i.e. ``Heroin Use Ever``). All Classifier models were constructed in 
-interactive python jupyter notebooks using SciKit Learn \cite{logclassH}. 
+heroin (i.e. ``Heroin Use Ever``). All classifier models were constructed in 
+interactive python jupyter notebooks using SciKit Learn \cite{classifyH}. 
 In addition to identifying the accuracy of the model, classification can 
 identify features in terms of importance for classifying the outcome. The 
 features of interest were identified: demographic characteristics, health, 
@@ -389,7 +390,7 @@ mental health (adultdepression), prescription opioid misuse and abuse
 heroin use ('HEROINEVR'). Next, the dataset was split into the training set 
 and test sets using the `train-test-split` function in `sklearn`.
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Logistic Regression Classifier}
 Logistic Regression Classification is a based on a linear equation that 
 calculates the relative weight of each feature for a categorical target or 
@@ -409,8 +410,6 @@ training and tests sets. A value of C=100 yielded training set accuracy of
 0.98 and test set accuracy of 0.98. Figure 4 shows that Pain Reliever Misuse
 ('PRLMISEVR'), Cocaine use, and Amphetamine use, were the three features
 with the highest coefficient values for classifying Heroin use. 
-
-\url{https://github.com/bigdata-i523/hid335/blob/master/project/BDA-Logistic-Classifier-Heroin.ipynb}
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure4.pdf}
@@ -472,7 +471,7 @@ in Figure 5.
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Classification of Prescription Pain Reliever Medication Misuse}
+\subsection{Classifier Models of Prescription Opioid Pain Relievers Misuse}
 
 \subsubsection{Logistic Regression Classifier\cite{muller17}}
 
