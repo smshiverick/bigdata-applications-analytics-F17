@@ -139,8 +139,32 @@ uses only a subset for improved interpretability.
 
 \subsubsection{Tree Based Models}
 
-Decision Trees
+Decision Trees are based on a features branching that start from a root node
+and continues until all leaves are pure leads to models that are complex, overfit
 
+Presence of pure leaves means the tree is 100 percent accurate on the training set
+Each data point in training set is in a leaf that has the correct majority class
+
+Strategies to Prevent Overfitting
+Pre-pruning:
+Stopping the creation of tree early
+
+Limiting the maximum depth of the tree, or limiting maximum number of leaves
+Requiring a minimum number of points in a node to keep splitting it
+Pruning (post-pruning):
+
+Building tree and then removing or collapsing nodes with little info
+
+Decision Trees Classification of Heroin Use
+Implemented in the DecisionTreeRegressor or DecisionTreeClassifier
+scikit-learn only does pre-pruning, but not post-pruning
+Import standard packages
+
+Random Forests Classifier: Strengths, weaknesses, parameters
+Most widely used ML method, very powerful, work well without heavy parameter tuning, without scaling of data
+Very difficult to interpret tens of hundreds of trees, random forests are deeper than single decision trees
+Random forests do NOT perform well with very high-dimensional, sparse data, such as text data
+max-features parameter determines how random each tree is; smaller max-features reduces overfitting
 
 
 
@@ -398,6 +422,18 @@ with the highest coefficient values for classifying Heroin use.
 \cite{raschka17}
 
 \subsubsection{Decision Tree Classifier\cite{muller17}}
+
+Random Forests Classifier: Strengths, weaknesses, parameters
+Most widely used ML method, very powerful, work well without heavy parameter tuning, without scaling of data
+Very difficult to interpret tens of hundreds of trees, random forests are deeper than single decision trees
+Random forests do NOT perform well with very high-dimensional, sparse data, such as text data
+max-features parameter determines how random each tree is; smaller max-features reduces overfitting
+
+
+\subsubsection{Random Forests Classifier\cite{muller17}}
+
+\subsubsection{Gradient Boosting Classifier\cite{muller17}}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
