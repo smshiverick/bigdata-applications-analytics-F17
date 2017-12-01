@@ -502,9 +502,12 @@ reduces overfitting
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Classifier Model of Prescription Opioid Pain Relievers Misuse}
+\subsection{Classifier Models of Prescription Opioid Pain Relievers Misuse}
 
 \subsubsection{Logistic Regression Classifier}
+
+
+\cite{classifyPRL}
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure9.pdf}
@@ -634,10 +637,7 @@ Moghadam, and others who helped to improve this project and report.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 
-
-
 \section{Code References}
-
 All code, notebooks, files, and folders for this project can be found in the
 i523/hid335/project githup repository: 
 \url{url:  https://github.com/bigdata-i523/hid335/tree/master/project}.
@@ -648,6 +648,7 @@ The `get-data.py` function was written to download the data, unzip the data
 files, extract the data, and write the NSDUH-2015 dataset to CSV file 
 \cite{getdata17}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Data Cleaning and Preparation}
 
 Data cleaning and preparation steps was conducted based on examples in 
@@ -663,12 +664,14 @@ python notebook: CITE URL
 based on examples from Python for Data Analysis \cite{mckinney17}, and the 
 Python Data Science Handbook \cite{vanderplas17}.  
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Machine Learning Classifier Algorithms}
-Machine learning classifier models included logistic regression classifier, 
+Machine learning classification models included logistic regression classifier, 
 decision Tree classifier, random forests classifier, and gradient boosting 
 classifier were constructed using SciKit Learn \cite{muller17, raschka17} 
-using an interactive python jupyter notebook \cite{classifyH}. 
+using an interactive python jupyter notebook for Heroin Use as the target
+variable \cite{classifyH} and for Prescription Opioid Misuse as the target
+\cite{classifyPRL}. 
 
 
 %\begin{enumerate}
