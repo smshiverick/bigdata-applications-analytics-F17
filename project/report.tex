@@ -30,7 +30,7 @@ opioid addiction among patients and medication prescribers, and help
 decrease the risk of opioid overdose death. 
 \end{abstract}
 
-\keywords{Health Analytics, Machine Learning, Classification, Opioid Addiction, 
+\keywords{Health Analytics, Machine Learning Classifiers, Opioid Addiction, 
 Big Data, i523, HID335}
 
 \maketitle
@@ -112,6 +112,7 @@ label that new instances will be assigned to.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Classification Algorithms} 
+
 Comparing the performance of different learning algorithms can be helpful for 
 selecting the best model for a given problem \cite{raschka17}. The K-Nearest-
 Neighbors (KNN) algorithms takes a set of data points and classifies a new data 
@@ -121,6 +122,7 @@ solution that is easy to understand; however, KNN doe not perform well with
 a large number of features (100 or more) or data that is sparse. 
 
 \subsubsection{Linear Classification Algorithms}
+
 Two common linear classification algorithms are logistic regression and support 
 vector machines (SVMs). The decision boundary for a linear classifier is a 
 linear function of the input; a binary classifier separates two classes using 
@@ -136,36 +138,61 @@ coefficient vectors (w) that are close to zero, trying to adjust to the
 `majority` of data points \cite{muller17}. The L2 (Ridge) penalty uses all 
 available features, but pushes the coefficient values toward zero. The L2 
 (Lasso) penalty sets the coefficient values for most features to zero, and 
-uses only a subset for improved interpretability.
+uses only a subset for improved interpretability. This paper uses a logistic
+regression classifier to predict Heroin use from demographic attributes, mental 
+health, prescription opioids, medication use, misuse, and illicit drug use. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Tree Based Models}
 
-Decision Trees are based on a features branching that start from a root node
-and continues until all leaves are pure leads to models that are complex, overfit
+Decision tree models are widely used for classification and regression. Tree 
+models ``learn'' a hierarchy of if-else questions that are represented in the
+form of a decision tree. Building decision trees proceeds from a root node as 
+the starting point and continues through a series of decisions or choices.
+Each node in the tree either represents either a question or a terminal node 
+(i.e.,leaf) that contains the outcome. Applied to a binary classification task, 
+the decision tree algorithm ``learns'' the sequence of if-else questions that 
+arrives at the outcome most quickly. For data with continuous features, the 
+decisions are expressed in the form of, ``Is feature x larger than value y?''
+\cite{muller17} In constructing the tree, the algorithm searches through all
+possible decisions or tests, and find a solution that is most informative 
+about the target outcome. A decision tree classifier is used for binary or 
+categorical targets, and decision tree regression is used for continuous
+target outcomes. The recursive branching process of tree based models yields
+a binary tree of decisions, with each node representing a test that considers
+a single feature. This process of recursive partitioning is repeated until
+each leaf in the decision tree contains only a single target. Prediction for
+a new data point proceeds by checking which region of the partition the 
+point falls in, and predicting the majority in that feature space. The 
+main advantage of tree based models is that they require little adjustment 
+and are easy to interpret. A drawback is that they can lead to very complex
+models that are highly overfit to the training data. A common strategy to 
+prevent overfitting is \emph{pre-pruning}, which stops tree construction 
+early by limiting the maximum depth of the tree, or the maximum number of 
+leaves. One can also set the minimum number of points in a node required for 
+splitting. Another approach is to build the tree and then remove or collapse 
+nodes with little information, which is called \emph{post-pruning}. Decision
+trees work well with features measured on very different scales, or with 
+data that has a mix of binary and continuous features. 
 
-Presence of pure leaves means the tree is 100 percent accurate on the training set
-Each data point in training set is in a leaf that has the correct majority class
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Random Forests Classifier}
 
-Strategies to Prevent Overfitting
-Pre-pruning:
-Stopping the creation of tree early
+Random forests is an ensemble approach to addressing the problem of decision
+tree overfitting training data. 
 
-Limiting the maximum depth of the tree, or limiting maximum number of leaves
-Requiring a minimum number of points in a node to keep splitting it
-Pruning (post-pruning):
 
-Building tree and then removing or collapsing nodes with little info
+of the most widely used ML methods that works well 
+without heavy parameter tuning or scaling of data. 
 
-Decision Trees Classification of Heroin Use
-Implemented in the DecisionTreeRegressor or DecisionTreeClassifier
-scikit-learn only does pre-pruning, but not post-pruning
-Import standard packages
+Very difficult to interpret tens of hundreds of trees, 
+random forests are deeper than single decision trees
 
-Random Forests Classifier: Strengths, weaknesses, parameters
-Most widely used ML method, very powerful, work well without heavy parameter tuning, without scaling of data
-Very difficult to interpret tens of hundreds of trees, random forests are deeper than single decision trees
-Random forests do NOT perform well with very high-dimensional, sparse data, such as text data
-max-features parameter determines how random each tree is; smaller max-features reduces overfitting
+Random forests do NOT perform well with very high-dimensional, sparse data, such 
+as text data
+
+max-features parameter determines how random each tree is; 
+smaller max-features reduces overfitting
 
 
 
@@ -451,9 +478,37 @@ with the highest coefficient values for classifying Heroin use.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Decision Tree Classifier}
 
-The plot of the decision tree classifier of heroin use figure was too wide
-to include here, and therefore a partial view of the decision tree is included
-in Figure 5.
+Decision Trees Classification of Heroin Use was implemented using the `Decision 
+Tree Classifier` package in scikit-learn, which only does pre-pruning. First, 
+the decision model was build using the default setting of a fully developed 
+tree until all leaves are pure. The `random state` features is fixed to break 
+ties internally. 
+
+Without restricting their depth, decision trees can become complex; unpruned 
+trees are prone to overfitting and do not generalize well to new data. 
+
+A second analysis applies pre-pruning, by setting the maximum depth to 4, which
+means the algorithm will split on the four consecutive questions. Limiting
+the depth of the tree decreases overfitting, which results in lower accuracy
+on the training set, but imporoved performance on the test set. 
+
+Even with a  tree depth of 4, the tree can be a bit complex. Figure 5 shows a 
+partial view of the resulting decision tree classifier of heroin use because 
+the complete figure was too wide to include here.
+
+Instead of looking at the whole tree, features importance is a commonly used 
+summary function that rates how important each feature is for the decisions 
+which a tree makes. Each feature is assigned an importance value between 0 and 1;
+with a value of 1 indicating that the feature perfectly predicts the target and 
+a value of 0 that the feature was not used at all. Feature importance values
+always sum to 1. A feature may be assigned a low feature importance value
+because another feature encodes the same information \cite{muller17}.
+
+
+
+
+
+
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure5.pdf}
@@ -543,17 +598,15 @@ data from operationalized sources into a data warehouse.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Limitations}
 
-Tradeoff between quality and quantity
-
 To be of any use, diverse and often messy raw data has to be sifted through and 
 effectively organized for further analysis, and 
 
-there are legitimate questions about the reliability of self report data from survey
-research for predicting actual behavior. 
+there are legitimate questions about the reliability of self report data from 
+surveyresearch for predicting actual behavior. 
 
-The question of 
-Value evaluates the quality of the data as it pertains to intended outcomes, such 
-as limiting the spread of contagion and disease prevention. 
+The question of Value evaluates the quality of the data as it pertains to 
+intended outcomes, such as limiting the spread of contagion and disease 
+prevention. 
 
 An important challenge for making sense of big data is developing analytic 
 tools adequate to handle large volumes of data in real time.
@@ -577,12 +630,18 @@ dependency by exposure to drug-related cues or stressors in the environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Dynamics of Epidemic Spreading}
 
-Epidemic spreading is a complex phenomenon based on contact networks between 
-individuals and distributed by transportation networks \cite{Colizza06}.
+As described in the introduction, prescription opioid addiction and overdose 
+death is a major health crisis that has been described as an epidemic.
+The expansion of pioid addiction may thought of as analogous to examples of
+biological epidemics in that spreading proceeds as a dynamic process based on 
+interactions between infected and uninfected persons. The dynamics of 
+epidemic spreading is complex, involving networks of person-to-person contact, 
+indirect contact exposure, and transportation pathways such as roads and 
+highways and airline transportation network \cite{Colizza06}, that facilitate 
+the distribution of opioid drugs to individuals susceptible to addiction and 
+dependency. This project has identified some of the features important for 
+classifying heroin use and prescription opioid misuse. 
 
-The dynamics of epidemic spreading is a complex phenomenon, based on contact 
-networks of person-to-person interaction, indirect exposure, and transmission 
-byways such as the {\it airline transportation network} (ATN) \cite{Colizza06}. 
 Epidemics are quantified in terms of the proportion of the population infected, 
 those yet to be infected, and the rate of transmission \cite{hethcote00}. In 
 addition, the structure of the contact network can influence epidemic spreading 
@@ -598,13 +657,17 @@ correlation between Twitter posts and rate of ILI reports does not capture the
 complex network structure that underlies disease epidemics and pandemics. 
 It is possible that by analyzing the structure of social media networks, 
 
+Could use network analysis to examine opioid distribution pathways and points 
+of contact among nodes or person in the network of prescription medications.
+The opioid crisis in North America may be amenable to social network modeling as 
+drug usage, dependancy, and addiction is subserved by social networks. 
+
 future research may help to identify how points of connection within online
 networks are associated with the spread of contagion and resulting epidemics 
-\cite{zhu17}. Some epidemics such as the opioid crisis in North America 
-\cite{volkow14} may be amenable to social network modeling as drug usage, 
-dependancy, and addiction is subserved by social networks. The emergence of 
-new technologies, such as wearable biosensors \cite{carreiro15} may help 
-improve geospatial mapping of the opioid epidemics and treatment interventions.
+\cite{zhu17}. 
+
+The emergence of new technologies, such as wearable biosensors \cite{carreiro15} 
+may help improve geospatial mapping of the opioid epidemics and treatment interventions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
@@ -616,8 +679,6 @@ address prescription opioid addiction, overdoses, in the following ways:
 \item Inform consumers of opioid medication as to risk factors 
 \item Increase knowledge of opioid abuse for more informed prescriptions. 
 \end{enumerate}
-
-
 
 
 
@@ -651,10 +712,7 @@ files, extract the data, and write the NSDUH-2015 dataset to CSV file
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Data Cleaning and Preparation}
 
-Data cleaning and preparation steps was conducted based on examples in 
-Chapter 7 of Python for Data Analysis \cite{mckinney17} and Chapter 3 in 
-the Python Data Science Handbook \cite{vanderplas17}, using an interactive 
-python Jupyter Notebook \cite{data17}.
+Data cleaning and preparation steps was conducted using an interactive python Jupyter Notebook \cite{data17} based on examples in Python for Data Analysis \cite{mckinney17} and the Python Data Science Handbook \cite{vanderplas17}.
 
 \subsection{Exploratory Data Analysis}
 
@@ -669,9 +727,8 @@ Python Data Science Handbook \cite{vanderplas17}.
 Machine learning classification models included logistic regression classifier, 
 decision Tree classifier, random forests classifier, and gradient boosting 
 classifier were constructed using SciKit Learn \cite{muller17, raschka17} 
-using an interactive python jupyter notebook for Heroin Use as the target
-variable \cite{classifyH} and for Prescription Opioid Misuse as the target
-\cite{classifyPRL}. 
+using two separate interactive python jupyter notebook, one for classifying 
+Heroin Use as the target variable \cite{classifyH}, and another notebook for classifying Prescription Opioid Misuse as the target \cite{classifyPRL}. 
 
 
 %\begin{enumerate}
