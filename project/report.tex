@@ -114,12 +114,14 @@ label that new instances will be assigned to.
 \subsection{Classification Algorithms} 
 
 Comparing the performance of different learning algorithms can be helpful for 
-selecting the best model for a given problem \cite{raschka17}. The K-Nearest-
-Neighbors (KNN) algorithms takes a set of data points and classifies a new data 
-point based on the distance (e.g., Euclidean) to its nearest neighbor(s). 
-The main parameter, k equal to 3 or 5 neighbors works well and provides a 
-solution that is easy to understand; however, KNN doe not perform well with 
-a large number of features (100 or more) or data that is sparse. 
+selecting the best model for a given problem \cite{raschka17}. One of the 
+simplest classification algorithms is K-Nearest-Neighbors (KNN) which takes 
+a set of data points and classifies a new data point based on the distance 
+(e.g., Euclidean, by default) to its nearest neighbors. The main parameter, 
+k equal to 3 or 5 neighbors works well and provides a solution that is easy 
+to interpret. A limitation of KNN is that it does not perform well with a 
+dataset that has a large number of features (100 or more) or sparse datasets. 
+In the following section, we consider several classification methods.
 
 \subsubsection{Linear Classification Algorithms}
 
@@ -208,15 +210,14 @@ dependency, addiction, and treatment, demographic measures of education and
 employment, physical health, depression, and mental health treatment. The 
 general idea of the project is that individuals dependent of addicted to 
 prescription opioid medications are more likely to use illicit opioids such 
-as heroin and fentanyl. Classifying individuals according to heroin use will 
-identify the set of features the best predicts opioid addiction. Machine 
-learning classification models were constructed to classify heroin use 
-in the sample by demographics attributes and mental health characteristics 
-(e.g., adult depression). This method helps address the opioid crisis in 
-the following ways: (i) Identify factors related to opioid dependency and 
-addiction, (ii) Inform consumers of prescription opioids about risk factors, 
-and (iii) Increase knowledge about opioid abuse for better decisions by 
-medication prescribers. 
+as heroin and fentanyl. It is hypothesized that classifying individuals 
+according to heroin use will identify the set of features that are important
+for predicting opioid addiction. Machine learning classification models were constructed to classify heroin use in the sample by demographics attributes 
+and mental health characteristics (e.g., adult depression). This method helps 
+address the opioid crisis in the following ways: (i) Identify factors related 
+to opioid dependency and addiction, (ii) Inform consumers of prescription 
+opioids about risk factors, and (iii) Increase knowledge about opioid abuse 
+for better decisions by medication prescribers. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
