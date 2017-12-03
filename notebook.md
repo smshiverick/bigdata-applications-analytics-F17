@@ -60,6 +60,7 @@
 * 11/24/17  Project: Updated Pandas Data Cleaning and Preparation, to include get-data() function
 * 11/28/17  Project: Python notebooks for Logistic regression Classification of Heroin Use and Opioids Misuse
 * 11/30/17  Project ipynb: Classification of Heroin with Logistic Regression, Decision Trees, and Random Forests
+* 12/02/17  Project ipynb: Uploaded Project Data Exploratory Analysis and Data Visualization notebooks
 
 # Writing
 * 09/05/17  Topic for Paper 1: Big Data Analytics, Data Mining, Health Informatice: Social Media, Population, Epidemics 
@@ -84,6 +85,7 @@
 * 11/26/17  Project Report: Added Figure 1 and created Tables 1 and 2 Summaries of Substance Use and Treatment 
 * 11/29/17  Project Report: Added Figures 2 through 4, regression scatterplot, logistic classifier variable plots
 * 11/30/17  Project Report: Added Figures 4 through 9, decision trees, random forests, gradient boosting classifiers
+* 12/01/17  Project Report: Writing Introduction on Classifier Algorithms, Describing Results of Classifier Models
 
 # Location
 * Address: Galway Drive, Dallas, Texas, 75218
