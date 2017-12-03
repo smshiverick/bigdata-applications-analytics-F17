@@ -143,7 +143,8 @@ model. The L2 penalty (Ridge) uses all available features, but pushes the
 coefficient values toward zero. The L1 penalty (Lasso) sets the coefficient 
 values for most features to zero, and uses only a subset for improved
 interpretability. This paper uses a logistic regression classifier to predict 
-Heroin use from demographic attributes, mental health, prescription opioids, medication use, misuse, and illicit drug use. 
+Heroin use from demographic attributes, mental health, prescription opioids, 
+medication use, misuse, and illicit drug use. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Tree Based Models}
@@ -378,6 +379,8 @@ in the youngest age group 12 to 17, and individuals over 50.
   \end{tabular}
 \end{table}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 Table 2 shows the frequency of individuals reporting that they had experienced
 mental health issues such as depression, suicidal thoughts,whether they had 
 received mental health treatment, received treatment from a private therapist, 
@@ -479,11 +482,11 @@ prescription opioids and using heroin, but this is a group of interest. The
 last column of the second row shows the individuals reporting high levels of 
 opioid misuse and abuse were distributed evenly across city/metropolitan areas 
 of different sizes, with only slightly higher numbers for small cities or 
-rural areas, but this difference is not likely to be significant. As stated 
-above, only few participants reported using heroin, and of these, the majority 
-were from large metropolitan areas. Finally, the sample seems to have slightly 
-higher proportions from small and large metropolitan areas, which is likely 
-due to weighted sampling, which drew more from heavily populated regions.
+rural areas. As stated above, only few participants reported using heroin, and 
+of these, the majority were from large metropolitan areas. Finally, the sample 
+seems to have slightly higher proportions from small and large metropolitan 
+areas, which is likely due to weighted sampling, which drew more from heavily 
+populated regions.
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure3.pdf}
@@ -500,7 +503,8 @@ This analysis classified individuals according to whether they had ever used
 heroin (i.e., ``Heroin Use Ever``. All classifier models were constructed 
 using SciKit Learn \cite{muller17} using an interactive python jupyter notebook  
 \cite{classifyH}. The features of interest were demographic characteristics, 
-health, mental health (adultdepression), prescription opioid misuse and abuse ('PRLMISEVR', 'PRLMISAB', 'PRLANY'), prescription tranquilizers and sedatives 
+health, mental health (adultdepression), prescription opioid misuse and abuse 
+('PRLMISEVR', 'PRLMISAB', 'PRLANY'), prescription tranquilizers and sedatives 
 ('TRQLZRS', 'SEDATVS'), illicit drugs ('COCAINE', 'AMPHETMN'), drug treatment 
 ('TRTMENT'), and mental health treatment ('MHTRTMT'). The target variable was 
 heroin use ('HEROINEVR'). Next, the dataset was split into the training set 
@@ -514,23 +518,26 @@ to model accuracy, features importance was identified for each model.
 
 Logistic Regression Classification is a based on a linear equation that 
 calculates the relative weight of each feature for a categorical target or 
-binary outcome (``yes/no``). The logistic regression classifier was fit to 
-the training data, and the model was validated on the test data. By default, 
-the model applies L2 (Ridge) regularization, and the test set accuracy 
-was 0.983 and test set accuracy was 0.984. Parameter `C` determines the 
-strength of regularization; higher values of C provides greater regularization. 
-The L1 (Lasso) regularization limits the values of most coefficients to zero, 
-creating a more interpretable model using only a few features. Figure 4 plots 
-the Coefficients of Logistic Regression Classifier (LGC) for Heroin Use with 
-L1 (Lasso) regularization under different values of parameter C. The default 
-setting, C=1.0, provides good performance for train and test sets, but the 
-model is very likely underfitting the test data. Using a higher value of C 
-fits a more 'flexible' model and generally gives improved accuracy for both 
-training and tests sets. A value of C=100 yielded training set accuracy of
-0.98 and test set accuracy of 0.98. Figure 4 shows that as hypothesized,
-Pain Reliever Misuse ('PRLMISEVR') predicted heroin use, as did Cocaine and 
-Amphetamine use, were the three features with the highest coefficient values 
-for classifying Heroin use. 
+binary outcome (``yes/no``)\cite{raschka17}. The logistic regression classifier 
+was fit to the training data, and the model was validated on the test data. 
+By default, the model applies L2 (Ridge) regularization, and the test set 
+accuracy was 0.983 and test set accuracy was 0.984. Parameter `C` determines 
+the strength of regularization; higher values of C provides greater 
+regularization. The L1 penalty (Lasso) limits the values of most coefficients 
+to zero, creating a more interpretable model using only a few features. 
+Figure 4 plots the Coefficients of Logistic Regression Classifier (LGC) for 
+Heroin Use with the L1 Penalty (Lasso) under different values of parameter C. 
+The default setting, C=1.0, provides good performance for train and test sets, 
+but the model is very likely underfitting the test data. Using a higher value 
+of C fits a more 'flexible' model and generally gives improved accuracy for 
+both training and tests sets. Using a value of C=100 yielded training set 
+accuracy of 0.98 and test set accuracy of 0.98. Figure 4 shows that the 
+features coefficient values did not change much according to the values of 
+parameter C, and the accuracy values were approximately the same for all 
+values of C. Examination of the The coefficients from the logistic regression 
+classifier revealed that the three features which were most closely associated 
+Heroin use. Prescription Opioid Pain Reliever Misuse ('PRLMISEVR'), as 
+predicted, Cocaine Use, and Amphetamine use, respectively.
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure4.pdf}
@@ -539,38 +546,46 @@ for classifying Heroin use.
   \label{f:Figure4}
 \end{figure}
 
-\cite{raschka17}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Decision Tree Classifier}
 
-Decision Trees Classification of Heroin Use was implemented using the `Decision 
-Tree Classifier` package in scikit-learn, which only does pre-pruning. First, 
+The following analysis used the \emph{Decision Tree Classifier} package in 
+Scikit-Learn \cite{muller17, raschka17}, which only does pre-pruning. First, 
 the decision model was build using the default setting of a fully developed 
 tree until all leaves are pure. The `random state` features is fixed to break 
-ties internally. 
-
-Without restricting their depth, decision trees can become complex; unpruned 
-trees are prone to overfitting and do not generalize well to new data. 
-
-A second analysis applies pre-pruning, by setting the maximum depth to 4, which
-means the algorithm will split on the four consecutive questions. Limiting
-the depth of the tree decreases overfitting, which results in lower accuracy
-on the training set, but imporoved performance on the test set. 
-
-Even with a  tree depth of 4, the tree can be a bit complex. Figure 5 shows a 
-partial view of the resulting decision tree classifier of heroin use because 
-the complete figure was too wide to include here.
-
-Instead of looking at the whole tree, features importance is a commonly used 
-summary function that rates how important each feature is for the decisions 
-which a tree makes. Each feature is assigned an importance value between 0 and 1;
-with a value of 1 indicating that the feature perfectly predicts the target and 
-a value of 0 that the feature was not used at all. Feature importance values
-always sum to 1. A feature may be assigned a low feature importance value
-because another feature encodes the same information \cite{muller17}.
-
-
+ties internally. Without restricting their depth, decision trees can become 
+complex; unpruned trees are prone to overfitting and do not generalize well 
+to new data. Next, pre-pruning was applied, setting the maximum depth to 4, 
+which means the algorithm split on the four consecutive questions. Limiting 
+the depth of the tree decreases overfitting, which results in lower accuracy 
+on the training set, but improved performance on the test set. Even with a  
+tree depth of 4, the tree can become a bit complex. Figure 5 shows a partial 
+view of the decision tree classifier of heroin use; the entire tree was too 
+wide to include as a legible Figure (the full tree image is available in the
+analytic-classifier notebook `BDA-Analytics-Classifier-Heroin.ipynb` 
+\cite{classifyH}. The decision tree shows the top features that the algorithm 
+split on to classify heroin use. One way to interpret a decision tree it by 
+following the sample numbers represented at the test split for each node. The 
+classifier algorithm selected Cocaine Use (aggregated score) as the root node 
+of the decision tree. The branch to the left  side of the tree represents 
+samples with a score equal to or less than 1.5 (n=40956), whereas the branch 
+to the right represents samples with a Cocaine Use score greater than 1.5
+(n=1903). The second split on the right occurs for Any Prescription Opioid 
+Pain Reliever Use (`PRLANY`), with n=1443 having a score less than or equal 
+to 3.5, and n=460 respondents with a PRL score greater than 3.5. In other 
+words, of those respondents who reported relatively high Cocaine use, a small
+portion also reported relatively high Prescription Opioid PRL use. Instead of 
+looking at the whole tree, features importance is a common summary function 
+that rates how important each feature is for the classification decisions 
+made in the algorithm. Each feature is assigned an importance value between 
+0 and 1; with a value of 1 indicating the feature perfectly predicts the 
+target and a value of 0 meaning that the feature was not used at all. Feature
+importance values also always sum to 1. A feature may have a low feature 
+importance value because another feature encodes the same information. The 
+top two important features for classifying Heroin Use were Cocaine Use and 
+Any Prescription Opioid PRL Use, with smaller importance given to Opioid PRL 
+Misuse Ever and Prescription Opioid PRL Misuse and Abuse. 
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure5.pdf}
@@ -578,11 +593,6 @@ because another feature encodes the same information \cite{muller17}.
   \label{f:Figure5}
 \end{figure}
 
-\begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/Figure6.pdf}
-  \caption{Feature Importance for Decision Tree Classifier for Heroin Use}
-  \label{f:Figure9}
-\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Random Forests Classifier}
@@ -602,41 +612,80 @@ importance over trees in the random forest, and typically provides a more
 reliable measure than feature importance for a single tree. 
 
 \begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/Figure7.pdf}
+  \centering\includegraphics[width=\columnwidth]{images/Figure6.pdf}
   \caption{Feature Importance for Random Forests Classifier for Heroin Use}
-  \label{f:Figure7}
+  \label{f:Figure6}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Gradient Boosting Classifier}
+\subsubsection{Gradient Boosted Classifier Tree}
+
+Gradient boosting machines is another ensemble method that combines multiple
+decision trees for regression or classification that builds trees in a serial 
+fashion, where each tree tries to correct for mistakes of the previous one
+\cite{muller17}. Gradient boosted regression trees use strong pre-pruning, 
+with shallow trees of a depth of one to five. Each tree only provides a good
+estimate of part of the data, but combining many shallow trees (i.e., ``weak 
+learners''), the use many simple models iteratively improves performance. In 
+addition to pre-pruning andd the number of trees, an important parameter for 
+gradient boosting is the learning rate, which determines how strongly each
+tree tries to correct for mistakes of previous trees. A high learning rate
+produces stronger corrections, allowing for more complex models. Adding
+more trees to the ensemble also increases model complexity
 
 
 \begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/Figure8.pdf}
+  \centering\includegraphics[width=\columnwidth]{images/Figure7.pdf}
   \caption{Feature Importance for Gradient Boosting Classifier for Heroin Use}
-  \label{f:Figure8}
+  \label{f:Figure7}
 \end{figure}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Classifier Models of Prescription Opioid Pain Relievers Misuse}
+\subsection{Classifier Models of Prescription Opioid Misuse}
 
 \subsubsection{Logistic Regression Classifier}
-
 
 \cite{classifyPRL}
 
 \begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/Figure8.pdf}
+  \caption{Logistic Regression Classification of Prescription Opioid (PRL) Misuse
+  with L2 Penalty}
+  \label{f:Figure8}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Decision Tree Classifier}
+
+
+\begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure9.pdf}
-  \caption{Logistic Regression Classification of Opioid Pain Medication
-  with L2 Lasso Regularization}
+  \caption{Decision Tree for Prescription Opioid (PRL) Misuse}
   \label{f:Figure9}
 \end{figure}
 
-\cite{vanderplas17}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Random Forests Classifier}
 
-\subsubsection{Decision Tree Classifier\cite{muller17}}
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/Figure10.pdf}
+  \caption{Feature Importance for Random Forest Classifier of 
+  Prescription Opioid (PRL) Misuse}
+  \label{f:Figure10}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Boosted Gradient Classifier}
+
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/Figure11.pdf}
+  \caption{Feature Importance for Gradient Boosted Classifier Tree of 
+  Prescription Opioid (PRL) Misuse}
+  \label{f:Figure11}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
@@ -699,42 +748,30 @@ dependency by exposure to drug-related cues or stressors in the environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Dynamics of Epidemic Spreading}
 
-As described in the introduction, prescription opioid addiction and overdose 
-death is a major health crisis that has been described as an epidemic.
-The expansion of pioid addiction may thought of as analogous to examples of
-biological epidemics in that spreading proceeds as a dynamic process based on 
-interactions between infected and uninfected persons. The dynamics of 
-epidemic spreading is complex, involving networks of person-to-person contact, 
-indirect contact exposure, and transportation pathways such as roads and 
-highways and airline transportation network \cite{Colizza06}, that facilitate 
-the distribution of opioid drugs to individuals susceptible to addiction and 
-dependency. This project has identified some of the features important for 
-classifying heroin use and prescription opioid misuse. 
-
-Epidemics are quantified in terms of the proportion of the population infected, 
-those yet to be infected, and the rate of transmission, and the structure of the 
-contact network can influence epidemic spreading \cite{pastor01}. 
-
-For example, in the case of simple contagion, weak ties among 
-acquaintances or infrequent associations provide shortcuts between distant nodes 
-that reduce distance within the network \cite{granovetter73} and can facilitate 
-the spread of disease. 
-
-Furthermore, networks with ``small world'' properties have many nodes with 
-few connections, but a small number of highly connected nodes that can rapidly 
-transmit contagion throughout the network \cite{watts98}. Analyzing the 
-correlation between Twitter posts and rate of ILI reports does not capture the 
-complex network structure that underlies disease epidemics and pandemics. 
-It is possible that by analyzing the structure of social media networks, 
-
-Could use network analysis to examine opioid distribution pathways and points 
-of contact among nodes or person in the network of prescription medications.
-The opioid crisis in North America may be amenable to social network modeling as 
-drug usage, dependancy, and addiction is subserved by social networks. 
-
-future research may help to identify how points of connection within online
-networks are associated with the spread of contagion and resulting epidemics 
-\cite{zhu17}. 
+If the prescription opioid crisis is a guenuine epidemic, then we can conceive 
+of it in terms of the dynamics of epidemic spreading which have been developed 
+based on models of contagious disease. Epidemic spreading is a dynamic process 
+based on networks of direct person-to-person contact and indirect exposure via
+transportation pathways \cite{Colizza06}, that facilitate the distribution of 
+opioid medications or illicit drugs. Instead of thinking about persons as
+infected or uninfected by biological contagion, in the opioid drug model, we 
+must consider individuals as dependent, addicted or susceptible to dependence
+and addiction. Epidemics are quantified in terms of the proportion of the 
+population infected, those yet to be infected, and the rate of transmission. 
+Furthermore, the structure of the contact network can influence epidemic 
+spreading \cite{pastor01}. For example, in the case of simple contagion, weak 
+ties among acquaintances or infrequent associations provide shortcuts between 
+distant nodes that reduce distance within the network \cite{granovetter73} 
+which can facilitate the spread of contagion, or in this case drug use. 
+Furthermore, opioid contact networks may have ``small world'' properties 
+where a small number of nodes or people have a very number of connection
+that can rapidly transmit contagion throughout the network \cite{watts98}. 
+It may be possible to apply network analysis to identify underlying structure 
+of the contact network of opioid use and addiction, to identify pathways and 
+points of contact between nodes or person in the spreading use, misuse, and
+abuse of prescription opioid medications. Future research could apply social 
+network modeling to the opioid crisis in order to identify how drug dependancy 
+and addiction are subserved by patterns of social interaction. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
