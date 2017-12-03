@@ -19,7 +19,7 @@ for Big Data Health Analytics}
 \begin{abstract}
 Classification of opioid addiction can identify important features relevant 
 for predicting drug abuse and overdose death. Machine learning procedures were 
-used on data from a large National Survey of Drug Use and Health (NSDUH-2015) 
+applied to data from a large National Survey of Drug Use and Health (NSDUH-2015) 
 to classify individuals for illicit opioid use according to demographic 
 characteristics and mental health attributes (e.g., depression). Classification 
 models of opioid addiction can be extended for big data health analytics to 
@@ -31,7 +31,7 @@ decrease the risk of opioid overdose death.
 \end{abstract}
 
 \keywords{Health Analytics, Machine Learning Classifiers, Opioid Addiction, 
-Big Data, i523, HID335}
+Big Data, i523, hid335}
 
 \maketitle
 
@@ -40,7 +40,7 @@ Big Data, i523, HID335}
 
 Big Data offers tremendous potential to fuel innovation and transform society. 
 Can this momentum be harnessed to address a serious health crisis such as the 
-opioid overdose epidemic?\cite{cdc16} Health informatics is generating huge 
+opioid overdose epidemic? \cite{cdc16} Health informatics is generating huge 
 amounts of data at a rapid pace, from electronic medical records (EMRs), 
 clinical research data, to population-level public health data \cite{herland14}. 
 This project considers health analytics from two levels, the research questions 
@@ -117,32 +117,33 @@ Comparing the performance of different learning algorithms can be helpful for
 selecting the best model for a given problem \cite{raschka17}. One of the 
 simplest classification algorithms is K-Nearest-Neighbors (KNN) which takes 
 a set of data points and classifies a new data point based on the distance 
-(e.g., Euclidean, by default) to its nearest neighbors. The main parameter, 
-k equal to 3 or 5 neighbors works well and provides a solution that is easy 
-to interpret. A limitation of KNN is that it does not perform well with a 
-dataset that has a large number of features (100 or more) or sparse datasets. 
-In the following section, we consider several classification methods.
+(e.g., Euclidean, by default) to its nearest neighbors. The main parameter for
+KNN is the number of neighbors, and k of 3 or 5 neighbors works well. The 
+advantage of the KNN classifier is that it provides a solution that is easy to 
+understand. A limitation of KNN is that it does not perform well with a large 
+number of features (100 or more) or sparse datasets. Several different 
+classification algorithms are considered below.
 
-\subsubsection{Linear Classification Algorithms}
+\subsubsection{Logistic Regression Classifier}
 
-Two common linear classification algorithms are logistic regression and support 
-vector machines (SVMs). The decision boundary for a linear classifier is a 
-linear function of the input; a binary classifier separates two classes using 
-along a line, plane, or hyperplane. Linear classification models differ in 
-terms of (1) how they measure how well a particular combination of coefficients 
-and intercept fit the training data, and (2) the type of regularization used 
-\cite{muller17}. The main difference between linear models for classification 
-is the penalty parameter `C`. High values of C correspond to less regularization
-and the model will fit the training set as best as possible, stressing the 
-importance of each individual data point to be classified correctly. By 
-contrast, with low values of C, the model puts more emphasis on finding 
-coefficient vectors (w) that are close to zero, trying to adjust to the 
-`majority` of data points \cite{muller17}. The L2 (Ridge) penalty uses all 
-available features, but pushes the coefficient values toward zero. The L2 
-(Lasso) penalty sets the coefficient values for most features to zero, and 
-uses only a subset for improved interpretability. This paper uses a logistic
-regression classifier to predict Heroin use from demographic attributes, mental 
-health, prescription opioids, medication use, misuse, and illicit drug use. 
+Logistic regression is a commonly used linear model for classification problems. 
+The decision boundary for the logistic regression classifier is a linear function 
+of the input; a binary classifier separates two classes using along a line, 
+plane, or hyperplane. Linear classification models differ in terms of (1) how 
+they measure how well a particular combination of coefficients and intercept fit 
+the training data, and (2) the type of regularization used \cite{muller17}. The 
+main parameter for linear classification models is the regularization parameter 
+`C`. High values of C correspond to less regularization and the model will fit 
+the training set as best as possible, stressing the importance of each individual 
+data point to be classified correctly. By contrast, with low values of C, the 
+model puts more emphasis on finding coefficient vectors (w) that are close to 
+zero, trying to adjust to the `majority` of data points \cite{muller17}. In 
+addition, the penalty parameter influences the coefficient values of the linear 
+model. The L2 penalty (Ridge) uses all available features, but pushes the 
+coefficient values toward zero. The L1 penalty (Lasso) sets the coefficient 
+values for most features to zero, and uses only a subset for improved
+interpretability. This paper uses a logistic regression classifier to predict 
+Heroin use from demographic attributes, mental health, prescription opioids, medication use, misuse, and illicit drug use. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Tree Based Models}
@@ -180,44 +181,62 @@ data that has a mix of binary and continuous features.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Random Forests Classifier}
 
-Random forests is an ensemble approach to addressing the problem of decision
-tree overfitting training data. 
-
-
-of the most widely used ML methods that works well 
-without heavy parameter tuning or scaling of data. 
-
-Very difficult to interpret tens of hundreds of trees, 
-random forests are deeper than single decision trees
-
-Random forests do NOT perform well with very high-dimensional, sparse data, such 
-as text data
-
-max-features parameter determines how random each tree is; 
-smaller max-features reduces overfitting
-
+A random forest is a collection of decision trees that are slightly different 
+from the others, which each overfits the data in different ways. The idea 
+behind random forests is that overfitting can be reduced by building many 
+trees and averaging their results. This approach retains the predictive power 
+of trees while reducing overfitting. Randomness is introduced into the tree 
+building process in two ways: (a) selecting a bootstrap sample of the data, 
+and (b) selecting features in each node branch \cite{muller17,raschka17}. In 
+building the random forest, we first decide how many trees to build (e.g., 10 
+or 100), and the algorithm makes different ransom choices so that each tree is 
+distinct. The bootstrapping method repeatedly draws random samples of size n 
+from the dataset (with replacement). The decision trees are build on these 
+random samples that are the same size as the original data, with some points 
+missing and some data points repeated. The algorithm also selects a random 
+subset of p features, repeated separately each node in the tree, so that 
+each decision at the node branch is made using a different subset of features.
+These two processes help ensure that all of the decision trees in the random
+forest are different. The important parameters for the random forests 
+algorithm are the number of sampled data points and the maximum number of 
+features; the algorithm could look at all of the features in the dataset
+or a limited number. A high value for ``maximum features'' will produce 
+trees in the random forest that are very similar and will fit the data 
+easily based on the most distinctive features, whereas a low value will 
+produce trees that are very different from each other, and reduces over-
+fitting. Random forests is of the most widely used ML algorithms that works 
+well without very much parameter tuning or scaling of data. A limitation of 
+this approach is that Random forests do not perform well with very high-
+dimensional, data that is sparse data, such as text data.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Project Goals} 
 
-The data for this project is the 2015 National Survey on Drug Use and Health 
-(NSHUH-2015) \cite{samhsa16}. The NSDUH-2015 is a comprehensive survey that 
-covers all aspects of substance use, misuse, dependency, and abuse, including 
-questions related to both prescription medications (opioids, tranquilizers, 
-sedatives) and illicit drugs (e.g., heroin, cocaine, methamphetamine), drug 
-dependency, addiction, and treatment, demographic measures of education and 
-employment, physical health, depression, and mental health treatment. The 
-general idea of the project is that individuals dependent of addicted to 
-prescription opioid medications are more likely to use illicit opioids such 
-as heroin and fentanyl. It is hypothesized that classifying individuals 
-according to heroin use will identify the set of features that are important
-for predicting opioid addiction. Machine learning classification models were constructed to classify heroin use in the sample by demographics attributes 
-and mental health characteristics (e.g., adult depression). This method helps 
-address the opioid crisis in the following ways: (i) Identify factors related 
-to opioid dependency and addiction, (ii) Inform consumers of prescription 
-opioids about risk factors, and (iii) Increase knowledge about opioid abuse 
-for better decisions by medication prescribers. 
+The general idea of the project is that prescription opioid dependency and
+addicted will in many cases lead to the use of illicit opioids such as heroin 
+or fentanyl. According to this reasoning, it was hypothesized that individuals 
+who report using heroin may also be susceptible to misusing or abusing 
+prescription opioid medications. The goal of the study was to identify the set 
+of features important for predicting opioid addiction. 
+
+
+
+The data for this 
+project comes from the National Survey on Drug Use and Health from 2015 (NSHUH-2015) 
+\cite{samhsa16}, which is the most recent year available. The NSDUH-2015 is a 
+comprehensive survey that covers all aspects of substance use, misuse, 
+dependency, and abuse, including questions related to both prescription 
+medications (opioids, tranquilizers, sedatives) and illicit drugs (e.g., 
+heroin, cocaine, methamphetamine), drug dependency, addiction, and treatment, 
+demographic measures of education and employment, physical health, depression, 
+and mental health treatment. Several classification models were constructed to 
+classify heroin use in the sample by demographics attributes and mental health 
+characteristics (e.g., adult depression). This method addresses the following
+issues related to opioid dependency and addiction: (i) Identify factors related 
+to illicit opioid use, (ii) Identify factors related to prescription opioid 
+misuse and abuse, and (iii) Examine the relationship between prescription 
+opioid misuse, abuse and heroin use. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -263,22 +282,22 @@ Cocaine Use, Amphetamine and Methamphetamine Use, Hallucinogen Use, Drug
 Treatment (e.g., Inpatient, Outpatient, Hospital, Mental Health Clinic, ER, 
 Drug Treatment Status), and Mental Health Treatment History. A codebook was 
 created to provide a complete list of variables included with summaries 
-of response categories \cite{codebook17}. Several steps to taken to detect 
-and remove inconsistencies in the data \cite{rahm00}: 
-
+of response categories \cite{codebook17}. The following steps taken to 
+detect and remove inconsistencies in the data \cite{rahm00}:
 \begin{enumerate}
-  \item Missing values (i.e., `NaN`) were removed 
-  \item Blanks, non-responses, or legitimate skips were recoded to zero 
-  (e.g.,`99`, `991`, `993`) 
-  \item Dichotomous responses (e.g., ``Yes=1``/``No=2``) were responses to 
-  ``No=0``
-  \item Categorical variables so the response was consistent with degree 
+  \item Remove missing values (i.e., `NaN`) 
+  \item Recode blanks, non-responses, or legitimate skips (e.g.,`99`, `991`, 
+  `993`) to zero  
+  \item Recode dichotomous responses (e.g., ``Yes=1``/``No=2``) so that ``No=0``
+  \item Recode categorical variables to be consistent with amount or degree 
   (e.g., ``1=low``, ``2=med``, ``3=high``)
-   \item Selected variables were renamed for better description (e.g., 
+   \item Rename selected variables for better description (e.g., 
    Adult Major Depressive Episode Lifetime changed from `AMDELT` to `DEPMELT`)
 \end{enumerate}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Aggregate Variables}
+
 Because the majority of features were represented as dichotomous ``Yes/No`` 
 variables, related features were summed to create aggregated variables. For 
 example, overall health, STD, Hepatitis, HIV, Cancer, and hospitalization were 
@@ -320,7 +339,7 @@ prescription opioid medication. Use of prescription Fentanyl and Demerol,
 two powerful opioids, and synthetic morphines such as Oxymorphone and
 Hydromorphone, was very low. The rate of prescription Tranquilizer use
 was several orders of magnitude higher than Sedative use or Methadone use.
-Compared to other illicit drugs such as Cocain, Amphetamines, Hallucinogens,
+Compared to other illicit drugs such as Cocaine, Amphetamines, Hallucinogens,
 heroin use was not very common in this sample. The highest rates of heroin
 use were seen between the ages of 18 to 49, and was lowest for respondents
 in the youngest age group 12 to 17, and individuals over 50. 
@@ -410,22 +429,44 @@ use for some individuals.
   \label{f:Figure1}
 \end{figure}
 
-Figure \ref{f:Figure2} shows the aggregated measure of Opioid Pain Reliever 
-misuse and abuse plotted against the aggregated measure of Heroin use (which
-includes misuse, abuse, lifetime use, past year use, 30 day use), with
-weighted regression lines by City Metropolitan region (from low to high). 
-The highest proportions of opioid and heroin misuse and abuse is seen in 
-large metropolitan areas with larger population size; however, the steeper
-slope of the smaller metropolitan regions (e.g., Blue, Green points)
-suggests that the highest levels of pain reliever abuse and misuse are
-seen in smaller metropolitan and rural areas, but these are represented
-by far fewer points. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Figure 2 shows the aggregated measure of Opioid Pain Reliever misuse and abuse 
+plotted against the aggregated measure of Heroin use (which includes misuse, 
+abuse, lifetime use, past year use, 30 day use), with weighted regression 
+lines grouped by size of City Metropolitan region (from none to large). 
+The largest proportion of the sample who report prescription opioid misuse, 
+abuse, and heroin use is represented by observations from large metropolitan 
+areas (red circles) with large population size. However, a small number of
+observations from rural or small metropolitan regions (blue and green circles)
+showed very high rates of prescription opioid misuse and abuse. Regression 
+lines (i.e., line of best fit) shown are weighted by the City/Metro
+region attribute, with a steeper slope shown for smaller metropolitan regions 
+than large metropolitan regions. The difference in slope may be due to the 
+influence of the small number of outliers who had high degrees of prescription 
+opioid misuse, and heroin use. The plot also shows a clear divide on the y-axis,
+which separates the sample according to high and low or no prescription opioid 
+misuse, although the continuum of heroin use from no, low, to high is 
+distributed fairly evenly along the x-axis. 
+
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure2.pdf}
   \caption{Plot of Opioid Pain Medication Misuse and Abuse and Heroin Use
   with Regression Slopes Weighted by Metropolitan Area Size}
   \label{f:Figure2}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Figure 3 shows the pairplots of demographic features including mental health
+(higher scores equal to more depression), 
+
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/Figure3.pdf}
+  \caption{Pairplots of Mental Health, Prescription Opioid Misuse and Abuse,
+  Heroin Use, and Size of City Metropolitan Area}
+  \label{f:Figure3}
 \end{figure}
 
 
@@ -522,18 +563,19 @@ because another feature encodes the same information \cite{muller17}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Random Forests Classifier}
 
-Random Forests Classifier: Strengths, weaknesses, parameters
-Most widely used ML method, very powerful, work well without heavy parameter 
-tuning, without scaling of data
+Random forests is an ensemble approach that builds many trees and averages 
+their results to reduce overfitting. The random forest classifier function was 
+used in sklearn, and the parameters of interest were the (1) the number of 
+trees to build (i.e., n-estimators), (2) the number of data points selected
+in our bootstrap sampling (i.e., n-samples), and (3) the maximum number of 
+features considered at each decision node branch (i.e., max-features). The
+max-features parameter determines how random each tree is, with smaller 
+values of max-features resulting in trees in the random forest that are very 
+different from each other. 
 
-Very difficult to interpret tens of hundreds of trees, random forests are deeper 
-than single decision trees
-
-Random forests do NOT perform well with very high-dimensional, sparse data, such 
-as text data 
-
-max-features parameter determines how random each tree is; smaller max-features 
-reduces overfitting
+Feature importance for random forests is computed by aggregating the feature 
+importance over trees in the random forest, and typically provides a more 
+reliable measure than feature importance for a single tree. 
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure7.pdf}
@@ -577,20 +619,26 @@ reduces overfitting
 
 \subsection{Extension to Big Data}
 
-These classification models could be adopted for big health data in two ways: 
-First, by expanding the survey to previous years, and second, by expanding the 
-sample to the population of patients with prescriptions for opioid pain 
-medication. Additional data from the NSDUH was downloaded from previous years 
-(2012 to 2014); preliminary examination of the data revealed inconsistencies 
+The methods used in this project could be extended to better approximate 
+big data for health analytics in the following ways: (1) Include a larger 
+selection of features from the 2600 attributes in in the NSDUH-2015 dataset; 
+(2) Include survey data from previous years (e.g., 2005-2015); and (3) 
+Extend the sample to the population of patients who have been prescribed 
+opioid pain medication. There were many additional features that could have
+been included in the subset of features included in the project dataset. 
+However, data cleaning and preparation can be a time consuming process, 
+especially for datasets with a large number of features \cite{rahm00}. 
+Additional data from the NSDUH was downloaded from previous years (2012 to 
+2014), and a preliminary examination of the data revealed inconsistencies 
 in questions and prescription opioid medications that would need to be 
-reconciled for combining data from multiple years. Additional time would have 
-been necessary to resolve inconsistencies in the coding of features, and
-unfortunately, constraints of time did not allow for the incorporation of data 
-from previous years into this analysis, or integration of data from multiple 
-sources. Data cleaning can be a time consuming process, especially for datasets 
-with a large number of features. In general, there are several phases involved 
-in big data cleaning, including: Extraction, Integration, and Aggregation of 
-data from operationalized sources into a data warehouse.
+resolved in order to combine data from multiple years. In addition to data 
+cleaning, there are several steps involved in the consolidation of data from 
+multiple sources into a single dataset, which include extraction, integration, 
+and aggregation of features. Unfortunately, time constraints for the project 
+deadline did not allow for the inclusion of data from previous years into this 
+analysis. A future study could integrate data from different years into the
+analysis or include data from multiple sources. 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Limitations}
@@ -668,7 +716,28 @@ networks are associated with the spread of contagion and resulting epidemics
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
 
-Machine learning classification of opioid abuse can contribute to efforts to 
+Several machine learning methods were used to classify heroin use and 
+prescription opioid misuse and abuse. The results of this analysis are somewhat inconclusive, given that the direction of these effect is unknown. On the one 
+hand there is evidence that individual who reported having used heroin were 
+also more likely to report misusing or abusing prescription opioids. On the 
+other hand, the proportion of individuals who misused or abused prescription 
+opioids, and also reported using heroin, was twice as large as the proportion 
+who reported only using heroin. A general conclusion is that the results 
+provide partial support for the hypothesis that taking prescription opioids
+leads to a higher likelihood of illicid opioid use. However, the results did
+not provide sufficienbt evidence to rule out the alternative hypothesis that
+people who have used heroin may have a propensity for opioid use therefore
+be more likely to become dependent on prescription opioid medications. Given
+that the number of individuals who reported using heroin in this sample was
+low, additional data may help to provide evidence to resolve this question.
+A limitation of survey data is there may be bias in self-reports of illicit
+drug use, as it is a proscribed and illegal behavior, and therefore the 
+data may underestimate the actual rate of heroin use in the general population. 
+Including additional data from previous years may provide a more tests of 
+these hypotheses. 
+
+
+Machine of opioid abuse can contribute to efforts to 
 address prescription opioid addiction, overdoses, in the following ways: 
 \begin{enumerate}
 \item Identify factors related to opioid dependency
