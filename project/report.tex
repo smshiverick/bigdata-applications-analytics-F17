@@ -218,14 +218,10 @@ addicted will in many cases lead to the use of illicit opioids such as heroin
 or fentanyl. According to this reasoning, it was hypothesized that individuals 
 who report using heroin may also be susceptible to misusing or abusing 
 prescription opioid medications. The goal of the study was to identify the set 
-of features important for predicting opioid addiction. 
-
-
-
-The data for this 
-project comes from the National Survey on Drug Use and Health from 2015 (NSHUH-2015) 
-\cite{samhsa16}, which is the most recent year available. The NSDUH-2015 is a 
-comprehensive survey that covers all aspects of substance use, misuse, 
+of features important for predicting opioid addiction. The data used in the 
+project is from the National Survey on Drug Use and Health from 2015 (NSHUH-
+2015) \cite{samhsa16}, which is the most recent year available. The NSDUH-2015 
+is a comprehensive survey that covers all aspects of substance use, misuse, 
 dependency, and abuse, including questions related to both prescription 
 medications (opioids, tranquilizers, sedatives) and illicit drugs (e.g., 
 heroin, cocaine, methamphetamine), drug dependency, addiction, and treatment, 
@@ -282,8 +278,8 @@ Cocaine Use, Amphetamine and Methamphetamine Use, Hallucinogen Use, Drug
 Treatment (e.g., Inpatient, Outpatient, Hospital, Mental Health Clinic, ER, 
 Drug Treatment Status), and Mental Health Treatment History. A codebook was 
 created to provide a complete list of variables included with summaries 
-of response categories \cite{codebook17}. The following steps taken to 
-detect and remove inconsistencies in the data \cite{rahm00}:
+of response categories \cite{codebook17}. The following steps were taken 
+to detect and remove inconsistencies in the data \cite{rahm00}:
 \begin{enumerate}
   \item Remove missing values (i.e., `NaN`) 
   \item Recode blanks, non-responses, or legitimate skips (e.g.,`99`, `991`, 
@@ -460,7 +456,34 @@ distributed fairly evenly along the x-axis.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Figure 3 shows the pairplots of demographic features including mental health
-(higher scores equal to more depression), 
+(higher scores equal to more depression), Prescription Opioid Pain Reliever
+(PRL) Medication (aggregated), Heroin Use (aggregated measure), and Size of 
+City/Metropolitan region. The top row shows that the majority of the sample 
+reported no mental health concerns, whereas a small proportion of the sample 
+reported depression, emotional distress, or suicidal thoughts. Only few people 
+self-described as high in depression reported low Prescription Opioid PRL 
+misuse and abuse. The plot also reveals that prescription opioid misuse and 
+heroin use were distributed approximately evenly for individuals reporting 
+either low, moderate, or high levels of depression, which suggests that 
+depression was not a factor in predicting opioid misuse. The second row shows 
+a small number of individuals from rural areas or small cities who reported 
+very high levels of prescription opioid misuse, although the majority of 
+respondents misusing or abusing prescription opioid were from large 
+metropolitan areas. As described above, the majority of respondents (about
+90 percent of the sample) reported they had never misused prescription 
+opioids. In the second row and third and fourth columns, a natural break is 
+seen between individuals who reported high levels of prescription opioid 
+misuse and abuse and those who reported very low or no opioid misuse. A very 
+small proportion of the entire sample reported both misusing and abusing 
+prescription opioids and using heroin, but this is a group of interest. The 
+last column of the second row shows the individuals reporting high levels of 
+opioid misuse and abuse were distributed evenly across city/metropolitan areas 
+of different sizes, with only slightly higher numbers for small cities or 
+rural areas, but this difference is not likely to be significant. As stated 
+above, only few participants reported using heroin, and of these, the majority 
+were from large metropolitan areas. Finally, the sample seems to have slightly 
+higher proportions from small and large metropolitan areas, which is likely 
+due to weighted sampling, which drew more from heavily populated regions.
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure3.pdf}
@@ -474,17 +497,17 @@ Figure 3 shows the pairplots of demographic features including mental health
 \subsection{Classifier Models of Heroin Use}
 
 This analysis classified individuals according to whether they had ever used 
-heroin (i.e., ``Heroin Use Ever``. All classifier models were constructed using 
-SciKit Learn \cite{muller17} using an interactive python jupyter notebooks  
-\cite{classifyH}. In addition to identifying the accuracy of the model, 
-classification can identify features in terms of importance for classifying the 
-outcome. The features of interest were identified: demographic characteristics, 
-health, mental health (adultdepression), prescription opioid misuse and abuse 
-('PRLMISEVR', 'PRLMISAB', 'PRLANY'), prescription tranquilizers and sedatives 
+heroin (i.e., ``Heroin Use Ever``. All classifier models were constructed 
+using SciKit Learn \cite{muller17} using an interactive python jupyter notebook  
+\cite{classifyH}. The features of interest were demographic characteristics, 
+health, mental health (adultdepression), prescription opioid misuse and abuse ('PRLMISEVR', 'PRLMISAB', 'PRLANY'), prescription tranquilizers and sedatives 
 ('TRQLZRS', 'SEDATVS'), illicit drugs ('COCAINE', 'AMPHETMN'), drug treatment 
 ('TRTMENT'), and mental health treatment ('MHTRTMT'). The target variable was 
 heroin use ('HEROINEVR'). Next, the dataset was split into the training set 
-and test sets using the `train-test-split` function in `sklearn`.
+and test sets using the `train-test-split` function in `sklearn`. The 
+classifier with measures of Training set accuracy and Test set accuracy are
+reported below for different regularization parameter values of C. In addition 
+to model accuracy, features importance was identified for each model. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Logistic Regression Classifier}
@@ -504,9 +527,10 @@ setting, C=1.0, provides good performance for train and test sets, but the
 model is very likely underfitting the test data. Using a higher value of C 
 fits a more 'flexible' model and generally gives improved accuracy for both 
 training and tests sets. A value of C=100 yielded training set accuracy of
-0.98 and test set accuracy of 0.98. Figure 4 shows that Pain Reliever Misuse
-('PRLMISEVR'), Cocaine use, and Amphetamine use, were the three features
-with the highest coefficient values for classifying Heroin use. 
+0.98 and test set accuracy of 0.98. Figure 4 shows that as hypothesized,
+Pain Reliever Misuse ('PRLMISEVR') predicted heroin use, as did Cocaine and 
+Amphetamine use, were the three features with the highest coefficient values 
+for classifying Heroin use. 
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure4.pdf}
