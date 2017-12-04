@@ -239,6 +239,13 @@ opioid misuse, abuse and heroin use.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Method}
 
+The project workflow pipeline is outlined in a `readme.md` file in the project 
+folder \cite{pipeline17}. The steps included in the workflow were (1) Download
+and Extract the Data, (2) Data Cleaning and Preparation, (3) Exploratory Data 
+Analysis, (4) Data Visualization, (5) Analsysis of Classification Models for 
+Heroin Use, and (6) Analysis of Classificaiton Models for Prescription Opioid 
+Pain Reliever Misuse.
+
 \subsection{Data} 
 
 Data from the 2015 NSHUH was downloaded from the Substance Abuse and Mental 
@@ -293,7 +300,7 @@ to detect and remove inconsistencies in the data \cite{rahm00}:
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Aggregate Variables}
+\subsubsection{Aggregated Variables}
 
 Because the majority of features were represented as dichotomous ``Yes/No`` 
 variables, related features were summed to create aggregated variables. For 
@@ -320,26 +327,26 @@ of 2 features and 57,146 observations, which was exported to CSV file.
 \subsection{Exploratory Data Analysis}
 
 Of the total sample of N=57,146 respondents, 26,736 were male and 30,410 
-female; 6,343 individuals reported misusing pain medication at some point; 
-however, only 956 repondents had used heroin (570 males, 386 females). Table 1 
-shows the raw counts of individual substance use by age group (with the sample 
-size for each age group), listing the ten most commonly used opioid pain 
-medications, self-reported misuse of prescription opioid pain relievers (i.e., 
-PRL Misuse Ever), use of prescription Tranquilizers, Sedatives, and Methadone. 
-In addition, self-reported use of illicit drugs such as heroin, cocaine, 
-amphetamines, methamphetamine, Hallucinogens, including LSD and Ecstasy 
-(MDMA). This summary table shows that substance use seems to be highest for 
-individuals between the ages of 18 to 25 and from 35 to 49 years. Of the
-prescription relievers, Hydrocodone use was almost double the rate of 
-Oxycodone use for each age group, and was significantly higher than any other 
-prescription opioid medication. Use of prescription Fentanyl and Demerol,
-two powerful opioids, and synthetic morphines such as Oxymorphone and
-Hydromorphone, was very low. The rate of prescription Tranquilizer use
-was several orders of magnitude higher than Sedative use or Methadone use.
-Compared to other illicit drugs such as Cocaine, Amphetamines, Hallucinogens,
-heroin use was not very common in this sample. The highest rates of heroin
-use were seen between the ages of 18 to 49, and was lowest for respondents
-in the youngest age group 12 to 17, and individuals over 50. 
+female; 6,343 individuals reported misusing pain medication at some point
+(570 males, 386 females), but only 956 respondents had used heroin (570 males, 
+386 females). Table 1 shows the raw counts of individual substance use by age 
+group (with the sample size for each age group), listing the ten most commonly 
+used opioid pain medications, self-reported misuse of prescription opioid pain 
+relievers (i.e., PRL Misuse Ever), use of prescription Tranquilizers, Sedatives, 
+and Methadone. In addition, self-reported use of illicit drugs such as heroin, 
+cocaine, amphetamines, methamphetamine, Hallucinogens, including LSD and 
+Ecstasy (MDMA). This summary table shows that substance use seems to be highest 
+for individuals between the ages of 18 to 25 and from 35 to 49 years. Of the
+prescription relievers, Hydrocodone use (e.g., `Vicodan`)  was almost double 
+the rate of Oxycodone use (e.g., `Oxycodone`) for each age group, and was 
+significantly higher than any other prescription opioid medication. Use of 
+prescription Fentanyl and Demerol, two powerful opioids, and synthetic morphines 
+such as Oxymorphone and Hydromorphone, was very low. The rate of prescription 
+Tranquilizer use was several orders of magnitude higher than Sedative use or 
+Methadone use. Compared to other illicit drugs such as Cocaine, Amphetamines, 
+Hallucinogens, heroin use was not very common in this sample. The highest rates 
+of heroin use were seen between the ages of 18 to 49, and was lowest for
+respondents in the youngest age group 12 to 17, and individuals over 50. 
 
 \begin{table}
   \caption{Substance Use by Age Group Counts - NSDUH 2015
@@ -938,8 +945,11 @@ Moghadam, and others who helped to improve this project and report.
 All code, notebooks, files, and folders for this project can be found in the
 i523/hid335/project githup repository: 
 \url{url:  https://github.com/bigdata-i523/hid335/tree/master/project}.
+An outline of the workflow pipelines was included as a `readme.md` markdown
+file \cite{pipeline17}.
 
-\subsection{Download and Extract Data file}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Download and Extract Data}
 
 The `get-data.py` function was written to download the data, unzip the data
 files, extract the data, and write the NSDUH-2015 dataset to CSV file 
@@ -952,30 +962,28 @@ Data cleaning and preparation steps was conducted using an interactive python
 Jupyter Notebook \cite{data17} based on examples in Python for Data Analysis 
 \cite{mckinney17} and the Python Data Science Handbook \cite{vanderplas17}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Exploratory Data Analysis}
 
-Exploratory Data Analysis and Visualization was conducted using an interactive
-python notebook: CITE URL
-
-based on examples from Python for Data Analysis \cite{mckinney17}, and the 
-Python Data Science Handbook \cite{vanderplas17}.  
+Exploratory Data Analysis of the NSDUH-2015 dataset was conducted using an 
+interactive python notebook \cite{eda17} based on examples from Python for 
+Data Analysis \cite{mckinney17}, and the Python Data Science Handbook 
+\cite{vanderplas17}.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Machine Learning Classifier Algorithms}
-Machine learning classification models included logistic regression classifier, 
-decision Tree classifier, random forests classifier, and gradient boosting 
-classifier were constructed using SciKit Learn \cite{muller17, raschka17} 
-using two separate interactive python jupyter notebook, one for classifying 
-Heroin Use as the target variable \cite{classifyH}, and another notebook for 
-classifying Prescription Opioid Misuse as the target \cite{classifyPRL}. 
+\subsection{Data Visualization}
 
+Several plots and graphs were constructed in a Data Visualization interactive
+python notebook \cite{dataviz17} using Matplotlib and Seaborn python 
+visualization packages \cite{mckinney17, vanderplas17}.  
 
-%\begin{enumerate}
-
-%\item Do not to use the underscore in bibtex labels
-%\item Address each of the items in the issues.tex file  
-%item Please do this only at the end once you have finished writing the paper. 
-%\item Change `TODO` with `DONE`. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Classification Algorithms}
+Machine learning classification models were constructed using SciKit Learn 
+\cite{muller17, raschka17} in two separate Jupyter Notebooks, one for 
+classifier models of Heroin Use as the target variable \cite{classifyH}, and 
+another for classifier models of Prescription Opioid PRL Misuse as the target 
+\cite{classifyPRL}. 
 
 %\end{enumerate}
 
