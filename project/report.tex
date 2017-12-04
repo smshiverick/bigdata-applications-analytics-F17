@@ -554,37 +554,39 @@ The following analysis used the \emph{Decision Tree Classifier} package in
 Scikit-Learn \cite{muller17, raschka17}, which only does pre-pruning. First, 
 the decision model was build using the default setting of a fully developed 
 tree until all leaves are pure. The `random state` features is fixed to break 
-ties internally. Without restricting their depth, decision trees can become 
-complex; unpruned trees are prone to overfitting and do not generalize well 
-to new data. Next, pre-pruning was applied, setting the maximum depth to 4, 
-which means the algorithm split on the four consecutive questions. Limiting 
-the depth of the tree decreases overfitting, which results in lower accuracy 
-on the training set, but improved performance on the test set. Even with a  
-tree depth of 4, the tree can become a bit complex. Figure 5 shows a partial 
-view of the decision tree classifier of heroin use; the entire tree was too 
-wide to include as a legible Figure (the full tree image is available in the
-analytic-classifier notebook `BDA-Analytics-Classifier-Heroin.ipynb` 
-\cite{classifyH}. The decision tree shows the top features that the algorithm 
-split on to classify heroin use. One way to interpret a decision tree it by 
-following the sample numbers represented at the test split for each node. The 
-classifier algorithm selected Cocaine Use (aggregated score) as the root node 
-of the decision tree. The branch to the left  side of the tree represents 
-samples with a score equal to or less than 1.5 (n=40956), whereas the branch 
-to the right represents samples with a Cocaine Use score greater than 1.5
-(n=1903). The second split on the right occurs for Any Prescription Opioid 
-Pain Reliever Use (`PRLANY`), with n=1443 having a score less than or equal 
-to 3.5, and n=460 respondents with a PRL score greater than 3.5. In other 
-words, of those respondents who reported relatively high Cocaine use, a small
-portion also reported relatively high Prescription Opioid PRL use. Instead of 
-looking at the whole tree, features importance is a common summary function 
-that rates how important each feature is for the classification decisions 
-made in the algorithm. Each feature is assigned an importance value between 
-0 and 1; with a value of 1 indicating the feature perfectly predicts the 
-target and a value of 0 meaning that the feature was not used at all. Feature
-importance values also always sum to 1. A feature may have a low feature 
-importance value because another feature encodes the same information. The 
-top two important features for classifying Heroin Use were Cocaine Use and 
-Any Prescription Opioid PRL Use, with smaller importance given to Opioid PRL 
+ties internally. Accuracy on the training set was 0.99 and test set accuracy
+was 0.974. Without restricting their depth, decision trees can become complex; 
+A limitation is that unpruned trees are prone to overfitting and do not 
+generalize well to new data. Limiting the depth of tree decreases overfitting,
+which results in lower training set accuracy, but improved performance on the 
+test set. Next, pre-pruning was applied, with a maximum depth of 4, which means 
+the algorithm split on four consecutive questions. Training set accuracy of 
+the pruned tree was 0.985 and test set accuracy was 0.984. Even with a depth 
+of 4, the tree can become a bit complex. Figure 5 shows a partial view of the 
+decision tree classifier of heroin use; the entire tree was too wide to include 
+as a legible Figure (the full tree image is available in the analytic-
+classifier notebook `BDA-Analytics-Classifier-Heroin.ipynb` \cite{classifyH}. 
+The decision tree shows the top features that the algorithm split on to 
+classify heroin use. One way to interpret a decision tree it by following the 
+sample numbers represented at the test split for each node. The classifier 
+algorithm selected Cocaine Use (aggregated score) as the root node of the 
+decision tree. The branch to the left  side of the tree represents samples 
+with a score equal to or less than 1.5 (n=40956), whereas the branch to the 
+right represents samples with a Cocaine Use score greater than 1.5 (n=1903). 
+The second split on the right occurs for Any Prescription Opioid Pain Reliever 
+Use (`PRLANY`), with n=1443 having a score less than or equal to 3.5, and 
+n=460 respondents with a PRL score greater than 3.5. In other words, of those
+respondents who reported relatively high Cocaine use, a small portion also
+reported relatively high Prescription Opioid PRL use. Instead of looking at 
+the whole tree, features importance is a common summary function that rates 
+how important each feature is for the classification decisions made in the 
+algorithm. Each feature is assigned an importance value between 0 and 1; 
+with a value of 1 indicating the feature perfectly predicts the target and 
+a value of 0 meaning that the feature was not used at all. Feature importance 
+values also always sum to 1. A feature may have a low feature importance 
+value because another feature encodes the same information. The top two 
+important features for classifying Heroin Use were Cocaine Use and Any 
+Prescription Opioid PRL Use, with smaller importance given to Opioid PRL 
 Misuse Ever and Prescription Opioid PRL Misuse and Abuse. 
 
 \begin{figure}[!ht]
@@ -598,14 +600,14 @@ Misuse Ever and Prescription Opioid PRL Misuse and Abuse.
 \subsubsection{Random Forests Classifier}
 
 Random forests is an ensemble approach that builds many trees and averages 
-their results to reduce overfitting. The random forest classifier function was 
-used in sklearn, and the parameters of interest were the (1) the number of 
-trees to build (i.e., n-estimators), (2) the number of data points selected
-in our bootstrap sampling (i.e., n-samples), and (3) the maximum number of 
-features considered at each decision node branch (i.e., max-features). The
-max-features parameter determines how random each tree is, with smaller 
-values of max-features resulting in trees in the random forest that are very 
-different from each other. 
+their results to reduce overfitting. The Random Forest Classifier package  
+in Scikit-Learn was used to classify Heroin Use. The parameters of interest 
+were the (1) the number of trees to build (i.e., n-estimators), (2) the number 
+of data points selected for bootstrap sampling (i.e., n-samples), and (3) the 
+maximum number of features considered at each decision node branch (i.e., 
+max-features). The max-features parameter determines how random each tree is, 
+with smaller values of max-features resulting in trees in the random forest 
+that are very different from each other. 
 
 Feature importance for random forests is computed by aggregating the feature 
 importance over trees in the random forest, and typically provides a more 
