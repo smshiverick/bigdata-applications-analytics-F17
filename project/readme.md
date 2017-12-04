@@ -3,12 +3,13 @@ The steps involved in carrying out the project analysis and report are outlined 
 
 ## Step 1. Download the data
 * The `get-data.py` function extracts the NSDUH-2015 data from the SAMH Data Archive.
-* This function was also included in the interactive notebook `BDA-Project-Data.ipynb`. 
+* This function was also included in the interactive notebook `BDA-Project-Data.ipynb`.
 
 ## Step 2. Data Cleaning and Preparation
 * Steps involved in cleaning the data are descrived in `BDA-Project-Data.ipynb`.
 * Missing values were removed, data values were recoded, features were renamed. 
-* The data was subset according to features of interest and aggregated variables created. 
+* The variables of interest are described in `project-data-codebook.txt`
+* Aggregated variables were constructed, resulting dataset: `project-data.csv`
 
 ## Step 3. Exploratory Data Analysis
 * Frequency summaries and crosstabulations created in 'BDA-Project-Explore-Data.ipynb'.
