@@ -34,6 +34,7 @@
 * 11/16/17  Project: Loaded NSDUH dataset as data frame, recoded features, prepare data for analysis
 * 11/20/17  Project: Formatted project folder in HID335 to include necessary files, folders, and formats
 * 11/27/17  Paper2: Resubmitted paper as report2.tex, and addressed issues in issues.tex
+* 12/04/17  Project: Workflow Pipelines readme.md created https://github.com/bigdata-i523/hid335/blob/master/project/readme.md
 
 #  Theory
 * 08/25-09/01/17  Read Introduction and Watched Course Motivation Video Lectures by Geoffrey Fox:
