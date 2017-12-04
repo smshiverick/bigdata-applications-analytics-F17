@@ -836,7 +836,7 @@ The Decision Tree classifier provided a easy to use, interpretable visual of
 the decisions involved at each step of classification. Random forests provides
 a more reliable indication of features importance than a single tree, 
 whereas the gradient boosting classifier included additional tuning 
-parameter for a more powerful model and more interpretible analysis of
+parameter for a more powerful model and more interpretable analysis of
 feature importance. Each classifier method provides a different level of
 analysis. For classifying heroin use, the logistic regression classified
 showed that Prescription Opioid PRL Misuse had the highest coefficient value, 
@@ -905,82 +905,69 @@ using a broader set of features, with more inclusive sample representative
 of the larger population, and integrate data from multiple sources. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Drug Abuse, Dependency, and Addiction}
+\subsection{Opioid Addiction and Epidemic Spreading}
 
 Drug addiction has many similar characteristics to other chronic medical 
 illnesses, but there are unique challenges to the treatment of addiction
 \cite{marsch12, swendson16}. In drug rehabilitation treatment programs, 
-patients undergo intense detoxification that reduces their drug tolerance, but 
-are then released back into the environments associated with their drug use, 
-putting them at high risk for relapse and potential drug overdose 
-\cite{johnson11}. According to a classical conditioning model of addiction, 
-situational cues or events can elicit a motivational state underlying relapse 
-to drug use. Addictive behavior can be also be reinstated after extinction of 
-dependency by exposure to drug-related cues or stressors in the environment 
-\cite{shaham03}. 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Dynamics of Epidemic Spreading}
-
-If the prescription opioid crisis is a guenuine epidemic, then we can conceive 
-of it in terms of the dynamics of epidemic spreading which have been developed 
-based on models of contagious disease. Epidemic spreading is a dynamic process 
-based on networks of direct person-to-person contact and indirect exposure via
-transportation pathways \cite{Colizza06}, that facilitate the distribution of 
-opioid medications or illicit drugs. Instead of thinking about persons as
-infected or uninfected by biological contagion, in the opioid drug model, we 
-must consider individuals as dependent, addicted or susceptible to dependence
-and addiction. Epidemics are quantified in terms of the proportion of the 
-population infected, those yet to be infected, and the rate of transmission. 
-Furthermore, the structure of the contact network can influence epidemic 
-spreading \cite{pastor01}. For example, in the case of simple contagion, weak 
+patients undergo intense detoxification that reduces their drug tolerance, 
+but are then released back into the environments associated with their drug 
+use, putting them at high risk for relapse and potential drug overdose 
+\cite{johnson11}. If the prescription opioid crisis is a guenuine epidemic, 
+we must consider the process of spreading or diffusion of contagion. Epidemic 
+spreading is a dynamic process based on networks of direct person-to-person 
+contact and indirect exposure via transportation pathways \cite{Colizza06}. 
+Epidemics are quantified in terms of the proportion of the population infected, 
+those yet to be infected, and the rate of transmission. Potentially everyone
+is at risk of becoming dependent or addicted to prescription medications or 
+illicit opioids. In terms of the opioid epidemic, rather than labeling persons 
+as infected or uninfected, it is more useful to consider people as either 
+susceptible to dependence and addiction or less susceptible. Furthermore, 
+the structure of the contact network can influence epidemic spreading
+\cite{pastor01}. For example, in the case of simple contagion, weak 
 ties among acquaintances or infrequent associations provide shortcuts between 
 distant nodes that reduce distance within the network \cite{granovetter73} 
 which can facilitate the spread of contagion, or in this case drug use. 
-Furthermore, opioid contact networks may have ``small world'' properties 
-where a small number of nodes or people have a very number of connection
-that can rapidly transmit contagion throughout the network \cite{watts98}. 
-It may be possible to apply network analysis to identify underlying structure 
-of the contact network of opioid use and addiction, to identify pathways and 
-points of contact between nodes or person in the spreading use, misuse, and
-abuse of prescription opioid medications. Future research could apply social 
-network modeling to the opioid crisis in order to identify how drug dependancy 
-and addiction are subserved by patterns of social interaction. 
-
+Furthermore, contact networks for drug use may have ``small world'' properties
+where a small number of nodes have a high number of connection that can 
+rapidly transmit contagion throughout the network \cite{watts98}. Network 
+analysis may help to identify the underlying structure of the contact network
+of opioid use, to examine pathways and points of contact in the misuse and 
+abuse of prescription opioid medications. According to a classical conditioning
+model of addiction, situational cues or events can elicit a motivational state 
+underlying relapse to drug use. Addictive behavior can be also be reinstated 
+after extinction of dependency by exposure to drug-related cues or stressors 
+in the environment \cite{shaham03}. Future research could use social network 
+modeling to explore how drug dependency and addiction are subserved by patterns 
+of social interaction. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
 
-Several machine learning methods were used to classify heroin use and 
-prescription opioid misuse and abuse. The results of this analysis are somewhat inconclusive, given that the direction of these effect is unknown. On the one 
-hand there is evidence that individual who reported having used heroin were 
-also more likely to report misusing or abusing prescription opioids. On the 
-other hand, the proportion of individuals who misused or abused prescription 
-opioids, and also reported using heroin, was twice as large as the proportion 
-who reported only using heroin. A general conclusion is that the results 
-provide partial support for the hypothesis that taking prescription opioids
-leads to a higher likelihood of illicid opioid use. However, the results did
-not provide sufficienbt evidence to rule out the alternative hypothesis that
-people who have used heroin may have a propensity for opioid use therefore
-be more likely to become dependent on prescription opioid medications. Given
-that the number of individuals who reported using heroin in this sample was
-low, additional data may help to provide evidence to resolve this question.
-A limitation of survey data is there may be bias in self-reports of illicit
-drug use, as it is a proscribed and illegal behavior, and therefore the 
-data may underestimate the actual rate of heroin use in the general population. 
-Including additional data from previous years may provide a more tests of 
-these hypotheses. 
-
-
-Machine of opioid abuse can contribute to efforts to 
-address prescription opioid addiction, overdoses, in the following ways: 
-\begin{enumerate}
-\item Identify factors related to opioid dependency
-\item Inform consumers of opioid medication as to risk factors 
-\item Increase knowledge of opioid abuse for more informed prescriptions. 
-\end{enumerate}
-
+This project compared several classification algorithms to predict heroin use 
+and prescription opioid misuse and abuse. The results provided partial support
+for the hypothesis that prescription opioid misuse is associated with the use
+of illicit opioids such as heroin. Several features were identified as 
+important for classifying heroin use, including Cocaine Use, Amphetamine Use, 
+and any prescription opioid medication use. In regards to predicting heroin
+use, it appears the use of other illicit drugs such as Cocaine and Amphetamine 
+was perhaps more informative than any prescription opioid use or misuse. Heroin 
+use was selected as important for classifying prescription opioid pain reliever 
+misuse, but additional factors also played as role, including tranquilizer use,
+age category, overall health, cocaine use. Substance treatment had the largest
+regression coefficient, suggesting that people who are misusing prescription
+opioid pain medication are also more likely to be in drug treatment programs. 
+It is not possible to determine the direction of these effect owing to the 
+nature of thes analysis. On the one hand individual misusing or abusing 
+prescription opioids may also be using heroin. Alternatively, individuals with
+a susceptability for opioid use may be equally likely to have use heroin and 
+also to have misused prescription opioids. A general conclusion is that there
+is that persons who report misusing prescription opioids were twice as likely
+to have used heroin. The results do not provide sufficient evidence to rule 
+out the alternative hypothesis. Given the relatively low rates of opioid and 
+heroin in this sample, additional evidence is needed to resolve this question.
+The study can provide information to raise awareness about the risk factors
+for prescription opioid addiction and may help reduce opioid overdose deaths. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1043,8 +1030,7 @@ classifier models of Heroin Use as the target variable \cite{classifyH}, and
 another for classifier models of Prescription Opioid PRL Misuse as the target 
 \cite{classifyPRL}. 
 
-%\end{enumerate}
 
-%\input{issues}
+\input{issues}
 
 \end{document}
