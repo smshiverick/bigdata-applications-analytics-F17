@@ -515,29 +515,29 @@ to model accuracy, features importance was identified for each model.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Logistic Regression Classifier}
-
+ 
 Logistic Regression Classification is a based on a linear equation that 
 calculates the relative weight of each feature for a categorical target or 
 binary outcome (``yes/no``)\cite{raschka17}. The logistic regression classifier 
-was fit to the training data, and the model was validated on the test data. 
-By default, the model applies L2 (Ridge) regularization, and the test set 
-accuracy was 0.983 and test set accuracy was 0.984. Parameter `C` determines 
-the strength of regularization; higher values of C provides greater 
-regularization. The L1 penalty (Lasso) limits the values of most coefficients 
-to zero, creating a more interpretable model using only a few features. 
-Figure 4 plots the Coefficients of Logistic Regression Classifier (LGC) for 
-Heroin Use with the L1 Penalty (Lasso) under different values of parameter C. 
-The default setting, C=1.0, provides good performance for train and test sets, 
-but the model is very likely underfitting the test data. Using a higher value 
-of C fits a more 'flexible' model and generally gives improved accuracy for 
-both training and tests sets. Using a value of C=100 yielded training set 
+was fit to the training data in Scikit-Learn, and the model was validated on 
+the test data. By default, the model applies L2 penalty (Ridge), and the test 
+set accuracy was 0.983 and the test set accuracy was 0.984. The parameter `C` 
+determines the strength of regularization, with higher values of C providing
+greater regularization. The L1 penalty (Lasso) limits the values of most 
+coefficients to zero, creating a more interpretable model that uses only a 
+few features. Figure 4 plots the coefficients of logistic regression classifier 
+for heroin use with the L1 Penalty (Lasso) under different values of parameter 
+C. The default setting, C=1.0, provides good performance for train and test 
+sets, but the model is very likely underfitting the test data. Using a higher
+value of C fits a more 'flexible' model and generally gives improved accuracy 
+for both training and tests sets. Using a value of C=100 yielded training set
 accuracy of 0.98 and test set accuracy of 0.98. Figure 4 shows that the 
-features coefficient values did not change much according to the values of 
+features coefficient values did not change much according to the values of
 parameter C, and the accuracy values were approximately the same for all 
-values of C. Examination of the The coefficients from the logistic regression 
-classifier revealed that the three features which were most closely associated 
-Heroin use. Prescription Opioid Pain Reliever Misuse ('PRLMISEVR'), as 
-predicted, Cocaine Use, and Amphetamine use, respectively.
+values of C. Examination of the coefficients from the logistic regression 
+classifier revealed the three features which were most closely associated 
+with Heroin use were: Prescription Opioid Pain Reliever (PRL) Misuse ever 
+(as predicted), Cocaine Use, and Amphetamine use, respectively.
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure4.pdf}
@@ -563,8 +563,8 @@ test set. Next, pre-pruning was applied, with a maximum depth of 4, which means
 the algorithm split on four consecutive questions. Training set accuracy of 
 the pruned tree was 0.985 and test set accuracy was 0.984. Even with a depth 
 of 4, the tree can become a bit complex. Figure 5 shows a partial view of the 
-decision tree classifier of heroin use; the entire tree was too wide to include 
-as a legible Figure (the full tree image is available in the analytic-
+decision tree classifier of heroin use (the entire tree was too wide to include 
+as a legible Figure), and the full tree image is available in the analytic-
 classifier notebook `BDA-Analytics-Classifier-Heroin.ipynb` \cite{classifyH}. 
 The decision tree shows the top features that the algorithm split on to 
 classify heroin use. One way to interpret a decision tree it by following the 
@@ -600,18 +600,32 @@ Misuse Ever and Prescription Opioid PRL Misuse and Abuse.
 \subsubsection{Random Forests Classifier}
 
 Random forests is an ensemble approach that builds many trees and averages 
-their results to reduce overfitting. The Random Forest Classifier package  
-in Scikit-Learn was used to classify Heroin Use. The parameters of interest 
-were the (1) the number of trees to build (i.e., n-estimators), (2) the number 
-of data points selected for bootstrap sampling (i.e., n-samples), and (3) the 
-maximum number of features considered at each decision node branch (i.e., 
-max-features). The max-features parameter determines how random each tree is, 
-with smaller values of max-features resulting in trees in the random forest 
-that are very different from each other. 
-
+their results to reduce overfitting. The model was build using the Random 
+Forest Classifier package in Scikit-Learn. The parameters of interest for
+builiding random forests are: (a) the number of trees (`n-estimators`), 
+(b) the number of data points for bootstrap sampling (`n-samples`), and 
+(c) the maximum number of features considered at each node (`max-features`). 
+The max-features parameter determines how random each tree is, with smaller 
+values of max-features resulting in trees in the random forest that are very 
+different from each other. This analysis applied a random forest consisting
+of 100 trees to classify Heroin Use, and the random state was set to zero. 
+The training set accuracy was 0.999 and the test set accuracy was 0.984. 
+Often the default settings for random forests work well, but we can apply
+pre-pruning as with a single tree, or adjust the maximum number of features. 
 Feature importance for random forests is computed by aggregating the feature 
-importance over trees in the random forest, and typically provides a more 
-reliable measure than feature importance for a single tree. 
+importance over trees in the random forest, and random forests gives
+non-zero importance to more features than a single tree. Typically random
+forests provide a more reliable measure of feature importance than the
+feature importance for a single tree. Figure 6 shows the feature importance 
+of the random forests classifier for heroin use with 100 trees. Similar to
+the single tree, the random forest selected Cocaine Use as the most
+informative feature in the model, followed by Any PRL Use, which is an 
+aggregated measure of prescription opioid medication use. Following after 
+that, several features were tied for third place of importance, namely 
+Education Level, Overall Health, Age Category, and Pain Reliever Misuse 
+and Abuse. Random forests provides much of the same benefit as decision
+trees, while compensating for some of their shortcomings of overfitting.
+Single trees are still useful for visually representing the decision process.
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure6.pdf}
@@ -620,10 +634,10 @@ reliable measure than feature importance for a single tree.
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Gradient Boosted Classifier Tree}
+\subsubsection{Gradient Boosting Classifier Tree}
 
 Gradient boosting machines is another ensemble method that combines multiple
-decision trees for regression or classification that builds trees in a serial 
+decision trees for regression or classification by building trees in a serial 
 fashion, where each tree tries to correct for mistakes of the previous one
 \cite{muller17}. Gradient boosted regression trees use strong pre-pruning, 
 with shallow trees of a depth of one to five. Each tree only provides a good
@@ -633,15 +647,28 @@ addition to pre-pruning andd the number of trees, an important parameter for
 gradient boosting is the learning rate, which determines how strongly each
 tree tries to correct for mistakes of previous trees. A high learning rate
 produces stronger corrections, allowing for more complex models. Adding
-more trees to the ensemble also increases model complexity
-
+more trees to the ensemble also increases model complexity. Grandient boosting
+and random forests perform well on similar tasks and data; it is common to
+first try random forests and then include gradient boosting to attain 
+improvements in accuracy of the learning model. This analysis used the 
+Gradient Boosting Classifier from Scikit-Learn to classify Heroin Use, with 
+the default setting of 100 trees of maximum depth of 3, and a learning rate 
+of 0.1. The model was build on the training set and evaluated on the test set, 
+with both training set and test set accuracy equal to 0.984. To reduce
+overfitting, prepruning could be implemented by reducing the maximum depth, 
+or by reducing the learning rate. Figure 7 shows that the feature importance 
+for the gradient boosting classifier tree looks similar to the feature 
+importance for random forests, but the gradient boosting has decreased the 
+importance of many features to zero. Again Cocaine is selected as the most 
+imformative features, followed by Any Opioid PRL Use. In addition to 
+Prescription Opioid PRL Misuse and Abuse, Amphetamine Use was selected as 
+an informative feature of Heroin Use. 
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure7.pdf}
   \caption{Feature Importance for Gradient Boosting Classifier for Heroin Use}
   \label{f:Figure7}
 \end{figure}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
