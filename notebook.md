@@ -59,7 +59,7 @@
 * 11/24/17  Project: Wrote get-data.py function to download, unzip, extract NSDUH data, write to csv file
 * 11/24/17  Project: Updated Pandas Data Cleaning and Preparation, to include get-data() function
 * 11/28/17  Project: Python notebooks for Logistic regression Classification of Heroin Use and Opioids Misuse
-* 11/30/17  Project ipynb: Analytics-Classifier Models of Heroin Use, Logistic Regression, Decision Trees, and Random Forests
+* 11/30/17  Project ipynb: Analytics-Classifier Models of Heroin Use, Logistic Regression, Decision Trees, Random Forests
 * 12/01/17  Project ipynb: Analytics-Classifier Models of Prescription Opioid Pain Reliever (PRL) Misuse
 * 12/02/17  Project ipynb: Uploaded Project Data Exploratory Analysis and Data Visualization notebooks
 
