@@ -751,7 +751,8 @@ PRL Misuse. As Figure 10 shows, several features were identified as important
 for classifying Prescription Opioid PRL Misuse. The random forest selected 
 Overall Health as the most informative feature in the model, followed by 
 Cocaine Use, Education Level, Age Category, and Size of City Metropolitan 
-region. Because of the additional features included as important, gradient boosting was performed to clarify the feature importance.
+region. Because of the additional features included as important, gradient 
+boosting was performed to clarify the feature importance.
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure10.pdf}
@@ -798,15 +799,18 @@ Prescription Opioid Misuse, and the relations among features may be complex.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Extension to Big Data}
 
-The methods used in this project could be extended to better approximate 
-big data for health analytics in the following ways: (1) Include a larger 
-selection of features from the 2600 attributes in in the NSDUH-2015 dataset; 
-(2) Include survey data from previous years (e.g., 2005-2015); and (3) 
-Extend the sample to the population of patients who have been prescribed 
-opioid pain medication. There were many additional features that could have
-been included in the subset of features included in the project dataset. 
-However, data cleaning and preparation can be a time consuming process, 
-especially for datasets with a large number of features \cite{rahm00}. 
+The classification methods to predict opioid use and misuse could be extended 
+to better approximate big data for health analytics in the following ways: (1) 
+Include a larger selection of features from the 2600 attributes in the NSDUH-
+2015 dataset; (2) Include survey data from previous years (e.g., 2010-2015); 
+and (3) Extend the sample to the population of patients who have been 
+prescribed opioid medications. 
+
+Many additional features could have been included in the subset of attributes 
+included in the project dataset. 
+
+Data cleaning and preparation can be time consuming when working
+with separate dataset with a large number of features \cite{rahm00}. 
 Additional data from the NSDUH was downloaded from previous years (2012 to 
 2014), and a preliminary examination of the data revealed inconsistencies 
 in questions and prescription opioid medications that would need to be 
@@ -944,7 +948,9 @@ files, extract the data, and write the NSDUH-2015 dataset to CSV file
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Data Cleaning and Preparation}
 
-Data cleaning and preparation steps was conducted using an interactive python Jupyter Notebook \cite{data17} based on examples in Python for Data Analysis \cite{mckinney17} and the Python Data Science Handbook \cite{vanderplas17}.
+Data cleaning and preparation steps was conducted using an interactive python 
+Jupyter Notebook \cite{data17} based on examples in Python for Data Analysis 
+\cite{mckinney17} and the Python Data Science Handbook \cite{vanderplas17}.
 
 \subsection{Exploratory Data Analysis}
 
@@ -960,7 +966,8 @@ Machine learning classification models included logistic regression classifier,
 decision Tree classifier, random forests classifier, and gradient boosting 
 classifier were constructed using SciKit Learn \cite{muller17, raschka17} 
 using two separate interactive python jupyter notebook, one for classifying 
-Heroin Use as the target variable \cite{classifyH}, and another notebook for classifying Prescription Opioid Misuse as the target \cite{classifyPRL}. 
+Heroin Use as the target variable \cite{classifyH}, and another notebook for 
+classifying Prescription Opioid Misuse as the target \cite{classifyPRL}. 
 
 
 %\begin{enumerate}
