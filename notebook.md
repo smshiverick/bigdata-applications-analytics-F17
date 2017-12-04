@@ -89,6 +89,7 @@
 * 12/01/17  Project Report: Writing Introduction on Classifier Algorithms, Describing Results of Classifier Models
 * 12/03/17  Project Report: Finished Results section for Classification of Heroin Use, Rewriting Discussion section
 * 12/03/17  Project Report: Finished Results section for Classification of Prescription Opioid Pain Reliever Misuse
+* 12/03/17  Project Report: Submitted Project report.pdf paper to TurnItIn for review. 
 
 # Location
 * Address: Galway Drive, Dallas, Texas, 75218
