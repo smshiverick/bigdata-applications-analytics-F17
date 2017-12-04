@@ -500,18 +500,17 @@ populated regions.
 \subsection{Classifier Models of Heroin Use}
 
 This analysis classified individuals according to whether they had ever used 
-heroin (i.e., ``Heroin Use Ever``. All classifier models were constructed 
-using SciKit Learn \cite{muller17} using an interactive python jupyter notebook  
-\cite{classifyH}. The features of interest were demographic characteristics, 
-health, mental health (adultdepression), prescription opioid misuse and abuse 
-('PRLMISEVR', 'PRLMISAB', 'PRLANY'), prescription tranquilizers and sedatives 
-('TRQLZRS', 'SEDATVS'), illicit drugs ('COCAINE', 'AMPHETMN'), drug treatment 
-('TRTMENT'), and mental health treatment ('MHTRTMT'). The target variable was 
-heroin use ('HEROINEVR'). Next, the dataset was split into the training set 
-and test sets using the `train-test-split` function in `sklearn`. The 
-classifier with measures of Training set accuracy and Test set accuracy are
-reported below for different regularization parameter values of C. In addition 
-to model accuracy, features importance was identified for each model. 
+heroin (i.e., ``Heroin Use Ever``). All classifier models were constructed 
+using SciKit Learn \cite{muller17} using an interactive python jupyter 
+notebook \cite{classifyH}. The features of interest were demographic 
+characteristics, health, mental health (adultdepression), prescription 
+opioid misuse and abuse (`PRLMISEVR`, `PRLMISAB`, `PRLANY`), prescription 
+tranquilizers and sedatives (`TRQLZRS`, `SEDATVS`), illicit drugs (`COCAINE`, 
+`AMPHETMN`), drug treatment (`TRTMENT`), and mental health treatment 
+(`MHTRTMT`). The target variable was Heroin Use (`HEROINEVR`). Next, the 
+dataset was split into the training set and test sets using the `train-test
+-split` function in `sklearn`. Model accuracy for the training set and test 
+set are reported, with different parameter values, and features importance. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Logistic Regression Classifier}
@@ -520,7 +519,7 @@ Logistic Regression Classification is a based on a linear equation that
 calculates the relative weight of each feature for a categorical target or 
 binary outcome (``yes/no``)\cite{raschka17}. The logistic regression classifier 
 was fit to the training data in Scikit-Learn, and the model was validated on 
-the test data. By default, the model applies L2 penalty (Ridge), and the test 
+the test data. By default, the model applies L2 penalty (Ridge). The training 
 set accuracy was 0.983 and the test set accuracy was 0.984. The parameter `C` 
 determines the strength of regularization, with higher values of C providing
 greater regularization. The L1 penalty (Lasso) limits the values of most 
@@ -551,43 +550,42 @@ with Heroin use were: Prescription Opioid Pain Reliever (PRL) Misuse ever
 \subsubsection{Decision Tree Classifier}
 
 The following analysis used the \emph{Decision Tree Classifier} package in 
-Scikit-Learn \cite{muller17, raschka17}, which only does pre-pruning. First, 
-the decision model was build using the default setting of a fully developed 
-tree until all leaves are pure. The `random state` features is fixed to break 
-ties internally. Accuracy on the training set was 0.99 and test set accuracy
-was 0.974. Without restricting their depth, decision trees can become complex; 
-A limitation is that unpruned trees are prone to overfitting and do not 
-generalize well to new data. Limiting the depth of tree decreases overfitting,
-which results in lower training set accuracy, but improved performance on the 
-test set. Next, pre-pruning was applied, with a maximum depth of 4, which means 
-the algorithm split on four consecutive questions. Training set accuracy of 
-the pruned tree was 0.985 and test set accuracy was 0.984. Even with a depth 
-of 4, the tree can become a bit complex. Figure 5 shows a partial view of the 
-decision tree classifier of heroin use (the entire tree was too wide to include 
-as a legible Figure), and the full tree image is available in the analytic-
-classifier notebook `BDA-Analytics-Classifier-Heroin.ipynb` \cite{classifyH}. 
-The decision tree shows the top features that the algorithm split on to 
-classify heroin use. One way to interpret a decision tree it by following the 
-sample numbers represented at the test split for each node. The classifier 
-algorithm selected Cocaine Use (aggregated score) as the root node of the 
-decision tree. The branch to the left  side of the tree represents samples 
-with a score equal to or less than 1.5 (n=40956), whereas the branch to the 
-right represents samples with a Cocaine Use score greater than 1.5 (n=1903). 
-The second split on the right occurs for Any Prescription Opioid Pain Reliever 
-Use (`PRLANY`), with n=1443 having a score less than or equal to 3.5, and 
-n=460 respondents with a PRL score greater than 3.5. In other words, of those
-respondents who reported relatively high Cocaine use, a small portion also
-reported relatively high Prescription Opioid PRL use. Instead of looking at 
-the whole tree, features importance is a common summary function that rates 
-how important each feature is for the classification decisions made in the 
-algorithm. Each feature is assigned an importance value between 0 and 1; 
-with a value of 1 indicating the feature perfectly predicts the target and 
-a value of 0 meaning that the feature was not used at all. Feature importance 
-values also always sum to 1. A feature may have a low feature importance 
-value because another feature encodes the same information. The top two 
-important features for classifying Heroin Use were Cocaine Use and Any 
-Prescription Opioid PRL Use, with smaller importance given to Opioid PRL 
-Misuse Ever and Prescription Opioid PRL Misuse and Abuse. 
+Scikit-Learn, which only does pre-pruning. First, the decision model was build
+using the default setting of a fully developed tree until all leaves are pure. 
+The random state` features is fixed to break ties internally. Accuracy on the
+training set was 0.99 and test set accuracy was 0.974. Without restricting 
+their depth, decision trees can become complex; unpruned trees are prone to 
+overfitting and do not generalize well to new data. Limiting the depth of 
+tree decreases overfitting, which results in lower training set accuracy, 
+but improved performance on the test set. Next, pre-pruning was applied, with 
+a maximum depth of 4, which means the algorithm split on four consecutive
+questions. Training set accuracy of the pruned tree was 0.985 and test set
+accuracy was 0.984. Even with a depth of 4, the tree can become a bit complex.
+Figure 5 shows a partial view of the decision tree classifier of heroin use 
+(the entire tree was too wide to include as a legible Figure), and the full 
+tree image is available in the notebook `BDA-Analytics-Classifier-Heroin.ipynb` 
+\cite{classifyH}. The decision tree shows the top features that the algorithm 
+split on to classify heroin use. One way to interpret a decision tree it by 
+following the sample numbers represented at the test split for each node. 
+The classifier algorithm selected Cocaine Use (aggregated score) as the root 
+node of the decision tree. The branch to the left  side of the tree represents 
+samples with a score equal to or less than 1.5 (n=40956), whereas the branch 
+to the right represents samples with a Cocaine Use score greater than 1.5
+(n=1903). The second split on the right occurs for Any Prescription Opioid 
+Pain Reliever Use (`PRLANY`), with n=1443 having a score less than or equal 
+to 3.5, and n=460 respondents with a PRL score greater than 3.5. In other 
+words, of those respondents who reported relatively high Cocaine use, a small
+portion also reported relatively high Prescription Opioid PRL use. Instead of 
+looking at the whole tree, features importance is a common summary function 
+that rates how important each feature is for the classification decisions 
+made in the algorithm. Each feature is assigned an importance value between 
+0 and 1; with a value of 1 indicating the feature perfectly predicts the 
+target and a value of 0 meaning that the feature was not used at all. 
+Feature importance values also always sum to 1. A feature may have a low 
+feature importance value because another feature encodes the same information. 
+The top two important features for classifying Heroin Use were Cocaine Use 
+and Any Prescription Opioid PRL Use, with smaller importance given to Opioid 
+PRL Misuse Ever and Prescription Opioid PRL Misuse and Abuse. 
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure5.pdf}
@@ -643,11 +641,11 @@ fashion, where each tree tries to correct for mistakes of the previous one
 with shallow trees of a depth of one to five. Each tree only provides a good
 estimate of part of the data, but combining many shallow trees (i.e., ``weak 
 learners''), the use many simple models iteratively improves performance. In 
-addition to pre-pruning andd the number of trees, an important parameter for 
+addition to pre-pruning and the number of trees, an important parameter for 
 gradient boosting is the learning rate, which determines how strongly each
 tree tries to correct for mistakes of previous trees. A high learning rate
 produces stronger corrections, allowing for more complex models. Adding
-more trees to the ensemble also increases model complexity. Grandient boosting
+more trees to the ensemble also increases model complexity. Gradient boosting
 and random forests perform well on similar tasks and data; it is common to
 first try random forests and then include gradient boosting to attain 
 improvements in accuracy of the learning model. This analysis used the 
@@ -655,14 +653,14 @@ Gradient Boosting Classifier from Scikit-Learn to classify Heroin Use, with
 the default setting of 100 trees of maximum depth of 3, and a learning rate 
 of 0.1. The model was build on the training set and evaluated on the test set, 
 with both training set and test set accuracy equal to 0.984. To reduce
-overfitting, prepruning could be implemented by reducing the maximum depth, 
+overfitting, pre-pruning could be implemented by reducing the maximum depth, 
 or by reducing the learning rate. Figure 7 shows that the feature importance 
 for the gradient boosting classifier tree looks similar to the feature 
 importance for random forests, but the gradient boosting has decreased the 
 importance of many features to zero. Again Cocaine is selected as the most 
 imformative features, followed by Any Opioid PRL Use. In addition to 
-Prescription Opioid PRL Misuse and Abuse, Amphetamine Use was selected as 
-an informative feature of Heroin Use. 
+Prescription Opioid PRL Misuse and Abuse, the gradient boosting classifier 
+selected Amphetamine Use as an informative feature of Heroin Use. 
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure7.pdf}
@@ -672,15 +670,42 @@ an informative feature of Heroin Use.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Classifier Models of Prescription Opioid Misuse}
+\subsection{Classifier Models of Prescription Opioid Pain Reliever (PRL) Misuse}
 
+This section reports results from the same set of classification analyses
+described above using Prescription Opioid Pain Reliever Misuse (`PRLMISEVR`) 
+the target variable. Attributes related to Heroin Use were now included as
+features (e.g., `HEROINEVR`, `HEROINUSE`, `HEROINFQY`). The classifier models 
+were built using SciKit Learn in a python notebook \cite{classifyPRL}. The
+dataset was split into the training set and test sets using the `train-test-
+split` function in sklearn and the target variables was designated. Model
+accuracy for the training set and test set are reported, for different 
+parameter values, with feature importance. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Logistic Regression Classifier}
 
-\cite{classifyPRL}
+The logistic regression classifier was fit to the training data using the 
+L1 penalty (Lasso), using different values of the regularization parameter C,
+and the model was validated on the test data. Higher value of parameter C 
+typically gives improved accuracy for both training and tests sets; however, 
+in this case, the training set accuracy was 0.901 and test set accuracy was 
+0.903, and these values were consistent for all values of parameter C. 
+Figure 8 plots the coefficients of logistic regression classifier for 
+Prescription Opioid PRL Misuse under different values of C. As shown in 
+Figure 8, the features with the highest coefficient values were Treatment
+(for substance use), Heroin Use (as predicted), as well as Cocaine and 
+Amphetamine use. This result indicates that Prescription Opioid Misuse is 
+positively related to Drug Treatment, meaning that respondents who reported
+higher levels of opioids misuse were also in treatment, but that people 
+who were misusing opioid medications were also more likely to have used
+illicit drugs such as heroin, cocaine, and amphetamine. 
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure8.pdf}
-  \caption{Logistic Regression Classification of Prescription Opioid (PRL) Misuse
+  \caption{Logistic Regression Classification of Prescription Opioid 
+  (PRL) Misuse
   with L2 Penalty}
   \label{f:Figure8}
 \end{figure}
@@ -689,6 +714,24 @@ an informative feature of Heroin Use.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Decision Tree Classifier}
 
+The Decision Tree Classifier package in Scikit-Learn was used to build the 
+tree model, pre-pruning was applied with a maximum depth of 4, which means 
+the algorithm split on four consecutive questions. The training set accuracy 
+of the pruned tree was 0.902 and test set accuracy was 0.902. Figure 9 shows 
+a partial view of the decision tree classifier of prescription opioid misuse
+(the full tree is included in the `BDA-Analytics-Classifier-PRL.ipynb` 
+notebook) \cite{classifyPRL}. As Figure 9 shows, the decicion tree classifier
+selected Cocaine Use as the root note, that branched by the test score equal
+to or less than 0.5 (any Cocaine Use). At the second node, on the branch to 
+the right n=5015 samples were further divided according to heroin use, with 
+n=1913 having a score greater than 0.5 (any Heroin Use). At the third node
+on the right branch, samples were selected according to Tranquilizer
+medication use, with n=1419 scoring positively. On the left branch, the 
+second node selected was Drug Treatment, with n=2844 respondents scoring
+positively that they had received Drug Treatment. Feature importance of
+the decision tree classifier selected Cocaine Use as the most informative
+feature for Prescription Opioid PRL Misuse. Following afterwards, 
+Tranquilizer Use, Drug Treatment, and Heroin Use were tied for second place. 
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure9.pdf}
@@ -698,6 +741,17 @@ an informative feature of Heroin Use.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Random Forests Classifier}
+
+The Random Forest Classifier package in Scikit-Learn was used to classify
+Prescription Opioid PRL Misuse as the target variable, with 100 trees. The 
+model accuracy for the training set was 0.955 and the test set accuracy was 
+0.896, which suggests that the model overfit the data. Figure 10 shows the 
+feature importance of the random forests classifier for Prescription Opioid 
+PRL Misuse. As Figure 10 shows, several features were identified as important
+for classifying Prescription Opioid PRL Misuse. The random forest selected 
+Overall Health as the most informative feature in the model, followed by 
+Cocaine Use, Education Level, Age Category, and Size of City Metropolitan 
+region. Because of the additional features included as important, gradient boosting was performed to clarify the feature importance.
 
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure10.pdf}
@@ -709,6 +763,25 @@ an informative feature of Heroin Use.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Boosted Gradient Classifier}
 
+The Gradient Boosting Classifier from Scikit-Learn was used to classify 
+Prescription Opioid PRL Misuse, using the default setting of 100 trees, of 
+maximum depth of 3, and a learning rate of 0.1. The model accuracy for the
+training set was 0.894 and accuracy for the test set was 0.893. Gradient 
+boosting typically improves test set accuracy by using many simple models 
+iteratively. In this case, model accuracy for gradient boosting was no better 
+than random forests, and this is because the default parameter settings were
+used; further parameter tuning is needed to improve model performance. Feature 
+importance was a primary interest for identifying features related to '
+prescription opioid abuse. Figure 11 shows the feature importance for the 
+gradient boosting classifier tree. As Figure 11 shows, several features were 
+important for classifying prescription opioid misuse, and contrary to the 
+random forests, gradient boosting selected Tranquilizer use as the most 
+informative feature. Following closely in importance were Heroin Use and Age 
+Category. Tied for fourth place were Cocaine Use and Treatment, with Mental 
+Health (depression) coming in fourth in terms of feature importance. This 
+result illustrates that several features are important for understanding 
+Prescription Opioid Misuse, and the relations among features may be complex.
+
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/Figure11.pdf}
   \caption{Feature Importance for Gradient Boosted Classifier Tree of 
@@ -719,6 +792,10 @@ an informative feature of Heroin Use.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 
+\subsection{Summary of Findings}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Extension to Big Data}
 
 The methods used in this project could be extended to better approximate 
