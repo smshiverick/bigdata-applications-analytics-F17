@@ -86,6 +86,7 @@
 * 11/29/17  Project Report: Added Figures 2 through 4, regression scatterplot, logistic classifier variable plots
 * 11/30/17  Project Report: Added Figures 4 through 9, decision trees, random forests, gradient boosting classifiers
 * 12/01/17  Project Report: Writing Introduction on Classifier Algorithms, Describing Results of Classifier Models
+* 12/03/17  Project Report: Finished Results section for Classification of Heroin Use, Rewriting Discussion section
 
 # Location
 * Address: Galway Drive, Dallas, Texas, 75218
