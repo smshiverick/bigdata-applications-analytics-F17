@@ -23,7 +23,7 @@ The steps involved in carrying out the project analysis and report are outlined 
 * Logistic regression classifier, Decision Trees, Random Forests, Gradient Boosting Classifier.
 * Plots of Coefficints with value of Regularization Parameter, and Feature Importance.
 
-## Step 6. Analytics: Classifier Models for Opioid Misuse
+## Step 6. Analytics: Classifier Models for Prescription Opioid Misuse
 * Classifier models for PRLMIS were constructed in `BDA-Analytics-Classifier-Heroin.ipynb`.
 * Logistic regression classifier, Decision Trees, Random Forests, Gradient Boosting Classifier.
 * Plots of Coefficints with value of Regularization Parameter, and Feature Importance.
