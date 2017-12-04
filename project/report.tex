@@ -393,7 +393,8 @@ mental health issues such as depression, suicidal thoughts,whether they had
 received mental health treatment, received treatment from a private therapist, 
 or believed that they needed drug treatment, but had not sought treatment, 
 across each age category. Frequency of depression was not included for 
-respondents between 12 to 17 years, and the measure was of adult depression. 
+respondents between 12 to 17 years, because the survey measure was for 
+adult depression. 
 
 \begin{table}
   \caption{Frequency Table of Mental Health Issues and Treatment NSDUH 2015
@@ -405,7 +406,6 @@ respondents between 12 to 17 years, and the measure was of adult depression.
     \midrule
     In Hospital Overnight& 730& 1149& 821& 890& 1173 \\
     Adult Depression& 0& 2413& 1395& 1766& 967 \\
-    Suicidal Thoughts& 13585& 14553& 9084& 11189& 8755 \\
     \midrule
     Mental Health Treatment& & & & & \\
     \midrule
@@ -800,57 +800,109 @@ Prescription Opioid Misuse, and the relations among features may be complex.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 
-\subsection{Summary of Findings}
-
 The results show that rates of prescription opioid use, misuse, and abuse are
-much higher than use of illicit opioids such as heroin and fentanyl. The use of
-Hydrocodone (`Vicodan`) was double the rate of Oxycodone use (`Oxycodone`)
+much higher than use of illicit opioids such as heroin and fentanyl. The use 
+of Hydrocodone (`Vicodan`) was double the rate of Oxycodone use (`Oxycodone`) 
+across almost all age groups. The use of traditional prescription opioids 
+was greater than reported use of synthetic opioids. Illicit drug use was 
+highest for respondents between the ages of 18 to 25. In terms of mental 
+health, more individuals between 18 to 25 years reported experiencing a major 
+depressive episode (in adulthood) than any other age group. In terms of the 
+so-called ``treatment gap'', almost twice as many respondents between 
+18 to 25 years who felt a need for substance use treatment, had not received
+treatment, than younger individuals between 12 to 17 years. The large majority 
+of respondents (approximately 90 percent) had not misused prescription opioid 
+pain relievers or used heroin. However, of those individuals who reported 
+misusing prescription opioid pain relievers, almost twice as many had also
+used heroin than had not (see Figure 1), which partially supports the 
+hypothesis that prescription opioid use is associated will use of illicit 
+opioids such as heroin. Prescription opioid misuse and heroin use was also
+higher in large metropolitan areas than smaller cities or rural areas, but
+a small portion of individuals in non-metropolitan regions reported very
+high levels of prescription opoioid misuse. These data points may represent 
+outliers, but a large sample would allow for analysis of how opioid misuse 
+and addiction differ for smaller rural regions versus large urban areas. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Comparison of Classifier Models}
 
+Several classifier algorithms were used to identify relevant features for 
+predicting heroin use and prescription opioid misuse. Comparing the performance 
+of different algorithms is helpful for  selecting the best model. Test set
+accuracy was comparable across models for both Heroin Use (0.98) and 
+Prescription Opioid PRL Misuse (0.89-0.90). Logistic Regression provided the
+feature coefficients for different values of the regularization parameter C. 
+The Decision Tree classifier provided a easy to use, interpretable visual of
+the decisions involved at each step of classification. Random forests provides
+a more reliable indication of features importance than a single tree, 
+whereas the gradient boosting classifier included additional tuning 
+parameter for a more powerful model and more interpretible analysis of
+feature importance. Each classifier method provides a different level of
+analysis. For classifying heroin use, the logistic regression classified
+showed that Prescription Opioid PRL Misuse had the highest coefficient value, 
+but the tree-based classifiers each identified Cocaine Use as the most
+informative feature for predicting heroin use. For classifying Prescription 
+Opioid PRL Misuse, logistic regression showed that Treatment had the highest
+coefficient value, but the tree based models each differed in selecting the
+most important features. Decision trees indicated that Cocaine Use was most
+informative, the random forests classifier selected health as the most
+important feature, and the gradient boosting model selected Tranquilizer use
+as most informative of prescription opioid PRL misuse. The different model 
+each have their advantages and limitations, logistic regression provides the
+coefficients, but random forests and gradient boosting are helpful for 
+identified sets of important features.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Study Limitations}
+
+The main goal of this project was to identify features relevant for predicting 
+opioid addiction by classifying cases according to heroin use. Only a small 
+proportion of the sample reported having used heroin, and scores for mental
+health issues were very low. A limitation of survey data is that responses may 
+be biased by under-reporting or minimizing the use of illicit or illegal 
+substances. People may also be reluctant to disclose mental health issues or 
+health problems (e.g., STDs, HIV status, suicide attempts). It is possible
+that this sample is representative of the frequency of opioid use and misuse
+in the larger population. Recent statistics from the CDC show that heroin use
+has increased among most demographics groups, with an average estimated rate 
+of approximately 2.6 percent between 2011-2013 \cite{cdc16}. The rate of heroin 
+use reported in the NSDUH-2015 sample was 1.6 percent. Therefore, it seems
+that the actual rate of heroin use in the U.S. population may not be accurately
+reflected in this sample. Another limitation is that the project dataset was 
+a constructed as a subset of features from the NSDUH-2015 data. Ninety 
+attributes out of 2666 features in the original data were selected, and many 
+features were combined to create aggregated variables for health, mental 
+health, prescription opioid misuse and abuse, drug treatment, mental health
+treatment. Future research could include a more comprehensive selection of
+features to identify the set of features relevant for predicting opioid
+dependency and addiction. An important challenge for making sense of big data 
+is developing analytic tools adequate to handle large volumes of data.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Extension to Big Data}
 
-The classification methods to predict opioid use and misuse could be extended 
-to better approximate big data for health analytics in the following ways: (1) 
-Include a larger selection of features from the 2600 attributes in the NSDUH-
-2015 dataset; (2) Include survey data from previous years (e.g., 2010-2015); 
-and (3) Extend the sample to the population of patients who have been 
-prescribed opioid medications. 
-
-Many additional features could have been included in the subset of attributes 
-included in the project dataset. 
-
-Data cleaning and preparation can be time consuming when working
-with separate dataset with a large number of features \cite{rahm00}. 
-Additional data from the NSDUH was downloaded from previous years (2012 to 
-2014), and a preliminary examination of the data revealed inconsistencies 
-in questions and prescription opioid medications that would need to be 
-resolved in order to combine data from multiple years. In addition to data 
-cleaning, there are several steps involved in the consolidation of data from 
-multiple sources into a single dataset, which include extraction, integration, 
-and aggregation of features. Unfortunately, time constraints for the project 
-deadline did not allow for the inclusion of data from previous years into this 
-analysis. A future study could integrate data from different years into the
-analysis or include data from multiple sources. 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Limitations}
-
-To be of any use, diverse and often messy raw data has to be sifted through and 
-effectively organized for further analysis, and 
-
-there are legitimate questions about the reliability of self report data from 
-surveyresearch for predicting actual behavior. 
-
-The question of Value evaluates the quality of the data as it pertains to 
-intended outcomes, such as limiting the spread of contagion and disease 
-prevention. 
-
-An important challenge for making sense of big data is developing analytic 
-tools adequate to handle large volumes of data in real time.
+A general tenet of big data is that, ``More data is always better.'' The 
+methods used in this project could be extended to better approximate big data 
+for predicting opioid use in the following ways: (1) Include a larger 
+selection of features from the attributes in the NSDUH-2015 dataset; (2) 
+Include survey data from previous years (e.g., 2005-2015) for a larger sample;  
+and (3) Obtain a broader sample from the population of patients who are 
+taking prescribed opioid medications. The most immediate step would be to 
+include additional features for use with the classifier models. Additional 
+data from the NSDUH was downloaded from previous years (2012 to 2014); 
+preliminary examination of the data revealed inconsistencies in questions 
+and prescription opioid medications that would need to be resolved in order 
+to combine data from multiple years. Data cleaning can be a time consuming 
+process, but important for obtaining usable data. Unfortunately, owing to 
+constraints of time for completing the project, it was not possible to
+integrate data from previous years into the project dataset. In working with
+big data, there are there are several steps involved in the consolidation of 
+data from multiple sources into a single dataset which include extraction, 
+integration, and aggregation of features (in addition to data cleaning) 
+\cite{rahm00}. A future study could integrate data from different years, 
+using a broader set of features, with more inclusive sample representative
+of the larger population, and integrate data from multiple sources. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Drug Abuse, Dependency, and Addiction}
