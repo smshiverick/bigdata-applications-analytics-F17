@@ -12,7 +12,7 @@ The steps involved in carrying out the project analysis and report are outlined 
 * Aggregated variables were constructed, resulting dataset: `project-data.csv`
 
 ## Step 3. Exploratory Data Analysis
-* Frequency summaries and crosstabulations created in 'BDA-Project-Explore-Data.ipynb'.
+* Frequency summaries and crosstabulations created in `BDA-Project-Explore-Data.ipynb`.
 * Simple frequency histogram plotted proportions of Prescription Opioid Misuse and Heroin Use. 
 
 ## Step 4. Data Visualization
