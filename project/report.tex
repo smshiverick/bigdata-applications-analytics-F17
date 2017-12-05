@@ -30,8 +30,8 @@ to opioid addiction among patients and medication prescribers, and help
 decrease the risk of opioid overdose death. 
 \end{abstract}
 
-\keywords{Health Analytics, Machine Learning Classifiers, Opioid Addiction, 
-Big Data, i523, hid335}
+\keywords{Big Data, Health Analytics, Classifier Algorithms, Opioid Addiction, 
+i523, hid335}
 
 \maketitle
 
@@ -57,8 +57,8 @@ dependence. Understanding the features that contribute to opioid addiction
 can identify underlying risk factors and increase awareness of potential 
 opioid abuse for patients and health care providers. The results could be 
 extended to big data from previous years of the opioid crisis and to the 
-larger population of patients taking prescription opioid mediation. Different 
-machine learning classification methods are discussed.
+larger population of patients taking prescription opioid mediation. 
+Different machine learning classification methods are discussed.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -106,8 +106,8 @@ learning problems are regression and classification. When the target variable
 to be predicted is continuous, or there is continuity between the outcome 
 (e.g., home values, or income), a regression model is used to test the set of 
 features that predict the target variable. If the target is a class label, set 
-of categorical or binary outcomes (e.g., `spam` or `ham`, `benign` or 
-`malignant`), then classification is used to predict which class or category 
+of categorical or binary outcomes (e.g., spam or ham, benign or malignant), 
+then classification is used to predict which class or category 
 label that new instances will be assigned to.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -127,24 +127,24 @@ classification algorithms are considered below.
 \subsubsection{Logistic Regression Classifier}
 
 Logistic regression is a commonly used linear model for classification problems. 
-The decision boundary for the logistic regression classifier is a linear function 
-of the input; a binary classifier separates two classes using along a line, 
-plane, or hyperplane. Linear classification models differ in terms of (1) how 
-they measure how well a particular combination of coefficients and intercept fit 
-the training data, and (2) the type of regularization used \cite{muller17}. The 
-main parameter for linear classification models is the regularization parameter 
-`C`. High values of C correspond to less regularization and the model will fit 
-the training set as best as possible, stressing the importance of each individual 
-data point to be classified correctly. By contrast, with low values of C, the 
-model puts more emphasis on finding coefficient vectors (w) that are close to 
-zero, trying to adjust to the `majority` of data points \cite{muller17}. In 
-addition, the penalty parameter influences the coefficient values of the linear 
-model. The L2 penalty (Ridge) uses all available features, but pushes the 
-coefficient values toward zero. The L1 penalty (Lasso) sets the coefficient 
-values for most features to zero, and uses only a subset for improved
-interpretability. This paper uses a logistic regression classifier to predict 
-Heroin use from demographic attributes, mental health, prescription opioids, 
-medication use, misuse, and illicit drug use. 
+The decision boundary for the logistic regression classifier is a linear 
+function of the input; a binary classifier separates two classes using along 
+a line, plane, or hyperplane. Linear classification models differ in terms of 
+(1) how they measure how well a particular combination of coefficients and 
+intercept fit the training data, and (2) the type of regularization used 
+\cite{muller17}. The main parameter for linear classification models is the
+regularization parameter `C`. High values of C correspond to less regularization 
+and the model will fit the training set as best as possible, stressing the 
+importance of each individual data point to be classified correctly. By contrast,
+with low values of C, the model puts more emphasis on finding coefficient vectors
+(w) that are close to zero, trying to adjust to the `majority` of data points 
+\cite{muller17}. In addition, the penalty parameter influences the coefficient 
+values of the linear model. The L2 penalty (Ridge) uses all available features, 
+but pushes the coefficient values toward zero. The L1 penalty (Lasso) sets the 
+coefficient values for most features to zero, and uses only a subset for 
+improved interpretability. This paper uses a logistic regression classifier to 
+predict Heroin use from demographic attributes, mental health, prescription 
+opioids, medication use, misuse, and illicit drug use. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Tree Based Models}
@@ -155,7 +155,7 @@ form of a decision tree. Building decision trees proceeds from a root node as
 the starting point and continues through a series of decisions or choices.
 Each node in the tree either represents either a question or a terminal node 
 (i.e.,leaf) that contains the outcome. Applied to a binary classification task, 
-the decision tree algorithm ``learns'' the sequence of if-else questions that 
+the decision tree algorithm \emph{learns} the sequence of if-else questions that 
 arrives at the outcome most quickly. For data with continuous features, the 
 decisions are expressed in the form of, ``Is feature x larger than value y?''
 \cite{muller17} In constructing the tree, the algorithm searches through all
@@ -201,7 +201,7 @@ These two processes help ensure that all of the decision trees in the random
 forest are different. The important parameters for the random forests 
 algorithm are the number of sampled data points and the maximum number of 
 features; the algorithm could look at all of the features in the dataset
-or a limited number. A high value for ``maximum features'' will produce 
+or a limited number. A high value for \emph{maximum-features} will produce 
 trees in the random forest that are very similar and will fit the data 
 easily based on the most distinctive features, whereas a low value will 
 produce trees that are very different from each other, and reduces over-
@@ -239,17 +239,17 @@ opioid misuse, abuse and heroin use.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Method}
 
-The project workflow pipeline is outlined in a `readme.md` file in the project 
-folder \cite{pipeline17}. The steps included in the workflow were (1) Download
-and Extract the Data, (2) Data Cleaning and Preparation, (3) Exploratory Data 
-Analysis, (4) Data Visualization, (5) Analsysis of Classification Models for 
-Heroin Use, and (6) Analysis of Classificaiton Models for Prescription Opioid 
-Pain Reliever Misuse.
+The project workflow pipeline is outlined in a readme markdown file in the
+project folder \cite{pipeline17}. The steps included in the workflow were 
+(1) Download and Extract the Data, (2) Data Cleaning and Preparation, 
+(3) Exploratory Data Analysis, (4) Data Visualization, (5) Analysis of 
+Classification Models for Heroin Use, and (6) Analysis of Classification 
+Models for Prescription Opioid Pain Reliever Misuse.
 
 \subsection{Data} 
 
 Data from the 2015 NSHUH was downloaded from the Substance Abuse and Mental 
-Health Data Archive (SAMHDA) \cite{samhsa16} URL using the `get-data.py` 
+Health Data Archive (SAMHDA) \cite{samhsa16} URL using the get-data.py 
 function written to unzip the data files, extract the data as a Pandas data 
 frame, and write the file to CSV file \cite{getdata17}. The dataset consists 
 of 57,146 observations with 2,666 features representing individual-level 
@@ -289,29 +289,29 @@ created to provide a complete list of variables included with summaries
 of response categories \cite{codebook17}. The following steps were taken 
 to detect and remove inconsistencies in the data \cite{rahm00}:
 \begin{enumerate}
-  \item Remove missing values (i.e., `NaN`) 
-  \item Recode blanks, non-responses, or legitimate skips (e.g.,`99`, `991`, 
-  `993`) to zero  
-  \item Recode dichotomous responses (e.g., ``Yes=1``/``No=2``) so that ``No=0``
+  \item Remove missing values (i.e., NaN) 
+  \item Recode blanks, non-responses, or legitimate skips (e.g., 99, 991, 
+  993) to zero  
+  \item Recode dichotomous responses (e.g., Yes=1 / No=2) so that No=0
   \item Recode categorical variables to be consistent with amount or degree 
-  (e.g., ``1=low``, ``2=med``, ``3=high``)
+  (e.g., 1=low, 2=med, 3=high)
    \item Rename selected variables for better description (e.g., 
-   Adult Major Depressive Episode Lifetime changed from `AMDELT` to `DEPMELT`)
+   Adult Major Depressive Episode Lifetime changed from AMDELT to DEPMELT)
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Aggregated Variables}
 
-Because the majority of features were represented as dichotomous ``Yes/No`` 
+Because the majority of features were represented as dichotomous Yes / No 
 variables, related features were summed to create aggregated variables. For 
 example, overall health, STD, Hepatitis, HIV, Cancer, and hospitalization were 
 aggregated to create a single health measure. The health measure was recoded
 so that higher scores indicated better health. Questions related to depression, 
 emotional distress, and suicidal thoughts were summed to create a single 
-variable for mental health (`MENTHLTH`) with scores ranging from 0 to 9. 
+variable for mental health (MENTHLTH) with scores ranging from 0 to 9. 
 Responses to pain reliever medication use, misuse, abuse, or dependency, 
 were aggregated to create a single variable of pain reliever misuse or abuse
-(`PRLMISAB`). All prescription painkiller medications used in the past year
+(PRLMISAB). All prescription painkiller medications used in the past year
 were summed. Similarly, all related responses were summed to create single 
 variables for Tranquilizers, Sedatives, Cocaine, Amphetamines, Hallucinogens, 
 Drug Treatment, and Mental Health Treatment. The target outcome of interest for 
@@ -337,8 +337,8 @@ and Methadone. In addition, self-reported use of illicit drugs such as heroin,
 cocaine, amphetamines, methamphetamine, Hallucinogens, including LSD and 
 Ecstasy (MDMA). This summary table shows that substance use seems to be highest 
 for individuals between the ages of 18 to 25 and from 35 to 49 years. Of the
-prescription relievers, Hydrocodone use (e.g., `Vicodan`)  was almost double 
-the rate of Oxycodone use (e.g., `Oxycodone`) for each age group, and was 
+prescription relievers, Hydrocodone use (e.g., Vicodan)  was almost double 
+the rate of Oxycodone use (e.g., Oxycodone) for each age group, and was 
 significantly higher than any other prescription opioid medication. Use of 
 prescription Fentanyl and Demerol, two powerful opioids, and synthetic morphines 
 such as Oxymorphone and Hydromorphone, was very low. The rate of prescription 
@@ -511,12 +511,12 @@ heroin (i.e., ``Heroin Use Ever``). All classifier models were constructed
 using SciKit Learn \cite{muller17} using an interactive python jupyter 
 notebook \cite{classifyH}. The features of interest were demographic 
 characteristics, health, mental health (adultdepression), prescription 
-opioid misuse and abuse (`PRLMISEVR`, `PRLMISAB`, `PRLANY`), prescription 
-tranquilizers and sedatives (`TRQLZRS`, `SEDATVS`), illicit drugs (`COCAINE`, 
-`AMPHETMN`), drug treatment (`TRTMENT`), and mental health treatment 
-(`MHTRTMT`). The target variable was Heroin Use (`HEROINEVR`). Next, the 
-dataset was split into the training set and test sets using the `train-test
--split` function in `sklearn`. Model accuracy for the training set and test 
+opioid misuse and abuse (PRLMISEVR, PRLMISAB, PRLANY), prescription 
+tranquilizers use and sedatives use (TRQLZRS, SEDATVS), use of illicit drugs 
+(COCAINE, AMPHETMN), drug treatment (TRTMENT), and mental health treatment 
+(MHTRTMT). The target variable was Heroin Use (HEROINEVR). Next, the 
+dataset was split into the training set and test sets using the train-test
+-split() function in sklearn. Model accuracy for the training set and test 
 set are reported, with different parameter values, and features importance. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -524,7 +524,7 @@ set are reported, with different parameter values, and features importance.
  
 Logistic Regression Classification is a based on a linear equation that 
 calculates the relative weight of each feature for a categorical target or 
-binary outcome (``yes/no``)\cite{raschka17}. The logistic regression classifier 
+binary outcome (yes / no) \cite{raschka17}. The logistic regression classifier 
 was fit to the training data in Scikit-Learn, and the model was validated on 
 the test data. By default, the model applies L2 penalty (Ridge). The training 
 set accuracy was 0.983 and the test set accuracy was 0.984. The parameter `C` 
@@ -535,7 +535,7 @@ few features. Figure 4 plots the coefficients of logistic regression classifier
 for heroin use with the L1 Penalty (Lasso) under different values of parameter 
 C. The default setting, C=1.0, provides good performance for train and test 
 sets, but the model is very likely underfitting the test data. Using a higher
-value of C fits a more 'flexible' model and generally gives improved accuracy 
+value of C fits a more flexible model and generally gives improved accuracy 
 for both training and tests sets. Using a value of C=100 yielded training set
 accuracy of 0.98 and test set accuracy of 0.98. Figure 4 shows that the 
 features coefficient values did not change much according to the values of
@@ -570,7 +570,7 @@ questions. Training set accuracy of the pruned tree was 0.985 and test set
 accuracy was 0.984. Even with a depth of 4, the tree can become a bit complex.
 Figure 5 shows a partial view of the decision tree classifier of heroin use 
 (the entire tree was too wide to include as a legible Figure), and the full 
-tree image is available in the notebook `BDA-Analytics-Classifier-Heroin.ipynb` 
+tree image is available in the notebook BDA-Analytics-Classifier-Heroin.ipynb 
 \cite{classifyH}. The decision tree shows the top features that the algorithm 
 split on to classify heroin use. One way to interpret a decision tree it by 
 following the sample numbers represented at the test split for each node. 
@@ -579,7 +579,7 @@ node of the decision tree. The branch to the left  side of the tree represents
 samples with a score equal to or less than 1.5 (n=40956), whereas the branch 
 to the right represents samples with a Cocaine Use score greater than 1.5
 (n=1903). The second split on the right occurs for Any Prescription Opioid 
-Pain Reliever Use (`PRLANY`), with n=1443 having a score less than or equal 
+Pain Reliever Use (PRLANY), with n=1443 having a score less than or equal 
 to 3.5, and n=460 respondents with a PRL score greater than 3.5. In other 
 words, of those respondents who reported relatively high Cocaine use, a small
 portion also reported relatively high Prescription Opioid PRL use. Instead of 
@@ -605,16 +605,16 @@ PRL Misuse Ever and Prescription Opioid PRL Misuse and Abuse.
 \subsubsection{Random Forests Classifier}
 
 Random forests is an ensemble approach that builds many trees and averages 
-their results to reduce overfitting. The model was build using the Random 
-Forest Classifier package in Scikit-Learn. The parameters of interest for
-builiding random forests are: (a) the number of trees (`n-estimators`), 
-(b) the number of data points for bootstrap sampling (`n-samples`), and 
-(c) the maximum number of features considered at each node (`max-features`). 
-The max-features parameter determines how random each tree is, with smaller 
-values of max-features resulting in trees in the random forest that are very 
-different from each other. This analysis applied a random forest consisting
-of 100 trees to classify Heroin Use, and the random state was set to zero. 
-The training set accuracy was 0.999 and the test set accuracy was 0.984. 
+their results to reduce overfitting. The model was build using the 
+\emph{Random Forest Classifier} package in Scikit-Learn. The parameters of 
+interest for building random forests are: (a) the number of trees 
+(n-estimators), (b) the number of data points for bootstrap sampling 
+(n-samples), and (c) the maximum number of features considered at each node 
+(max-features). The max-features parameter determines how random each tree is, 
+with smaller values of max-features resulting in trees in the random forest 
+that are very different from each other. This analysis applied a random forest 
+consisting of 100 trees to classify Heroin Use, and the random state was set to 
+zero. The training set accuracy was 0.999 and the test set accuracy was 0.984. 
 Often the default settings for random forests work well, but we can apply
 pre-pruning as with a single tree, or adjust the maximum number of features. 
 Feature importance for random forests is computed by aggregating the feature 
@@ -656,10 +656,10 @@ more trees to the ensemble also increases model complexity. Gradient boosting
 and random forests perform well on similar tasks and data; it is common to
 first try random forests and then include gradient boosting to attain 
 improvements in accuracy of the learning model. This analysis used the 
-Gradient Boosting Classifier from Scikit-Learn to classify Heroin Use, with 
-the default setting of 100 trees of maximum depth of 3, and a learning rate 
-of 0.1. The model was build on the training set and evaluated on the test set, 
-with both training set and test set accuracy equal to 0.984. To reduce
+\emph{Gradient Boosting Classifier} from Scikit-Learn to classify Heroin Use, 
+with the default setting of 100 trees of maximum depth of 3, and a learning 
+rate of 0.1. The model was build on the training set and evaluated on the test 
+set, with both training set and test set accuracy equal to 0.984. To reduce
 overfitting, pre-pruning could be implemented by reducing the maximum depth, 
 or by reducing the learning rate. Figure 7 shows that the feature importance 
 for the gradient boosting classifier tree looks similar to the feature 
@@ -680,14 +680,14 @@ selected Amphetamine Use as an informative feature of Heroin Use.
 \subsection{Classifier Models of Prescription Opioid Pain Reliever (PRL) Misuse}
 
 This section reports results from the same set of classification analyses
-described above using Prescription Opioid Pain Reliever Misuse (`PRLMISEVR`) 
-the target variable. Attributes related to Heroin Use were now included as
-features (e.g., `HEROINEVR`, `HEROINUSE`, `HEROINFQY`). The classifier models 
-were built using SciKit Learn in a python notebook \cite{classifyPRL}. The
-dataset was split into the training set and test sets using the `train-test-
-split` function in sklearn and the target variables was designated. Model
-accuracy for the training set and test set are reported, for different 
-parameter values, with feature importance. 
+described above using \emph{Prescription Opioid Pain Reliever Misuse} 
+(PRLMISEVR) as the target variable. Attributes related to Heroin Use were 
+now included as features (e.g., HEROINEVR, HEROINUSE, HEROINFQY). The 
+classifier models were built using SciKit Learn in a python notebook 
+\cite{classifyPRL}. The dataset was split into the training set and test 
+sets using the train-test-split function in sklearn and the target variables 
+was designated. Model accuracy for the training set and test set are reported, 
+for different parameter values, with feature importance. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -726,8 +726,8 @@ tree model, pre-pruning was applied with a maximum depth of 4, which means
 the algorithm split on four consecutive questions. The training set accuracy 
 of the pruned tree was 0.902 and test set accuracy was 0.902. Figure 9 shows 
 a partial view of the decision tree classifier of prescription opioid misuse
-(the full tree is included in the `BDA-Analytics-Classifier-PRL.ipynb` 
-notebook) \cite{classifyPRL}. As Figure 9 shows, the decicion tree classifier
+(the full tree is included in the BDA-Analytics-Classifier-PRL.ipynb 
+notebook) \cite{classifyPRL}. As Figure 9 shows, the decision tree classifier
 selected Cocaine Use as the root note, that branched by the test score equal
 to or less than 0.5 (any Cocaine Use). At the second node, on the branch to 
 the right n=5015 samples were further divided according to heroin use, with 
@@ -802,13 +802,13 @@ Prescription Opioid Misuse, and the relations among features may be complex.
 
 The results show that rates of prescription opioid use, misuse, and abuse are
 much higher than use of illicit opioids such as heroin and fentanyl. The use 
-of Hydrocodone (`Vicodan`) was double the rate of Oxycodone use (`Oxycodone`) 
+of Hydrocodone (Vicodan) was double the rate of Oxycodone use (Oxycodone) 
 across almost all age groups. The use of traditional prescription opioids 
 was greater than reported use of synthetic opioids. Illicit drug use was 
 highest for respondents between the ages of 18 to 25. In terms of mental 
 health, more individuals between 18 to 25 years reported experiencing a major 
 depressive episode (in adulthood) than any other age group. In terms of the 
-so-called ``treatment gap'', almost twice as many respondents between 
+so-called \emph{treatment gap}, almost twice as many respondents between 
 18 to 25 years who felt a need for substance use treatment, had not received
 treatment, than younger individuals between 12 to 17 years. The large majority 
 of respondents (approximately 90 percent) had not misused prescription opioid 
@@ -898,8 +898,8 @@ process, but important for obtaining usable data. Unfortunately, owing to
 constraints of time for completing the project, it was not possible to
 integrate data from previous years into the project dataset. In working with
 big data, there are there are several steps involved in the consolidation of 
-data from multiple sources into a single dataset which include extraction, 
-integration, and aggregation of features (in addition to data cleaning) 
+data from multiple sources into a single dataset (in addition to data 
+cleaning), which include extraction, integration, and aggregation of features  
 \cite{rahm00}. A future study could integrate data from different years, 
 using a broader set of features, with more inclusive sample representative
 of the larger population, and integrate data from multiple sources. 
@@ -913,7 +913,7 @@ illnesses, but there are unique challenges to the treatment of addiction
 patients undergo intense detoxification that reduces their drug tolerance, 
 but are then released back into the environments associated with their drug 
 use, putting them at high risk for relapse and potential drug overdose 
-\cite{johnson11}. If the prescription opioid crisis is a guenuine epidemic, 
+\cite{johnson11}. If the prescription opioid crisis is a genuine epidemic, 
 we must consider the process of spreading or diffusion of contagion. Epidemic 
 spreading is a dynamic process based on networks of direct person-to-person 
 contact and indirect exposure via transportation pathways \cite{Colizza06}. 
@@ -957,17 +957,17 @@ misuse, but additional factors also played as role, including tranquilizer use,
 age category, overall health, cocaine use. Substance treatment had the largest
 regression coefficient, suggesting that people who are misusing prescription
 opioid pain medication are also more likely to be in drug treatment programs. 
-It is not possible to determine the direction of these effect owing to the 
-nature of thes analysis. On the one hand individual misusing or abusing 
-prescription opioids may also be using heroin. Alternatively, individuals with
-a susceptability for opioid use may be equally likely to have use heroin and 
-also to have misused prescription opioids. A general conclusion is that there
-is that persons who report misusing prescription opioids were twice as likely
-to have used heroin. The results do not provide sufficient evidence to rule 
-out the alternative hypothesis. Given the relatively low rates of opioid and 
-heroin in this sample, additional evidence is needed to resolve this question.
-The study can provide information to raise awareness about the risk factors
-for prescription opioid addiction and may help reduce opioid overdose deaths. 
+The direction of these effects cannot be determined owing to the nature of the 
+analyses. On the one hand individual misusing or abusing prescription opioids 
+may also be using heroin. Alternatively, individuals with a susceptability for 
+opioid use may be equally likely to have use heroin and also to have misused 
+prescription opioids. A general conclusion is that there is that persons who 
+report misusing prescription opioids were twice as likely to have used heroin. 
+The results do not provide sufficient evidence to rule out the alternative 
+hypothesis. Given the relatively low rates of opioid and heroin in this sample, 
+additional evidence is needed to resolve this question. The study can provide
+information to raise awareness about the risk factors for prescription opioid 
+addiction and may help reduce opioid overdose deaths. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -989,14 +989,14 @@ Moghadam, and others who helped to improve this project and report.
 \section{Code References}
 All code, notebooks, files, and folders for this project can be found in the
 i523/hid335/project githup repository: 
-\url{url:  https://github.com/bigdata-i523/hid335/tree/master/project}.
-An outline of the workflow pipelines was included as a `readme.md` markdown
+\url{https://github.com/bigdata-i523/hid335/tree/master/project}.
+An outline of the workflow pipelines was included as a readme.md markdown
 file \cite{pipeline17}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Download and Extract Data}
 
-The `get-data.py` function was written to download the data, unzip the data
+The get-data.py function was written to download the data, unzip the data
 files, extract the data, and write the NSDUH-2015 dataset to CSV file 
 \cite{getdata17}.
 
