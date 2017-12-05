@@ -126,25 +126,26 @@ classification algorithms are considered below.
 
 \subsubsection{Logistic Regression Classifier}
 
-Logistic regression is a commonly used linear model for classification problems. 
-The decision boundary for the logistic regression classifier is a linear 
-function of the input; a binary classifier separates two classes using along 
-a line, plane, or hyperplane. Linear classification models differ in terms of 
-(1) how they measure how well a particular combination of coefficients and 
-intercept fit the training data, and (2) the type of regularization used 
+Logistic regression is a commonly used linear model for classification 
+problems. The decision boundary for the logistic regression classifier is a 
+linear function of the input; a binary classifier separates two classes using 
+along a line, plane, or hyperplane. Linear classification models differ in 
+terms of (1) how they measure how well a particular combination of coefficients 
+and intercept fit the training data, and (2) the type of regularization used 
 \cite{muller17}. The main parameter for linear classification models is the
-regularization parameter `C`. High values of C correspond to less regularization 
+regularization parameter C. High values of C correspond to less regularization 
 and the model will fit the training set as best as possible, stressing the 
-importance of each individual data point to be classified correctly. By contrast,
-with low values of C, the model puts more emphasis on finding coefficient vectors
-(w) that are close to zero, trying to adjust to the `majority` of data points 
-\cite{muller17}. In addition, the penalty parameter influences the coefficient 
-values of the linear model. The L2 penalty (Ridge) uses all available features, 
-but pushes the coefficient values toward zero. The L1 penalty (Lasso) sets the 
-coefficient values for most features to zero, and uses only a subset for 
-improved interpretability. This paper uses a logistic regression classifier to 
-predict Heroin use from demographic attributes, mental health, prescription 
-opioids, medication use, misuse, and illicit drug use. 
+importance of each individual data point to be classified correctly. By 
+contrast, with low values of C, the model puts more emphasis on finding 
+coefficient vectors (i.e., weights) that are close to zero, trying to adjust 
+to the majority of data points. In addition, the penalty parameter influences 
+the coefficient values of the linear model. The L2 penalty (Ridge) uses all 
+available features, but pushes the coefficient values toward zero. The L1 
+penalty (Lasso) sets the coefficient values for most features to zero, and uses 
+only a subset of features for improved interpretability. This analysis used a 
+logistic regression classifier to predict Heroin use from demographic 
+attributes, mental health, prescription opioids, medication use, misuse, 
+and illicit drug use. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Tree Based Models}
