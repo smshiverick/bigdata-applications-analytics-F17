@@ -10,9 +10,9 @@ owner:
     url: https://github.com/bigdata-i523/hid335
 paper1:
     author:
-    - Sean M. Shiverick
+        - Sean M. Shiverick
     hid:
-    - 335
+        - 335
     title: >
         Big Data Analytics, Data Mining, and Public Health
         Informatics: Using Data Mining of Social Media to Track
@@ -28,7 +28,7 @@ paper1:
         media has applications for public health
         informatics. Prediction models based on social media work best
         in areas with a high degree of internet access.
-    url: https://github.com/bigdata-i523/hid335/blob/master/paper1/report.pdf
+    url: https://github.com/bigdata-i523/hid335/blob/master/paper1/
     type: latex
     status: 10/25/17 100%
     chapter: Health
@@ -36,52 +36,55 @@ paper1:
 paper2:
     review: Nov 6 2017
     author:
-    - Sean M. Shiverick
+        - Sean M. Shiverick
     chapter: Health
     hid:
-    - 335
+        - 335
     title: >
-        Big Health Data from Wearable Electronic Sensors (WES) and the Treatment
-        of Opioid Addiction
+        Big Health Data from Wearable Electronic Sensors (WES)
+        and the Treatment of Opioid Addiction
     abstract: >
-        Wearable electronic sensors (WES) and mobile health applications can be 
-        used to collect vital health data to supplement traditional forms of 
-        treatment for opioid addiction and may be used to predict risk factors 
-        related to overdose death. 
-    url: https://github.com/bigdata-i523/hid335/blob/master/paper2/report.tex
+        Wearable electronic sensors (WES) and mobile health
+        applications can be used to collect vital health data to
+        supplement traditional forms of treatment for opioid addiction
+        and may be used to predict risk factors related to overdose
+        death.
+    url: https://github.com/bigdata-i523/hid335/blob/master/paper2/
     type: latex
     status: 100%
-    chapter: TBD
-
 project:
-   type: project   
-   author:
-   - Sean Shiverick
-   hid:
-   - 335
-   title: >
-       Using Machine Learning Classification of Opioid Addiction for Big Data Health Analytics
-   abstract: >
-       Classification of opioid addiction can identify important features relevant 
-       for predicting drug abuse and overdose death. Machine learning procedures were 
-       used on data from a large National Survey of Drug Use and Health (NSDUH-2015) 
-       to classify individuals for illicit opioid use according to demographic 
-       characteristics and mental health attributes (e.g., depression). Classification 
-       models of opioid addiction can be extended for big data health analytics to 
-       include high-dimensional datasets, data collected over previous years, or 
-       expanded to the larger population of patients taking prescription opioid 
-       medication. The results seek to raise awareness of risk factors related to 
-       opioid addiction among patients and medication prescribers, and help 
-       decrease the risk of opioid overdose death.  
-   url: https://github.com/bigdata-i523/sample-pid000/project/report.pdf
-   dataset: >
-       National Survey on Drug Use and Health (NSDUH) 2015
-       Substance Abuse and Mental Health Data Archive
-       U.S. Department of Health and Human Services (HHS)
-       https://www.datafiles.samhsa.gov/study-dataset/national-survey-drug-use-and-health-2015-nsduh-2015-ds0001-nid16894
-       size TBD
-   analytics: Machine Learning
-   application: Health Analytics 
-   chapter: Health
-   keywords: Health Analytics, Machine Learning, Opioid Addiction, i523, hid335
-   status: 100%
+    type: project
+    author:
+        - Sean Shiverick
+    hid:
+        - 335
+    title: >
+        Using Machine Learning Classification of Opioid Addiction for
+        Big Data Health Analytics
+    abstract: >
+        Classification of opioid addiction can identify important
+        features relevant for predicting drug abuse and overdose
+        death. Machine learning procedures were used on data from a
+        large National Survey of Drug Use and Health (NSDUH-2015) to
+        classify individuals for illicit opioid use according to
+        demographic characteristics and mental health attributes (e.g.,
+        depression). Classification models of opioid addiction can be
+        extended for big data health analytics to include
+        high-dimensional datasets, data collected over previous years,
+        or expanded to the larger population of patients taking
+        prescription opioid medication. The results seek to raise
+        awareness of risk factors related to opioid addiction among
+        patients and medication prescribers, and help decrease the risk
+        of opioid overdose death.
+    url: https://github.com/bigdata-i523/sample-pid000/project/report.pdf
+    dataset: >
+        National Survey on Drug Use and Health (NSDUH) 2015
+        Substance Abuse and Mental Health Data Archive
+        U.S. Department of Health and Human Services (HHS)
+        https://www.datafiles.samhsa.gov/study-dataset/national-survey-drug-use-and-health-2015-nsduh-2015-ds0001-nid16894
+        size TBD
+    analytics: Machine Learning
+    application: Health Analytics
+    chapter: Health
+    keywords: Health Analytics, Machine Learning, Opioid Addiction, i523, hid335
+    status: 100%
