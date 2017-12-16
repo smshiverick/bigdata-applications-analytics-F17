@@ -29,7 +29,6 @@ paper1:
         informatics. Prediction models based on social media work best
         in areas with a high degree of internet access.
     url: https://github.com/bigdata-i523/hid335/blob/master/paper1/
-    type: latex
     status: 10/25/17 100%
     chapter: Health
 paper2:
@@ -49,7 +48,6 @@ paper2:
         and may be used to predict risk factors related to overdose
         death.
     url: https://github.com/bigdata-i523/hid335/blob/master/paper2/
-    type: latex
     status: 100%
 project:
     type: project
